@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUGU CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="main-ss">
+        <div class="container-esqueda-ss">
+            <h1>Qual o plano mais adequado à sua realidade?</h1>
+            <p>Conte-nos sobre sua empresa para que possamos sugerir qual plano da iugu corresponde às necessidades e
+                maturidade de seu modelo de negócio.</p>
+
+
+            <div class="calculadora-text">
+                <h3><img src="./bolinha-ss.svg">Qual o faturamento mensal do seu negócio?</h3>
+                <input type="number" placeholder="Ex: R$ 40.000" class="faturamento">
+
+
+
+                <div class="funcoes-pagamentos">
+                    <h3><img src="./bolinha-ss.svg">Quais funções de pagamento você precisa?</h3>
+                    <div class="container-inputs">
+
+                        <div class="container-input">
+                            <label for="pix" class="container"><p>Pix</p>
+                                <input type="checkbox" name="" id="pix">
+                                <span class="check"></span>
+                            </label>
+
+                        </div>
+                        <div class="container-input">
+                            <label for="Boleto" class="container">
+                                <input type="checkbox" name="" id="Boleto">
+                                <p>Boleto</p>
+                                <span class="check"></span>
+                            </label>
+                        </div>
+                        <div class="container-input">
+                            <label for="credito" class="container">
+                                <input type="checkbox" name="" id="credito">
+                                <p>Cartão de crédito</p>
+                                <span class="check"></span>
+                            </label>
+
+                        </div>
+                        <div class="container-input">
+                            <label for="Split" class="container">
+                                <input type="checkbox" name="" id="Split">
+                                <p>Split de pagamento</p>
+                                <span class="check"></span>
+                            </label>
+                        </div>
+
+                        <img src="./icon-info-ss.svg">
+                        <p class="info"></p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="verPlano">Ver plano ideal</button>
+        </div>
+
+        <div class="container-direita-ss">
+            <p class="value"></p>
+
+
+
+            <h2>O melhor para seu negócio é:</h2>
+
+            <img src="./hand.svg">
+
+            <h3>Preencha o formulário para descobrir o plano ideal para a sua empresa</h3>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

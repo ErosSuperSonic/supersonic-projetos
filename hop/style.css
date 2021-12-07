@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.addon {
+  color: #0A8FC1;
+  font-weight: bold;
+}
+
+.conheca {
+  color: #C9327E;
+}
+
+.container-card-ss {
+  font-family: "Museo Sans", sans-serif;
+  padding-top: 65px;
+  padding-bottom: 60px;
+  background-color: #EFEFEF;
+}
+
+.container-card-ss .text-container-card {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-left: 23.2px;
+  padding-right: 51.6px;
+}
+
+.container-card-ss h2 {
+  font-family: 'Museo Sans',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.carrousel-cards-ss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  padding-left: 23.2px;
+}
+
+.carrousel-cards-ss::-webkit-scrollbar {
+  display: none;
+}
+
+.card-ss {
+  width: 289px;
+  height: 707.63px;
+  background: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 26px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.card-ss::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3.63px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.card-ss.rosa .flex-header p {
+  color: #C9327E;
+}
+
+.card-ss.rosa .header-card > p {
+  color: #C9327E;
+}
+
+.card-ss.rosa .conteudo-card-ss a, .card-ss.rosa .conteudo-card-ss button {
+  background-color: #C9327E;
+}
+
+.card-ss.rosa .conteudo-card-ss a:hover, .card-ss.rosa .conteudo-card-ss button:hover {
+  background-color: #db4d95;
+}
+
+.card-ss.rosa .conteudo-card-ss ul h4 {
+  color: #C9327E;
+}
+
+.card-ss.rosa::after {
+  background-color: #C9327E;
+}
+
+.card-ss.yellow .flex-header p {
+  color: #F89621;
+}
+
+.card-ss.yellow .header-card > p {
+  color: #F89621;
+}
+
+.card-ss.yellow .conteudo-card-ss a, .card-ss.yellow .conteudo-card-ss button {
+  background-color: #F89621;
+}
+
+.card-ss.yellow .conteudo-card-ss a:hover, .card-ss.yellow .conteudo-card-ss button:hover {
+  background-color: #FFBA79;
+}
+
+.card-ss.yellow .conteudo-card-ss ul h4 {
+  color: #F89621;
+}
+
+.card-ss.yellow::after {
+  background-color: #F89621;
+}
+
+.card-ss.green .flex-header p {
+  color: #12B3B0;
+}
+
+.card-ss.green .header-card > p {
+  text-align: center;
+  color: #12B3B0;
+}
+
+.card-ss.green .conteudo-card-ss a, .card-ss.green .conteudo-card-ss button {
+  background-color: #12B3B0;
+}
+
+.card-ss.green .conteudo-card-ss a:hover, .card-ss.green .conteudo-card-ss button:hover {
+  background-color: #18D2CE;
+}
+
+.card-ss.green .conteudo-card-ss ul h4 {
+  color: #12B3B0;
+}
+
+.card-ss.green::after {
+  background-color: #12B3B0;
+}
+
+.card-ss .header-card > p {
+  font-weight: 600;
+  font-size: .9rem;
+  padding-bottom: 17.21px;
+  border-bottom: 1px solid #D8D8D8;
+  margin-bottom: 16.27px;
+}
+
+.card-ss .header-card .flex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20.51px;
+}
+
+.card-ss .header-card .flex-header h4 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card-ss .header-card .flex-header p {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card-ss .header-card img {
+  width: 54px;
+  height: 54px;
+  margin-right: 9.83px;
+}
+
+.card-ss .conteudo-card-ss p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.card-ss .conteudo-card-ss a, .card-ss .conteudo-card-ss button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 23px;
+  margin-bottom: 16.53px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 255.97px;
+  height: 34.53px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: none;
+}
+
+.card-ss .conteudo-card-ss ul {
+  margin-top: 18.13px;
+  list-style: none;
+  width: 234px;
+}
+
+.card-ss .conteudo-card-ss ul h4 {
+  margin-bottom: 15.67px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.card-ss .conteudo-card-ss ul li {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #141414;
+  margin-bottom: 20px;
+  position: relative;
+  left: 20px;
+}
+
+.card-ss .conteudo-card-ss ul li img {
+  position: absolute;
+  left: -20px;
+  top: 1px;
+}
+
+.boxed-ss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 39px;
+}
+
+.boxed-ss div:nth-child(1) {
+  background-color: #404040;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.boxed-ss div:nth-child(2) {
+  background-color: #AAAAAA;
+}
+
+.boxed-ss div:nth-child(3) {
+  background-color: #CAC9C9;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.boxed-ss div {
+  width: 40.28px;
+  height: 6px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (min-width: 920px) {
+  .carrousel-cards-ss {
+    overflow: auto;
+  }
+}
+
+@media (min-width: 970px) {
+  .carrousel-cards-ss {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-card-ss .text-container-card {
+    margin-bottom: 52px;
+  }
+  .container-card-ss .text-container-card h2 {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .container-card-ss .text-container-card p {
+    font-size: 20px;
+  }
+  .card-ss {
+    width: 360px;
+    height: 647.21px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card-ss .conteudo-card-ss a, .card-ss .conteudo-card-ss button {
+    width: 100%;
+  }
+  .card-ss .header-card > p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .card-ss.green .header-card > p {
+    font-size: 1rem;
+  }
+  .card-ss .conteudo-card-ss ul li {
+    margin-bottom: 7px;
+  }
+  .card-ss .conteudo-card-ss ul {
+    width: 98%;
+  }
+  .boxed-ss {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
