@@ -1,0 +1,32 @@
+body {
+  background: #000;
+}
+
+.list-ss {
+  list-style: none;
+}
+
+.list-ss li {
+  color: #fff;
+  font-family: XP;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 80;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+.list-ss li img {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+/*# sourceMappingURL=style.css.map */
