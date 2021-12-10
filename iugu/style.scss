@@ -805,3 +805,9 @@ body {
         margin-bottom: 0px;
     }
 }
+
+@media(max-width: 320px){
+    .main-ss{
+        height: 246vh;
+    }
+}

@@ -25,7 +25,7 @@
                     <h3><img
                             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/iugu/bolinha-ss.svg?token=AU7JVW2ZJB3B4B6FMBT37ODBV6WLW">Qual
                         o faturamento mensal do seu negócio?</h3>
-                    <input type="number" placeholder="Ex: R$ 40.000" class="faturamento">
+                    <input type="text" pattern="[0-9]" maxlength="22" placeholder="Ex: R$ 40.000" id="faturamento" class="faturamento">
 
 
 
@@ -85,7 +85,7 @@
 
                 <div class="container-imagem">
 
-                    
+
                     <div class="container-card-ss">
                         <div class="carrousel-cards-ss">
                             <div class="card-ss yellow">
@@ -284,6 +284,7 @@
 
 
 
+    <script src="./carregarLibs.js"></script>
     <script src="./script.js"></script>
 </body>
 

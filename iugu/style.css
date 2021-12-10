@@ -665,7 +665,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 200vh;
+    height: auto;
   }
   .container-esqueda-ss {
     padding-left: 20px;
@@ -775,5 +775,11 @@ body {
     border: none;
     margin-bottom: 0px;
   }
+
+  .image-ss{
+    padding-bottom: 40px;
+  }
 }
+
+
 /*# sourceMappingURL=style.css.map */

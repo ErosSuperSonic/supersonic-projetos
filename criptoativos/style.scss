@@ -1,11 +1,11 @@
-body{
+body {
     background: #000;
 }
 
-.list-ss{
+.list-ss {
     list-style: none;
 
-    li{
+    li {
         color: #fff;
         font-family: XP;
         font-size: 24px;
@@ -16,13 +16,49 @@ body{
         text-align: left;
 
 
-        display:flex;
+        display: flex;
         align-items: center;
         margin-bottom: 24px;
-        img{
+
+        img {
             margin-right: 12px;
             width: 20px;
             height: 20px;
+        }
+    }
+}
+
+.image-ss {
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media(max-width: 1117px) {
+    .image-ss {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: translateY(0);
+    }
+
+    #element-112 .x_39a3bfb4 {
+        font-style: normal;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    #element-112 .x_e0654353 {
+        width: 100%;
+    }
+
+    .list-ss {
+        li {
+            font-size: 16px;
+            line-height: 24px;
+
         }
     }
 }

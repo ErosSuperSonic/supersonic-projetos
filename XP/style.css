@@ -1,0 +1,68 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.supersonic{
+    background-color: #F4F4F4;
+    padding: 91px 0;
+}
+
+.supersonic h2{
+    padding-bottom: 23px;
+    line-height: 2.625rem;
+    position: relative;
+    color: #000;
+    font-family: Roboto Slab,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+
+    position: relative;
+
+    margin-bottom:48px;
+}
+
+.supersonic h2::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #ffc709;
+    bottom: 0;
+    left: 0;
+}
+
+.container-ss{
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.container-ss li{
+    list-style: none;
+    line-height: 1.875rem;
+    font-size: 1rem;
+    margin-bottom: 0.6em;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
+.flex-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(max-width:768px){
+     .flex-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .flex-container img{
+        width: 100%;
+        margin-top: 32px;
+    } 
+    .supersonic{
+        padding: 35px 0;
+    }
+}
