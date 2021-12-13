@@ -43,7 +43,7 @@
     margin: 12px;
 }
 
-.container-ss button {
+.container-ss a {
     background: #FFC709;
     width: 189px;
     height: 44px;
@@ -70,6 +70,104 @@
     height: 42.1875rem !important;
 }
 
-#page-block-7n2ylj32kaa .section-block{
+#page-block-7n2ylj32kaa .section-block {
     height: 42.1875rem !important;
+}
+
+.img-ss {
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+
+@media(max-width: 1024px){
+    #element-1320{
+        top: 14rem !important;
+    }
+}
+@media(max-width:1180px) {
+
+    .img-ss {
+        display: none;
+    }
+
+    #element-1205,
+    #element-1205 .x_354dba24 {
+        width: 100% !important;
+    }
+
+    #page-block-7n2ylj32kaa,
+    #page-block-7n2ylj32kaa .section-block {
+        height: 54rem !important;
+    }
+
+    #element-1320 {
+        top: 18rem !important;
+    }
+}
+
+@media(max-width: 767px) {
+    #page-block-7n2ylj32kaa .section-fit {
+        max-width: 100% !important;
+    }
+
+    #element-1205,
+    #element-1205 .x_354dba24 {
+        font-weight: bold !important;
+        font-size: 32px !important;
+        line-height: 40px !important;
+    }
+
+    .x_436f1287.x_8c071feb p {
+        width: 309px;
+        font-size: 16px;
+        top: -133px;
+    }
+
+    .container-ss,
+    #element-1320 {
+        width: 100% !important;
+    }
+
+    .container-ss li {
+        font-size: 16px;
+    }
+    #element-1205, #element-1320{
+        left: 0 !important;
+    }
+    #element-1320{
+        top: 18rem !important;
+        padding-left:20px;
+    }
+    .container-ss{
+        position: relative;
+        top: -6rem;
+    }
+    #element-1205 .x_e737124d{
+        padding-left: 20px;
+    }
+    #page-block-7n2ylj32kaa, #page-block-7n2ylj32kaa .section-block{
+        height: 43rem !important;
+    }
+
+    .button-group{
+        left: 46%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+}
+@media(max-width: 409px){
+    #element-1320{
+        top: 23rem !important;
+        padding-left:20px;
+    }
+    .container-ss {
+        top: -9rem;
+        left: -14px;
+    }
+
+    .button-group{
+        left: 50%;
+    }
 }

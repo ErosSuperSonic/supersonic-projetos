@@ -17,3 +17,7 @@ const containerAdd = `
 <p>Leva só 5 minutos</p>
 </div>
 `;
+
+containerAdd.addEventListener("click", () => {
+    window.location.href = "https://cadastro.xpi.com.br/desktop/step/1?_ga=2.106974530.1963409769.1639143941-818339838.1639143941";
+})
