@@ -17,10 +17,13 @@ button.addEventListener("click", () => {
 
 	const faturamento = faturamentoInput.value;
 
-	const faturamento1 = faturamento.replace(",", "")
-	const faturamento2 = faturamento1.replace(".", "")
+	const faturamento1 = faturamento.replaceAll(",", "")
+	
+	const faturamento2 = faturamento1.replaceAll(".", "")
+	console.log(faturamento2)
 
 	const faturamento3 = faturamento2/100;
+
 
 	if (window.innerWidth >= 1200) {
 		if (faturamento3 <= 50000 && split.checked == false) {
