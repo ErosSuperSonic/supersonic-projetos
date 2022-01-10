@@ -20,15 +20,25 @@ div .primary-images-carousel .product-detail-controls::after {
     height: 1.5625rem;
 }
 div .primary-images-carousel .product-detail-next{
-    content: ' \276F';
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/06d958681f035434cc87761a75852329394f6327/disantini/images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 18px;
 }
 div .primary-images-carousel .product-detail-prev{
-    content: ' \276E';
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/06d958681f035434cc87761a75852329394f6327/disantini/images/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 15px;
 }
 
 
-
-
+button.btn.icon-button.add-to-wish-list{
+    display: none;
+}
+button.btn.icon-button.share{
+    display: none;
+}
 /*=== Prices ====*/
 .product-detail .product-name {
     font-size: 47px;
