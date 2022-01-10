@@ -6315,7 +6315,7 @@
             var e = $(".page").data("action")
               , n = $(this).data("locale")
               , o = $(this).data("currencycode")
-              , i = $(".page").data("querystring")
+              , i = $(".page").data("querystring")//ok
               , r = $(".country-selector").data("url");
             $.ajax({
                 url: r,

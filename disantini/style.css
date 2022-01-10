@@ -19,13 +19,15 @@ div .primary-images-carousel .product-detail-controls::after {
     width: 1.5625rem;
     height: 1.5625rem;
 }
-div .primary-images-carousel .product-detail-next{
+
+div .primary-images-carousel .product-detail-next {
     background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/06d958681f035434cc87761a75852329394f6327/disantini/images/arrow-right.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 18px;
 }
-div .primary-images-carousel .product-detail-prev{
+
+div .primary-images-carousel .product-detail-prev {
     background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/06d958681f035434cc87761a75852329394f6327/disantini/images/arrow-left.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -33,12 +35,10 @@ div .primary-images-carousel .product-detail-prev{
 }
 
 
-button.btn.icon-button.add-to-wish-list{
+button.btn.icon-button.share {
     display: none;
 }
-button.btn.icon-button.share{
-    display: none;
-}
+
 /*=== Prices ====*/
 .product-detail .product-name {
     font-size: 47px;
@@ -62,4 +62,172 @@ button.btn.icon-button.share{
 .attributes .prices .price span.installments b {
     font-weight: 700;
     color: #21A144;
+}
+
+div.attributes>div:nth-of-type(3) {
+    justify-content: space-between;
+}
+
+/*==========Popup ===========*/
+
+.guia-tamanho-ss {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.guia-tamanho-ss p {
+    text-decoration-line: underline;
+    color: #4E4E50;
+    margin-left: 5px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.guia-tamanho-ss img {
+    width: 16px;
+    height: 16px;
+}
+
+.guia-tamanhos-ss-popup {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100%;
+    height: 100vh !important;
+    top: 0px !important;
+    transition: .3s !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.guia-tamanhos-ss-popup.active-ss {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.guia-tamanhos-ss-popup .container-popup {
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 90vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.guia-tamanhos-ss-popup .title {
+    background: #F8B34B;
+    text-align: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.container-popup .title p {
+    color: #4E4E50;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 28px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.container-popup .element {
+    padding: 0px 64px;
+}
+
+.guia-tamanhos-ss-popup .close-popup-ss {
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.guia-tamanhos-ss-popup .close-popup-ss svg {
+    width: 100%;
+}
+
+
+
+
+/*======= DOBRA NOVA ==========*/
+
+
+.infos-ss {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.box-img {
+    width: 25px;
+    height: 25px;
+    background: #21A144;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.box-img img{
+    width: 15px;
+    height: 15px;
+}
+
+.infos-ss>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.infos-ss div p {
+    color: #4E4E50;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.infos-ss a {
+    text-decoration: underline;
+    color: #4E4E50 !important;
+
+}
+
+.infos-ss div span {
+    color: #21A144;
+}
+
+button .add-to-cart-icon{
+    display: none;
+}
+
+.btn.btn-sucess.btn-block.add-to-cart{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.26);
+    margin-bottom: 15px;
+}
+
+.btn.icon-button.add-to-wish-list{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    text-transform: none;
+    color: #4A4A4A;
+    font-family: 'Roboto Condensed';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+.btn.icon-button.add-to-wish-list strong{
+    margin-left: 7px;
 }
