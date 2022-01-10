@@ -1,0 +1,55 @@
+/*=== Botões ====*/
+div .primary-images-carousel .product-detail-controls {
+    width: 47px;
+    height: 47px;
+    background-color: rgba(248, 179, 75, 0.19);
+    border-radius: 50%;
+}
+
+div .primary-images-carousel .product-detail-controls svg {
+    display: none;
+}
+
+div .primary-images-carousel .product-detail-controls::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+    width: 1.5625rem;
+    height: 1.5625rem;
+}
+div .primary-images-carousel .product-detail-next{
+    content: ' \276F';
+}
+div .primary-images-carousel .product-detail-prev{
+    content: ' \276E';
+}
+
+
+
+
+/*=== Prices ====*/
+.product-detail .product-name {
+    font-size: 47px;
+    color: #4E4E50;
+    line-height: 55px;
+}
+
+
+.attributes .prices .price span del+.sales .value {
+    font-size: 47px;
+    color: #4E4E50 !important;
+    font-weight: normal;
+}
+
+.attributes .prices .price span.installments {
+    color: #21A144;
+    font-weight: 300;
+    margin-top: 16px;
+}
+
+.attributes .prices .price span.installments b {
+    font-weight: 700;
+    color: #21A144;
+}
