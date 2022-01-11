@@ -178,7 +178,7 @@ div.attributes>div:nth-of-type(3) {
 
 }
 
-.box-img img{
+.box-img img {
     width: 15px;
     height: 15px;
 }
@@ -205,18 +205,24 @@ div.attributes>div:nth-of-type(3) {
     color: #21A144;
 }
 
-button .add-to-cart-icon{
+.venda-entrega {
+    position: relative;
+    left: 38px;
+}
+
+
+button .add-to-cart-icon {
     display: none;
 }
 
-.btn.btn-sucess.btn-block.add-to-cart{
+.btn.btn-sucess.btn-block.add-to-cart {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.26);
     margin-bottom: 15px;
 }
 
-.btn.icon-button.add-to-wish-list{
+.btn.icon-button.add-to-wish-list {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -228,6 +234,49 @@ button .add-to-cart-icon{
     justify-content: center;
     margin-bottom: 48px;
 }
-.btn.icon-button.add-to-wish-list strong{
+
+.btn.icon-button.add-to-wish-list strong {
     margin-left: 7px;
+}
+
+#container-flex{
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    right: 10px;
+    color: #4E4E50;
+}
+
+
+
+
+/*Seção das fotos quadradas dos tenis*/
+.product-detail .attributes .color .swatch-circle.color-value.selected{
+    /*Esse é o selecionado*/
+    border: none;
+    width: 62px;
+    height: 62px;
+    border-radius: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    background-image: url("https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg?size=626&ext=jpg");
+    background-size: cover;
+    background-position: center;
+}
+span.color-value.swatch-container.swatch-circle.selectable,
+span.color-value.swatch-container.swatch-circle.unselectable{ /*Esse são todos os itens de cor*/
+    border: none;
+    width: 62px;
+    height: 62px;
+    border-radius: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    background-image: url("https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg?size=626&ext=jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.product-detail .attributes .color .swatch-circle.unselectable::after{
+    
+}
+.product-detail .attributes .color .swatch-value{
+    display: none !important;
 }
