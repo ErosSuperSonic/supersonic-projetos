@@ -272,10 +272,16 @@ span.color-value.swatch-container.swatch-circle.unselectable{ /*Esse são todos 
     background-image: url("https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg?size=626&ext=jpg");
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
-.product-detail .attributes .color .swatch-circle.unselectable::after{
-    
+.product-detail .attributes .color .swatch-circle.unselectable:after{
+    height: 66px !important;
+    width: 70px !important;
+    background-size: cover !important;
+    left: -3px !important;
+    background-image: none !important;
+    background-color: rgba(196, 196, 196, 0.52);
 }
 .product-detail .attributes .color .swatch-value{
     display: none !important;
