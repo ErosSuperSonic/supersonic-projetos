@@ -172,14 +172,16 @@ document.querySelector("div.attributes>div:nth-of-type(3)").insertAdjacentHTML(
 const infoSs = document.querySelector(".infos-ss");
 const btnAddCarrinho = document.querySelector("button.btn.btn-sucess.btn-block.add-to-cart");
 
+const newBtnAddCarrinho = btnAddCarrinho.cloneNode(true)
 
-const newBtnAddCarrinho = btnAddCarrinho;
 infoSs.insertAdjacentElement("afterend", newBtnAddCarrinho);
+newBtnAddCarrinho.insertAdjacentElement("afterend", newBtnFavorito);
 
+btnAddCarrinho.style.display = "none" 
 
-
-btnAddCarrinho.insertAdjacentElement("afterend", newBtnFavorito);
-
+newBtnAddCarrinho.addEventListener("click", e =>{
+    btnAddCarrinho.click()
+})
 
 
 
@@ -200,7 +202,6 @@ document.querySelector(".cor-value").innerHTML = document.querySelectorAll("butt
 //Pegando cor dos botões
 document.querySelectorAll("button.color-attribute").forEach((button) => {
     button.addEventListener("click", () => {
-        console.log(`Cliquei no botão da cor ${button.title}`);
 		document.querySelector(".cor-value").innerHTML = button.title; //Definindo nome da cor no Desktop
         document.querySelectorAll(".cor-value")[1].innerHTML =  button.title; //Definindo nome da cor no mobile
 	});
@@ -220,6 +221,18 @@ if (window.innerWidth <= "992") {
     const btnGuiaTamanhosMobile = btnGuiaTamanhos;
     btnGuiaTamanhosMobile.style.display = "flex"
     infoSs.insertAdjacentElement("beforebegin", btnGuiaTamanhosMobile)
+
+
+
+
+    
+    const myTag = document.querySelector(".product-breadcrumb.col.hidden-sm-down.d-flex.justify-content-center")
+    const newTag = myTag.cloneNode(true)
+    newTag.style.border= "none !important"
+
+    document.querySelector(".buttons-list").insertAdjacentElement("afterbegin",newTag)
+    document.querySelectorAll(".product-breadcrumb.col.hidden-sm-down.d-flex.justify-content-center")[1].style.display = "none !important"
+    document.querySelectorAll("ol.breadcrumb")[1].style.display = "none"
 }
 
     
@@ -231,6 +244,15 @@ if(window.innerWidth <= 600){
     document.querySelectorAll(".product-detail-attributes")[1].insertAdjacentHTML("afterbegin","<p class='paragrafo-color-add'><strong>Cor:</strong><span class='cor-value'></span></p>");
     document.querySelectorAll(".cor-value")[1].innerHTML = document.querySelectorAll("button.color-attribute")[0].title;
 }
+
+//Verificando se existe desconto
+if(document.querySelectorAll(".strike-through")){
+    document.querySelector(".prices .price span span.sales").style.color = "#dd0031 !important"
+}else{
+    document.querySelector(".prices .price span span.sales").style.color = "#4E4E50 !important"
+}
+
+
 
 
 
@@ -256,7 +278,6 @@ function chamarDados() {
                     })
                     .then(function (data) {
                         el.querySelector("span.color-value").style.backgroundImage = `url('${data.product.images.large[0].absUrl}')`;
-                        console.log(el.querySelector("span.color-value"))
                     })
                     .catch((error) => {
                         console.log("Deu erro", error);

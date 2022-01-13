@@ -36,32 +36,22 @@ div .primary-images-carousel .product-detail-prev {
     left: 12px;
 }
 
-.primary-images-carousel .slick-carousel {
-    padding: 0rem !important;
-}
 
-.primary-images-carousel {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
 
-button.btn.icon-button.share {
-    display: none;
-}
 
 /*=== Prices ====*/
 .product-detail .product-name {
-    font-size: 47px;
     color: #4E4E50;
-    line-height: 55px;
 }
 
 
 .attributes .prices .price span del+.sales .value,
 .prices .price span span.sales {
-    font-size: 47px;
-    color: #4E4E50 !important;
     font-weight: normal;
+}
+
+.prices .price span span.sales {
+    color: #4E4E50 !important;
 }
 
 .attributes .prices .price span.installments {
@@ -175,7 +165,7 @@ div.attributes>div:nth-of-type(3) {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     flex-direction: column-reverse;
 }
 
@@ -264,7 +254,7 @@ div.attributes .btn.icon-button.add-to-wish-list strong {
 
 
 /*Seção das fotos quadradas dos tenis*/
- .product-detail .attributes .color .swatch-circle.color-value.selected {
+.product-detail .attributes .color .swatch-circle.color-value.selected {
     /*Esse é o selecionado*/
     border: none;
     width: 62px;
@@ -276,11 +266,17 @@ div.attributes .btn.icon-button.add-to-wish-list strong {
     background-position: center;
 }
 
+.product-detail-attributes .color-value.swatch-container.swatch-circle.selected.selectable {
+    border: 2px solid #F8B34B;
+}
+
+div.attributes>div:nth-of-type(2) {
+    justify-content: center;
+}
 
 div.attributes>div:nth-of-type(2)>div span.color-value.swatch-container.swatch-circle.selectable,
 div.attributes>div:nth-of-type(2)>div span.color-value.swatch-container.swatch-circle.unselectable {
-    
-    border: none;
+
     width: 62px;
     height: 62px;
     border-radius: 0px;
@@ -298,15 +294,15 @@ div.color button .swatch-circle.unselectable:after {
 }
 
 div.col-10 .attribute button .swatch-value,
-div.col-8 .attribute button .swatch-value{
+div.col-8 .attribute button .swatch-value {
     display: none !important;
-} 
+}
 
 
 .paragrafo-color-add {
-    position: relative;
-    left: -20px;
-    top: 6px;
+    position: absolute;
+    left: -63px;
+    top: 37px;
     color: #4E4E50;
 }
 
@@ -314,93 +310,129 @@ div.col-8 .attribute button .swatch-value{
     padding-right: 3px;
 }
 
+.container-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: -10px;
+}
+
 @media(max-width: 1200px) {
     .paragrafo-color-add {
-        position: absolute;
         top: -10px;
         left: 8px;
     }
 
-    .product-detail .product-name,
-    .attributes .prices .price span del+.sales .value,
-    .prices .price span span.sales {
-        font-size: 38px;
-        line-height: 44px;
-    }
-
+}
+.infos-ss p{
+    font-size: 16px;
 }
 
+@media screen and (max-width: 991.98px) {
+    #chatbot {
+        bottom: 4% !important;
+    }
+    .product-breadcrumb.col.hidden-sm-down.d-flex.justify-content-center{
+        display: block !important;
+    }
+    .product-breadcrumb .breadcrumb{
+        border: none !important;
+    }
+    [aria-label=Breadcrumb]{
+        display: block !important; 
+    }
+}
+
+
 @media(max-width: 992px) {
+    .product-detail .product-name{
+        padding-top: 20px;
+    }
     .attributes .row .caroussel-elements .attribute.color {
         position: relative;
         top: 16px;
     }
-    .product-detail .product-name,
-    .attributes .prices .price span del+.sales .value,
-    .prices .price span span.sales {
-        font-size: 31px;
-        line-height: 34px;
-    }
+
     .paragrafo-color-add {
         top: -22px;
         left: -53px;
     }
-    .container-flex{
+
+    .container-flex {
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         left: -10px;
     }
 
-    div.attributes>div:nth-of-type(2)>div .attribute.color{
+    div.attributes>div:nth-of-type(2)>div .attribute.color {
         justify-content: flex-start;
         margin-left: 30px;
     }
+
+    .primary-images-carousel .slick-carousel-item .image-container .product-image{
+        left: 50% !important;
+        top: 60% !important;
+        transform: translate(-50%,-50%);
+        width: 80% !important;
+
+    }
+
+    .slick-carousel.slick-initialized.slick-slider.slick-dotted{
+        background: #fff !important;
+        padding-bottom: 20px;
+    }
+
+
 }
 
-@media(max-width: 543px){
-    .paragrafo-color-add{
-        top: 20px;
-        left: 20px;
+@media(max-width: 543px) {
+    .row.hidden-xs-down {
+        display: block !important;
     }
 
-    .infos-ss{
+    .infos-ss {
         align-items: flex-start;
+        flex-direction: column;
     }
 
-    div.attributes>div:nth-of-type(2){
+    div.attributes>div:nth-of-type(2) {
         overflow-x: scroll;
     }
 
-    .caroussel-elements{
+    .caroussel-elements {
         overflow-x: scroll;
         position: absolute !important;
         right: 0;
         overflow-y: hidden;
     }
-    div.attributes>div:nth-of-type(3){
+
+    div.attributes>div:nth-of-type(3) {
         margin-top: 120px;
     }
 
     .paragrafo-color-add {
         position: absolute;
         top: 210px;
-        left: 38px;
+        left: 16px;
     }
 
     div.attributes .btn.btn-sucess.btn-block.add-to-cart,
-    div.attributes .btn.icon-button.add-to-wish-list{
+    div.attributes .btn.icon-button.add-to-wish-list {
         width: 100%;
     }
 
-    div.attributes .btn.icon-button.add-to-wish-list{
+    div.attributes .btn.icon-button.add-to-wish-list {
         margin-bottom: 22px;
     }
-    #container-flex{
+
+    #container-flex {
         flex-direction: column;
         align-items: flex-start;
+        padding-bottom: 13px;
     }
-    .venda-entrega{
+
+    .venda-entrega {
         top: 9px;
     }
 
