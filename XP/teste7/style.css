@@ -1,0 +1,26 @@
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d1d1d;
+}
+
+h1.nh-hero__title,
+h1.nh-hero__title strong {
+    font-weight: 500;
+}
+
+.list-ss {
+    color: #fff;
+}
+
+.list-ss li {
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
