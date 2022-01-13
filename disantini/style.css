@@ -220,18 +220,19 @@ div.attributes>div:nth-of-type(3) {
 
 
 
-button .add-to-cart-icon {
+div.attributes button .add-to-cart-icon {
     display: none;
 }
 
-.btn.btn-sucess.btn-block.add-to-cart {
+div.attributes .btn.btn-sucess.btn-block.add-to-cart {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.26);
     margin-bottom: 15px;
 }
 
-.btn.icon-button.add-to-wish-list {
+
+div.attributes .btn.icon-button.add-to-wish-list {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -244,7 +245,7 @@ button .add-to-cart-icon {
     margin-bottom: 48px;
 }
 
-.btn.icon-button.add-to-wish-list strong {
+div.attributes .btn.icon-button.add-to-wish-list strong {
     margin-left: 7px;
 }
 
@@ -263,7 +264,7 @@ button .add-to-cart-icon {
 
 
 /*Seção das fotos quadradas dos tenis*/
-div.attributes>div:nth-of-type(2)>div .product-detail .attributes .color .swatch-circle.color-value.selected {
+ .product-detail .attributes .color .swatch-circle.color-value.selected {
     /*Esse é o selecionado*/
     border: none;
     width: 62px;
@@ -296,10 +297,11 @@ div.color button .swatch-circle.unselectable:after {
     background-color: rgba(196, 196, 196, 0.52);
 }
 
-div.col-10 .attribute button .swatch-value{
+div.col-10 .attribute button .swatch-value,
+div.col-8 .attribute button .swatch-value{
     display: none !important;
 } 
-  
+
 
 .paragrafo-color-add {
     position: relative;
@@ -331,7 +333,6 @@ div.col-10 .attribute button .swatch-value{
 @media(max-width: 992px) {
     .attributes .row .caroussel-elements .attribute.color {
         position: relative;
-        left: 58px;
         top: 16px;
     }
     .product-detail .product-name,
@@ -350,11 +351,17 @@ div.col-10 .attribute button .swatch-value{
         position: relative;
         left: -10px;
     }
+
+    div.attributes>div:nth-of-type(2)>div .attribute.color{
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
 }
 
 @media(max-width: 543px){
     .paragrafo-color-add{
         top: 20px;
+        left: 20px;
     }
 
     .infos-ss{
@@ -381,13 +388,20 @@ div.col-10 .attribute button .swatch-value{
         left: 38px;
     }
 
-    .btn.btn-sucess.btn-block.add-to-cart,
-    .btn.icon-button.add-to-wish-list{
+    div.attributes .btn.btn-sucess.btn-block.add-to-cart,
+    div.attributes .btn.icon-button.add-to-wish-list{
         width: 100%;
     }
 
-    .btn.icon-button.add-to-wish-list{
+    div.attributes .btn.icon-button.add-to-wish-list{
         margin-bottom: 22px;
+    }
+    #container-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .venda-entrega{
+        top: 9px;
     }
 
 }

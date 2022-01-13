@@ -153,7 +153,7 @@ document.querySelector("div.attributes>div:nth-of-type(3)").insertAdjacentHTML(
         <p><strong><span>Compra garantida.</span></strong></p>
     </div>
 
-    <div class="venda-entrega">Venda e entrega feita pela <a href="#">Di Santinni.</a></div>
+    <div class="venda-entrega">Venda e entrega feita pela <a href="https://www.disantinni.com.br/home?gclid=Cj0KCQiAuP-OBhDqARIsAD4XHpeMhzMpJJPDcR27kdw92nDcHA9iYa8fGkyIgf-oVwu8TroBdJhzfU4aAnTpEALw_wcB">Di Santinni.</a></div>
 </div>
 
 
@@ -171,9 +171,17 @@ document.querySelector("div.attributes>div:nth-of-type(3)").insertAdjacentHTML(
 //Botão adicionar carrinho
 const infoSs = document.querySelector(".infos-ss");
 const btnAddCarrinho = document.querySelector("button.btn.btn-sucess.btn-block.add-to-cart");
+
+
 const newBtnAddCarrinho = btnAddCarrinho;
 infoSs.insertAdjacentElement("afterend", newBtnAddCarrinho);
+
+
+
 btnAddCarrinho.insertAdjacentElement("afterend", newBtnFavorito);
+
+
+
 
 
 newBtnFavorito.innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,18 +247,14 @@ const myCollection = document.querySelectorAll(".attribute.color")[0].children; 
 const arrImages = [];
 
 function chamarDados() {
-
-        console.log("Entrei camada 1")
         Array.from(myCollection).forEach((el) => {
             //Begando os botões com as urls para as imagens
             if (el.tagName === "BUTTON") {
                 fetch(el.attributes["data-url"].value)
                     .then(function (response) {
-                        console.log("Entrei camada 2")
                         return response.json();
                     })
                     .then(function (data) {
-                        console.log("Entrei camada 3")
                         el.querySelector("span.color-value").style.backgroundImage = `url('${data.product.images.large[0].absUrl}')`;
                         console.log(el.querySelector("span.color-value"))
                     })
