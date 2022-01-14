@@ -16,9 +16,9 @@ document.querySelector("#page-block-s1jmi49fb9>div:nth-of-type(3)>div").insertAd
     `
 )
 
-document.querySelector("#page-block-s1jmi49fb9>div:nth-of-type(1)").insertAdjacentHTML("afterbegin", `
+document.querySelector("#page-block-s1jmi49fb9>div:nth-of-type(1)").insertAdjacentHTML("beforeend", `
     <div class="depoimento-ss">
-        <img src="./imagem.png" alt="">
+        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/Teste5/imagem.png" alt="">
         <div>
             <p>“Acabei de instalar o novo aplicativo e acessar o Clear Pro pelo meu navegador, parabéns, surpreenderam 😍”</p>
             <span>Matheus Ricardo Hoffmann</span>

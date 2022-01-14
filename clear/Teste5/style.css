@@ -97,10 +97,14 @@ body {
     display: flex;
     align-items: center;
     background: #0501B4;
-
     justify-content: center;
     color: #fff;
-    height: 272px;
+    height: 300px;
+    position: absolute;
+    bottom: 21px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 .depoimento-ss p{
@@ -112,16 +116,35 @@ body {
     font-size: 14px;
     line-height: 24px;
 
+    position: relative;
+    top: 50px;
+
 }
 .depoimento-ss span{
     font-weight: bold;
     font-size: 14px;
     display: block;
+    position: relative;
+    top: 50px;
 }
 .depoimento-ss img{
     margin-right: 10px;
+    position: relative;
+    top: 50px;
 }
+
+
+
+
+
+
+
+
 #page-block-s1jmi49fb9>div:nth-of-type(3)>div {
     display: flex;
     align-items: center;
+}
+#page-block-s1jmi49fb9 .section-block,
+#page-block-s1jmi49fb9{
+    height: 48.75rem !important;
 }
