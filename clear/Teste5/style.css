@@ -1,0 +1,127 @@
+*,
+body,
+html {
+    padding: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+#element-474,
+#element-144,
+#element-484 {
+    display: none;
+}
+
+.container-ss {
+    color: #fff;
+    max-width: 488px;
+    position: relative;
+    top: 9px;
+}
+
+
+.container-ss ul {
+    padding: 0;
+    margin-top: 22px;
+    margin-bottom: 48px;
+}
+
+.container-ss h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #FFFFFF;
+}
+
+.container-ss li {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.container-ss li img {
+    margin-right: 10px;
+}
+
+.container-button a {
+    color: #0404CF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: Montserrat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 269px;
+    height: 55px;
+    background: #75FA89;
+}
+
+.container-button p {
+    width: 269px;
+
+
+    margin: 0;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    margin-top: 6px;
+    color: #FFFFFF;
+
+}
+
+.depoimento-ss{
+    display: flex;
+    align-items: center;
+    background: #0501B4;
+
+    justify-content: center;
+    color: #fff;
+    height: 272px;
+}
+
+.depoimento-ss p{
+    max-width: 426px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+.depoimento-ss span{
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+.depoimento-ss img{
+    margin-right: 10px;
+}
+#page-block-s1jmi49fb9>div:nth-of-type(3)>div {
+    display: flex;
+    align-items: center;
+}

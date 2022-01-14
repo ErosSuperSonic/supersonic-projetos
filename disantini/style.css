@@ -371,7 +371,6 @@ div.color button .swatch-circle.unselectable:after {
 
     div.attributes>div:nth-of-type(2)>div .attribute.color {
         justify-content: flex-start;
-        margin-left: 30px;
     }
 
     .primary-images-carousel .slick-carousel-item .image-container .product-image {
@@ -403,15 +402,15 @@ div.color button .swatch-circle.unselectable:after {
         flex-direction: column;
     }
 
-    div.attributes>div:nth-of-type(2) {
+    /* div.attributes>div:nth-of-type(2) {
         overflow-x: scroll;
-    }
+    } */
 
     .caroussel-elements {
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
         position: absolute !important;
         right: 0;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
 
     div.attributes>div:nth-of-type(3) {
@@ -421,7 +420,7 @@ div.color button .swatch-circle.unselectable:after {
     .paragrafo-color-add {
         position: absolute;
         top: 162px;
-        left: 45px;
+        left: 17px;
         margin: 0;
         width: 300px;
     }

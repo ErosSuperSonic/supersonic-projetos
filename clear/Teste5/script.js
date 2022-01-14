@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-    <!-- ﻿﻿https://lp.clear.com.br/cada-acao-pm -->
-
-
-    <div class="container-ss">
+document.querySelector("#page-block-s1jmi49fb9>div:nth-of-type(3)>div").insertAdjacentHTML("afterbegin", 
+`<div class="container-ss">
         <h1>Se investir na bolsa é a sua, nós facilitamos isso para você</h1>
 
         <ul>
@@ -27,8 +13,10 @@
             <p>Abra sua conta 100% online e grátis</p>
         </div>
     </div>
+    `
+)
 
-
+document.querySelector("#page-block-s1jmi49fb9>div:nth-of-type(1)").insertAdjacentHTML("afterbegin", `
     <div class="depoimento-ss">
         <img src="./imagem.png" alt="">
         <div>
@@ -36,6 +24,4 @@
             <span>Matheus Ricardo Hoffmann</span>
         </div>
     </div>
-</body>
-
-</html>
+`)

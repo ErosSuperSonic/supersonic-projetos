@@ -143,27 +143,26 @@ btnClosePopup.addEventListener("click", () => {
 document.querySelector("div.attributes>div:nth-of-type(3)").insertAdjacentHTML(
 	"afterend",
 	`
-<div class="infos-ss">
-<div id="container-flex">
-    <div style="align-items: center; display: flex;">
-        <div class="box-img">
-            <img
-                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/disantini/images/verified.png">
+    <div class="infos-ss">
+        <div id="container-flex">
+            <div style="align-items: center; display: flex;">
+                <div class="box-img">
+                    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/disantini/images/verificado.svg" alt="">
+                </div>
+                <p><strong><span>Compra garantida.</span></strong></p>
+            </div>
+
+            <div class="venda-entrega">Venda e entrega feita pela <a href="#">Di Santinni.</a></div>
         </div>
-        <p><strong><span>Compra garantida.</span></strong></p>
+
+
+        <div>
+            <div class="box-img"><img
+                    src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/2c26df284c435e0d09591b8599ba4272be750446/disantini/images/storefront.svg">
+            </div>
+            <p><strong><span>Retire grátis</span></strong> <span>em qualquer loja física.</span></p>
+        </div>
     </div>
-
-    <div class="venda-entrega">Venda e entrega feita pela <a href="https://www.disantinni.com.br/home?gclid=Cj0KCQiAuP-OBhDqARIsAD4XHpeMhzMpJJPDcR27kdw92nDcHA9iYa8fGkyIgf-oVwu8TroBdJhzfU4aAnTpEALw_wcB">Di Santinni.</a></div>
-</div>
-
-
-<div>
-    <div class="box-img"><img
-            src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/2c26df284c435e0d09591b8599ba4272be750446/disantini/images/storefront.svg">
-    </div>
-    <p><strong><span>Retire grátis</span></strong> <span>em qualquer loja física.</span></p>
-</div>
-</div>
 `
 );
 
@@ -244,14 +243,26 @@ if(window.innerWidth <= 600){
     document.querySelectorAll(".product-detail-attributes")[1].insertAdjacentHTML("afterbegin","<p class='paragrafo-color-add'><strong>Cor:</strong><span class='cor-value'></span></p>");
     document.querySelectorAll(".cor-value")[1].innerHTML = document.querySelectorAll("button.color-attribute")[0].title;
 
-    let contadorPosition = 0;
-    document.querySelectorAll("div.attributes>div:nth-of-type(2)>div .swatch-value").forEach(() =>{
-        contadorPosition++
-        if(contadorPosition >= 4){
-            console.log("Entrei")
-            document.querySelectorAll(".paragrafo-color-add")[1].style.top = '195px'
-        }
-    })
+    // let contadorPosition = 0;
+    // document.querySelectorAll("div.attributes>div:nth-of-type(2)>div .swatch-value").forEach(() =>{
+    //     contadorPosition++
+    //     if(contadorPosition == 2 || contadorPosition == 3){
+    //         document.querySelectorAll(".paragrafo-color-add")[1].style.top = '170px'
+    //     }
+    // })
+
+    document.querySelectorAll(".paragrafo-color-add")[0].style.display = 'none'
+
+    if(document.querySelector(".product-name").clientHeight < 82){
+        document.querySelectorAll(".paragrafo-color-add")[1].style.top = '170px'
+    } 
+    else if(document.querySelector(".product-name").clientHeight < 83){
+        document.querySelectorAll(".paragrafo-color-add")[1].style.top = '195px'
+    }else if(document.querySelector(".product-name").clientHeight > 83 && document.querySelector(".product-name").clientHeight <= 114){
+        document.querySelectorAll(".paragrafo-color-add")[1].style.top = '233px'
+    }else if(document.querySelector(".product-name").clientHeight > 114 && document.querySelector(".product-name").clientHeight <= 145){
+        document.querySelectorAll(".paragrafo-color-add")[1].style.top = '263px'
+    }
 }
 
 //Verificando se existe desconto
@@ -261,7 +272,9 @@ if(document.querySelectorAll(".strike-through")){
     document.querySelector(".prices .price span span.sales").style.color = "#4E4E50 !important"
 }
 
-
+if(window.innerWidth <= 355){
+    document.querySelectorAll(".attributes .row .caroussel-elements .attribute.color")[0].style.overflowX = "scroll"
+}
 
 
 
