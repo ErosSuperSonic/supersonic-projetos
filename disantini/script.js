@@ -238,11 +238,20 @@ if (window.innerWidth <= "992") {
     
 if(window.innerWidth <= 600){
     const linhaCarrousel = document.querySelector("div.col-10")
-    linhaCarrousel.classList.replace("col-10", "col-8")
+    linhaCarrousel.classList.replace("col-10", "col-12")
     linhaCarrousel.classList.add("caroussel-elements")
 
     document.querySelectorAll(".product-detail-attributes")[1].insertAdjacentHTML("afterbegin","<p class='paragrafo-color-add'><strong>Cor:</strong><span class='cor-value'></span></p>");
     document.querySelectorAll(".cor-value")[1].innerHTML = document.querySelectorAll("button.color-attribute")[0].title;
+
+    let contadorPosition = 0;
+    document.querySelectorAll("div.attributes>div:nth-of-type(2)>div .swatch-value").forEach(() =>{
+        contadorPosition++
+        if(contadorPosition >= 4){
+            console.log("Entrei")
+            document.querySelectorAll(".paragrafo-color-add")[1].style.top = '195px'
+        }
+    })
 }
 
 //Verificando se existe desconto
