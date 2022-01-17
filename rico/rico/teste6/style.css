@@ -6,6 +6,10 @@ body {
     box-sizing: border-box;
 }
 
+#page_block_below_fold {
+    display: none !important;
+}
+
 .container-ss {
     height: auto;
     background-color: rgba(255, 82, 0, 1);
@@ -16,14 +20,18 @@ body {
 .max-container {
     padding-top: 100px;
     display: flex;
-    max-width: 1100px;
+    max-width: 1259px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: space-between;
 }
-.conteudo-text{
+
+.conteudo-text {
     width: 598px;
     margin-top: 45px;
 }
+
 .conteudo-img {
     width: 477px;
     height: 668px;
@@ -38,6 +46,7 @@ body {
     line-height: 46px;
     letter-spacing: 0.1px;
     color: #190564;
+    font-weight: 600;
 }
 
 .container-ss .title h2 {
@@ -54,12 +63,13 @@ body {
 .container-ss ul {
     list-style: none;
     margin-top: 34px;
+    padding: 0;
 }
 
 .container-ss ul li {
     display: flex;
     align-items: center;
-    font-weight: 700;
+    font-weight: 500;
     color: #190564;
     margin-top: 12px;
 
@@ -69,10 +79,11 @@ body {
     margin-right: 12px;
 }
 
-.button-container{
+.button-container {
     width: 331px;
     margin-bottom: 35px;
 }
+
 .button-container a {
     margin-top: 52px;
 
@@ -103,4 +114,73 @@ body {
     text-align: center;
     width: 100%;
     margin-top: 8px;
+}
+
+.x_f2074b6c {
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    line-height: 18px;
+}
+
+@media(max-width: 879px) {
+    .max-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .conteudo-img{
+        width: 297px;
+        height: auto;
+    }
+}
+
+@media(max-width: 768px){
+    
+}
+@media(max-width: 663px) {
+    .max-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .conteudo-text {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .max-container {
+        padding-top: 32px;
+    }
+
+    .container-ss .title h1 {
+        font-size: 28px;
+        line-height: 33px;
+        ;
+    }
+
+    .container-ss .title h2 {
+        font-size: 16px;
+    }
+
+    .container-ss ul {
+        margin-top: 16px;
+    }
+
+    .conteudo-img {
+        width: 217.73px;
+        height: auto;
+    }
+
+    .x_f2074b6c {
+        margin-top: 24px;
+    }
+    .container-ss{
+        padding-bottom: 50px;
+    }
 }
