@@ -1,3 +1,7 @@
+.bg-grey-ss{
+    background: #DDDDDD;
+    border-radius: 10px;
+}
 /*=== Botões ====*/
 div .primary-images-carousel .product-detail-controls {
     width: 47px;
@@ -103,7 +107,13 @@ div.attributes>div:nth-of-type(3) {
     opacity: 0 !important;
     pointer-events: none;
     z-index: 1000;
+    left: 0;
 }
+
+.guia-tamanhos-ss-popup .container-popup::-webkit-scrollbar{
+    display: none;
+}
+
 
 .guia-tamanhos-ss-popup.active-ss {
     opacity: 1 !important;
@@ -117,7 +127,7 @@ div.attributes>div:nth-of-type(3) {
     margin-top: 50px;
     height: 90vh;
     border-radius: 20px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .guia-tamanhos-ss-popup .title {
@@ -135,6 +145,7 @@ div.attributes>div:nth-of-type(3) {
     padding: 28px 0;
     text-transform: uppercase;
     font-weight: 500;
+    margin: 0;
 }
 
 .container-popup .element {
@@ -344,10 +355,23 @@ div.color button .swatch-circle.unselectable:after {
     [aria-label=Breadcrumb] {
         display: block !important;
     }
+    .container-popup .element{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container-popup .title p{
+        font-size: 19px;
+    }
+    .table thead th,
+    .table td, .table th{
+        vertical-align: inherit !important; 
+        font-size: 14px;
+    }
 }
 
 
 @media(max-width: 992px) {
+
     .product-detail .product-name {
         padding-top: 20px;
     }

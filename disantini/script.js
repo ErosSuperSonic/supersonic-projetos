@@ -45,87 +45,113 @@ maincontent.insertAdjacentHTML(
         </div>
 
         <div class="element">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eum! Mollitia, fugiat id amet ab vitae
-                modi doloremque cumque excepturi saepe rerum quod odit animi itaque fuga quasi eius earum iure sint
-                provident quibusdam possimus unde rem et. Impedit blanditiis porro ipsa qui perferendis nihil nobis
-                fuga doloribus, neque repudiandae consectetur, velit dolore. Quidem vero nesciunt fugiat, alias
-                deserunt, distinctio iure assumenda sapiente eveniet rem aut deleniti cumque sunt libero, temporibus
-                velit magni quo aliquam et modi accusantium facilis! Reiciendis, odio! Voluptatem quibusdam
-                quisquam, eos ad, labore doloremque incidunt alias praesentium deserunt molestiae magnam maxime
-                veritatis ea placeat perspiciatis mollitia expedita voluptatibus ex omnis tempore asperiores ipsum
-                perferendis accusamus. Praesentium ab aliquam animi officiis facilis illum magni, dolor doloremque
-                recusandae architecto a saepe quae consectetur quis, repellendus dicta deleniti possimus inventore
-                assumenda nesciunt. Laboriosam, recusandae ratione cum, adipisci totam eos iusto dolores voluptates
-                autem maiores id voluptatem vel sint reprehenderit hic fugit earum repellendus quam porro illo ipsam
-                quidem molestias, natus dolore? Porro, adipisci. Eaque quibusdam magni et quo repellat itaque
-                aliquam explicabo alias eos dolorum vitae voluptatum laborum ipsam nesciunt laboriosam fugit,
-                molestiae fuga possimus sint quaerat optio iusto. Eius debitis, beatae repellat assumenda aperiam
-                alias velit neque suscipit provident exercitationem quidem harum iusto! Maiores quos libero,
-                voluptatem consectetur architecto quisquam eius adipisci quod officia velit! Nam iure harum
-                blanditiis nisi commodi accusamus labore. Nam placeat reiciendis ratione beatae dolor assumenda
-                illum temporibus tempora accusamus iste. Nemo suscipit labore, quidem impedit quibusdam vel aliquam
-                similique ipsam consequatur eligendi vero ut adipisci quasi, ab sed sunt aperiam dicta repudiandae
-                eum quam totam deleniti recusandae, enim praesentium. Laudantium cumque, distinctio quidem
-                consequatur fuga ut quam, hic deleniti repellendus aliquam neque. Sapiente nisi fuga omnis sunt
-                dolores tenetur nesciunt eaque iure distinctio autem in molestiae accusamus ad accusantium quasi ab
-                quos repellendus asperiores maxime, consequuntur, itaque similique eum. Expedita molestias alias,
-                iusto commodi maxime tempore eos nobis optio iure blanditiis eaque provident voluptatum, aliquam
-                beatae excepturi inventore iste ipsa reprehenderit aspernatur quos. Eos tenetur at id non adipisci,
-                eligendi impedit recusandae ab. Cupiditate voluptates consequuntur error nesciunt adipisci facilis
-                debitis quidem enim dolor quaerat. At delectus illum incidunt ullam iusto perspiciatis. Incidunt
-                quae rerum ipsa, voluptate velit, est magnam cum in distinctio voluptatem laboriosam quo sint
-                veniam, sed nihil cupiditate. Illum, cum unde cupiditate magnam id corrupti est impedit aspernatur
-                sit. Nostrum voluptatem a, ea in eos ullam unde veniam omnis aperiam molestiae reiciendis porro?
-                Neque, fuga quis accusantium incidunt possimus corrupti dolore delectus cumque dolorem deleniti quia
-                quos, omnis nihil in aperiam? Quasi modi sit dolore quibusdam unde aut, beatae nemo vitae, aliquid
-                accusamus perferendis iure! Accusantium culpa eos reiciendis odio velit nesciunt vitae et ex unde
-                commodi maiores optio minus quaerat quo voluptatibus quis, eum omnis iusto a atque reprehenderit
-                fuga? Atque porro in totam nobis minus optio! Pariatur inventore molestias sit suscipit delectus,
-                mollitia est corrupti eveniet, quam accusantium, sint ratione dolorum laudantium quibusdam dolor.
-                Ducimus dolor obcaecati alias et ad. Eos dolore eligendi enim rerum quidem unde optio quaerat iusto
-                quia quod! Similique consequuntur ducimus hic illum dolore. Pariatur harum dolorem excepturi
-                mollitia distinctio commodi. Neque unde animi eligendi quidem voluptate ea labore vero enim ipsum,
-                ullam temporibus possimus qui, velit necessitatibus illum voluptatem quas doloremque? Quod nemo
-                provident aliquid quos deserunt, doloribus laudantium odit at quae perferendis similique ut debitis
-                repellendus perspiciatis. Est, repellendus ex voluptates cupiditate doloribus suscipit saepe
-                corporis velit ullam, similique quibusdam animi esse laboriosam aut rem? Ad quaerat aut velit nihil,
-                vel fugit corporis et assumenda quis iusto corrupti, unde laborum itaque voluptate veniam. Ipsa,
-                esse aliquid explicabo deleniti consectetur rerum magnam, sed quibusdam qui, vitae eos eligendi
-                temporibus. Harum aperiam, ipsam quod vero voluptate et nostrum blanditiis. Veritatis reiciendis
-                harum adipisci error, provident fugiat labore impedit. Tempora doloribus, eveniet nulla explicabo
-                nisi eligendi mollitia animi sapiente unde, inventore cupiditate atque sequi vero aliquid maxime,
-                corrupti magnam praesentium excepturi delectus quaerat ipsa! Esse ducimus rem illo distinctio quos
-                veniam aliquam molestiae exercitationem! Error, autem aperiam. Aspernatur ratione dolore odio
-                nostrum praesentium animi possimus doloribus quidem accusantium corporis nobis ipsum at tempora
-                asperiores, sequi temporibus alias quaerat eos nemo necessitatibus qui molestiae sapiente expedita?
-                Fuga architecto dicta molestias quia quisquam est, accusamus maxime sit laboriosam nihil sequi iure
-                maiores dolore aut consequuntur adipisci repellendus quaerat soluta in possimus? Delectus possimus
-                aliquam architecto ipsa nemo ullam tenetur eaque corrupti aliquid quae magnam, voluptatibus, natus
-                ipsum iste odio necessitatibus amet eveniet vero modi consequuntur maxime asperiores sunt obcaecati!
-                Impedit iste voluptates dolorem animi explicabo nisi soluta accusamus tenetur voluptate magni porro
-                eos repudiandae quod, inventore atque, delectus nostrum. Quia veritatis architecto sit asperiores
-                illum unde consequatur porro. Ea maiores pariatur eaque voluptatem consectetur laborum aliquam!
-                Fugiat quibusdam et laborum nostrum temporibus modi harum dignissimos fuga asperiores. Aut, ipsum
-                ipsam. Maiores saepe suscipit sed aspernatur, odio consectetur, voluptas, dignissimos recusandae
-                laudantium esse deleniti quaerat at porro non. Deleniti, iusto delectus! Ad earum culpa, delectus
-                error odit pariatur impedit eius voluptas natus voluptatem nisi expedita mollitia quidem facere
-                magnam. Architecto veniam quo asperiores ipsa magnam fugiat quos est, nam optio ad nisi repellendus
-                rerum, numquam qui soluta hic et ex quibusdam ratione facilis, minus esse tempore! Voluptatum unde
-                magni adipisci nemo ipsam aliquid deleniti eos nihil error necessitatibus. Possimus, dolor
-                asperiores quisquam, fugiat fuga quod officia soluta vel adipisci ab perspiciatis voluptatum quo
-                aspernatur accusamus maiores officiis doloremque omnis assumenda ratione nam laboriosam. Autem
-                vitae, consequatur nostrum nesciunt dolorem dolorum. Mollitia possimus nostrum aspernatur fugit
-                velit iste, quod nemo autem quidem dignissimos eos sit accusantium iusto provident est tenetur!
-                Reiciendis et ex ipsum dignissimos recusandae quibusdam quos suscipit animi, corporis quod ipsa,
-                laboriosam, nemo perspiciatis minima cupiditate praesentium mollitia pariatur illum nobis? Dolorem,
-                cumque accusamus. Itaque ratione, veniam maiores ut aut doloremque? Nulla mollitia tempora
-                reprehenderit, dignissimos voluptatibus assumenda quos iure est laboriosam saepe illo explicabo ex
-                repudiandae, cupiditate hic voluptates asperiores! Quaerat, adipisci distinctio a accusantium,
-                consequuntur, aliquam ipsa voluptatum assumenda dolore odio vel veritatis minus atque iure non!
-                Optio veniam aliquid culpa architecto repellendus dolorem aspernatur.</p>
+            <table class="table">
+                <thead class="bg-grey-ss">
+                  <tr>
+                    <th class="text-center" scope="col" >Tamanho</th>
+                    <th class="text-center" scope="col">EUA</th>
+                    <th class="text-center" scope="col" >Comprimento do pé (cm)</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="text-center" scope="row">34,5</th>
+                    <td class="text-center">34,5</td>
+                    <td class="text-center">22</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">35</th>
+                    <td class="text-center">4,5</td>
+                    <td class="text-center">22,5</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center" scope="row">36</th>
+                    <td class="text-center">5</td>
+                    <td class="text-center">23,5</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">37</th>
+                    <td class="text-center">6</td>
+                    <td class="text-center">24</td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="text-center" scope="row">37,5</th>
+                    <td class="text-center">6,5</td>
+                    <td class="text-center">24,5</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">38</th>
+                    <td class="text-center">7</td>
+                    <td class="text-center">25</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center" scope="row">39</th>
+                    <td class="text-center">7,5</td>
+                    <td class="text-center">25,5</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">39,5</th>
+                    <td class="text-center">8</td>
+                    <td class="text-center">26</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center" scope="row">40</th>
+                    <td class="text-center">8,5</td>
+                    <td class="text-center">26,5</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">40,5</th>
+                    <td class="text-center">9</td>
+                    <td class="text-center">27</td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="text-center" scope="row">41</th>
+                    <td class="text-center">9,5</td>
+                    <td class="text-center">27,5</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">42</th>
+                    <td class="text-center">10,5</td>
+                    <td class="text-center">28</td>
+                  </tr>
+
+                  
+
+                  <tr>
+                    <td class="text-center" scope="row">42,5</th>
+                    <td class="text-center">10,5</td>
+                    <td class="text-center">28,5</td>
+                  </tr>
+
+                  <tr class="bg-grey-ss">
+                    <td class="text-center" scope="row">43</th>
+                    <td class="text-center">11</td>
+                    <td class="text-center">28</td>
+                  </tr>
+
+
+            
+                </tbody>
+              </table>
+              
         </div>
     </div>
-</div>`
+</div>
+`
 );
 
 btnGuiaTamanhos.addEventListener("click", () => {
@@ -136,7 +162,6 @@ const btnClosePopup = document.querySelector(".close-popup-ss");
 btnClosePopup.addEventListener("click", () => {
 	document.querySelector(".guia-tamanhos-ss-popup").classList.toggle("active-ss");
 });
-
 
 
 //======== Adicionando nova seção ========//
@@ -278,9 +303,8 @@ if(window.innerWidth <= 355){
 
 
 
-
-
-
+//Mudando sacola de compra
+document.querySelectorAll("#cartModal .modal-dialog .modal-content .cart-totals .label p")[1].innerHTML = "subtotal"
 
 
 
@@ -312,6 +336,22 @@ function chamarDados() {
 
 chamarDados();
 
+
+
+
+// Hotjar
+var x = 0;
+var hjCheck = setInterval(function() { // loop para procurar o Hotjar
+  x++;
+  if(x > 40) { // se depois de tentar 40 vezes não der certo, cancela o loop
+    clearInterval(hjCheck);
+  }
+  if(typeof hj === "function") { // ao encontrar o Hotjar...
+    hj('event', 'ss_variant'); // dispara o evento...
+    clearInterval(hjCheck); // e cancela o loop
+  }
+}, 300); // o loop roda a cada 300ms
+// 40 vezes 300 = 12.000 = 12 segundos tentando encontrar o Hotjar
 
 
 

@@ -22,6 +22,24 @@ document.querySelector("#page-block-s1jmi49fb9>div:nth-of-type(1)").insertAdjace
         <div>
             <p>“Acabei de instalar o novo aplicativo e acessar o Clear Pro pelo meu navegador, parabéns, surpreenderam 😍”</p>
             <span>Matheus Ricardo Hoffmann</span>
-        </div>
+            </div>
+
+            <img class="arrow-bottom" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/Teste5/arrow-bottom.svg" alt="">
     </div>
 `)
+
+
+if(window.innerWidth <= 700){
+    const iframeYtb = document.querySelector("#element-486")
+    const containerSS = document.querySelector(".container-ss")
+    const newIframe = iframeYtb.cloneNode(true)
+    iframeYtb.style.display = "none"
+
+    containerSS.insertAdjacentElement("beforeend",newIframe)
+}
+
+
+if(window.innerWidth <= 375){
+    document.querySelector("section#page-block-s1jmi49fb9 .section-block").style.height = "151vh !important" 
+    document.querySelector("#page-block-s1jmi49fb9").style.height = "151vh !important"
+}
