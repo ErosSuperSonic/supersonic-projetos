@@ -50,6 +50,7 @@ body {
 .head-ss a:hover,
 .button-container a:hover {
     background-color: #FFDF73;
+    text-decoration: none;
 }
 
 .max-container-ss h1 {
@@ -68,6 +69,7 @@ body {
 
 .max-container-ss h1 span {
     color: #FBC105;
+    display: inline-block;
 }
 
 .max-container-ss ul {
@@ -85,7 +87,7 @@ body {
 
 }
 
-.max-container-ss li img {
+.max-container-ss li svg {
     margin-right: 12px;
 }
 
@@ -141,6 +143,7 @@ body {
         justify-content: flex-start;
         margin-top: 7px;
         flex-direction: column;
+        padding-left: 0;
     }
 
     .max-container-ss ul li {
@@ -166,3 +169,4 @@ body {
         line-height: 18px;
     }
 }
+
