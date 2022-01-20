@@ -1,0 +1,138 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#page-block-7un6avq7m0b .section-block{
+    background-color: #030028;
+}
+.container-ss {
+    font-family: "Poppins";
+    padding-bottom: 96px;
+    padding-top: 91px;
+}
+
+.max-container-ss {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1300px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-ss {}
+
+.text-ss h1 {
+    width: 500px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    color: #030028;
+    margin-bottom: 26px;
+}
+
+.text-ss h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    color: #030028;
+    width: 540px;
+}
+
+.container-button {
+    width: 252px;
+}
+
+.container-button a {
+    width: 100%;
+    height: 59px;
+
+    display: flex;
+    background: #FF5200;
+    border-radius: 400px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: .4s;
+    margin-top: 82px;
+}
+
+.container-button a:hover {
+    text-decoration: none !important;
+    background: #ff8045;
+
+}
+
+.container-button p {
+    text-align: center;
+    margin-top: 13px;
+}
+.container-button-mobile{
+    display: none;
+}
+@media(max-width: 1309px) {
+    .max-container-ss {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1135px) {
+    .max-container-ss {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-button {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 758px) {
+    .container-ss{
+        padding-bottom: 14px;
+        padding-top: 20px;
+    }
+    .text-ss h1 {
+        font-size: 23px;
+        line-height: 30px;
+        text-align: center;
+        color: #030028;
+        margin-bottom: 19px;
+        width: 100%;
+    }
+
+    .text-ss h2 {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #030028;
+        margin-bottom: 23px;
+        width: 100%;
+    }
+
+    .container-button {
+        display: none;
+    }
+
+    .container-iframe-ss iframe,
+    .container-iframe-ss {
+        width: 100%;
+    }
+    .container-button-mobile a{
+        margin-top: 24px;
+    }
+    .container-button-mobile{
+        display: block;
+    }
+}
+
+@media(max-width: 414px){
+    .container-iframe-ss iframe, .container-iframe-ss{
+        height: 220px;
+    }
+}

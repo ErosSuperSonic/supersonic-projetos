@@ -1,0 +1,145 @@
+*,
+html,
+body,
+ul,
+p {
+
+    
+}
+
+.container-ss {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+
+    font-family: "Rico Sans";
+    background-color: #190564;
+    width: 100%;
+    padding-top: 100px;
+    color: #fff;
+    padding-bottom: 40px;
+
+}
+
+.max-container-ss {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-img-ss {
+    width: 600px;
+    margin-top: 50px;
+}
+
+.container-img-ss img {
+    width: 600px;
+}
+
+.text-ss h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 60px;
+    margin-bottom: 32px;
+}
+.text-ss ul{
+    list-style: none;
+    padding: 0;
+}
+.text-ss ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.text-ss ul li svg {
+    margin-right: 12px;
+}
+
+.container-button-ss a {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-weight: 700;
+
+    background: #FF5200;
+    text-decoration: none;
+    transition: .3s;
+    border-radius: 60px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+}
+
+.container-button-ss {
+    width: 212px;
+    text-align: center;
+}
+
+.container-button-ss a:hover {
+    text-decoration: none;
+    background: #b46e4e;
+}
+
+
+@media(max-width: 1070px) {
+
+    .container-img-ss img,
+    .container-img-ss {
+        width: 500px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .max-container-ss {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-ss {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+@media(max-width: 600px) {
+    .text-ss {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .container-img-ss {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .container-img-ss img {
+        width: 100%;
+        position: relative;
+        left: 7px;
+    }
+
+    .text-ss h1 {
+        font-size: 36px;
+        line-height: 52px;
+        font-weight: 600;
+    }
+    .text-ss ul li{
+        margin-bottom: 14px;
+    }
+    .container-button-ss{
+        width: 100%;
+    }
+    .container-ss {
+        padding-top: 28px;
+    }
+}
