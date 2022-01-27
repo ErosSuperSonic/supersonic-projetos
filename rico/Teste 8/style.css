@@ -5,9 +5,50 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-#page-block-7un6avq7m0b .section-block{
+
+.header-ss {
+    background: #190564;
+    font-family: Poppins;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.header-ss img {
+    width: 114px;
+    height: 50px;
+}
+
+.header-ss a {
+    width: 255px;
+    height: 59px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    display: flex;
+    background: #FF5200;
+    border-radius: 400px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: .4s;
+}
+
+
+.header-ss .max-container-ss {
+    align-items: center;
+
+}
+
+#page-block-7un6avq7m0b .section-block {
     background-color: #030028;
 }
+
 .container-ss {
     font-family: "Poppins";
     padding-bottom: 96px;
@@ -62,19 +103,21 @@ body {
     margin-top: 82px;
 }
 
-.container-button a:hover {
+.container-button a:hover,
+.header-ss a:hover {
     text-decoration: none !important;
     background: #ff8045;
-
 }
 
 .container-button p {
     text-align: center;
     margin-top: 13px;
 }
-.container-button-mobile{
+
+.container-button-mobile {
     display: none;
 }
+
 @media(max-width: 1309px) {
     .max-container-ss {
         width: 100%;
@@ -87,16 +130,39 @@ body {
         align-items: center;
     }
 
+    .header-ss .max-container-ss {
+        flex-direction: row;
+    }
+
+    .header-ss {
+        padding: 0;
+    }
+
+    .header-ss img {
+        position: relative;
+        top: -5px;
+    }
+
+    .header-ss a {
+        width: 164.24px;
+        height: 38px;
+        margin-top: 26px;
+        margin-bottom: 23px;
+    }
+
     .container-button {
         margin: 0 auto;
     }
 }
 
+
+
 @media(max-width: 758px) {
-    .container-ss{
+    .container-ss {
         padding-bottom: 14px;
         padding-top: 20px;
     }
+
     .text-ss h1 {
         font-size: 23px;
         line-height: 30px;
@@ -123,16 +189,20 @@ body {
     .container-iframe-ss {
         width: 100%;
     }
-    .container-button-mobile a{
+
+    .container-button-mobile a {
         margin-top: 24px;
     }
-    .container-button-mobile{
+
+    .container-button-mobile {
         display: block;
     }
 }
 
-@media(max-width: 414px){
-    .container-iframe-ss iframe, .container-iframe-ss{
+@media(max-width: 414px) {
+
+    .container-iframe-ss iframe,
+    .container-iframe-ss {
         height: 220px;
     }
 }

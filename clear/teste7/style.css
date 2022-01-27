@@ -1,0 +1,254 @@
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#page-block-bhyo40haq4{
+    display: none;
+}
+.logo-ss img {
+    width: 100px;
+}
+header{
+    background: #FFF;
+
+}
+.max-header{
+    display: flex;
+    justify-content: space-between;
+    width: 862px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.abra-conta-ss {
+    width: 148px;
+    height: 33px;
+    border: 2px solid #0404CF;
+    color: #0404CF;
+    font-size: 0.8669rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+.abra-conta-ss:hover {
+    color: #fff;
+    background: #0404CF;
+}
+
+.container-ss {
+    background: url("https://v.fastcdn.co/u/344766a4/58888087-0-bg.png") repeat-x rgb(5, 0, 245) 50% 50% / auto;
+}
+
+.container-img-ss {
+    width: 458px;
+}
+
+.container-img-ss img {
+    width: 100%;
+    position: relative;
+    left: 72px;
+}
+
+.container-img-ss p {
+    font-family: Clear Geo, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+    color: #FFFFFF;
+    text-align: right;
+    margin-top: 29px;
+}
+
+.max-container-ss {
+    width: 862px;
+    margin: 0 auto;
+
+
+    display: flex;
+    font-family: "Clear Geo", sans-serif;
+    padding-top: 55px;
+    justify-content: space-between;
+    padding-bottom: 82px;
+}
+
+.copy-text-ss {
+    color: #fff;
+    font-family: "Clear Geo", sans-serif;
+
+    width: 862px;
+    margin: 0 auto;
+    padding-bottom: 41px;
+}
+
+.text-ss h1 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFFFFF;
+    width: 440px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.text-ss h1 span{
+    display: inline-block;
+}
+.text-ss ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 38px;
+}
+
+.container-img-ss img {
+    width: 100%;
+}
+
+.text-ss li {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.text-ss li svg {
+    margin-right: 11px;
+}
+
+.btn-ss {
+    width: 348px;
+    height: 61.36px;
+    display: flex;
+    color: #000;
+    text-decoration: none !important;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    border-radius: 100px;
+    transition: .3s;
+}
+.btn-ss:hover{
+    background: #00FB79;
+}
+.btn-2-ss {
+    display: none;
+}
+
+@media(max-width: 1030px) {
+    .max-header{
+        width: 100%;
+    }
+    .container-img-ss img {
+        left: 0px;
+    }
+
+    .container-img-ss p {
+        position: relative;
+        left: -77px;
+    }
+
+    .max-container-ss,
+    .copy-text-ss {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media(max-width: 871px) {
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .copy-text-ss {
+        width: 100%;
+    }
+
+    .max-container-ss {
+        width: 100%;
+        padding-top: 21px;
+        padding-bottom: 32px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 768px) {
+    .text-ss h1 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    .container-img-ss {
+        width: 100%;
+    }
+
+    .text-ss,
+    .text-ss h1 {
+        width: 100%;
+    }
+
+    .text-ss h1 {
+        margin-bottom: 12px;
+    }
+
+    .text-ss li {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 35px;
+        margin-bottom: 8px;
+    }
+
+    .container-img-ss {
+        width: 289px;
+    }
+
+    .btn-1-ss {
+        display: none;
+    }
+
+    .btn-2-ss {
+        display: flex;
+        width: 100%;
+        max-width: 323px;
+    }
+
+    .container-img-ss p {
+        text-align: center;
+        left: 0;
+        margin-top: 0px;
+        margin-top: 14px;
+    }
+
+    .copy-text-ss {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 375px) and (max-device-height: 667px) {
+    .text-ss ul {
+        margin-bottom: -29px;
+    }
+}
