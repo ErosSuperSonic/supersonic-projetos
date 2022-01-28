@@ -43,3 +43,11 @@ document.querySelector("div#element-637").insertAdjacentHTML("beforeend", `
         <p>Leva só 5 minutos</p>
     </div>
 `)
+
+
+document.querySelector("div#element-637").insertAdjacentHTML("beforeend", `
+<div class="container-img">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/reclame.png">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/iBest.png">
+</div>
+`)
