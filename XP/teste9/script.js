@@ -51,3 +51,4 @@ document.querySelector("div#element-637").insertAdjacentHTML("beforeend", `
     <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/iBest.png">
 </div>
 `)
+

@@ -7,27 +7,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #element-32 {
-            top: 7.8125rem !important;
+         /* html,
+        body,
+        * {
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+        }  */
+
+        html {
+            scroll-behavior: smooth;
         }
 
-        .copy-xp,
-        .container-lista-ss ul,
-        .container-button,
-        .container-img {
-            position: relative;
-            bottom: 3rem;
+        #page-block-bmj34arwoi{
+            display: none
+        }
+        .header-ss {
+            background: #222222;
+            padding-bottom: 15px;
+            padding-top: 15px;
         }
 
-        #page-block-sjjaspugqr9,
-        #page-block-sjjaspugqr9 .section-block {
-            height: 60.9375rem !important;
+        .header-ss img {
+            width: 50px;
         }
 
-        #element-637>div>h1>span:nth-of-type(1),
-        #element-637>div>h1 {
-            display: none;
+        .header-ss div {
+            display: flex;
+            align-items: center;
         }
+
+        .max-container-header {
+            max-width: 1373px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .abrir-conta {
+            display: flex;
+            background: #FBC105;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #18191A;
+            font-family: Roboto, sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 24px;
+            text-transform: uppercase;
+            height: 33px;
+            width: 160px;
+            transition: .3s;
+        }
+
+        .abrir-conta:hover,
+        .container-button a:hover {
+            background: #ffd756;
+            text-decoration: none !important;
+        }
+
+        .acesse-conta {
+            color: #fff;
+            font-weight: 700;
+            height: 35px;
+            width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background: #000;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+
+        }
+
+        .container-ss {
+            background: url("//v.fastcdn.co/u/344766a4/60572765-0-FUNDO.png") repeat rgb(0, 0, 0) 50% 50% / cover;
+        }
+
+        .square-ss {
+            display: block;
+            border: 2px solid #FBC105;
+            width: 233px;
+            height: 233px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+
+        }
+
+        .square-ss p {
+            color: #fff;
+            margin-top: 16px;
+            font-size: 1.3rem;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container-imagens {
+            display: flex;
+        }
+
+        .container-imagens div {
+            margin-right: 40px;
+        }
+
+        .container-imagens .square-ss:nth-child(2) {
+            margin-top: 40px;
+        }
+
+        .max-container {
+            max-width: 1373px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 59px;
+            padding-bottom: 100px;
+            margin: 0 auto;
+        }
+
 
         .h1-ss {
             font-family: Arial;
@@ -41,18 +145,13 @@
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
-        #element-32,
-        .copy-xp,
-        .container-lista-ss {
-            width: 37.4375rem !important;
-        }
-
         .copy-xp {
             font-family: Arial;
-            font-weight: bold;
-            font-size: 28px;
+            font-weight: normal;
+            font-size: 24px;
             letter-spacing: 0.015em;
             color: #FFFFFF;
+            margin-top: 10px;
         }
 
         .container-lista-ss ul {
@@ -77,7 +176,7 @@
         .container-button {
             width: 235px;
             text-align: center;
-            padding-top: 65px;
+            padding-top: 45px;
         }
 
         .container-button a {
@@ -118,232 +217,230 @@
             margin-top: 60px;
         }
 
+        .text-ss {
+            width: 600px;
+            margin-right: 30px;
+        }
 
-        @media(max-width: 1200px) {
-            .h1-ss {
-                font-size: 36px;
+        @media(max-width: 1376px) {
+            .text-ss {
+                margin-left: 40px;
             }
 
-            .copy-xp {
-                font-size: 24px;
+            .max-container-header {
+                margin-left: 40px;
+                margin-right: 40px;
             }
         }
 
-        @media(max-width: 1028px) {
-
-            #page-block-sjjaspugqr9,
-            #page-block-sjjaspugqr9 .section-block {
-                height: 69.9375rem !important;
-            }
-        }
-
-        @media(max-width: 960px) {
-            .h1-ss {
-                font-size: 28px;
-                line-height: 30px;
+        @media(max-width: 1000px) {
+            .max-container {
+                flex-direction: column;
             }
 
-            .copy-xp {
-                font-size: 22px;
+            .container-imagens {
+                justify-content: center;
+                margin-top: 40px;
             }
 
-            .container-lista-ss ul li {
-                font-size: 20px;
-            }
-        }
-
-        @media(max-width: 856px) {
-
-            #page-block-sjjaspugqr9,
-            #page-block-sjjaspugqr9 .section-block {
-                height: 80.9375rem !important
-            }
-        }
-
-        @media(max-width: 768px) {
-
-            #page-block-sjjaspugqr9,
-            #page-block-sjjaspugqr9 .section-block {
-                height: 111.9375rem !important;
-            }
-
-            #element-32 {
-                width: 100% !important;
-            }
-
-            #element-637 {
-                left: 0rem;
-            }
-
-            #element-32 {
-                left: 50% !important;
-                transform: translateX(-50%) !important;
-                text-align: center !important;
-                top: 1.8125rem !important;
-            }
-
-            .copy-xp {
-                left: 50% !important;
-                transform: translateX(-50%) !important;
+            .text-ss {
+                width: 100%;
                 text-align: center;
-                bottom: 2rem;
-            }
-
-            .h1-ss {
-                font-size: 28px;
-                line-height: 37px;
-            }
-
-            #element-637 {
-                left: 2rem;
+                margin-right: 0;
+                margin-left: 0;
             }
 
             .container-button {
-                left: 50%;
-                transform: translateX(-50%);
-                padding-top: 38px;
+                margin: 0 auto;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
             }
 
-            .container-lista-ss {
-                position: relative;
-                left: -60px;
+            .container-img {
+                justify-content: center;
             }
 
-
-
-
-
-            #element-699 {
-                top: 48rem !important;
-            }
-
-            #element-705 {
-                top: 50rem !important;
-            }
-
-            #element-700 {
-                top: 56.375rem !important;
-            }
-
-
-
-            #element-697 {
-                top: 63.25rem !important;
-            }
-
-            #element-706 {
-                top: 65rem !important;
-            }
-
-            #element-698 {
-                top: 70.6875rem !important;
-            }
-
-
-
-            #element-695 {
-                top: 78.625rem !important;
-            }
-
-            #element-707 {
-                top: 80.1875rem !important;
-            }
-
-            #element-696 {
-                top: 86.0625rem !important;
-            }
-
-
-            #element-717 {
-                top: 93.875rem !important;
-            }
-
-            #element-719 {
-                top: 96.9375rem !important;
-            }
-
-            #element-718 {
-                top: 102.375rem !important;
-            }
-        }
-
-        @media(max-width:375px) {
-            #element-32 {
-                width: 90% !important;
+            .max-container {
+                margin-left: 0;
+                padding-left: 35px;
+                padding-right: 35px;
             }
 
             .h1-ss {
-                font-size: 25px;
-                line-height: 33px;
+                font-size: 32px;
+                line-height: 35px;
             }
 
             .copy-xp {
-                font-size: 20px;
-            }
-
-            .container-lista-ss{
-                left: -45px;
-            }
-            .container-lista-ss ul li{
                 font-size: 18px;
             }
 
-            #element-__gpage-block-bmj34arwoi-1304{
-                left: 1.0625rem !important;
+            .max-container {
+                padding-top: 32px;
+                padding-bottom: 32px;
             }
-            #element-__gpage-block-bmj34arwoi-1458{
-                left: 15.3125rem !important;
+        }
+
+        @media(max-width: 700px) {
+            .h1-ss{
+                margin-bottom: 32px;
             }
+            .container-lista-ss ul li {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .container-lista-ss ul {
+                padding-top: 40px;
+            }
+
+            .container-button {
+                padding-top: 16px;
+            }
+
+            .container-imagens {
+                flex-direction: column;
+            }
+
+            .container-imagens div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 0px;
+            }
+
+            .square-ss {
+                margin-top: 40px;
+            }
+
+            .text-ss {
+                margin-left: 0px;
+            }
+
+            .max-container-header {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+            .max-container-header img{
+                width: 37px;
+            }
+            .max-container-header a {
+                font-size: 12px;
+                width: fit-content;
+                height: 40px;
+                margin: 0;
+                padding-left: 12px;
+                padding-right: 12px
+            }
+            .max-container-header .acesse-conta{
+                height: 42px;
+                margin-left: 16px;
+            }
+
         }
     </style>
 </head>
 
 <body>
-    <h1 class="h1-ss">Invista de forma completa na <span style="color: #FBC105">maior corretora do Brasil</span></h1>
-    <p class="copy-xp">Veja o que só quem é XP vê</p>
+    <header class="header-ss">
+        <div class="max-container-header">
+            <img src="https://v.fastcdn.co/u/344766a4/56743717-0-XP-Investimentos---B.png">
 
-    <div class="container-lista-ss">
-        <ul>
-            <li>
-                <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M10 20.3333C14.6024 20.3333 18.3333 16.6024 18.3333 12C18.3333 7.39763 14.6024 3.66667 10 3.66667C5.39763 3.66667 1.66667 7.39763 1.66667 12C1.66667 16.6024 5.39763 20.3333 10 20.3333ZM10 22C4.47715 22 0 17.5228 0 12C0 6.47715 4.47715 2 10 2C15.5228 2 20 6.47715 20 12C20 17.5228 15.5228 22 10 22ZM8.8058 14.2011L5.58908 10.9863L4.41092 12.1652L8.80746 16.559L15.8733 9.47749L14.6935 8.30029L8.8058 14.2011Z"
-                        fill="white" />
-                </svg>
-                Mais de 38 anos de história
-            </li>
+            <div>
+                <a href="https://portal.xpi.com.br/" class="abrir-conta">Abrir sua conta</a>
+                <a href="https://cadastro.xpi.com.br/desktop/step/1" class="acesse-conta">Acesse sua conta</a>
+            </div>
+        </div>
+    </header>
+    <section class="container-ss">
+        <div class="max-container">
+            <div class="text-ss">
+                <h1 class="h1-ss">Invista de forma completa na <span style="color: #FBC105">maior corretora do
+                        Brasil</span>
+                </h1>
+                <p class="copy-xp">Veja o que só quem é XP vê</p>
 
-            <li>
-                <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M10 20.3333C14.6024 20.3333 18.3333 16.6024 18.3333 12C18.3333 7.39763 14.6024 3.66667 10 3.66667C5.39763 3.66667 1.66667 7.39763 1.66667 12C1.66667 16.6024 5.39763 20.3333 10 20.3333ZM10 22C4.47715 22 0 17.5228 0 12C0 6.47715 4.47715 2 10 2C15.5228 2 20 6.47715 20 12C20 17.5228 15.5228 22 10 22ZM8.8058 14.2011L5.58908 10.9863L4.41092 12.1652L8.80746 16.559L15.8733 9.47749L14.6935 8.30029L8.8058 14.2011Z"
-                        fill="white" />
-                </svg>
-                Mais de 1 milhão de cilentes
-            </li>
+                <div class="container-lista-ss">
+                    <ul>
+                        <li>
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10 20.3333C14.6024 20.3333 18.3333 16.6024 18.3333 12C18.3333 7.39763 14.6024 3.66667 10 3.66667C5.39763 3.66667 1.66667 7.39763 1.66667 12C1.66667 16.6024 5.39763 20.3333 10 20.3333ZM10 22C4.47715 22 0 17.5228 0 12C0 6.47715 4.47715 2 10 2C15.5228 2 20 6.47715 20 12C20 17.5228 15.5228 22 10 22ZM8.8058 14.2011L5.58908 10.9863L4.41092 12.1652L8.80746 16.559L15.8733 9.47749L14.6935 8.30029L8.8058 14.2011Z"
+                                    fill="white" />
+                            </svg>
+                            Mais de 38 anos de história
+                        </li>
+
+                        <li>
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10 20.3333C14.6024 20.3333 18.3333 16.6024 18.3333 12C18.3333 7.39763 14.6024 3.66667 10 3.66667C5.39763 3.66667 1.66667 7.39763 1.66667 12C1.66667 16.6024 5.39763 20.3333 10 20.3333ZM10 22C4.47715 22 0 17.5228 0 12C0 6.47715 4.47715 2 10 2C15.5228 2 20 6.47715 20 12C20 17.5228 15.5228 22 10 22ZM8.8058 14.2011L5.58908 10.9863L4.41092 12.1652L8.80746 16.559L15.8733 9.47749L14.6935 8.30029L8.8058 14.2011Z"
+                                    fill="white" />
+                            </svg>
+                            Mais de 1 milhão de cilentes
+                        </li>
 
 
-            <li>
-                <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M10 20.3333C14.6024 20.3333 18.3333 16.6024 18.3333 12C18.3333 7.39763 14.6024 3.66667 10 3.66667C5.39763 3.66667 1.66667 7.39763 1.66667 12C1.66667 16.6024 5.39763 20.3333 10 20.3333ZM10 22C4.47715 22 0 17.5228 0 12C0 6.47715 4.47715 2 10 2C15.5228 2 20 6.47715 20 12C20 17.5228 15.5228 22 10 22ZM8.8058 14.2011L5.58908 10.9863L4.41092 12.1652L8.80746 16.559L15.8733 9.47749L14.6935 8.30029L8.8058 14.2011Z"
-                        fill="white" />
-                </svg>
-                Mais de R$715 bilhões sob custódia
-            </li>
-        </ul>
-    </div>
+                        <li>
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10 20.3333C14.6024 20.3333 18.3333 16.6024 18.3333 12C18.3333 7.39763 14.6024 3.66667 10 3.66667C5.39763 3.66667 1.66667 7.39763 1.66667 12C1.66667 16.6024 5.39763 20.3333 10 20.3333ZM10 22C4.47715 22 0 17.5228 0 12C0 6.47715 4.47715 2 10 2C15.5228 2 20 6.47715 20 12C20 17.5228 15.5228 22 10 22ZM8.8058 14.2011L5.58908 10.9863L4.41092 12.1652L8.80746 16.559L15.8733 9.47749L14.6935 8.30029L8.8058 14.2011Z"
+                                    fill="white" />
+                            </svg>
+                            Mais de R$715 bilhões sob custódia
+                        </li>
+                    </ul>
+                </div>
 
 
-    <div class="container-button">
-        <a href="https://cadastro.xpi.com.br/desktop/step/1">Abra sua conta</a>
-        <p>Leva só 5 minutos</p>
-    </div>
+                <div class="container-button">
+                    <a href="https://cadastro.xpi.com.br/desktop/step/1">Abra sua conta</a>
+                    <p>Leva só 5 minutos</p>
+                </div>
 
-    <div class="container-img">
-        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/reclame.png">
-        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/iBest.png">
-    </div>
+                <div class="container-img">
+                    <img
+                        src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/reclame.png">
+                    <img
+                        src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/XP/teste9/iBest.png">
+                </div>
+            </div>
+
+            <div class="container-imagens">
+                <div>
+                    <a class="square-ss" href="#page-block-spg7o404a6c">
+                        <img src="https://v.fastcdn.co/u/344766a4/60571460-0-ACESSORIA.png" alt="">
+                        <p>ACESSORIA</p>
+                    </a>
+
+
+                    <a class="square-ss" href="#page-block-3duxq85swrf">
+                        <img src="https://v.fastcdn.co/u/344766a4/60571470-0-CARTAO.png" alt="">
+                        <p>CARTÃO XP VISA INFINITE</p>
+                    </a>
+                </div>
+
+
+                <div style="margin-right: 0px ;">
+                    <a class="square-ss" href="#page-block-19clnxwvyj5">
+                        <img src="https://v.fastcdn.co/u/344766a4/60571450-0-PLATAFORMA.png" alt="">
+                        <p>PLATAFORMA DE PRODUTOS XP</p>
+                    </a>
+
+
+                    <a class="square-ss" href="#page-block-9vp37xq1sgu">
+                        <img src="https://v.fastcdn.co/u/344766a4/60571455-0-300.png" alt="">
+                        <p>FOCO NOS INVESTIMENTOS</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
