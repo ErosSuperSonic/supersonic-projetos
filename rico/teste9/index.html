@@ -23,6 +23,7 @@
 
         .container-ss {
             font-family: Poppins, sans-serif;
+            position: relative;
         }
 
         .max-container {
@@ -68,11 +69,21 @@
             transition: .3s;
         }
 
+        .container-gif-ss {
+            width: 100px;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
+        .container-gif-ss img {
+            width: 100%;
+        }
 
         .main-ss {
             background: url("https://v.fastcdn.co/u/344766a4/56617102-0-Destaque-LP.png") no-repeat rgb(21, 20, 23) 48% 33% / auto;
-            padding-bottom: 20px;
+            padding-bottom: 100px;
             padding-left: 40px;
             padding-right: 40px;
         }
@@ -168,8 +179,9 @@
             text-decoration: none !important;
             background: #F8A27A;
         }
-        @media(min-width:700px) and (min-device-height:667px){
-            .text-ss h1{
+
+        @media(min-width:700px) and (min-device-height:667px) {
+            .text-ss h1 {
                 line-height: 79.8px;
             }
         }
@@ -179,6 +191,10 @@
                 background-position: top;
                 padding-top: 130px;
             }
+
+            .container-gif-ss {
+                bottom: 70px;
+            }
         }
 
         @media(max-width:700px) {
@@ -187,8 +203,6 @@
                 background-position: bottom;
                 height: 100vh;
                 padding-top: 14px;
-
-                background-position-y: -163px;
             }
 
             .text-ss {
@@ -201,7 +215,7 @@
                 text-align: center;
                 font-size: 34px;
                 padding-top: 14px;
-                line-height:41.8px;
+                line-height: 41.8px;
             }
 
             .text-ss ul {
@@ -233,15 +247,45 @@
                 width: 90%;
                 max-width: 289px;
             }
+
+            .container-gif-ss {
+                left: 85%;
+                transform: translateX(-50%);
+            }
         }
 
 
-        @media(max-width:375px) and (min-device-height:667px) {
+
+        @media(max-width: 390px){
+            .main-ss{
+                background-position-y: -163px;
+            }
+        }
+
+        @media(max-width: 413px) and (min-device-width: 895px) {
+            .container-gif-ss{
+                bottom: 97px;
+            }
+        }
+
+        @media(max-width: 400px){
+            .container-gif-ss{bottom: 70px;} 
+        }
+
+        @media(max-width:375px) and (min-device-height:640px) {
             .main-ss {
                 background-position-y: -178px;
             }
-
         }
+
+
+        @media(max-width:375px) and (max-device-height:667px) {
+            .main-ss {
+                background-position-y: -178px;
+            }
+        }
+
+
 
         @media(max-width:360px) and (min-device-height:740px) {
             .main-ss {
@@ -253,6 +297,10 @@
 
 <body>
     <section class="container-ss">
+
+        <div class="container-gif-ss">
+            <img src="https://v.fastcdn.co/u/344766a4/56210187-0-Scroll-Down-white.gif" alt="">
+        </div>
 
         <header class="header-ss">
             <div class="max-container">
