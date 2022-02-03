@@ -7,117 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .imgs-ss {
-            position: absolute;
-            right: -16px;
-            bottom: -76px;
-            display: flex;
-            align-items: center;
-        }
+      .container-ss{
+          width: 100%;
+      }
+      .container-ss__maxwidth{
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+      }
+      
+      .container-ss__img{
+          width: 200px;
 
-        .mg-right {
-            margin-right: -18px
-        }
-
-        .imgs-ss img {
-            width: 70%;
-        }
-
-        .hero__container soma-grid-row {
-            margin-bottom: 105px !important;
-        }
-
-        @media screen and (min-width: 768px) {
-            .hero {
-                min-height: 746px !important;
-            }
-        }
-
-
-
-        @media(max-width: 1250px) {
-            .imgs-ss img {
-                width: 159px;
-            }
-
-            .imgs-ss {
-                right: 29px;
-                bottom: -43px;
-                right: -6px;
-            }
-        }
-
-        @media(max-width:1034px) {
-            .imgs-ss {
-                right: 6px;
-                bottom: 27px;
-            }
-
-        }
-
-        @media(max-width: 767px) {
-            .imgs-ss img {
-                width: 120px;
-            }
-
-            .imgs-ss {
-                left: 50%;
-                right: 0px;
-                transform: translateX(-50%);
-
-                align-items: center;
-                justify-content: center;
-            }
-        }
-
-        @media(max-width: 600px) {
-            .imgs-ss {
-                bottom: 21px;
-            }
-        }
-
-
-        @media(max-width: 375px) and (min-device-height: 667px) {
-            .bg-hero-409a0af1946745114da8d253a311abbd[class] {
-                height: 100vh;
-            }
-
-            .imgs-ss {
-                bottom: 122px;
-            }
-
-            .hero__container soma-grid-row {
-                margin-bottom: 200px !important;
-            }
-        }
-
-        @media(max-width: 360px) and (min-device-height: 740px) {
-            .bg-hero-409a0af1946745114da8d253a311abbd[class] {
-                height: 100vh;
-            }
-
-            .imgs-ss {
-                bottom: 180px;
-            }
-
-            .hero__container soma-grid-row {
-                margin-bottom: 254px !important;
-            }
-        }
+      }
     </style>
 </head>
 
 <body>
-    <div class="imgs-ss">
-        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/reclame.png">
-        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/best.png">
+
+    <div class="container-ss">
+        <div class="container-ss__maxwidth container-ss__maxwidth--hoverOpacity">
+            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/reclame.png" alt="Selo reclame aqui">
+            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/best.png" alt="Selo best">
+            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/selo%20b3%20bmf-bovespa.png" alt="selo b3 bmf-bovespa">
+            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20CETIP%20Certifica%20instituição%20financeira.png" alt="Selo CETIP Certifica instituição financeira">
+            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20anbima%20produtos%20de%20investimento.png" alt="Selo anbima produtos de investimento">
+            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/selo%20retail%20broker.png" alt="selo retail broker">
+            <img class="container-ss__img" src="" alt="">
+        </div>
     </div>
 
-    <script>
-        document.querySelector(".hero__container").insertAdjacentHTML("beforeend", `  <div class="imgs-ss">
-        <img mg-right src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/reclame.png">
-        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/best.png">
-    </div>`)
 
     </script>
 </body>
