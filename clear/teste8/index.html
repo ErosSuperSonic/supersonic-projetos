@@ -7,35 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      .container-ss{
-          width: 100%;
-      }
-      .container-ss__maxwidth{
-          display:flex;
-          justify-content:space-between;
-          align-items:center;
-      }
-      
-      .container-ss__img{
-          width: 200px;
+        .container-ss {
+            width: 100%;
+            background-color: #f5f7f9;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
 
-      }
+        .container-ss__maxwidth {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1312px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .container-ss__img {
+            height: 100px;
+            margin: 10px;
+
+        }
+
+        .container-ss__maxwidth--hoverOpacity {
+            opacity: 0.3;
+            transition: .3s;
+        }
+
+        .container-ss__maxwidth--hoverOpacity:hover {
+            opacity: 1;
+        }
+
+        .container-ss__img--height130 {
+            height: 130px;
+        }
+
+        @media(max-width: 768px) {
+            .container-ss__img--none {
+                display: none;
+            }
+
+            div.section-products {
+                margin-top: -49px;
+            }
+        }
+
+        @media(max-width: 418px) {
+            .container-ss__maxwidth--hoverOpacity {
+                opacity: 1;
+            }
+
+            .container-ss__img {
+                height: 81px;
+            }
+
+            .container-ss__img--height130 {
+                height: 90px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container-ss">
+    <section class="container-ss">
         <div class="container-ss__maxwidth container-ss__maxwidth--hoverOpacity">
-            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/reclame.png" alt="Selo reclame aqui">
-            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/best.png" alt="Selo best">
-            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/selo%20b3%20bmf-bovespa.png" alt="selo b3 bmf-bovespa">
-            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20CETIP%20Certifica%20instituição%20financeira.png" alt="Selo CETIP Certifica instituição financeira">
-            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20anbima%20produtos%20de%20investimento.png" alt="Selo anbima produtos de investimento">
-            <img class="container-ss__img" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/selo%20retail%20broker.png" alt="selo retail broker">
-            <img class="container-ss__img" src="" alt="">
+            <img class="container-ss__img container-ss__img--height130"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/reclame.png"
+                alt="Selo reclame aqui">
+            <img class="container-ss__img container-ss__img--height130"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/best.png"
+                alt="Selo best">
+            <img class="container-ss__img  container-ss__img--none"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/selo%20b3%20bmf-bovespa.png"
+                alt="selo b3 bmf-bovespa">
+            <img class="container-ss__img"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20CETIP%20Certifica%20instituição%20financeira.png"
+                alt="Selo CETIP Certifica instituição financeira">
+            <img class="container-ss__img container-ss__img--none"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20anbima%20produtos%20de%20investimento.png"
+                alt="Selo anbima produtos de investimento">
+            <img class="container-ss__img container-ss__img--none"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/selo%20retail%20broker.png"
+                alt="selo retail broker">
+            <img class="container-ss__img container-ss__img--none"
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/Selo%20B3%201.png"
+                alt="selo B cewrtifica">
         </div>
-    </div>
+    </section>
 
 
     </script>
