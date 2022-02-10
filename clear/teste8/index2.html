@@ -20,6 +20,8 @@
 
     .container-ss {
         background: #F5F7F9;
+        padding-top: 70px;
+        padding-bottom:70px;
     }
 
     .container-ss__maxContainer {
@@ -46,11 +48,36 @@
         color: #000000;
     }
 
+    .container-ss__img {
+        margin-right: 60px;
+    }
+
+    .container-ss__img--one {
+        width: 135px;
+        height: 101px;
+    }
+
+    .container-ss__img--two {
+        width: 100px;
+        height: 100px;
+    }
+
     strong {
         font-weight: bold !important;
     }
 
+    .container-ss__div--marginRight {
+        margin-right: 130px;
+    }
+
     @media(max-width: 1278px) {
+        .container-ss__img {
+            margin-right: 20px;
+        }
+
+        .container-ss__div--marginRight {
+            margin-right: 0px;
+        }
 
         .container-ss__maxContainer {
             flex-direction: column;
@@ -60,22 +87,25 @@
     }
 
     @media(max-width: 768px) {
+
+        .container-ss__img--one {
+            width: 111.87px;
+            height: 84px;
+        }
+
+        .container-ss__img--two {
+            width: 102px;
+            height: 102px;
+        }
+
+
         .container-ss__div--flex p {
             font-size: 14px;
             line-height: 20px;
             width: 140px;
         }
 
-        .container-ss__img {
-            height: 84px;
-            margin-right: 20px;
-        }
-
-        .container-ss__img--height {
-            height: 109px;
-        }
-
-        #element{
+        #element {
             margin-top: -43px;
         }
     }
@@ -84,15 +114,15 @@
 <body>
     <section class="container-ss">
         <div class="container-ss__maxContainer">
-            <div class="container-ss__div--flex">
-                <img class="container-ss__img"
+            <div class="container-ss__div--flex container-ss__div--marginRight">
+                <img class="container-ss__img container-ss__img--one"
                     src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/reclame.png"
                     alt="Selo reclame aqui">
                 <p><strong>Indicada ao prêmio</strong> Reclame Aqui 2021 em 6º lugar</p>
             </div>
 
             <div class="container-ss__div--flex">
-                <img class="container-ss__img container-ss__img--height"
+                <img class="container-ss__img container-ss__img--two"
                     src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste8/best.png"
                     alt="Selo best">
                 <p><strong>8º lugar</strong> no Voto Popular no iBest em 2021</p>
