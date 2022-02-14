@@ -127,6 +127,7 @@ div.resultsfilters .tagitem img {
         box-shadow: none;
         border-radius: 0;
         padding: 19px 0px 24px 29px;
+        margin: 0px 0px 20px 0px;
     }
 
     div.resultsfilters .alert_mobile_button,
@@ -139,6 +140,15 @@ div.resultsfilters .tagitem img {
 
     div.resultsfilters .tagitem {
         left: 70px;
+    }
+
+    .overlaypopup .contentPopup .flightsfilters .filter_block {
+        box-shadow: 0px 0px 8px rgb(0 0 0 / 22%) !important;
+        margin-bottom: 20px;
+    }
+
+    div.filterMobContent>div>div:nth-of-type(2) {
+        margin-bottom: 20px;
     }
 
     .maisUsados {
@@ -177,11 +187,75 @@ div.resultsfilters .tagitem img {
 
 
 
-    button.flightsfilters .btnclearfilters{
-        font-size:16px
+    button.flightsfilters .btnclearfilters {
+        font-size: 16px
     }
 
-    .flightsfilters .filter_block.open .header_filterblock svg{
+    .flightsfilters .filter_block.open .header_filterblock svg {
         transform: rotate(180deg);
+        position: relative;
+        top: 4px;
+    }
+
+
+    .buttonAplicarFiltros {
+        background-color: #fff;
+        padding: 14px 40px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        box-shadow: 4px 0px 4px rgb(0 0 0 / 21%);
+    }
+
+
+    .buttonAplicarFiltros p {
+        background: #FF8A00;
+        border-radius: 3px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+
+        font-weight: bold;
+        color: #fff;
+    }
+
+    button.applyButton {
+        display: none;
+    }
+
+    div.overlaypopup .contentPopup .filterMobContent {
+        padding-bottom: 70px;
+    }
+
+    .abrirModal {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 50%;
+        top: 38px;
+    }
+
+    div.overlaypopup .contentPopup {
+        background-color: #eceff1;
+    }
+
+    .contentbox div.inforesultfilters {
+        margin: 0px;
+        margin-top: -23px;
+        padding-left: 30px;
+        margin-bottom: 21px;
+    }
+
+    .contentbox button.clearresultfilters {
+        border: none;
+        text-decoration: underline;
+        color: #388BF7;
+        font-weight: normal;
+        font-size: 14px;
     }
 }

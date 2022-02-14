@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        boyd,
+        html,
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container-ss {
+            background: url("https://www.xpi.com.br/assets/images/hero-renda-fixa.jpg");
+            padding-top: 80px;
+            padding-bottom: 100px;
+            background-size: cover;
+            background-position: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .max-container {
+            max-width: 1184px;
+            margin: 0 auto;
+        }
+
+        .container-ss h1 {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            /* or 133% */
+
+            letter-spacing: -0.02em;
+
+            color: #FFFFFF;
+            width: 700px;
+            position: relative;
+            padding-bottom: 33px;
+        }
+
+        .container-ss h1::after {
+            position: absolute;
+            content: "";
+            width: 23px;
+            height: 3px;
+            bottom: 0px;
+            left: 0px;
+            background-color: #FBC105;
+        }
+
+        .container-ss p {
+            font-family: Roboto, sans-serif;
+
+            font-size: 24px;
+            line-height: 48px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+            padding-bottom: 57px;
+        }
+
+        .container-ss ul {
+            padding: 0px;
+            list-style: none;
+        }
+
+        .container-ss ul li {
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            line-height: 24px;
+            /* identical to box height, or 100% */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.1px;
+
+            color: #FFFFFF;
+            font-family: Roboto, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .container-ss ul li svg {
+            margin-right: 12px;
+        }
+
+        .container-button {
+            width: 350px;
+            text-align: center;
+        }
+
+        .container-button a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 57px;
+
+            background: #FBC105;
+            text-decoration: none;
+
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            /* identical to box height, or 112% */
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #000000;
+            text-emphasis: none;
+            margin-top: 57px;
+            margin-bottom: 6px;
+        }
+
+        .container-button p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+
+        @media(max-width:720px) {
+            .container-ss {
+                background: linear-gradient(97.81deg, #303030 1.23%, #4b4b4b 100%);
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .container-ss h1 {
+                font-size: 26px;
+                text-align: center;
+                line-height: 100%;
+                padding-bottom: 35px;
+                width: 100%;
+            }
+
+            .container-ss h1::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .container-ss p {
+                font-size: 18px;
+                padding-bottom: 28px;
+                line-height: 100%;
+                padding-top: 18px;
+                text-align: center;
+            }
+
+            .container-ss ul li {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 8px;
+            }
+
+            .container-button {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .container-button a{
+                margin-top: 28px;
+                font-size:18px
+            }
+            .container-button p {
+                font-size: 12px;
+                padding-top: 4px;
+                padding-bottom:0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-ss">
+        <div class="max-container">
+            <h1>Conte com mais de 80 opções de renda fixa que rendem acima da poupança e inflação</h1>
+            <p>Invista com taxa zero na melhor corretora eleita pela iBest</p>
+
+            <ul>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z"
+                            fill="white" />
+                    </svg>
+                    Com segurança pela garantia do FGC
+                </li>
+
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z"
+                            fill="white" />
+                    </svg>
+                    Rentabilidade estável e recorrente
+                </li>
+
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z"
+                            fill="white" />
+                    </svg>
+                    Acessível a partir de R$30,00
+                </li>
+            </ul>
+
+            <div class="container-button">
+                <a href="https://cadastro.xpi.com.br">Abra sua conta para investir</a>
+                <p>Leva só 5 minutos</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

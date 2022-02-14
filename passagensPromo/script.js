@@ -1,4 +1,58 @@
 if (window.innerWidth <= 680) {
+
+	createFloatingFilter();
+	activyModaFiltro();
+	encontrandoBotao();
+	popupAlertDisplayNone();
+	createMaisUsadosInListFilters();
+}
+
+
+function createFloatingFilter() {
+	const filtroFlutuante = `<div class="popupFlutuanteFiltro">
+	<p>Filtros</p>
+	<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path
+			d="M20 39.4901C9.23301 39.4901 0.5 30.7617 0.5 19.9951C0.5 9.2284 9.23301 0.5 20 0.5C30.767 0.5 39.5 9.2284 39.5 19.9951C39.5 30.7617 30.767 39.4901 20 39.4901Z"
+			fill="#FF8A00" stroke="#FF8A00" />
+		<path d="M21.8344 24.6505H10" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M29.2857 24.6505H26.2175" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path
+			d="M24.0259 26.9934C25.2363 26.9934 26.2175 25.9443 26.2175 24.6502C26.2175 23.356 25.2363 22.3069 24.0259 22.3069C22.8155 22.3069 21.8344 23.356 21.8344 24.6502C21.8344 25.9443 22.8155 26.9934 24.0259 26.9934Z"
+			stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M14.8214 14.3403H10" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M29.2857 14.3403H19.2045" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		<path
+			d="M17.0129 16.6835C18.2233 16.6835 19.2045 15.6344 19.2045 14.3403C19.2045 13.0462 18.2233 11.9971 17.0129 11.9971C15.8025 11.9971 14.8214 13.0462 14.8214 14.3403C14.8214 15.6344 15.8025 16.6835 17.0129 16.6835Z"
+			stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+	</svg>
+</div>`;
+	document.querySelector(".contentbox").insertAdjacentHTML("beforeend", filtroFlutuante);
+
+	//adicionando action no button flutuante
+
+	const popupFiltro = document.querySelector(".popupFlutuanteFiltro");
+
+	popupFiltro.addEventListener("click", () => {
+		document.querySelector("div.resultsfilters button.filter_mobile_button").click();
+		createButtonInModal()
+		modifyImageInPopup()
+	});
+
+
+	document.addEventListener("scroll", () => {
+		if (window.scrollY >= 440) {
+			popupFiltro.style.opacity = 1;
+			popupFiltro.style.pointerEvents = "all";
+		} else {
+			popupFiltro.style.opacity = "0";
+			popupFiltro.style.pointerEvents = "none";
+		}
+	});
+}
+
+function encontrandoBotao() {
+
 	const iconeFilter = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <g fill="none" fill-rule="evenodd">
                                 <path d="M0 0h24v24H0z"/>
@@ -9,14 +63,10 @@ if (window.innerWidth <= 680) {
                             </g>
                         </svg>`;
 
-	//Mudança filtro no mobile
-
 	let encontrouButton = false;
-	let encontrouItens = false;
-	let encontrouPopupAlert = false;
 
 	const encontrandoBotao = setInterval(() => {
-		if (!encontrouButton && !encontrouItens) {
+		if (!encontrouButton) {
 			const mobileButton = document.querySelector(
 				".filter_mobile_button"
 			);
@@ -28,6 +78,10 @@ if (window.innerWidth <= 680) {
 			}
 		}
 	}, 300);
+}
+
+function createMaisUsadosInListFilters() {
+	let encontrouItens = false;
 
 	const itensSeatch = setInterval(() => {
 		if (!encontrouItens) {
@@ -39,11 +93,21 @@ if (window.innerWidth <= 680) {
 					"afterend",
 					"<p class='maisUsados'>Mais usados</p>"
 				);
+
+				itemFilter.insertAdjacentHTML(
+					"afterend",
+					"<span class='abrirModal'></span>"
+				);
 				encontrouItens = true;
 				clearInterval(itensSeatch);
 			}
 		}
 	}, 300);
+}
+
+
+function popupAlertDisplayNone() {
+	let encontrouPopupAlert = false;
 
 	const popupAlert = setInterval(() => {
 		if (!encontrouPopupAlert) {
@@ -64,63 +128,9 @@ if (window.innerWidth <= 680) {
 			}
 		}
 	}, 300);
-
-	//adicionando botão flutuante
-	const filtroFlutuante = `<div class="popupFlutuanteFiltro">
-                                <p>Filtros</p>
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20 39.4901C9.23301 39.4901 0.5 30.7617 0.5 19.9951C0.5 9.2284 9.23301 0.5 20 0.5C30.767 0.5 39.5 9.2284 39.5 19.9951C39.5 30.7617 30.767 39.4901 20 39.4901Z"
-                                        fill="#FF8A00" stroke="#FF8A00" />
-                                    <path d="M21.8344 24.6505H10" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M29.2857 24.6505H26.2175" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M24.0259 26.9934C25.2363 26.9934 26.2175 25.9443 26.2175 24.6502C26.2175 23.356 25.2363 22.3069 24.0259 22.3069C22.8155 22.3069 21.8344 23.356 21.8344 24.6502C21.8344 25.9443 22.8155 26.9934 24.0259 26.9934Z"
-                                        stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M14.8214 14.3403H10" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M29.2857 14.3403H19.2045" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M17.0129 16.6835C18.2233 16.6835 19.2045 15.6344 19.2045 14.3403C19.2045 13.0462 18.2233 11.9971 17.0129 11.9971C15.8025 11.9971 14.8214 13.0462 14.8214 14.3403C14.8214 15.6344 15.8025 16.6835 17.0129 16.6835Z"
-                                        stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>`;
-	document
-		.querySelector(".contentbox")
-		.insertAdjacentHTML("beforeend", filtroFlutuante);
-
-	//adicionando action no button flutuante
-
-	const popupFiltro = document.querySelector(".popupFlutuanteFiltro");
-
-	popupFiltro.addEventListener("click", () => {
-		document
-			.querySelector("div.resultsfilters button.filter_mobile_button")
-			.click();
-	});
-
-	document.addEventListener("scroll", () => {
-		if (window.scrollY >= 440) {
-			popupFiltro.style.opacity = 1;
-			popupFiltro.style.pointerEvents = "all";
-		} else {
-			popupFiltro.style.opacity = "0";
-			popupFiltro.style.pointerEvents = "none";
-		}
-	});
-
-	carregarImgsPopup();
-
-	document
-		.querySelectorAll(".contentPopup .item_filterblock.undefined")
-		.forEach((el) => {
-			el.addEventListener("click", () => {
-				carregarImgsPopup();
-				console.log("Oii");
-			});
-		});
 }
 
-function carregarImgsPopup() {
+function modifyImageInPopup() {
 	const arrowPopup = `<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M1.00002 8L7.51002 1.49L14.02 8" stroke="#484848" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 	</svg>
@@ -185,8 +195,7 @@ function carregarImgsPopup() {
 						document
 							.querySelectorAll(
 								".contentPopup .item_filterblock.undefined"
-							)
-							[index].insertAdjacentHTML(
+							)[index].insertAdjacentHTML(
 								"afterbegin",
 								checkedPopup
 							);
@@ -200,8 +209,7 @@ function carregarImgsPopup() {
 						document
 							.querySelectorAll(
 								".contentPopup .item_filterblock.undefined"
-							)
-							[index].insertAdjacentHTML(
+							)[index].insertAdjacentHTML(
 								"afterbegin",
 								roundedPopup
 							);
@@ -209,6 +217,93 @@ function carregarImgsPopup() {
 				});
 
 				clearInterval(encontrandoArrow);
+			}
+		}
+	}, 300);
+
+
+}
+
+
+function createButtonInModal() {
+	let encontrouModal = false;
+	const encontrandoModal = setInterval(() => {
+		if (!encontrouModal) {
+			const modalBody = document.querySelector(".modal-body")
+
+			if (modalBody) {
+				const btnAplicarFiltro = `<div class="buttonAplicarFiltros">
+											<p>Aplicar Filtros</p>
+										</div>`
+				modalBody.insertAdjacentHTML("beforeend", btnAplicarFiltro)
+
+				document.querySelector(".buttonAplicarFiltros").addEventListener("click", () => {
+					listTagItem()
+					document.querySelector("button.applyButton").click()
+				})
+
+				encontrouModal = true;
+				clearInterval(encontrandoModal);
+
+			}
+		}
+	}, 300);
+}
+
+
+function activyModaFiltro() {
+	let encontrouBtn = false;
+	const encontrandoBtn = setInterval(() => {
+		if (!encontrouBtn) {
+			const btnTeste = document.querySelector(".abrirModal")
+
+			if (btnTeste) {
+
+
+				btnTeste.addEventListener("click", () => {
+					document.querySelector("div.resultsfilters button.filter_mobile_button").click()
+					createButtonInModal()
+					modifyImageInPopup()
+				})
+				encontrouBtn = true;
+				clearInterval(encontrandoBtn);
+
+			}
+		}
+	}, 300);
+
+}
+
+
+function listTagItem() {
+	const allTagsItens = document.querySelectorAll(".modal-body  .filter_tags .tagitem");
+	addTagItensInFilterHome(allTagsItens)
+	clearFilterHome();
+}
+
+function addTagItensInFilterHome(tagsItens) {
+	const myTagsItens = Array.from(tagsItens)
+	console.log(document.querySelector(".resultsfilters"))
+	myTagsItens.forEach((el) => {
+		document.querySelector(".resultsfilters").insertAdjacentElement("afterbegin", el)
+	})
+}
+
+
+function clearFilterHome() {
+	let timeRemoveItens = false;
+
+	const itensInSearchHome = setInterval(() => {
+		if (!timeRemoveItens) {
+			const itemFilter = document.querySelector(".clearresultfilters")
+			if (itemFilter) {
+				itemFilter.addEventListener("click", () => {
+					document.querySelectorAll(".resultsfilters .tagitem").forEach((el) => {
+						el.remove()
+					})
+				})
+				timeRemoveItens = true;
+				clearInterval(itensInSearchHome);
 			}
 		}
 	}, 300);
