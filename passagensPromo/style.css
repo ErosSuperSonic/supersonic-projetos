@@ -1,261 +1,124 @@
-.resultsfilters {
-    background: #fff;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    padding: 40px 0px 23px 20px;
-    position: relative;
-}
-
-div.resultsfilters {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 4px 4px;
-}
-
-.resultsfilters .title_resultsfilters {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 22px;
-    color: #484848;
-}
-
-div.resultsfilters .alert_mobile_button,
-div.resultsfilters .filter_mobile_button,
-div.resultsfilters .freq_filters,
-div.resultsfilters .tagitem {
-    margin: 0;
-    margin-top: 26px;
-    padding: 11px 30px;
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    font-family: "Open sans", sans-serif;
-
-
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-
-div.resultsfilters .tagitem {
-    background: #186AAF;
-    position: relative;
-}
-
-div.resultsfilters .tagitem img {
-    position: absolute;
-    right: -9px;
-    width: 20px;
-    height: 20px;
-    background: #FF8A00;
-    border-radius: 50%;
-    padding: 3px;
-    top: -8px;
-}
-
-
-.popupFlutuanteFiltro {
-    display: none;
-}
-
-/* FILTRO NO MOBILE */
-
-
-
-@media(max-width:680px) {
-    div.resultsfilters button.filter_mobile_button {
+@media(min-width: 769px) {
+    .seloContainer {
         position: absolute;
-        width: 40px;
-        height: 40px;
-        padding: 0px;
+        left: 48px;
+    }
+
+    .seloContainer svg {
+        width: 100px;
+    }
+
+    .copy-ss p {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #FF0000;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #FF8A00;
-        border-radius: 100%;
     }
 
-    .resultsfilters .freq_filters img {
-        margin: auto;
-        height: initial;
-    }
-
-    button.filter_mobile_button p {
-        position: absolute;
-        top: -23px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        display: flex;
-        align-items: center;
-        color: #484848;
-    }
-
-    button.freq_filters {
-        transform: translateX(72px);
-    }
-
-    div.filter_tags .tagitem {
-        font-weight: 600;
-        font-size: 14px;
+    .copy-ss {
         position: relative;
-        margin-right: 24px;
-        margin-top: 8px;
-    }
-
-    div.filter_tags .tagitem img {
-        position: absolute;
-        right: -7px;
-        width: 15px;
-        height: 15px;
-        background: #FF8A00;
-        border-radius: 50%;
-        padding: 2px;
-        top: -5px;
-    }
-
-    div.flightsfilters .filter_block .header_filterblock {
-        color: #484848;
-    }
-
-    div.overlaypopup .contentPopup .applyButton,
-    div.resultsfilters .filter_mobile_button.applied {
-        background: #FF8A00;
-    }
-
-    div.resultsfilters {
-        box-shadow: none;
-        border-radius: 0;
-        padding: 19px 0px 24px 29px;
-        margin: 0px 0px 20px 0px;
-    }
-
-    div.resultsfilters .alert_mobile_button,
-    div.resultsfilters .filter_mobile_button,
-    div.resultsfilters .freq_filters,
-    div.resultsfilters .tagitem {
-        font-size: 14px;
-        padding: 3px 9px;
-    }
-
-    div.resultsfilters .tagitem {
-        left: 70px;
-    }
-
-    .overlaypopup .contentPopup .flightsfilters .filter_block {
-        box-shadow: 0px 0px 8px rgb(0 0 0 / 22%) !important;
-        margin-bottom: 20px;
-    }
-
-    div.filterMobContent>div>div:nth-of-type(2) {
-        margin-bottom: 20px;
-    }
-
-    .maisUsados {
-        position: absolute;
-        left: 101px;
-        font-size: 14px;
-        top: 18px;
-        color: #484848;
-    }
-
-    .popupFlutuanteFiltro {
-        display: flex;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        position: fixed;
         bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 8px 26px;
-        border-radius: 10px 10px 0px 0px;
-        font-family: "Open Sans";
-        z-index: 1000;
-        transition: .3s;
-        opacity: 0;
-        pointer-events: none;
-
+        width: 100%;
+        margin-top: 10px;
     }
 
-    .popupFlutuanteFiltro p {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        color: #484848;
+    .copy-ss svg {
+        width: 25px;
+        height: 25px;
         margin-right: 7px;
     }
 
-
-
-    button.flightsfilters .btnclearfilters {
-        font-size: 16px
-    }
-
-    .flightsfilters .filter_block.open .header_filterblock svg {
-        transform: rotate(180deg);
+    .flightcardlist {
         position: relative;
-        top: 4px;
     }
 
-
-    .buttonAplicarFiltros {
-        background-color: #fff;
-        padding: 14px 40px;
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        box-shadow: 4px 0px 4px rgb(0 0 0 / 21%);
-    }
-
-
-    .buttonAplicarFiltros p {
-        background: #FF8A00;
+    div.flightcarditem .arrow_details span {
+        background: #F1F3F4;
         border-radius: 3px;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        width: 70px;
+        background-image: none;
+        height: 38px;
+    }
 
+    div.flightcarditem .arrow_details span p {
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 5px;
+    }
 
+    div.flightcarditem .arrow_details span div {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 13px;
-
-        font-weight: bold;
-        color: #fff;
+        flex-direction: column;
+        height: 100%;
     }
 
-    button.applyButton {
-        display: none;
+    div.flightcarditem .arrow_details {
+        position: relative;
+        left: 15px;
     }
 
-    div.overlaypopup .contentPopup .filterMobContent {
-        padding-bottom: 70px;
+    div.flightcarditem .arrow_details.reverse {
+        transform: rotate(0deg)
     }
 
-    .abrirModal {
-        width: 40px;
-        height: 40px;
+    div.flightcarditem .arrow_details.reverse svg {
+        transform: rotate(180deg)
+    }
+}
+
+@media(max-width: 768px) {
+    .copy-ss {
+        padding: 10px 0px;
+    }
+
+    .copy-ss p {
+        font-size: 10px;
+        line-height: 14px;
+        display: flex;
+        text-align: center;
+        color: #FF0000;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .copy-ss svg {
+        margin-right: 8px;
+        margin-top: 2px;
+    }
+
+    div.flightcarditem .arrow_details span {
+        background: #F1F3F4 !important;
+        border-radius: 3px;
+        width: 119px;
+        height: 17px;
+        position: relative;
+    }
+
+    div.flightcarditem .arrow_details span p {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 14px;
+        /* identical to box height */
+        color: #000000;
+    }
+
+    div.flightcarditem .arrow_details span div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    div.flightcarditem .arrow_details{
         position: absolute;
-        border-radius: 50%;
-        top: 38px;
     }
 
-    div.overlaypopup .contentPopup {
-        background-color: #eceff1;
-    }
-
-    .contentbox div.inforesultfilters {
-        margin: 0px;
-        margin-top: -23px;
-        padding-left: 30px;
-        margin-bottom: 21px;
-    }
-
-    .contentbox button.clearresultfilters {
-        border: none;
-        text-decoration: underline;
-        color: #388BF7;
-        font-weight: normal;
-        font-size: 14px;
-    }
 }
