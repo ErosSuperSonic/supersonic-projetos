@@ -180,7 +180,6 @@ chamarDados();
 
 //Correção tirando botão de adicionar a sacola nos itens que não são selecionaveis
 function verificarBotaoAdicionarCarrinho() {
-
 	let verificarInterval = false;
 	const myInterval = setInterval(() => {
 		if (!verificarInterval) {
@@ -206,7 +205,6 @@ function verificarBotaoAdicionarCarrinho() {
 }
 
 verificarBotaoAdicionarCarrinho();
-
 
 function teste() {
 	const buttonUnselectable = document.querySelectorAll(
@@ -256,44 +254,54 @@ document
 document
 	.querySelector(".dropdown-toggle.custom-select.form-control")
 	.addEventListener("click", () => {
-		if (document.querySelectorAll(".dropdown-menu.show a")) {
-			let verificarInterval = false;
-			let achandoClickInterval = setInterval(() => {
-				if (!verificarInterval) {
-					const button = document.querySelectorAll(
-						".dropdown-menu.show a"
-					);
+		let verificarExistencia = false;
+		let achandoExistencia = setInterval(() => {
+			if (!verificarExistencia) {
+				const item = document.querySelectorAll(".dropdown-menu.show a");
+				if (item) {
+					let verificarInterval = false;
+					let achandoClickInterval = setInterval(() => {
+						if (!verificarInterval) {
+							const button = document.querySelectorAll(
+								".dropdown-menu.show a"
+							);
 
-					if (button) {
-						verificarInterval = true;
-						clearInterval(achandoClickInterval);
-						button.forEach((a) => {
-							a.addEventListener("click", () => {
-								if (
-									document.querySelector(
-										".color-value.swatch-container.swatch-circle.selected"
-									)
-								) {
-									clicar();
-									teste()
-								}
-							});
-						});
-					}
+							if (button) {
+								verificarInterval = true;
+								clearInterval(achandoClickInterval);
+								button.forEach((a) => {
+									a.addEventListener("click", () => {
+										if (
+											document.querySelector(
+												".color-value.swatch-container.swatch-circle.selected"
+											)
+										) {
+											clicar();
+											teste();
+										}
+									});
+								});
+							}
+						}
+					}, 300);
+
+					teste();
+					clearInterval(achandoExistencia);
+					verificarExistencia = true;
 				}
-			}, 300);
-		}
+			}
+		}, 300);
 	});
 
 function clicar() {
 	let verificarInterval = false;
 	let achandoClickInterval = setInterval(() => {
-		
 		if (!verificarInterval) {
-			
-			const button = document.querySelector(".color-value.swatch-container.swatch-circle.selected");
+			const button = document.querySelector(
+				".color-value.swatch-container.swatch-circle.selected"
+			);
 			if (button) {
-				button.click()
+				button.click();
 				verificarInterval = true;
 				clearInterval(achandoClickInterval);
 			}

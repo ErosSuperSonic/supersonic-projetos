@@ -1,11 +1,15 @@
 @media(min-width: 769px) {
+
     .seloContainer {
         position: absolute;
-        left: 48px;
+        top: -9px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 138px;
     }
 
     .seloContainer svg {
-        width: 100px;
+        width: 100%;
     }
 
     .copy-ss p {
@@ -19,10 +23,22 @@
     }
 
     .copy-ss {
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        bottom: 20px;
+    }
+
+    .copy-ss.copy-relative {
         position: relative;
         bottom: 0px;
         width: 100%;
         margin-top: 10px;
+
+
+        transform: none;
+        left: 0;
+
     }
 
     .copy-ss svg {
@@ -33,6 +49,15 @@
 
     .flightcardlist {
         position: relative;
+    }
+
+    div.flightgroupcard>div:nth-of-type(1)>div:nth-of-type(3) {
+        padding-top: 46px;
+    }
+
+    div.flightgroupcard>div:nth-of-type(1) {
+        position: relative;
+        padding-bottom: 20px;
     }
 
     div.flightcarditem .arrow_details span {
@@ -74,18 +99,31 @@
 }
 
 @media(max-width: 768px) {
+
+    .seloContainer {
+        position: absolute;
+        top: -12px;
+        left: 0.5px;
+    }
+
+    #root>main>div.contentbox>div.flightgroupcard>div:nth-child(1)>div.flightcardsidebar {
+        padding-top: 28px;
+    }
+
     .copy-ss {
         padding: 10px 0px;
     }
 
     .copy-ss p {
-        font-size: 10px;
-        line-height: 14px;
+        font-size: 12px;
+        line-height: 16.34px;
         display: flex;
         text-align: center;
         color: #FF0000;
         align-items: center;
         justify-content: center;
+        font-weight: 600;
+        font-family: "Open Sans";
 
     }
 
@@ -117,7 +155,7 @@
 
     }
 
-    div.flightcarditem .arrow_details{
+    div.flightcarditem .arrow_details {
         position: absolute;
     }
 
