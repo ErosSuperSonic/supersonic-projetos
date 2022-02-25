@@ -55,11 +55,12 @@
         padding-top: 46px;
     }
 
-    div.flightgroupcard>div:nth-of-type(1) {
+     div.flightgroupcard>div:nth-of-type(1) {
         position: relative;
         padding-bottom: 20px;
     }
 
+    /*
     div.flightcarditem .arrow_details span {
         background: #F1F3F4;
         border-radius: 3px;
@@ -95,7 +96,7 @@
 
     div.flightcarditem .arrow_details.reverse svg {
         transform: rotate(180deg)
-    }
+    } */
 }
 
 @media(max-width: 768px) {
@@ -132,7 +133,7 @@
         margin-top: 2px;
     }
 
-    div.flightcarditem .arrow_details span {
+    /* div.flightcarditem .arrow_details span {
         background: #F1F3F4 !important;
         border-radius: 3px;
         width: 119px;
@@ -144,7 +145,7 @@
         font-weight: 300;
         font-size: 10px;
         line-height: 14px;
-        /* identical to box height */
+
         color: #000000;
     }
 
@@ -157,6 +158,6 @@
 
     div.flightcarditem .arrow_details {
         position: absolute;
-    }
+    } */
 
 }
