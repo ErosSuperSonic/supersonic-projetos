@@ -3,17 +3,17 @@
     .seloContainer {
         position: absolute;
         top: -9px;
-        left: 50%;
+        left: 42%;
         transform: translateX(-50%);
         width: 138px;
     }
 
-    .seloContainer svg {
+    .seloContainer img {
         width: 100%;
     }
 
     .copy-ss p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 25px;
         text-align: center;
         color: #FF0000;
@@ -41,9 +41,9 @@
 
     }
 
-    .copy-ss svg {
-        width: 25px;
-        height: 25px;
+    .copy-ss img {
+        width: 20px;
+        height: 20px;
         margin-right: 7px;
     }
 
@@ -128,7 +128,7 @@
 
     }
 
-    .copy-ss svg {
+    .copy-ss img {
         margin-right: 8px;
         margin-top: 2px;
     }

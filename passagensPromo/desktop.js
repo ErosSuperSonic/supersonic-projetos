@@ -1,7 +1,13 @@
 if (window.innerWidth > 768) {
-    adicionarSeloInFirstCardDesktop()
-    adicionarCopy();
-    addEventButtonsMelhoresTarifas()
+    try{
+            adicionarSeloInFirstCardDesktop()
+            adicionarCopy();
+            addEventButtonsMelhoresTarifas()
+            atualizarMaisBaratoFiltroDestaque()
+            atualizarMaisBaratoFiltroLateral()
+    }catch(e){
+        console.log(e)
+    }
 }
 
 
@@ -66,15 +72,9 @@ function adicionarSeloInFirstCardDesktop() {
 
 function adicionarCopy() {
 
-    console.log("Entrei")
     const myHTML = `<div class="copy-ss">
                     <p>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.5 13.125C10.6066 13.125 13.125 10.6066 13.125 7.5C13.125 4.3934 10.6066 1.875 7.5 1.875C4.3934 1.875 1.875 4.3934 1.875 7.5C1.875 10.6066 4.3934 13.125 7.5 13.125Z"
-                                stroke="#FF0000" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M7.5 4.21875V7.5H10.7812" stroke="#FF0000" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/1224991d5f0722566078dca93d309a7b2d217aef/passagensPromo/relogio-mobile.svg">
 
 
                         Aproveite o melhor preço antes que ele aumente.
@@ -122,6 +122,7 @@ function addEventButtonsMelhoresTarifas() {
                     button.addEventListener("click", () => {
                         adicionarSeloInFirstCardDesktop();
                         adicionarCopy();
+                        cleanFilters();
                     })
                 })
 
@@ -132,4 +133,110 @@ function addEventButtonsMelhoresTarifas() {
             }
         }
     }, 300);
+}
+
+function atualizarMaisBaratoFiltroDestaque() {
+    let encontrouButton = false;
+
+    const encontrouButtons = setInterval(() => {
+        if (!encontrouButton) {
+            const buttons = document.querySelectorAll(".resultsfilters button")
+
+            if (buttons) {
+                buttons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        adicionarSeloInFirstCardDesktop();
+                        adicionarCopy();
+                        cleanFilters();
+                    })
+                })
+
+                setTimeout(() => {
+                    encontrouButton = true;
+                    clearInterval(encontrouButtons);
+                }, 15000)
+            }
+        }
+    }, 300);
+}
+
+
+function atualizarMaisBaratoFiltroLateral() {
+    let encontrouButton = false;
+
+    const encontrouButtons = setInterval(() => {
+        if (!encontrouButton) {
+            const buttons = document.querySelectorAll(".item_filterblock")
+
+            if (buttons) {
+                buttons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        adicionarSeloInFirstCardDesktop();
+                        adicionarCopy();
+                        cleanFilters();
+                    })
+                })
+
+                setTimeout(() => {
+                    encontrouButton = true;
+                    clearInterval(encontrouButtons);
+                }, 15000)
+            }
+        }
+    }, 300);
+}
+
+
+
+function cleanFilters() {
+
+    if (document.querySelectorAll(".clearresultfilters")) {
+        let encontrou = false;
+
+        const encontrouClearFilter = setInterval(() => {
+            if (!encontrou) {
+                const clearFilter = document.querySelector(".btnclearfilters")
+
+                if (clearFilter) {
+                    clearFilter.addEventListener("click", () => {
+                        adicionarSeloInFirstCardDesktop();
+                        adicionarCopy();
+                        tagItemVerification()
+                    })
+
+
+                    setTimeout(() => {
+                        encontrou = true;
+                        clearInterval(encontrouClearFilter);
+                    }, 15000)
+                }
+            }
+        }, 300);
+    }
+}
+
+
+function tagItemVerification(){
+    if (document.querySelectorAll(".tagitem")){
+        let encontrou = false;
+
+        const encontrouTagItem = setInterval(() => {
+            if (!encontrou) {
+                const tagItem = document.querySelector(".tagitem")
+
+                if (tagItem) {
+                    tagItem.addEventListener("click", () => {
+                        adicionarSeloInFirstCardDesktop();
+                        adicionarCopy();
+                    })
+
+
+                    setTimeout(() => {
+                        encontrou = true;
+                        clearInterval(encontrouTagItem);
+                    }, 15000)
+                }
+            }
+        }, 300);
+    }
 }
