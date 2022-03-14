@@ -1,0 +1,445 @@
+html,
+body,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo-ss {
+    background: url("https://v.fastcdn.co/u/344766a4/60271680-0-grafismo.png") repeat rgb(33, 33, 33) 47% 0 / cover;
+    padding-bottom: 94px;
+}
+
+#page-block-n3n8ozb7idb>div:nth-of-type(3){
+    display: none;
+}
+
+.max-container {
+    max-width: 1394px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-ss {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 20px;
+    padding-bottom:  56px;
+
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.header-ss svg {
+    width: 47px;
+}
+
+.header-ss a {
+    background: #FBC105;
+    border-radius: 4px;
+    color: #000000;
+    text-decoration: none;
+
+
+    font-family: Roboto;
+    font-weight: bold;
+    width: 216px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+}
+
+.text-ss {
+    width: 886px;
+}
+
+.text-ss h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 66px;
+    line-height: 86px;
+    /* or 130% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    color: #FFFFFF;
+    margin-bottom: 44px;
+}
+
+.text-ss span {
+    display: contents;
+    color: #FBC105;
+}
+
+.text-ss ul {
+    list-style: none;
+}
+
+.text-ss li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.text-ss svg {
+    margin-right: 12px;
+}
+
+.container-button-ss {
+    margin-top: 90px;
+    width: 525px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-button-ss a {
+    width: 428px;
+    height: 74px;
+    display: flex;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    background: #FBC105;
+    border-radius: 4px;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Roboto;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.container-button-ss p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    color: #FFFFFF;
+
+}
+
+
+.calculadora {
+    margin-left: 82px;
+    width: 445px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 34px 30px;
+    font-family: Roboto;
+
+}
+
+.calculadora h3 {
+    width: 100%;
+    text-align: center;
+
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+
+    color: #121212;
+    margin-bottom: 32px;
+}
+
+
+.investimentoValores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.investimentoValores button {
+    width: 48px;
+    height: 48px;
+    background: #FBC105;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.investimentoValores p {
+    font-size: 16px;
+    line-height: 36px;
+    color: #3D3D3D;
+}
+.investimentoValores h4{
+    display: flex;
+}
+.investimentoValores span{
+    margin-right:  10px;
+}
+.valorInvestido label {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.valorInvestido label {
+    font-size: 24px;
+
+}
+
+.valorInvestido input,
+.investimentoValores h4 {
+    width: 200px;
+    border: none;
+    font-size: 24px;
+    line-height: 36px;
+    color: #121212;
+    margin-left: 8px;
+    outline: none;
+    font-weight: 400;
+}
+
+.investimentoValores h4 {
+    margin-left: 0px;
+    position: relative;
+}
+
+.valorInvestido input::-webkit-outer-spin-button,
+.valorInvestido input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.valorInvestido label::after,
+.investimentoValores h4::after {
+    position: absolute;
+    content: "";
+    width: 240px;
+    height: 1px;
+    background-color: #666666;
+    bottom: 0px;
+    left: 0px;
+}
+
+.buttons-valorInvestido {
+    position: relative;
+    top: 10px;
+}
+
+.valorResgate {
+    margin-top: 32px;
+}
+
+.valorResgate input {
+    border: none;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    /* or 100% */
+    color: #121212;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.valorResgate h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    /* or 180% */
+    text-align: left;
+    color: #3D3D3D;
+    margin-bottom: 8px;
+}
+
+.valorResgate h4 {
+    display: flex;
+    align-items: center;
+    border: none;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    /* or 100% */
+    color: #121212;
+    margin-bottom: 24px;
+}
+
+.valorResgate p {
+    font-size: 12px;
+    line-height: 12px;
+    /* or 104% */
+    color: #3D3D3D;
+    margin-bottom: 24px;
+}
+
+.abrirConta a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FBC105;
+    border-radius: 4px;
+
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    height: 53.81px;
+    margin-bottom: 8px;
+}
+
+.abrirConta p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #3D3D3D;
+    text-align: center;
+}
+
+@media(max-width: 1400px) {
+    .text-ss {
+        width: 720px;
+    }
+
+    .header-ss {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .flex {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1300px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .header-ss,
+    .text-ss {
+        width: 100%;
+    }
+
+    .text-ss h1 {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .text-ss {
+        padding-left: 26px;
+    }
+
+    .container-button-ss {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 33px;
+        width: 100%;
+    }
+
+    .container-button-ss button {
+        margin-bottom: 10px;
+    }
+
+    .calculadora {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    
+    .text-ss {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .text-ss h1 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 39px;
+        letter-spacing: 0.1px;
+        margin-bottom: 37px;
+    }
+
+    .text-ss li {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    }
+
+    .container-button-ss a {
+        height: 50px;
+        max-width: 323px;
+    }
+
+    .container-button-ss {
+        margin-top: 52px;
+    }
+
+
+    .calculadora h3 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .calculadora {
+        width: 90%;
+    }
+
+
+    .valorInvestido label::after,
+    .investimentoValores h4::after {
+        width: 140px;
+    }
+
+    #valueInvestimento {
+        width: 104px;
+    }
+
+    .valorInvestido label,
+    .investimentoValores h4 {
+        width: 140px;
+    }
+
+    .valorResgate h3 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 36px;
+        margin-bottom: 0;
+    }
+
+    .valorResgate h4 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+}

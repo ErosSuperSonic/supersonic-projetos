@@ -178,6 +178,9 @@ function chamarDados() {
 
 chamarDados();
 
+
+
+
 //Correção tirando botão de adicionar a sacola nos itens que não são selecionaveis
 function verificarBotaoAdicionarCarrinho() {
 	let verificarInterval = false;
@@ -206,6 +209,10 @@ function verificarBotaoAdicionarCarrinho() {
 
 verificarBotaoAdicionarCarrinho();
 
+
+
+
+
 function teste() {
 	const buttonUnselectable = document.querySelectorAll(
 		".attributes .row .caroussel-elements .color-attribute"
@@ -219,7 +226,10 @@ function teste() {
 			const spans = button.querySelectorAll(
 				"span.color-value.swatch-container.swatch-circle.unselectable"
 			);
-			//achandoClick();
+
+			console.log("Entrei")
+
+
 			if (spans.length >= 1) {
 				document.querySelector(".btn-sucess").style.display = "none";
 			} else {
@@ -276,8 +286,8 @@ document
 												".color-value.swatch-container.swatch-circle.selected"
 											)
 										) {
-											clicar();
 											teste();
+											clicar();
 										}
 									});
 								});
@@ -294,6 +304,8 @@ document
 	});
 
 function clicar() {
+	
+	console.log("Entrei aqui")
 	let verificarInterval = false;
 	let achandoClickInterval = setInterval(() => {
 		if (!verificarInterval) {
@@ -302,6 +314,8 @@ function clicar() {
 			);
 			if (button) {
 				button.click();
+
+				console.log("Salve entrei")
 				verificarInterval = true;
 				clearInterval(achandoClickInterval);
 			}
