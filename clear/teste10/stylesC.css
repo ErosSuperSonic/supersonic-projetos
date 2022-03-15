@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.container-ss {
+    background: url("./fundoC.png");
+    background-size: cover;
+}
+
+.maxContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.maxContainer ul {
+    padding: 0;
+}
+
+.maxContainer span {
+    display: contents;
+}
+
+.logo {
+    padding-top: 67px;
+}
+
+.maxContainer h1 {
+    font-family: 'Clear Geo', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+    color: #FFFFFF;
+
+    margin-bottom: 16px;
+}
+
+.maxContainer p {
+    font-family: 'Clear Geo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 120%;
+    /* or 36px */
+    color: #fff;
+    width: 700px;
+
+}
+
+.maxContainer p span {
+    color: #00FF7B;
+
+}
+
+.textSS h1 {
+    margin-top: 100px;
+    width: 700px;
+}
+
+
+.textSS ul {
+    margin-top: 40px;
+    list-style: none;
+    width: 700px;
+
+}
+
+.textSS ul li {
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 16px;
+
+    display: flex;
+}
+
+.textSS ul li svg {
+    margin-right: 8px;
+
+}
+
+.links a,
+.links p {
+    font-family: 'Clear Geo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+}
+
+.links p {
+    text-decoration: none;
+}
+
+.links {
+    margin-top: 32px
+}

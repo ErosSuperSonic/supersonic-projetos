@@ -9,14 +9,14 @@ body {
 
 
 .container-ss {
-    background-image: url("fundoB.png");
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste10/fundoB.png");
     width: 100%;
     background-size: cover;
 
 }
 
 .maxContainer {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     z-index: 100;
 }
@@ -27,8 +27,7 @@ body {
 
 .titlePageSS {
     padding-top: 103px;
-    width: 496px;
-    flex: 1;
+    width: 614px;
 
 }
 
@@ -45,8 +44,7 @@ body {
 }
 
 .titlePageSS p:nth-child(2) {
-    font-family: 'Clear Geo',
-        sans-serif;
+    font-family: 'Clear Geo';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -69,8 +67,7 @@ body {
 }
 
 .titlePageSS p:nth-child(4) {
-    font-family: 'Clear Geo',
-        sans-serif;
+    font-family: 'Clear Geo';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -79,6 +76,7 @@ body {
 
 
     color: #00FF7B;
+    text-align: right;
 
 }
 
@@ -101,7 +99,8 @@ body {
 .flex-SS {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
 }
 
 .textInfo {
