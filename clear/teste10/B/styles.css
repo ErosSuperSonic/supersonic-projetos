@@ -22,6 +22,11 @@ body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container
     padding-bottom: 47px;
 }
 
+.bg-hero-d41d8cd98f00b204e9800998ecf8427e[class] {
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste10/B/fundoB.png") !important;
+    background-size: cover;
+}
+
 .logo {
     margin-bottom: 103px;
 }
@@ -31,6 +36,14 @@ body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container
     justify-content: space-between;
     align-items: center;
     width: 1000px;
+}
+
+.coluna1TextSS {
+    width: 496px;
+}
+
+.coluna1TextSS img {
+    width: 100%;
 }
 
 .coluna2TextSS {
@@ -66,4 +79,112 @@ body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container
     color: #FFFFFF;
     margin-top: 50px;
     max-width: 751px;
+}
+
+.abraConta {
+    display: none;
+}
+
+@media(max-width:1500px) {
+
+    .main-menu__desktop-container,
+    .main-menu__lv-2-accordion-container,
+    .hero__container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .container-text {
+        width: 859px;
+    }
+}
+
+@media(max-width:1297px) {
+    .coluna1TextSS {
+        width: 400px;
+    }
+
+    .coluna2TextSS p {
+        font-size: 28px;
+    }
+
+    .coluna2TextSS {
+        width: 277px;
+    }
+
+    .container-text {
+        width: 766px;
+    }
+}
+
+@media(max-width:1148px) {
+    .container-text {
+        width: 703px;
+    }
+}
+
+@media(max-width: 1044px) {
+    body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container.full.hydrated>soma-container>soma-grid>soma-grid-row>soma-grid-col.soma-grid-col.xs-8.sm-8.md-3.lg-4.xl-4.hydrated {
+        display: none;
+    }
+
+    .container-text {
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .copy p {
+        max-width: 100%;
+    }
+
+    .abraConta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        max-width: 308px;
+        height: 53px;
+
+        margin: 0 auto;
+        background: #00FF7B;
+
+        color: #0500F5;
+        font-family: 'Clear Geo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+
+
+        margin-top: 32px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .hero__container soma-grid-row {
+        display: none;
+    }
+
+    .hero__container {
+        position: inherit !important;
+    }
+
+    .container-text {
+        flex-direction: column;
+    }
+
+    .coluna1TextSS {
+        width: 342px;
+    }
+
+    .coluna2TextSS p {
+        margin-top: 32px;
+        text-align: center;
+    }
 }
