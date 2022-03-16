@@ -33,44 +33,8 @@ body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container
     width: 1000px;
 }
 
-.coluna1TextSS p {
-    font-weight: 700;
-    font-style: normal;
-}
-
 .coluna2TextSS {
     width: 342px;
-}
-
-.data {
-    font-family: 'Clear Geo';
-    font-size: 80px;
-    line-height: 150%;
-    /* identical to box height, or 120px */
-    color: #FFFFFF;
-}
-
-.concorra {
-    color: #00FF7B;
-    font-family: 'Clear Geo';
-    font-size: 36px;
-    line-height: 150%;
-}
-
-.valor {
-    font-family: 'Clear Action';
-    font-size: 130px;
-    line-height: 150%;
-    /* identical to box height, or 195px */
-    color: #FFFFFF;
-}
-
-.emPremios {
-    font-family: 'Clear Geo';
-    font-size: 36px;
-    line-height: 150%;
-    /* identical to box height, or 54px */
-    color: #00FF7B;
 }
 
 .coluna2TextSS p {
