@@ -1,0 +1,105 @@
+soma-grid-col.lg-8 {
+    display: none;
+}
+
+body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container.full.hydrated>soma-container>soma-grid>soma-grid-row>soma-grid-col.soma-grid-col.xs-8.sm-8.md-3.lg-4.xl-4.hydrated {
+    position: absolute;
+    width: 500px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-menu__desktop-container,
+.main-menu__lv-2-accordion-container,
+.hero__container {
+    max-width: 1500px !important;
+}
+
+.hero {
+    height: auto !important;
+    padding-top: 67px;
+    padding-bottom: 47px;
+}
+
+.logo {
+    margin-bottom: 103px;
+}
+
+.container-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+
+.coluna1TextSS p {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.coluna2TextSS {
+    width: 342px;
+}
+
+.data {
+    font-family: 'Clear Geo';
+    font-size: 80px;
+    line-height: 150%;
+    /* identical to box height, or 120px */
+    color: #FFFFFF;
+}
+
+.concorra {
+    color: #00FF7B;
+    font-family: 'Clear Geo';
+    font-size: 36px;
+    line-height: 150%;
+}
+
+.valor {
+    font-family: 'Clear Action';
+    font-size: 130px;
+    line-height: 150%;
+    /* identical to box height, or 195px */
+    color: #FFFFFF;
+}
+
+.emPremios {
+    font-family: 'Clear Geo';
+    font-size: 36px;
+    line-height: 150%;
+    /* identical to box height, or 54px */
+    color: #00FF7B;
+}
+
+.coluna2TextSS p {
+    font-family: 'Clear Geo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+
+
+    color: #FFFFFF;
+
+}
+
+.coluna2TextSS p span {
+    color: #00FF7B;
+}
+
+.copy p {
+    font-family: 'Clear Geo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+
+    color: #FFFFFF;
+    margin-top: 50px;
+    max-width: 751px;
+}
