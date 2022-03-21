@@ -1,0 +1,18 @@
+.newbutton--ss {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* cinza 3 */
+
+    color: #7C7C7E;
+}
+
+.newbutton--ss svg {
+    margin-right: 5px;
+}

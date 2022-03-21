@@ -31,7 +31,7 @@ soma-grid-col.md-3 {
 }
 
 .bg-hero-d41d8cd98f00b204e9800998ecf8427e[class] {
-    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste10/fundoC.png") !important;
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste10/C/fundoC.png") !important;
     background-size: cover;
 }
 
@@ -57,70 +57,76 @@ soma-container.hero {
     padding-top: 67px;
 }
 
-.maxContainer h1 {
-    font-family: 'Clear Geo', sans-serif;
+.coluna1TextSS p:nth-child(1) {
+    font-family: 'Clear Geo';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 120%;
     /* or 48px */
+
+
     color: #FFFFFF;
 
+}
+
+.coluna1TextSS h1 {
+    font-family: 'Clear Geo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+    width: 542px;
+    margin-top: 100px;
     margin-bottom: 16px;
 }
 
-.maxContainer p {
+.coluna1TextSS p {
     font-family: 'Clear Geo';
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 120%;
-    /* or 36px */
     color: #fff;
     width: 628px;
-
+    margin-bottom: 40px;
 }
 
-.maxContainer p span {
-    color: #00FF7B;
-
-}
-
-.textSS h1 {
-    margin-top: 100px;
-    width: 547px;
-}
-
-
-.textSS ul {
-    margin-top: 40px;
-    list-style: none;
-    width: 700px;
-
-}
-
-
-.textSS ul li {
-    color: #FFFFFF;
-    font-weight: 500;
+.lista-ss li {
     margin-bottom: 16px;
+}
 
+.lista-ss div {
     display: flex;
-    font-family: "Clear Geo";
+    align-items: center;
+    color: #fff;
+    width: fit-content;
 }
 
-.textSS ul li a {
-    color: #FFFFFF;
-}
-
-.textSS ul li svg {
+.lista-ss svg {
     margin-right: 8px;
-    width: 31px;
-
 }
 
-.links a,
-.links p {
+.container-text a {
+    margin: 32px 0px;
+    color: #fff;
+    text-decoration: none;
+    width: 368px;
+    height: 56px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.copy {
+    width: 751px;
+}
+
+.copy p,
+.copy a {
     font-family: 'Clear Geo';
     font-style: normal;
     font-weight: 400;
@@ -128,150 +134,101 @@ soma-container.hero {
     line-height: 150%;
     /* or 24px */
 
-    text-decoration-line: underline;
 
     color: #FFFFFF;
 }
 
-.inscrevasse {
-    width: 368px;
-    height: 56px;
-    border-radius: 4px;
-    border: 2px solid #FFFFFF;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: 'Clear Geo';
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none !important;
-}
-
-.links p {
-    text-decoration: none;
-    margin-top: 32px;
-}
-
-.links {
-    margin-top: 32px
-}
-
-.links a.abraSuaContaSS {
-    display: none !important;
-    width: 368px;
-    height: 53px;
-    background: #00FF7B;
-    border-radius: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    text-decoration: none;
-
-}
-
-.hero .soft-lead {
-    height: 274px !important;
+a.abraSuaConta {
+    display: none;
 }
 
 @media(max-width: 1200px) {
-
-    .hero .soft-lead,
-    body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container.full.hydrated>soma-container>soma-grid {
-        display: none !important;
+    .maxContainer {
+        padding-left: 16px;
+        padding-right: 16px;
     }
-
-    .maxContainer h1,
-    .maxContainer p,
-    .textSS h1,
-    .textSS ul {
-        width: 100%;
-    }
-
-    .links a.abraSuaContaSS {
-        display: flex !important;
-        margin-bottom: 12px;
-        border-color: #00FF7B;
-        color: #0500F5;
-    }
-
 }
 
-@media(max-width:1020px) {
-    .buttons {
-        display: flex;
-        flex-direction: column;
+@media(max-width: 1062px) {
+    body>soma-container.hero.bg-hero-d41d8cd98f00b204e9800998ecf8427e.soma-container.full.hydrated>soma-container>soma-grid {
+        display: none;
     }
 
-    .buttons a {
+    a.abraSuaConta {
+        display: flex;
+        margin-top: 40px;
+        color: #0500F5;
+        text-decoration: none;
+        width: 368px;
+        height: 56px;
+        border: 2px solid #00FF7B;
+        background: #00FF7B;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 311px;
-        height: 56px;
-
-        background: #00FF7B;
-        box-shadow: 0px 8px 16px rgba(4, 4, 207, 0.16);
         border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
-    .maxContainer {
-        padding: 0px;
+    .logo {
+        text-align: center;
     }
+
 }
 
-@media(max-width: 768px) {
 
-    .inscrevasse,
-    .links a.abraSuaContaSS {
+@media(max-width: 821px) {
+    .coluna1TextSS h1 {
         width: 100%;
     }
 
-    .maxContainer h1 {
-        font-size: 29px;
-        line-height: 120%;
+    .coluna1TextSS p {
+        width: 100%;
     }
 
-    .maxContainer p {
+    .copy {
+        width: 100%;
+    }
+    .maxContainer{
+        padding: 0;
+    }
+}
+
+@media(max-width: 600px) {
+    .coluna1TextSS h1 {
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 120%;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+
+    .hero__container {
+        justify-content: flex-start !important;
+    }
+
+    .coluna1TextSS p {
+        font-weight: 500;
         font-size: 23px;
         line-height: 120%;
     }
 
-    .textSS ul li,
-    .textSS ul li a {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 120%
+    .lista-ss div {
+        align-items: flex-start;
     }
 
-    .links p {
-        font-size: 14px;
-        line-height: 150%;
+    .coluna1TextSS p {
+        margin-bottom: 24px;
     }
 
-    .textSS h1 {
-        margin-top: 32px;
-    }
-
-    .logo {
-        padding: 0;
-        width: 120px;
-        margin: 0 auto;
-    }
-
-    .logo img {
+    .container-text a {
+        margin: 16px auto;
         width: 100%;
     }
 
-    .hero__container {
-        position: inherit !important;
-    }
-
-    .my3SVG {
-        width: 27px;
-        margin-right: 4px;
+    a.abraSuaConta {
+        width: 100%;
+        margin-top: 40px;
     }
 }
