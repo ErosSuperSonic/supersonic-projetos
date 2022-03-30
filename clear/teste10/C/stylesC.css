@@ -14,9 +14,11 @@ soma-grid-col.md-3 {
     width: 400px;
 }
 
-.soft-lead {
-    position: absolute;
-    right: 0;
+body > soma-container > soma-container > soma-grid > soma-grid-row {
+    position: absolute !important;
+    top: 50% !important;
+    right: 20% !important;
+    transform: translateY(-50%) !important;
 }
 
 soma-heading.hero__heading>p {
@@ -29,6 +31,8 @@ soma-grid-col.md-3 {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 
 .bg-hero-d41d8cd98f00b204e9800998ecf8427e[class] {
     background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/clear/teste10/C/fundoC.png") !important;

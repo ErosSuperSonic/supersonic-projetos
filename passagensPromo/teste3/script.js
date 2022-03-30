@@ -44,6 +44,7 @@ if (window.innerWidth > 570) {
                         span.style.display = "none"
                     })
                     verificarBotoes = true;
+                    
                     setTimeout(() => {
                         clearInterval(botoesInterval)
                     }, 10000)
@@ -109,7 +110,7 @@ if (window.innerWidth > 570) {
 
     let myIntervalDesk = setInterval(() => {
         contador = contador + 1000
-        criarElementMobile();
+        criarElementDesktop();
 
         if (contador === 7000) {
             clearInterval(myIntervalDesk)
