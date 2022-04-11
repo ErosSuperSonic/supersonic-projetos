@@ -13,9 +13,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: absolute;
-            bottom: 20%;
-            left: 0px;
         }
 
         .container-ss img:nth-child(1) {
@@ -32,15 +29,61 @@
             width: 95.79px;
             height: 95.79px;
         }
+
+        .maxContainer {
+            width: 1084px;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 16%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media(max-width: 1084px) {
+
+            .clear-hero {
+                padding-bottom: 149px !important;
+            }
+
+            .maxContainer {
+                max-width: 316px;
+                width: 100%;
+                bottom: 4%;
+            }
+
+            .container-ss {
+                width: 100%;
+            }
+
+            .container-ss img:nth-child(1) {
+                width: 107px;
+                height: 48px;
+            }
+
+            .container-ss img:nth-child(2) {
+                width: 101.58px;
+                height: 76px;
+            }
+
+            .container-ss img:nth-child(3) {
+                width: 70px;
+                height: 70px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container-ss">
-        <img src="./xpinc.png" alt="">
-        <img src="./reclame aqui.png" alt="">
-        <img src="./ibest.png" alt="">
+    <div class="maxContainer">
+        <div class="container-ss">
+            <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/clear/teste%2011/xpinc.png?raw=true"
+                alt="">
+            <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/clear/teste%2011/reclame%20aqui.png?raw=true"
+                alt="">
+            <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/clear/teste%2011/ibest.png?raw=true"
+                alt="">
+        </div>
     </div>
 </body>
 
