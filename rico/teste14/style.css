@@ -7,24 +7,29 @@ body {
           box-sizing: border-box;
 }
 
+body {
+  background: #F5F5F5;
+}
+
 .main-ss {
   background-color: #190564;
   padding-top: 165px;
   padding-bottom: 120px;
 }
 
-.maxContainer {
+.maxContainer,
+section.invista {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
+  max-width: 1440px !important;
   position: relative;
 }
 
 .container-ss-text {
   font-family: 'Rico Sans';
   color: #FFFFFF;
-  width: 501px;
+  width: 571px;
 }
 
 .container-ss-text h1 {
@@ -79,10 +84,202 @@ body {
 .imagem-container {
   position: absolute;
   right: 0px;
-  top: calc(165px - 50px);
+  top: 231px;
+  pointer-events: none;
 }
 
 .imagem-container img {
   width: 100%;
+}
+
+section.invista h3.conheca-ss {
+  margin-top: 72px;
+  font-family: 'Rico Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  color: #190564;
+  width: auto;
+  border: none;
+}
+
+div.tabs-default {
+  border-radius: 41px;
+  border: 1px solid #190564;
+  padding: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 614px;
+}
+
+div.tabs-default .item {
+  padding: 0px;
+  color: #190564;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+div.tabs-default .item.slick-current {
+  border: none;
+  background: #3A29A4;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 40px;
+  margin: 0;
+}
+
+section.invista .list-itens div.item {
+  width: 335px;
+  background: #fff;
+  height: auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px rgba(204, 204, 219, 0.5);
+          box-shadow: 0px 0px 15px rgba(204, 204, 219, 0.5);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+section.invista .list-itens div.item:hover {
+  border-radius: 20px;
+}
+
+section.invista .list-itens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: none;
+}
+
+.renda-ss {
+  color: #3A29A4;
+  font-family: 'Rico Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+section.invista .list-itens div.item h3 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #FF5200;
+  width: auto;
+  height: auto;
+  border: none;
+  margin-bottom: 8px;
+}
+
+section.invista .list-itens div.item p {
+  font-family: 'Rico Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #030028;
+}
+
+section.invista .list-itens div.item .info p {
+  color: #3A29A4;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+section.invista .list-itens div.item .info strong {
+  color: #3A29A4;
+}
+
+.verMais-ss {
+  color: #3A29A4;
+  text-decoration: none;
+  width: 80px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 15px;
+  border: 1px solid #3A29A4;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-top: 30px;
+}
+
+@media (max-width: 1384px) {
+  .imagem-container {
+    width: 80%;
+    right: -99px;
+    top: 282px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  section.invista div.list-itens {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .imagem-container {
+    top: 319px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .imagem-container {
+    display: none;
+  }
+  .container-ss-text {
+    width: 100%;
+  }
+  div.tabs-default .item.slick-current,
+  .slick-slider .slick-list,
+  .slick-slider .slick-track {
+    height: 23px;
+  }
+  div.tabs-default .item {
+    margin-right: 20px;
+  }
+  section.invista h3.conheca-ss {
+    font-size: 24px;
+    margin-top: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-ss {
+    padding-top: 32px;
+    padding-bottom: 38px;
+  }
+  .container-ss-text h1 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    line-height: 34px;
+  }
+  .container-ss-text p {
+    font-size: 14px;
+  }
+  .container-ss-text a {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 38px;
+    height: 52px;
+    width: 251px;
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
