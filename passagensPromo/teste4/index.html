@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        div.container_cta div.box_cta {
+            display: none;
+        }
+
+        #arrowSS {
+            position: absolute;
+            right: 23px;
+        }
+
+        .container-ss-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            font-family: "Open sans", sans-serif;
+
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 28px 21px 28px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.18);
+            z-index: 10;
+            width: 100%;
+        }
+
+        .container-ss-cta p {
+            color: #484848;
+            width: 50%;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .container-ss-cta p span {
+            font-weight: 700;
+        }
+
+        .container-ss-cta span {
+            color: #32CC34;
+        }
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__header__label {
+            font-size: 16px;
+        }
+
+        .container-ss-cta button {
+            width: 143px;
+            height: 40px;
+            background: #32CC34;
+            border-radius: 7px;
+
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+        }
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item .arr_date,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .arr_date,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item .dep_date,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .dep_date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px !important;
+
+        }
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item .arr_date span,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .arr_date span,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item .dep_date span,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .dep_date span {
+            color: #98989B;
+            -webkit-text-fill-color: #98989B;
+        }
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+
+
+
+
+
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .dep_date,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .arr_date {
+            width: 100px;
+        }
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__title {
+            text-align: center;
+
+        }
+
+
+        .single-post .single-post__recomended--marge {
+            height: auto;
+        }
+
+
+        #mobile-title p {
+            font-weight: 700;
+            font-size: 16px;
+            padding-top: 0px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #mobile-title span {
+            display: block;
+            color: #AFE74A;
+            -webkit-text-fill-color: #AFE74A;
+        }
+
+        .pesquiseSS {
+            text-align: center;
+        }
+
+        .pesquiseSS span {
+            font-weight: 400;
+            font-size: 12px;
+            margin: 0 auto;
+            position: relative;
+            top: -10px;
+            -webkit-text-fill-color: #fff;
+            color: #fff;
+        }
+
+
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item .fraseCard,
+        .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .fraseCard {
+            font-size: 12px;
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0;
+            color: #98989B;
+        }
+
+        p.titleCard {
+            margin: 0;
+            text-align: center;
+        }
+
+        p.titleCard span {
+            color: #AFE74A;
+            -webkit-text-fill-color: #AFE74A;
+            font-weight: 700;
+        }
+
+        @media(max-width: 1100px) {
+            .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__header__label {
+                text-align: right;
+                -webkit-text-fill-color: #fff;
+                color: #fff;
+                font-size: 14px;
+            }
+
+
+            .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container-ss-cta {
+                display: flex;
+            }
+
+            .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__item .fraseCard,
+            .passagens-promo .comp-newshortcode.comp-newshortcode--mod01 .comp-newshortcode__item .fraseCard {
+                font-size: 12px;
+                position: absolute;
+                bottom: -4px;
+                left: 50%;
+                padding: 0;
+                color: #98989B;
+                width: fit-content;
+            }
+
+            p.titleCard {
+                font-size: 14px;
+            }
+
+            .pesquiseSS {
+                text-align: center;
+            }
+
+            #arrowSS {
+                position: absolute;
+                right: 57px;
+            }
+
+            .passagens-promo .comp-newshortcode.comp-newshortcode--mod03 .comp-newshortcode__header__selection {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-ss-cta">
+        <p><span>Economize até 35%</span> na sua passagem agora</p>
+        <button>Pesquisar</button>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
+

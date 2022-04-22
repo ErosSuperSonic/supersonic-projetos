@@ -1,0 +1,143 @@
+section.hero-with-light-background .content-wrapper .title h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    color: #383838;
+}
+
+section.partners-section,
+section.featured-section,
+section.bullets {
+    display: none;
+}
+
+div.subtitle.rich-text-content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+
+    color: #383838;
+    margin-bottom: 40px;
+}
+
+section.hero-with-light-background .content-wrapper .subtitle {
+    max-width: 100%;
+}
+
+/* .hero-with-light-background .image-wrapper .ilustration {
+    position: relative;
+    top: -30px;
+} */
+
+div#header-top-bar,
+.header .primary-header {
+    background-color: #181818;
+}
+
+div#header-top-bar a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+div.ctas,
+div.topics-wrapper {
+    display: none;
+}
+
+.list-ss {
+    list-style: none;
+    display: flex;
+}
+
+.list-ss div {
+    margin-right: 50px;
+}
+
+.list-ss li {
+    font-size: 18px;
+    color: #383838;
+    display: flex;
+    margin-bottom: 36px;
+}
+
+.list-ss li svg {
+    margin-right: 10px;
+}
+
+.list-ss li p {
+    width: 100%;
+}
+
+.container-ss button {
+    background: #5274FF;
+    border-radius: 100px;
+    width: 300px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-weight: 300;
+    font-family: "Museo Sans";
+    border: none;
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.dobraCardsSS h2 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 60px;
+    margin-bottom: 24px;
+    color: #383838;
+}
+
+.dobraCardsSS p {
+    color: #383838;
+    text-align: center;
+    font-size: 28px;
+
+}
+
+.dobraCardsSS .container {
+    max-width: 1174px;
+    margin: 0 auto;
+}
+
+.dobraCardsSS .item img {
+    width: 100%;
+}
+.dobraCardsSS .item{
+    width: 350.03px;
+    text-align: left;
+}
+.dobraCardsSS .item h3 {
+    margin-top: 29px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+
+    /* preto */
+
+    color: #000000;
+}
+
+.dobraCardsSS .item p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.1584px;
+    line-height: 20px;
+    /* or 144% */
+    text-align: left;
+    /* preto */
+
+    color: #000000;
+}
