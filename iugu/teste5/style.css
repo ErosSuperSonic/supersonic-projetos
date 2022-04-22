@@ -50,6 +50,7 @@ div.topics-wrapper {
 .list-ss {
     list-style: none;
     display: flex;
+    width: 740px;
 }
 
 .list-ss div {
@@ -57,7 +58,7 @@ div.topics-wrapper {
 }
 
 .list-ss li {
-    font-size: 18px;
+    font-size: 16px;
     color: #383838;
     display: flex;
     margin-bottom: 36px;
@@ -71,7 +72,13 @@ div.topics-wrapper {
     width: 100%;
 }
 
-.container-ss button {
+.cardsSS {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-ss button,
+.falarIugu {
     background: #5274FF;
     border-radius: 100px;
     width: 300px;
@@ -87,26 +94,27 @@ div.topics-wrapper {
     border: none;
     font-size: 16px;
     margin-top: 24px;
+    cursor: pointer;
 }
 
 .dobraCardsSS h2 {
     text-align: center;
     font-style: normal;
     font-weight: 700;
-    font-size: 49px;
+    font-size: 48px;
     line-height: 60px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     color: #383838;
 }
 
 .dobraCardsSS p {
     color: #383838;
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
 
 }
 
-.dobraCardsSS .container {
+.dobraCardsSS .containerSS {
     max-width: 1174px;
     margin: 0 auto;
 }
@@ -114,12 +122,15 @@ div.topics-wrapper {
 .dobraCardsSS .item img {
     width: 100%;
 }
-.dobraCardsSS .item{
+
+.dobraCardsSS .item {
     width: 350.03px;
     text-align: left;
 }
+
 .dobraCardsSS .item h3 {
     margin-top: 29px;
+    margin-bottom: 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -140,4 +151,83 @@ div.topics-wrapper {
     /* preto */
 
     color: #000000;
+}
+
+.title-ss {
+    margin-bottom: 40px;
+}
+
+.verMais {
+    text-align: center;
+}
+
+.verMais button {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: #383838;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.verMais button svg {
+    width: 15px;
+    margin-left: 5px;
+    transition: .3s;
+
+}
+
+
+.cardForActive {
+    display: none;
+}
+
+.cardForActive.active {
+    display: block;
+    margin-top: 40px;
+}
+
+.verMais button.active {
+    color: #5274FF;
+    font-weight: 700;
+}
+
+.verMais button.active svg {
+    transform: rotate(180deg);
+}
+
+
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.falarIugu {
+    margin-top: 0px;
+    margin-right: 30px;
+}
+
+.planos {
+    width: 300px;
+    height: 48px;
+    border: 1px solid #383838;
+    border-radius: 100px;
+    background: transparent;
+    font-size: 16px;
+
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 42px;
+    margin-top: 70px;
+}
+
+.hero-with-light-background .image-wrapper {
+    position: relative;
+    left: 40px;
+    top: -67px;
 }

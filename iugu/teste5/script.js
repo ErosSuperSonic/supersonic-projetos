@@ -1,5 +1,3 @@
-
-
 //Alterando titulo
 document.querySelector(".title.rich-text-content h1").innerHTML = "Tecnologia para gestão de pagamentos <strong>completa, flexível e automatizada</strong>"
 
@@ -9,7 +7,7 @@ document.querySelector(".subtitle.rich-text-content").innerHTML = "Para marketpl
 
 
 const novosItensPrimeiraDobra = `
-        <div class="container-ss">
+    <div class="container-ss" style="display: none;">
         <div class="list-ss">
             <div>
                 <li>
@@ -64,7 +62,26 @@ const novosItensPrimeiraDobra = `
                 </li>
             </div>
         </div>
-        <button>Falar com a iugu</button>
+        <button class="open-chat">Falar com a iugu</button>
     </div>
 `
-document.querySelector(".hero-with-light-background .content-wrapper").insertAdjacentHTML("beforeend", novosItensPrimeiraDobra)
+document.querySelector("div.content-wrapper").insertAdjacentHTML("beforeend", novosItensPrimeiraDobra)
+
+
+
+//ativando dobra
+
+const btnVerMais = document.querySelector(".verMais button")
+btnVerMais.addEventListener("click", () => {
+    document.querySelector(".cardForActive").classList.toggle("active")
+    btnVerMais.classList.toggle("active")
+})
+
+
+
+const openChatBtns = document.querySelectorAll(".open-chat")
+openChatBtns.forEach((element) => {
+    element.addEventListener("click", () => {
+        window.HubSpotConversations.widget.open()
+    })
+})
