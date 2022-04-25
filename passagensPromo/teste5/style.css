@@ -1,0 +1,37 @@
+@media(max-width: 768px) {
+
+    /* Tirando fundo da div dos inputs */
+    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-hAcGzb.gabjPE,
+    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-gSQFLo.eUBgZI,
+    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-dwsnSq.hJAxjb {
+        background-color: transparent;
+    }
+
+    /* Mudando cor da fonte das letras da label */
+    #searchframe label {
+        color: #fff;
+        padding-left: 9px;
+    }
+
+    /* Deixando o container relativo para posicionar o selo */
+    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-hAcGzb.gabjPE {
+        position: relative;
+    }
+
+    .selo1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .selo1 p {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        width: 69px;
+    }
+}

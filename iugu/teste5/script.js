@@ -7,7 +7,7 @@ document.querySelector(".subtitle.rich-text-content").innerHTML = "Para marketpl
 
 
 const novosItensPrimeiraDobra = `
-    <div class="container-ss" style="display: none;">
+        <div class="container-ss">
         <div class="list-ss">
             <div>
                 <li>
@@ -62,7 +62,7 @@ const novosItensPrimeiraDobra = `
                 </li>
             </div>
         </div>
-        <button class="open-chat">Falar com a iugu</button>
+        <button class="verPlanos">Ver planos</button>
     </div>
 `
 document.querySelector("div.content-wrapper").insertAdjacentHTML("beforeend", novosItensPrimeiraDobra)
@@ -84,4 +84,9 @@ openChatBtns.forEach((element) => {
     element.addEventListener("click", () => {
         window.HubSpotConversations.widget.open()
     })
+})
+
+const verPlanos = document.querySelector(".verPlanos")
+verPlanos.addEventListener("click", () => {
+    window.location.href = "https://www.iugu.com/planos/"
 })

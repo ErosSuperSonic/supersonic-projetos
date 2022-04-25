@@ -7,6 +7,10 @@ section.hero-with-light-background .content-wrapper .title h1 {
     color: #383838;
 }
 
+section.hero-with-light-background .top-wrapper {
+    padding: 60px 0 0;
+}
+
 section.partners-section,
 section.featured-section,
 section.bullets {
@@ -55,6 +59,10 @@ div.topics-wrapper {
 
 .list-ss div {
     margin-right: 50px;
+}
+
+div.list-ss>div:nth-of-type(2) {
+    width: 400px;
 }
 
 .list-ss li {
