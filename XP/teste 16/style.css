@@ -1,0 +1,37 @@
+body.custom-background {
+    background-image: none;
+    background-color: #fff;
+}
+
+#simulador_app .page--0 .content__title {
+    color: #B88D00;
+    font-weight: 500;
+}
+
+#simulador_app .content__title:after {
+    background-color: #B88D00;
+}
+
+#simulador_app .page--0 .content-col:first-of-type .content__content soma-context soma-paragraph,
+#simulador_app .page--0 .navigation .acceptance .checkbox-label {
+    color: #121212;
+    font-weight: 400;
+}
+
+#simulador_app .page--0 .content-col:first-of-type .content__content soma-context:last-of-type {
+    border-left: 2px solid #B88D00;
+}
+
+#simulador_app .page--0 .navigation .acceptance .checkbox {
+    border-color: #121212;
+    background-color: #fff;
+}
+
+#simulador_app .page--0 .navigation .acceptance input:checked~.checkbox {
+    border-color: #fff;
+    background-color: #121212;
+}
+
+#simulador_app .page--0 .navigation .acceptance input:checked~.checkbox:after {
+    border-color: #fff;
+}

@@ -1,3 +1,35 @@
+.reference-title {
+    display: none;
+}
+
+.sectionSS {
+    display: flex;
+    width: 83%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.sectionSS .item span {
+    font-weight: 600;
+}
+
+.sectionSS .item {
+    text-align: center;
+    color: #484848;
+    width: 175px;
+}
+
+.sectionSS .item:nth-child(1) {
+    position: relative;
+    top: 12px;
+}
+
+#searchframe>div {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.18);
+
+}
+
 @media(max-width: 768px) {
 
     /* Tirando fundo da div dos inputs */
@@ -18,6 +50,20 @@
         position: relative;
     }
 
+    #searchframe>div {
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN,
+    #searchframe>div {
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    .area-destaque__ofertas {
+        margin-top: 16px;
+    }
+
     .selo1 {
         position: absolute;
         right: 0;
@@ -36,31 +82,21 @@
     }
 
     .sectionSS {
-        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 36px 20px 0px;
-        
+        padding: 32px 20px 0px;
+        margin-bottom: 0;
     }
 
     .sectionSS .item {
         width: 44%;
-        text-align: center;
         font-size: 12px;
-        color: #484848;
     }
 
-    .sectionSS .item:nth-child(1) {
-        position: relative;
-        top: 12px;
-        margin-bottom: 20px;
-    }
-
+    .sectionSS .item:nth-child(1),
     .sectionSS .item:nth-child(2) {
         margin-bottom: 20px;
     }
 
-    .sectionSS .item span {
-        font-weight: 600;
-    }
+
 }

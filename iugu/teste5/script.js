@@ -6,6 +6,108 @@ document.querySelector(".title.rich-text-content h1").innerHTML = "Tecnologia pa
 document.querySelector(".subtitle.rich-text-content").innerHTML = "Para marketplace, e-commerce ou qualquer negócio online. Gestão financeira fácil e completa, que otimiza processos e torna sua empresa uma potência."
 
 
+const sectionDesktop = `
+<section class="dobraCardsSS">
+        <div class="containerSS">
+            <div class="title-ss">
+                <h2>Com a iugu, você pode focar no que realmente importa:
+                    o crescimento da sua empresa.
+                </h2>
+                <p>Veja alguns exemplos de como a iugu pode te ajudar.</p>
+            </div>
+
+            <div class="cardsSS">
+                <div class="item">
+                    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/iugu/teste5/images/item1.png"
+                        alt="Comissionamento de pagamentos para marketplaces">
+                    <h3>Comissionamento de pagamentos para marketplaces</h3>
+                    <p>Divisão de pagamentos entre seus parceiros de forma ágil e segura, sem bitributação e impostos
+                        que não são do seu
+                        negócio.</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/iugu/teste5/images/item2.png?raw=true"
+                        alt="Automatização de processos e cobranças recorrentes">
+                    <h3>Automatização de processos e cobranças recorrentes</h3>
+                    <p>Ganhe praticidade com as nossas funções de automatização de processos e cobranças únicas e
+                        recorrentes. Customize os
+                        fluxos da maneira que quiser.
+                    </p>
+                </div>
+
+                <div class="item">
+                    <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/iugu/teste5/images/item3.png?raw=true"
+                        alt="API customizável e bem documentada">
+                    <h3>API customizável e bem documentada</h3>
+                    <p>Com nossa API, você pode personalizar as ferramentas conforme às necessidades do seu negócio.
+                        Poupe tempo com as
+                        automações e ganhe eficiência na sua operação financeira.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="cardsSS cardForActive">
+                <div class="flexContainer">
+                    <div class="item">
+                        <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/iugu/teste5/images/item4.png?raw=true"
+                            alt="Régua de comunicação com clientes">
+                        <h3>Régua de comunicação com clientes</h3>
+                        <p>Reduza custos com inadimplência com a nossa ferramenta de comunicados de cobrança via e-mail
+                            e SMS. Você ainda
+                            pode
+                            personalizar os ciclos de cobrança e os juros.</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/iugu/teste5/images/item5.png?raw=true"
+                            alt="Dashboard transparente e em tempo real">
+                        <h3>Dashboard transparente e em tempo real</h3>
+                        <p>Acelere sua tomada de decisão com o nosso dashboard que mostra todas as suas motivações
+                            financeiras em um só lugar.</p>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/iugu/teste5/images/item6.png?raw=true"
+                            alt="Gateway de pagamentos para e-commerce">
+                        <h3>Gateway de pagamentos para e-commerce</h3>
+                        <p>Transações rápidas e segura para você receber pagamentos por boleto, cartão de crédito e PIX
+                            personalizados com a sua
+                            marca em um checkout transparente..
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="btns">
+                    <button class="falarIugu open-chat">
+                        Falar com a iugu
+                    </button>
+                    <button class="planos">
+                        Ver planos e preços
+                    </button>
+                </div>
+            </div>
+            <div class="verMais">
+                <button>
+                    <span>Ver mais</span>
+                    <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M1 1L9 9L17 1" stroke="#383838" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </section>`
+
+if (!document.querySelector(".dobraCardsSS") && window.innerWidth >= 768) {
+    document.querySelector("section.hero-with-light-background").insertAdjacentHTML("afterend", sectionDesktop)
+}
+
+
+
 const novosItensPrimeiraDobra = `
         <div class="container-ss">
         <div class="list-ss">
@@ -75,6 +177,12 @@ const btnVerMais = document.querySelector(".verMais button")
 btnVerMais.addEventListener("click", () => {
     document.querySelector(".cardForActive").classList.toggle("active")
     btnVerMais.classList.toggle("active")
+
+    if (btnVerMais.classList.contains("active")) {
+        btnVerMais.querySelector("span").innerText = "Ver menos"
+    } else {
+        btnVerMais.querySelector("span").innerText = "Ver mais"
+    }
 })
 
 

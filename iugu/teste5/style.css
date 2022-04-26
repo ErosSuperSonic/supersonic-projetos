@@ -1,3 +1,7 @@
+section {
+    overflow-x: hidden;
+}
+
 section.hero-with-light-background .content-wrapper .title h1 {
     font-style: normal;
     font-weight: 700;
@@ -198,6 +202,7 @@ div.list-ss>div:nth-of-type(2) {
 .verMais button.active {
     color: #5274FF;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .verMais button.active svg {
@@ -238,4 +243,57 @@ div.list-ss>div:nth-of-type(2) {
     position: relative;
     left: 40px;
     top: -67px;
+}
+
+
+@media(max-width: 768px) {
+    section.hero-with-light-background .top-wrapper {
+        padding: 0;
+    }
+
+    .hero-with-light-background {
+        padding-top: 70px;
+    }
+
+    .hero-with-light-background .image-wrapper .ilustration {
+        display: none;
+    }
+
+    .list-ss {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    section.hero-with-light-background .content-wrapper .title h1 {
+        font-size: 34px;
+        line-height: 46px;
+        margin-bottom: 21px;
+    }
+
+    section.hero-with-light-background .content-wrapper .subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    div.list-ss>div:nth-of-type(2) {
+        width: 100%;
+    }
+
+    .list-ss div {
+        margin-right: 0;
+    }
+
+    .list-ss li {
+        margin-bottom: 17px;
+    }
+
+    .container-ss button {
+        width: 100%;
+    }
+}
+
+@media(max-width:500px) {
+    section.hero-with-light-background .content-wrapper .title h1{
+        width: 86%;
+    }
 }

@@ -17,7 +17,7 @@ function adicionarSelo1() {
 
 
 
-function adicionarSectionSelosMobile() {
+function adicionarSectionSelos() {
 
     const sectionSelos = `
             <section class="sectionSS">
@@ -44,9 +44,7 @@ function adicionarSectionSelosMobile() {
         document.querySelector(".area-destaque__ofertas").insertAdjacentHTML("beforebegin", sectionSelos)
     }
 }
-if (window.innerWidth < 768) {
-    adicionarSelo1()
-}
+
 
 
 const root = document.querySelector('#area-destaque');
@@ -55,7 +53,9 @@ const observer = new MutationObserver((mutations) => {
         if (window.innerWidth <= 768) {
             if (mutation.target.classList.contains("THIN")) {
                 adicionarSelo1()
-                adicionarSectionSelosMobile()
+                adicionarSectionSelos()
+            } else {
+                adicionarSectionSelos();
             }
         }
 
@@ -66,3 +66,11 @@ observer.observe(root, {
     childList: true,
     subtree: true,
 });
+
+
+
+adicionarSectionSelos()
+
+if (window.innerWidth < 768) {
+    adicionarSelo1()
+}
