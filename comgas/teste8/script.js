@@ -1,0 +1,1 @@
+document.querySelector(".btn-login").insertAdjacentHTML("beforebegin", '<a href="https://virtual.comgas.com.br/queroComgas" class="cta-SS">Quero ser cliente Comgás</a>')

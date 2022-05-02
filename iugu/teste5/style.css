@@ -2,6 +2,10 @@ section {
     overflow-x: hidden;
 }
 
+button {
+    cursor: pointer;
+}
+
 section.hero-with-light-background .content-wrapper .title h1 {
     font-style: normal;
     font-weight: 700;
@@ -109,11 +113,15 @@ div.list-ss>div:nth-of-type(2) {
     cursor: pointer;
 }
 
+.dobraCardsSS {
+    margin-bottom: 15px;
+}
+
 .dobraCardsSS h2 {
     text-align: center;
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 32px;
     line-height: 60px;
     margin-bottom: 10px;
     color: #383838;
@@ -129,6 +137,7 @@ div.list-ss>div:nth-of-type(2) {
 .dobraCardsSS .containerSS {
     max-width: 1174px;
     margin: 0 auto;
+    margin-bottom: 15px;
 }
 
 .dobraCardsSS .item img {
@@ -177,9 +186,10 @@ div.list-ss>div:nth-of-type(2) {
     background: none;
     border: none;
     text-decoration: underline;
-    color: #383838;
-    font-size: 16px;
+    color: #5274FF;
+    font-size: 20px;
     cursor: pointer;
+    margin-top: 8px;
 }
 
 .verMais button svg {
@@ -245,6 +255,9 @@ div.list-ss>div:nth-of-type(2) {
     top: -67px;
 }
 
+.dobraMobile {
+    display: none
+}
 
 @media(max-width: 768px) {
     section.hero-with-light-background .top-wrapper {
@@ -253,6 +266,7 @@ div.list-ss>div:nth-of-type(2) {
 
     .hero-with-light-background {
         padding-top: 70px;
+        margin-bottom: 0;
     }
 
     .hero-with-light-background .image-wrapper .ilustration {
@@ -290,10 +304,68 @@ div.list-ss>div:nth-of-type(2) {
     .container-ss button {
         width: 100%;
     }
+
+    .dobraMobile {
+        padding: 32px;
+        color: #383838;
+        display: block;
+    }
+
+    .dobraMobile h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+    }
+
+    .dobraMobile .item h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 10px;
+        margin-top: 8px;
+    }
+
+    .dobraMobile .item p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .dobraMobile .item {
+        margin-bottom: 50px;
+    }
+
+    .btnsMobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btnsMobile button {
+        width: 47%;
+        font-size: 14px;
+        line-height: 19px;
+        border-radius: 100px;
+        border: none;
+        height: 38px;
+        margin: 0;
+    }
+
+    .btnsMobile button:nth-child(1) {
+        background: #5274FF;
+        color: #fff;
+    }
+
+    .btnsMobile button:nth-child(2) {
+        background: transparent;
+        color: #383838;
+        border: 1px solid #383838;
+    }
+
 }
 
 @media(max-width:500px) {
-    section.hero-with-light-background .content-wrapper .title h1{
+    section.hero-with-light-background .content-wrapper .title h1 {
         width: 86%;
     }
 }

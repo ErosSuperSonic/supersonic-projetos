@@ -10,8 +10,7 @@ function adicionarSelo1() {
         </svg>
     </div>
 `
-
-    document.querySelector("#searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-hAcGzb.gabjPE").insertAdjacentHTML("afterbegin", selo1)
+    document.querySelector("#searchframe > div > div.sc-avest.eAxniz.THIN > div.sc-fHeRUh.cKYqQR > div.sc-dFtzxp.hkRtkq").insertAdjacentHTML("afterbegin", selo1)
 }
 
 
@@ -74,3 +73,11 @@ adicionarSectionSelos()
 if (window.innerWidth < 768) {
     adicionarSelo1()
 }
+
+
+document.querySelector(".banner__call--description").innerHTML
+
+
+const texto = document.querySelector(".banner__call--description")
+const newTexto = texto.innerHTML.replace("de desconto", '<strong style="white-space: nowrap;">de desconto</strong>')
+texto.innerHTML = newTexto

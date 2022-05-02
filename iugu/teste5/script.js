@@ -1,19 +1,18 @@
-//Alterando titulo
-document.querySelector(".title.rich-text-content h1").innerHTML = "Tecnologia para gestão de pagamentos <strong>completa, flexível e automatizada</strong>"
+try {
+    //Alterando titulo
+    document.querySelector(".title.rich-text-content h1").innerHTML = "Tecnologia para gestão de pagamentos <strong>completa, flexível e automatizada</strong>"
 
-//Mudando copy
+    //Mudando copy
 
-document.querySelector(".subtitle.rich-text-content").innerHTML = "Para marketplace, e-commerce ou qualquer negócio online. Gestão financeira fácil e completa, que otimiza processos e torna sua empresa uma potência."
+    document.querySelector(".subtitle.rich-text-content").innerHTML = "Para marketplace, e-commerce ou qualquer negócio online. Gestão financeira fácil e completa, que otimiza processos e torna sua empresa uma potência."
 
 
-const sectionDesktop = `
+    const sectionDesktop = `
 <section class="dobraCardsSS">
         <div class="containerSS">
             <div class="title-ss">
-                <h2>Com a iugu, você pode focar no que realmente importa:
-                    o crescimento da sua empresa.
-                </h2>
-                <p>Veja alguns exemplos de como a iugu pode te ajudar.</p>
+                <h2>Veja alguns exemplos de como a iugu pode te ajudar</h2>
+
             </div>
 
             <div class="cardsSS">
@@ -84,7 +83,7 @@ const sectionDesktop = `
                     <button class="falarIugu open-chat">
                         Falar com a iugu
                     </button>
-                    <button class="planos">
+                    <button class="planos verPlanos">
                         Ver planos e preços
                     </button>
                 </div>
@@ -102,13 +101,79 @@ const sectionDesktop = `
         </div>
     </section>`
 
-if (!document.querySelector(".dobraCardsSS") && window.innerWidth >= 768) {
-    document.querySelector("section.hero-with-light-background").insertAdjacentHTML("afterend", sectionDesktop)
-}
+    const sectionMobile = `
+    <section class="dobraMobile">
+        <h2>Veja alguns exemplos de como a iugu pode te ajudar:</h2>
+
+        <div class="item">
+            <img
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/10253f8c99c339ef66e501e52ff891b95cb3e348/iugu/teste5/images/icone1.svg">
+            <h3>Comissionamento de pagamentos para marketplaces</h3>
+            <p>Divisão de pagamentos entre seus parceiros de forma ágil e segura, sem bitributação e impostos que não
+                são do seu
+                negócio.</p>
+        </div>
+
+        <div class="item">
+            <img
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/10253f8c99c339ef66e501e52ff891b95cb3e348/iugu/teste5/images/icone2.svg">
+            <h3>Automatização de processos e cobranças recorrentes</h3>
+            <p>Ganhe praticidade com as nossas funções de automatização de processos e cobranças únicas e recorrentes.
+                Customize os
+                fluxos da maneira que quiser.</p>
+        </div>
+        <div class="item">
+            <img src ="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/3425534cb559c240e18874571f56d17d05548683/iugu/teste5/images/icone3.svg" >
+            <h3>API customizável e bem documentada</h3>
+            <p>Com nossa API, você pode personalizar as ferramentas conforme às necessidades do seu negócio. Poupe tempo
+                com as
+                automações e ganhe eficiência na sua operação financeira.
+            </p>
+        </div>
+
+        <div class="item">
+            <img
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/10253f8c99c339ef66e501e52ff891b95cb3e348/iugu/teste5/images/icone4.svg">
+            <h3>Régua de comunicação com clientes</h3>
+            <p>Reduza custos com inadimplência com a nossa ferramenta de comunicados de cobrança via e-mail e SMS. Você
+                ainda pode
+                personalizar os ciclos de cobrança e os juros.
+            </p>
+        </div>
+
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/10253f8c99c339ef66e501e52ff891b95cb3e348/iugu/teste5/images/icone5.svg">
+            <h3>Dashboard transparente e em tempo real</h3>
+            <p>Acelere sua tomada de decisão com o nosso dashboard que mostra todas as suas motivações financeiras em um
+                só lugar.</p>
+        </div>
+
+
+        <div class="item">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/10253f8c99c339ef66e501e52ff891b95cb3e348/iugu/teste5/images/icone6.svg">
+            <h3>Gateway de pagamentos para
+                e-commerce
+            </h3>
+            <p>Transações rápidas e segura para você receber pagamentos por boleto, cartão de crédito e PIX
+                personalizados com a sua
+                marca em um checkout transparente.
+            </p>
+        </div>
+
+        <div class="btnsMobile">
+            <button class="verPlanos">Ver planos</button>
+            <button class="falarIugu open-chat">
+                Falar com a iugu
+            </button>
+        </div>
+    </section>
+`
 
 
 
-const novosItensPrimeiraDobra = `
+
+
+    const novosItensPrimeiraDobra = `
         <div class="container-ss">
         <div class="list-ss">
             <div>
@@ -167,34 +232,50 @@ const novosItensPrimeiraDobra = `
         <button class="verPlanos">Ver planos</button>
     </div>
 `
-document.querySelector("div.content-wrapper").insertAdjacentHTML("beforeend", novosItensPrimeiraDobra)
+    document.querySelector("div.content-wrapper").insertAdjacentHTML("beforeend", novosItensPrimeiraDobra)
 
 
 
-//ativando dobra
+    //ativando dobra
 
-const btnVerMais = document.querySelector(".verMais button")
-btnVerMais.addEventListener("click", () => {
-    document.querySelector(".cardForActive").classList.toggle("active")
-    btnVerMais.classList.toggle("active")
 
-    if (btnVerMais.classList.contains("active")) {
-        btnVerMais.querySelector("span").innerText = "Ver menos"
+    if (!document.querySelector(".dobraCardsSS") && window.innerWidth >= 768) {
+        document.querySelector("section.hero-with-light-background").insertAdjacentHTML("afterend", sectionDesktop)
+
+        const btnVerMais = document.querySelector(".verMais button")
+        btnVerMais.addEventListener("click", () => {
+            document.querySelector(".cardForActive").classList.toggle("active")
+            btnVerMais.classList.toggle("active")
+
+            if (btnVerMais.classList.contains("active")) {
+                btnVerMais.querySelector("span").innerText = "Ver menos"
+            } else {
+                btnVerMais.querySelector("span").innerText = "Ver mais"
+            }
+        })
+
     } else {
-        btnVerMais.querySelector("span").innerText = "Ver mais"
+        document.querySelector("section.hero-with-light-background").insertAdjacentHTML("afterend", sectionMobile)
     }
-})
 
 
-
-const openChatBtns = document.querySelectorAll(".open-chat")
-openChatBtns.forEach((element) => {
-    element.addEventListener("click", () => {
-        window.HubSpotConversations.widget.open()
+    const openChatBtns = document.querySelectorAll(".open-chat")
+    openChatBtns.forEach((element) => {
+        element.addEventListener("click", () => {
+            window.HubSpotConversations.widget.open()
+        })
     })
-})
 
-const verPlanos = document.querySelector(".verPlanos")
-verPlanos.addEventListener("click", () => {
-    window.location.href = "https://www.iugu.com/planos/"
-})
+    const verPlanos = document.querySelectorAll(".verPlanos")
+    verPlanos.forEach((button) => {
+        button.addEventListener("click", () => {
+            window.location.href = "https://www.iugu.com/planos/"
+        })
+    })
+
+
+
+
+} catch (e) {
+    console.log(e)
+}

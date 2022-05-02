@@ -25,17 +25,23 @@
     top: 12px;
 }
 
-#searchframe>div {
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.18);
-
+div.sc-avest {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 @media(max-width: 768px) {
+    div.sc-avest {
+        box-shadow: none;
+    }
+
+    #searchframe>div {
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.18);
+    }
 
     /* Tirando fundo da div dos inputs */
-    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-hAcGzb.gabjPE,
-    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-gSQFLo.eUBgZI,
-    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-dwsnSq.hJAxjb {
+    #searchframe>div>div.sc-avest.eAxniz.THIN>div.sc-fHeRUh.cKYqQR,
+    #searchframe>div>div.sc-avest.eAxniz.THIN>div.sc-iUKqMP.fOipLX,
+    #searchframe>div>div.sc-avest.eAxniz.THIN>div.sc-gyElHZ.cSXrKm {
         background-color: transparent;
     }
 
@@ -46,7 +52,7 @@
     }
 
     /* Deixando o container relativo para posicionar o selo */
-    #searchframe>div>div.sc-bUbRBg.cKtFts.THIN>div.sc-hAcGzb.gabjPE {
+    #searchframe>div>div.sc-avest.eAxniz.THIN>div.sc-fHeRUh.cKYqQR>div.sc-dFtzxp.hkRtkq {
         position: relative;
     }
 
@@ -66,7 +72,7 @@
 
     .selo1 {
         position: absolute;
-        right: 0;
+        right: 10px;
         top: 0;
         display: flex;
         align-items: center;
@@ -84,7 +90,7 @@
     .sectionSS {
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 32px 20px 0px;
+        padding: 32px 0px 0px;
         margin-bottom: 0;
     }
 
