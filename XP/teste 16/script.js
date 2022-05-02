@@ -200,8 +200,11 @@ function trocarFraseForm() {
 function trocarTitulos() {
     const tituloPage = document.querySelector(".content__title");
 
+
     if (tituloPage.innerText === "Quanto você pensa em investir?") {
         tituloPage.innerHTML = "<span>Preencha o valor e o prazo do seu investimento</span>"
+    } else if (tituloPage.innerText === 'Simulador deInvestimentos da XP') {
+        tituloPage.style.textAlign = 'left'
     } else if (tituloPage.innerText === "Queremos te conhecer melhor!") {
         tituloPage.innerHTML = "<span>Quais suas expectativas com o investimento?</span>"
     } else if (tituloPage.innerText === "Para finalizar, precisamos dosseus dados para enviar o resultado") {

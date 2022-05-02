@@ -11,7 +11,7 @@ body,
     padding-bottom: 94px;
 }
 
-#page-block-n3n8ozb7idb>div:nth-of-type(3){
+#page-block-n3n8ozb7idb>div:nth-of-type(3) {
     display: none;
 }
 
@@ -31,7 +31,7 @@ body,
     justify-content: space-between;
 
     padding-top: 20px;
-    padding-bottom:  56px;
+    padding-bottom: 56px;
 
     width: 1300px;
     margin: 0 auto;
@@ -201,12 +201,15 @@ body,
     line-height: 36px;
     color: #3D3D3D;
 }
-.investimentoValores h4{
+
+.investimentoValores h4 {
     display: flex;
 }
-.investimentoValores span{
-    margin-right:  10px;
+
+.investimentoValores span {
+    margin-right: 10px;
 }
+
 .valorInvestido label {
     display: flex;
     position: relative;
@@ -377,7 +380,7 @@ body,
 }
 
 @media(max-width: 768px) {
-    
+
     .text-ss {
         padding-left: 16px;
         padding-right: 16px;
@@ -442,4 +445,7 @@ body,
         font-size: 24px;
         margin-bottom: 16px;
     }
+
+
+
 }

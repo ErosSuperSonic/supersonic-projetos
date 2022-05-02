@@ -151,7 +151,98 @@ div>label,
 #simulador_app .results__products .soma-table-row .col--divider {
     border-bottom: 1px solid #ffffff;
     background-color: #ffffff;
-} 
-label.checkbox-label>span:nth-of-type(1) a{
+}
+
+label.checkbox-label>span:nth-of-type(1) a {
     color: #121212;
+}
+
+@media(max-width: 768px) {
+
+    #simulador_app .page--0 .navigation .soma-grid,
+    #simulador_app .navigation soma-grid {
+        background-color: transparent;
+    }
+
+    #simulador_app .page--0 .content-col:first-of-type .content__content soma-context:last-of-type {
+        padding-left: 10px;
+    }
+
+    #simulador_app .page__content>soma-grid-col:last-of-type {
+        position: relative;
+    }
+
+    #simulador_app {
+        margin: 4px;
+    }
+
+    .secoesSS {
+        width: 100%;
+    }
+
+    #simulador_app .content__title span {
+        font-weight: 400;
+    }
+
+    #simulador_app .page--0 .content__title {
+        font-size: 32px;
+        line-height: inherit;
+    }
+
+    .item span {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+
+    .line::after {
+        left: 22px;
+    }
+
+    #simulador_app .navigation .soma-grid-col:last-of-type {
+        flex-direction: row-reverse;
+        background: transparent;
+    }
+
+    .secoesSS .item:nth-child(1) .line::after {
+        width: 62px;
+    }
+
+    .secoesSS .item:nth-child(2) .line::after {
+        width: 75px;
+    }
+
+    .secoesSS .item:nth-child(3) .line::after {
+        width: 58px;
+    }
+
+    .secoesSS .item:nth-child(4) .line::after {
+        width: 50px;
+    }
+
+    .content.soma-container.hydrated .content__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    #simulador_app .content__title:after,
+    #simulador_app .results__products .soma-table-row.header {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    #simulador_app .page--1 .content__content,
+    #simulador_app .page--2 .content__content ,
+    #simulador_app .page--3 .content__content {
+        position: relative;
+        top: 60px;
+    }
+
+    #simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(2)>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1) {
+        display: none;
+    }
+
+    .secoesSS {
+        width: 92%;
+    }
 }
