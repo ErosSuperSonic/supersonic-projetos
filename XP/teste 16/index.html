@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <style>
 
@@ -13,7 +14,71 @@
 
 <body>
 
+    <div class="secoesSS" style="top: 10%">
+        <div class="item active">
+            <div class="circle line">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.81246 1.33203L3.2578 6.88669L1.40625 5.03514" stroke="#121212" stroke-width="1.5" />
+                </svg>
+            </div>
+            <span>Termos</span>
+        </div>
 
+        <div class="item active">
+            <div class="circle line">
+                2
+            </div>
+            <span>Valor e Prazo</span>
+        </div>
+
+        <div class="item active">
+            <div class="circle line">
+                3
+            </div>
+            <span>Expectativas</span>
+        </div>
+
+        <div class="item">
+            <div class="circle line">
+                4
+            </div>
+            <span>Dados</span>
+        </div>
+
+        <div class="item">
+            <div class="circle">
+                5
+            </div>
+            <span>Resultado</span>
+        </div>
+    </div>
+
+    <img src="checkedXp.svg" alt="">
 </body>
+
+<script>
+    function atualizarItensLista() {
+        document.querySelectorAll(`.item`).forEach((el, index) => {
+            let newIndex = index + 1
+            if (el.classList.contains("active")) {
+                if (el !== null && index > 0) {
+
+                    document.querySelector(`.item.active:nth-child(${newIndex - 1}) .line`).classList.add("active")
+                }
+            }
+        })
+
+        
+        document.querySelectorAll(".item.active .circle").forEach((conteudo) => {
+            conteudo.innerHTML = `<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.81246 1.33203L3.2578 6.88669L1.40625 5.03514" stroke="#121212" stroke-width="1.5" />
+                </svg>`
+        })
+    }
+
+    atualizarItensLista()
+
+
+</script>
 
 </html>

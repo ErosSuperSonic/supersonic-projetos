@@ -1,3 +1,23 @@
+    function atualizarItensLista() {
+        document.querySelectorAll(`.item`).forEach((el, index) => {
+            let newIndex = index + 1
+            if (el.classList.contains("active")) {
+                if (el !== null && index > 0) {
+
+                    document.querySelector(`.item.active:nth-child(${newIndex - 1}) .line`).classList.add("active")
+                }
+            }
+        })
+
+
+        document.querySelectorAll(".item.active .circle").forEach((conteudo) => {
+            conteudo.innerHTML = `<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.81246 1.33203L3.2578 6.88669L1.40625 5.03514" stroke="#121212" stroke-width="1.5" />
+                </svg>`
+        })
+    }
+
+
 const secaoIndicacaoProcesso = `
     <div class="secoesSS">
         <div class="item active">
@@ -96,6 +116,7 @@ function adicionarAnosNaEtapa3() {
                         })
                         document.querySelectorAll(".secoesSS > div")[0].classList.add("active")
                         document.querySelectorAll(".secoesSS > div")[1].classList.add("active")
+                        atualizarItensLista()
                     }
                 }
             } catch (e) {
@@ -139,7 +160,7 @@ function etapa4MudarTextos() {
                         document.querySelectorAll(".secoesSS > div")[0].classList.add("active")
                         document.querySelectorAll(".secoesSS > div")[1].classList.add("active")
                         document.querySelectorAll(".secoesSS > div")[2].classList.add("active")
-
+                        atualizarItensLista()
                         if (!el.shadowRoot.querySelector("label").querySelector(".svgInterrogation")) {
                             el.shadowRoot.querySelector("label > span").insertAdjacentHTML("beforebegin", interrogation)
                             el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.position = "absolute"
@@ -269,6 +290,7 @@ function trocarFraseForm() {
                 document.querySelectorAll(".secoesSS > div")[1].classList.add("active")
                 document.querySelectorAll(".secoesSS > div")[2].classList.add("active")
                 document.querySelectorAll(".secoesSS > div")[3].classList.add("active")
+                atualizarItensLista()
 
                 const input1 = document.querySelector("#simulador_app > soma-container > soma-grid > soma-grid-row > soma-grid-col:nth-child(1) > soma-container > soma-grid > soma-grid-row > soma-grid-col > soma-text-field:nth-child(3)").shadowRoot.querySelector("div > label")
                 if (input1) {

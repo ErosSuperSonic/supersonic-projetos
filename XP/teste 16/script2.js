@@ -1,6 +1,7 @@
+
+
 function etapa4MudarTextos() {
     //Expectativas
-
     let verifyLabels = false;
     let setarLabels = setInterval(() => {
         if (!verifyLabels) {

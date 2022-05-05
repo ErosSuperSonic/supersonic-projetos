@@ -109,8 +109,12 @@ div>label,
     color: rgba(0, 0, 0, 1);
 }
 
-.item.active .line::after,
+
 #simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(12)>soma-context>soma-table>soma-table-body {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.item .line.active::after {
     background-color: rgba(0, 0, 0, 1);
 }
 
@@ -208,6 +212,10 @@ label.checkbox-label>span:nth-of-type(1) a {
 #simulador_app .results__buttons_group soma-context {
     width: 348px;
     margin: 0 auto;
+}
+
+#simulador_app .page--1 .content__title {
+    margin-top: 100px;
 }
 
 @media(max-width:1023px) {
