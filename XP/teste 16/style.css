@@ -64,6 +64,8 @@ div>label,
 }
 
 
+
+
 .secoesSS {
     display: flex;
     width: 1162px;
@@ -74,7 +76,7 @@ div>label,
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 13%;
+    top: 0%;
 
 }
 
@@ -157,7 +159,80 @@ label.checkbox-label>span:nth-of-type(1) a {
     color: #121212;
 }
 
+#simulador_app .page--4 .secoesSS,
+#simulador_app .page--0 .secoesSS {
+    display: none;
+}
+
+#simulador_app>soma-container.page--0>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(2) {
+    position: relative;
+    top: -56px;
+}
+
+#simulador_app>soma-container.page--0>soma-grid>soma-grid-row>soma-grid-col:nth-child(2)>soma-container {
+    position: relative;
+    top: -110px;
+}
+
+.svgInterrogation {
+    position: absolute;
+    right: -36px;
+}
+
+#simulador_app>soma-container.page--4>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(14),
+#simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(16)>soma-context>soma-context>soma-button.results__button--full.results__button--share.soma-button.secondary.lg.inverse.hydrated {
+    display: none;
+}
+
+#simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(16)>soma-context>soma-context>soma-button.results__button--full.results__button--redo.soma-button.secondary.lg.inverse.hydrated {
+    color: #121212;
+    border-color: #121212;
+}
+
+
+
+#simulador_app .results__buttons_group soma-context {
+    grid-template-areas: "account account "
+        "redo redo"
+        "links links";
+}
+
+#simulador_app .page--3 .content__title {
+    margin-top: 63px;
+}
+
+#simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(16)>soma-context>soma-context>soma-button.results__button--full.results__button--redo.soma-button.secondary.lg.inverse.hydrated:hover {
+    background-color: transparent !important;
+}
+
+#simulador_app .results__buttons_group soma-context {
+    width: 348px;
+    margin: 0 auto;
+}
+
+@media(max-width:1023px) {
+    #simulador_app .results__content>soma-context:last-of-type {
+        position: relative;
+
+    }
+
+    #simulador_app .results__buttons_group {
+        background-color: transparent;
+    }
+}
+
 @media(max-width: 768px) {
+    #simulador_app>soma-container.page--0>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(2) {
+        top: 0;
+    }
+
+    #simulador_app .page--0 .navigation .soma-grid-col:last-of-type {
+        margin-top: 105px;
+    }
+
+    .secoesSS {
+        top: -2%;
+    }
 
     #simulador_app .page--0 .navigation .soma-grid,
     #simulador_app .navigation soma-grid {
@@ -182,6 +257,7 @@ label.checkbox-label>span:nth-of-type(1) a {
 
     #simulador_app .content__title span {
         font-weight: 400;
+        font-size: 24px;
     }
 
     #simulador_app .page--0 .content__title {
@@ -201,6 +277,7 @@ label.checkbox-label>span:nth-of-type(1) a {
     #simulador_app .navigation .soma-grid-col:last-of-type {
         flex-direction: row-reverse;
         background: transparent;
+        justify-content: space-between !important;
     }
 
     .secoesSS .item:nth-child(1) .line::after {
@@ -225,17 +302,20 @@ label.checkbox-label>span:nth-of-type(1) a {
         font-weight: 300;
     }
 
-    #simulador_app .content__title:after,
+
+    #simulador_app .page--1 .content__title:after,
+    #simulador_app .page--2 .content__title:after,
+    #simulador_app .page--3 .content__title:after,
     #simulador_app .results__products .soma-table-row.header {
         margin: 0 auto;
         margin-top: 10px;
     }
 
     #simulador_app .page--1 .content__content,
-    #simulador_app .page--2 .content__content ,
+    #simulador_app .page--2 .content__content,
     #simulador_app .page--3 .content__content {
         position: relative;
-        top: 60px;
+        top: 30px;
     }
 
     #simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(2)>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1) {
@@ -244,5 +324,136 @@ label.checkbox-label>span:nth-of-type(1) a {
 
     .secoesSS {
         width: 92%;
+    }
+
+    #simulador_app .content__content soma-paragraph.input--question {
+        font-size: 16px;
+        position: relative;
+        top: 28px;
+        text-align: center;
+    }
+
+    #simulador_app .page--1 .content__content soma-quantity {
+        width: 92%;
+    }
+
+    #simulador_app .page--1 .navigation .soma-grid-col,
+    #simulador_app .page--1 .navigation .soma-grid-col,
+    #simulador_app .page--1 .navigation .soma-grid-col {
+        height: 77px;
+    }
+
+    #simulador_app .navigation button {
+        font-size: 15px;
+    }
+
+
+    #simulador_app .content__content soma-paragraph {
+        font-size: 16px;
+    }
+
+    #simulador_app .navigation .soma-grid-col {
+        height: 78px;
+    }
+
+    #simulador_app .page--4 .results__content__title--detail:after {
+        top: -44px;
+        position: relative;
+    }
+
+    #simulador_app .page--4 .results__content__title--small {
+        position: relative;
+        top: -29px;
+        margin-bottom: -38px;
+
+    }
+
+    #simulador_app .results__content>soma-context:last-of-type {
+        position: relative;
+    }
+
+
+    #simulador_app .page--0 .navigation .acceptance .checkbox-label a {
+        color: #121211;
+    }
+
+    #simulador_app .page--0 .content__title span {
+        font-size: 30px;
+    }
+
+    #simulador_app .page--0 .content__title:after {
+        margin-top: 5px;
+    }
+
+    .header {
+        z-index: 1000;
+    }
+
+    #simulador_app .page--1 .content__title {
+        margin-bottom: 0px;
+    }
+
+    #simulador_app>soma-container.page--4>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(7) {
+        display: none;
+    }
+
+    #simulador_app>soma-container.page--4>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(8)>soma-heading>div {
+        margin-bottom: 15px;
+    }
+
+    #simulador_app>soma-container.page--4>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(9)>soma-heading>div {
+        margin-bottom: 0px;
+    }
+
+    #simulador_app .page--4 .results__content__title--cta:after {
+        margin-top: 13px;
+        margin-bottom: 24px;
+    }
+
+    #simulador_app>soma-container>soma-grid>soma-grid-row>soma-grid-col:nth-child(1)>soma-container>soma-grid>soma-grid-row>soma-grid-col>soma-context:nth-child(16)>soma-context>soma-context>soma-button.results__button--full.results__button--share.soma-button.secondary.lg.inverse.hydrated {
+        display: none;
+    }
+
+    #simulador_app .results__buttons_group {
+        background-color: transparent;
+    }
+
+    #simulador_app .results__buttons_group soma-button.secondary {
+        color: #121212;
+        border-color: #121212;
+    }
+
+    #simulador_app .results__buttons_group soma-context {
+        flex-direction: column-reverse;
+    }
+
+    #simulador_app .results__buttons_group soma-button {
+        max-height: 64px;
+    }
+
+
+}
+
+
+
+@media(max-width:400px) {
+    .line::after {
+        left: 27px;
+    }
+
+    .secoesSS .item:nth-child(1) .line::after {
+        width: 46px;
+    }
+
+    .secoesSS .item:nth-child(2) .line::after {
+        width: 58px;
+    }
+
+    .secoesSS .item:nth-child(3) .line::after {
+        width: 41px;
+    }
+
+    .secoesSS .item:nth-child(4) .line::after {
+        width: 35px;
     }
 }

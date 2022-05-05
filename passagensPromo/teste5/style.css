@@ -37,6 +37,7 @@ div.sc-avest {
     width: 93px;
 }
 
+
 @media(max-width: 768px) {
     div.sc-avest {
         box-shadow: none;

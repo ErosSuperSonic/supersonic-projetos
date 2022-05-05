@@ -1,0 +1,94 @@
+.card-platform__chip {
+    background-color: #F5F7F9;
+    color: #4D677E;
+    margin-top: 8px;
+
+}
+
+.card-platform__description {
+    display: none
+}
+
+
+
+.card-platform__price s {
+    font-size: 16px;
+}
+
+.principaisRecursos {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #4D677E;
+
+    position: relative;
+    top: -8px;
+}
+
+.subcopySS {
+    width: 90%;
+    position: absolute;
+    bottom: -47px;
+    color: #4D677E !important;
+    font-weight: 400;
+    font-family: 'Clear Geo';
+    font-size: 11px !important;
+    text-align: center;
+    left: 47%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-slide>a {
+    text-decoration: none;
+}
+
+
+@media(max-width: 768px) {
+    .principaisRecursos {
+        font-size: 12px;
+    }
+
+    #list-cards-content-1 .swiper-container-android .swiper-slide,
+    #list-cards-content-1 .swiper-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #list-cards-content-1 .swiper-container-pointer-events {
+        touch-action: initial;
+    }
+
+    .card-platform__chip {
+        padding: 0 15px;
+    }
+
+    #list-cards-content-1 .swiper-pagination {
+        display: none;
+    }
+
+    #list-cards-content-1 .swiper-slide {
+        margin-bottom: 70px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+    }
+
+    #list-cards-content-1 .swiper-wrapper {
+        width: initial;
+        transform: none !important;
+    }
+
+    .platforms__content {
+        margin-left: 0px;
+    }
+
+    .platforms__cta-container {
+        margin: 0px 0 120px;
+    }
+}

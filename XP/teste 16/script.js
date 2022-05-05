@@ -87,7 +87,7 @@ function adicionarAnosNaEtapa3() {
                         verifyAnos = true
 
                         if (!document.querySelector(".secoesSS")) {
-                            document.querySelector("#simulador_app").insertAdjacentHTML("beforebegin", secaoIndicacaoProcesso)
+                            document.querySelectorAll(".page")[1].insertAdjacentHTML("afterbegin", secaoIndicacaoProcesso)
                         }
 
                         //Mexendo no active da lista no topo da pagina
@@ -96,7 +96,6 @@ function adicionarAnosNaEtapa3() {
                         })
                         document.querySelectorAll(".secoesSS > div")[0].classList.add("active")
                         document.querySelectorAll(".secoesSS > div")[1].classList.add("active")
-
                     }
                 }
             } catch (e) {
@@ -110,7 +109,14 @@ function adicionarAnosNaEtapa3() {
     }, 300)
 
 }
+let interrogation = `
+<svg class="svgInterrogation" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" stroke-width="1.5"/>
+<path d="M9.08984 8.99999C9.32495 8.33166 9.789 7.7681 10.3998 7.40912C11.0106 7.05015 11.7287 6.91893 12.427 7.0387C13.1253 7.15848 13.7587 7.52151 14.2149 8.06352C14.6712 8.60552 14.9209 9.29151 14.9198 9.99999C14.9198 12 11.9198 13 11.9198 13" stroke="black" stroke-width="1.5"/>
+<path d="M12 17.5L12 16" stroke="black" stroke-width="1.5"/>
+</svg>
 
+`
 
 function etapa4MudarTextos() {
     //Expectativas
@@ -121,35 +127,119 @@ function etapa4MudarTextos() {
             try {
                 const labels = document.querySelectorAll("#simulador_app > soma-container > soma-grid > soma-grid-row > soma-grid-col:nth-child(1) > soma-container > soma-grid > soma-grid-row > soma-grid-col > soma-radio-group > soma-radio")
                 if (labels) {
+                    labels.forEach((el, index) => {
+                        if (!document.querySelector(".secoesSS")) {
+                            document.querySelectorAll(".page")[1].insertAdjacentHTML("afterbegin", secaoIndicacaoProcesso)
+                        }
 
-                    labels.forEach((el) => {
+                        //Mexendo no active da lista no topo da pagina
+                        document.querySelectorAll(".secoesSS > div").forEach((el) => {
+                            el.classList.remove("active")
+                        })
+                        document.querySelectorAll(".secoesSS > div")[0].classList.add("active")
+                        document.querySelectorAll(".secoesSS > div")[1].classList.add("active")
+                        document.querySelectorAll(".secoesSS > div")[2].classList.add("active")
 
-                        let expr = el.shadowRoot.querySelector("label > span")
-                        switch (expr.innerHTML) {
-                            case '100% de chance de ganhar 10%':
-                                //Mexendo no active da lista no topo da pagina
-                                document.querySelectorAll(".secoesSS > div").forEach((el) => {
-                                    el.classList.remove("active")
+                        if (!el.shadowRoot.querySelector("label").querySelector(".svgInterrogation")) {
+                            el.shadowRoot.querySelector("label > span").insertAdjacentHTML("beforebegin", interrogation)
+                            el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.position = "absolute"
+                            el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.cursorPointer = "all"
+                            el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.zIndex = "10"
+                            if (window.innerWidth <= 1100) {
+                                el.shadowRoot.querySelector("label > span").style.fontSize = "14px"
+                            }
+                            if (index == 0) {
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-86px"
+
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseover", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar 10% de retorno sem risco"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-77px"
+
+                                })
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "100% de chance de ganhar 10%"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-89px"
+
                                 })
 
-                                document.querySelectorAll(".secoesSS > div")[0].classList.add("active")
-                                document.querySelectorAll(".secoesSS > div")[1].classList.add("active")
-                                document.querySelectorAll(".secoesSS > div")[2].classList.add("active")
+                                if (window.innerWidth <= 1100) {
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-83px"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                        el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-83px"
+                                        el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar 10% de retorno sem risco"
 
-                                expr.innerHTML = "Ganhar 10% de retorno sem risco"
-                                break;
-                            case 'Possibilidade de ganhar entre 5% - 20%':
-                                expr.innerHTML = "Ganhar entre 5% a 20% com pouco risco"
-                                break;
-                            case 'Possibilidade de ganhar entre 0% - 25%':
-                                expr.innerHTML = "Ganhar até 25% com médio risco"
-                                break;
-                            case 'Possibilidade de perder 10% ou ganhar até 40%':
-                                expr.innerHTML = "Ganhar até 40% com risco de perder 10%"
-                                break;
+                                    })
+                                }
+
+                            } else if (index == 1) {
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-37px"
+
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseover", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar entre 5% a 20% com pouco risco"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-27px"
+                                })
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Possibilidade de ganhar entre 5%-20%"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-43px"
+                                })
+
+                                if (window.innerWidth <= 1100) {
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-38px"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                        el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-38px"
+                                        el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar entre 5% a 20% com pouco risco"
+                                    })
+                                }
+                            } else if (index == 2) {
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-47px"
+                                el.shadowRoot.querySelector("label > span").innerHTML = "Possibilidade de ganhar entre 0%-25%"
+
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseover", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar até 25% com médio risco"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-80px"
+
+                                })
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Possibilidade de ganhar entre 0%-25%"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-47px"
+
+                                })
+
+                                if (window.innerWidth <= 1100) {
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-44px"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                        el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-74px"
+                                        el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar até 25% com médio risco"
+                                    })
+                                }
+                            } else if (index == 3) {
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "3px"
+                                el.shadowRoot.querySelector("label > span").style.width = "70%"
+                                el.shadowRoot.querySelector("label > span").innerHTML = "Possibilidade de perder 10% ou ganhar até 40%"
+
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseover", () => {
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-26px"
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar até 40% com risco de perder 10%"
+
+                                })
+                                el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                    el.shadowRoot.querySelector("label > span").innerHTML = "Possibilidade de perder 10% ou ganhar até 40%"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "3px"
+
+                                })
+
+                                if (window.innerWidth <= 1100) {
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "13px"
+                                    el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").addEventListener("mouseout", () => {
+                                        el.shadowRoot.querySelector("label").querySelector(".svgInterrogation").style.right = "-26px"
+                                        el.shadowRoot.querySelector("label > span").innerHTML = "Ganhar até 40% com risco de perder 10%"
+                                    })
+                                }
+
+                            }
+
                         }
                     })
-
                     clearInterval(setarLabels)
                     verifyLabels = true
                 }
@@ -219,11 +309,11 @@ function trocarTitulos() {
 function trocarSubtitulos() {
     document.querySelectorAll("soma-paragraph.input--question.soma-paragraph.inverse.hydrated").forEach((el) => {
         if (el.innerText === "Quanto você quer investir?") {
+
             el.innerHTML = "<span>Quanto você quer investir? (mínimo R$1.000)</span>"
 
-            document.querySelectorAll("#simulador_app").insertAdjacentHTML("beforeend", "<p>Eros</p>")
+            document.querySelector("#simulador_app > soma-container > soma-grid > soma-grid-row > soma-grid-col:nth-child(1) > soma-container > soma-grid > soma-grid-row > soma-grid-col > soma-text-field").shadowRoot.querySelector("div > label").innerHTML = "Digite seu valor aqui"
 
-            document.querySelector("#simulador_app > soma-container > soma-grid > soma-grid-row > soma-grid-col:nth-child(1) > soma-container > soma-grid > soma-grid-row > soma-grid-col > soma-text-field").querySelector("div > label").innerHTML = "Digite seu valor aqui"
         } else if (el.innerText === "Por quanto tempo você pretende deixar o dinheiro investido?") {
             el.innerHTML = "<span>Quando você quer resgatar seu investimento?</span>"
         } else if (el.innerText === "Das opções abaixo, o que você prefere?") {
@@ -240,6 +330,11 @@ function resultado() {
             try {
                 if (document.querySelector(".results__content")) {
                     document.querySelector(".secoesSS").style.display = "none"
+
+                    document.querySelector("#simulador_app > soma-container > soma-grid > soma-grid-row > soma-grid-col:nth-child(1) > soma-container > soma-grid > soma-grid-row > soma-grid-col > soma-context:nth-child(16) > soma-context > soma-context > soma-button.results__button--full.results__button--redo.soma-button.secondary.lg.inverse.hydrated").shadowRoot.querySelector("button").addEventListener("click", () => {
+                        window.location.reload();
+                    })
+
                     clearInterval(setarLabels)
                     verifyLabels = true
                 }
