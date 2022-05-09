@@ -1,0 +1,140 @@
+/*=============  Limpando pagina ============= */
+
+.loggedin-container .loggedin-row .flex-container {
+    padding: 0 152px !important;
+}
+
+.loggedin-container .loggedin-row .flex-container .instalations section .user-data h4,
+#pageInfo[_ngcontent-serverApp-c164] .info-header__titulo[_ngcontent-serverApp-c164] {
+    color: #007CB6 !important;
+}
+
+.loggedin-container .loggedin-row .flex-container div.instalations {
+    border-bottom: 0.5px solid #C4C4C4;
+}
+
+.loggedin-container .loggedin-row .flex-container .instalations section div.avatar {
+    border: 2px solid #E0E0E0;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
+#pageInfo[_ngcontent-serverApp-c164] .info-header[_ngcontent-serverApp-c164] .icone[_ngcontent-serverApp-c164],
+.conta-por-email[_ngcontent-serverApp-c175] .descricao__normal[_ngcontent-serverApp-c175],
+.container-info,
+.checkbox,
+cg-button .cg-btn--green[_ngcontent-serverApp-c17],
+.form-cg__label--comgas,
+#pageInfo>div.col-md-2.col-xs-12,
+#mainContent>div>cg-fatura-email>div>div.col-md-4.col-xs-12 {
+    display: none !important;
+}
+
+
+
+
+/*===========  Textos ========= */
+.activeTermos {
+    color: #007CB6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.textCadastro {
+    width: 555px;
+    line-height: 150%;
+    color: #3A3A3A;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.subtitleSS {
+    width: 555px;
+    color: #007CB6;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+cg-button .cg-btn--outline--text-green[_ngcontent-serverApp-c17] {
+    color: #fff;
+    border-radius: 100px;
+    background: #7FC241;
+    border: 2px solid transparent;
+    width: 184px;
+    height: 40px;
+    transition: all 0.3s;
+}
+
+
+cg-button .cg-btn--outline--text-red[_ngcontent-serverApp-c17] {
+    color: #7FC241;
+    border: 2px solid #7FC241;
+    border-radius: 60px;
+    width: 184px;
+    height: 40px;
+    transition: all 0.3s;
+
+}
+
+cg-button .cg-btn--outline--text-red[_ngcontent-serverApp-c17]:hover {
+    background: #7FC241;
+    color: #fff;
+    border: 2px solid #7FC241;
+
+}
+
+div.container-button {
+    flex-direction: row-reverse;
+}
+
+div.box-emergencias-home {
+    background-color: #E80000;
+    border-radius: 0 0 10px 10px;
+}
+
+div.col-md-10 {
+    width: 627px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ========== CARDS ========= */
+.itemSS {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 152px;
+    border-radius: 9px;
+
+    border-top: 4px solid #007CB6;
+    padding: 11px 0px 16px 0;
+
+    text-decoration: none;
+    color: #58595B;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.itemSS img {
+    width: 37px;
+    margin-bottom: 8px;
+}
+
+.itemSS span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.5px;
+}

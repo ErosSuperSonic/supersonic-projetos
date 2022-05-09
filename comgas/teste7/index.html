@@ -8,51 +8,247 @@
     <title>Document</title>
 
     <style>
-        body {
-            background: #F7F7F7;
+        /*=============  Limpando pagina ============= */
+
+        .loggedin-container .loggedin-row .flex-container {
+            padding: 0 152px !important;
         }
 
+        .loggedin-container .loggedin-row .flex-container .instalations section .user-data h4,
+        #pageInfo[_ngcontent-serverApp-c164] .info-header__titulo[_ngcontent-serverApp-c164] {
+            color: #007CB6 !important;
+        }
+
+        .loggedin-container .loggedin-row .flex-container div.instalations {
+            border-bottom: 0.5px solid #C4C4C4;
+        }
+
+        .loggedin-container .loggedin-row .flex-container .instalations section div.avatar {
+            border: 2px solid #E0E0E0;
+            filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        #pageInfo[_ngcontent-serverApp-c164] .info-header[_ngcontent-serverApp-c164] .icone[_ngcontent-serverApp-c164],
+        .conta-por-email[_ngcontent-serverApp-c175] .descricao__normal[_ngcontent-serverApp-c175],
+        .container-info,
+        .checkbox,
+        cg-button .cg-btn--green[_ngcontent-serverApp-c17],
+        .form-cg__label--comgas,
+        #pageInfo>div.col-md-2.col-xs-12,
+        #mainContent>div>cg-fatura-email>div>div.col-md-4.col-xs-12 {
+            display: none !important;
+        }
+
+
+
+
+        /*===========  Textos ========= */
+        .activeTermos {
+            color: #007CB6;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .textCadastro {
+            width: 555px;
+            line-height: 150%;
+            color: #3A3A3A;
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+
+        .subtitleSS {
+            width: 555px;
+            color: #007CB6;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+        cg-button .cg-btn--outline--text-green[_ngcontent-serverApp-c17] {
+            color: #fff;
+            border-radius: 100px;
+            background: #7FC241;
+            border: 2px solid transparent;
+            width: 184px;
+            height: 40px;
+            transition: all 0.3s;
+        }
+
+
+        cg-button .cg-btn--outline--text-red[_ngcontent-serverApp-c17] {
+            color: #7FC241;
+            border: 2px solid #7FC241;
+            border-radius: 60px;
+            width: 184px;
+            height: 40px;
+            transition: all 0.3s;
+
+        }
+
+        cg-button .cg-btn--outline--text-red[_ngcontent-serverApp-c17]:hover {
+            background: #7FC241;
+            color: #fff;
+            border: 2px solid #7FC241;
+
+        }
+
+        div.container-button {
+            flex-direction: row-reverse;
+        }
+
+        div.box-emergencias-home {
+            background-color: #E80000;
+            border-radius: 0 0 10px 10px;
+        }
+
+        div.col-md-10 {
+            width: 627px;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* ========== CARDS ========= */
+
+
+        .container-SS {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            background: rgba(238, 238, 238, 0.6);
+            /* Brancas/Branca -1 */
+
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            width: 330px;
+            padding: 24px 16px;
+        }
+
+
+
         .itemSS {
-            background: #FFFFFF;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
-            max-width: 152px;
-            border-radius: 9px;
-
-            border-top: 4px solid #007CB6;
-            padding: 11px 0px 16px 0;
+            padding: 11px 8px 16px 8px;
 
             text-decoration: none;
             color: #58595B;
             font-family: 'Open Sans', sans-serif;
+            width: 141px;
+            height: 90.27px;
+            margin-bottom: 24px;
+            text-align: center;
 
+
+            background: #FFFFFF;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: .3s all;
 
         }
 
+        .itemSS:hover {
+            border: 1px solid #007CB6;
+        }
+
         .itemSS img {
-            width: 37px;
             margin-bottom: 8px;
+            width: 20px;
         }
 
         .itemSS span {
             font-style: normal;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 16px;
             line-height: 16px;
             letter-spacing: -0.5px;
+        }
+
+        .container-SS h2 {
+            font-family: 'Open Sans',sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 130%;
+            /* or 31px */
+            letter-spacing: -0.015em;
+            /* Pretas/Preta 0 */
+            color: #3A3A3A;
+
+            margin-bottom: 24px;
         }
     </style>
 </head>
 
 <body>
     <div class="container-SS">
+
+        <h2>Veja <strong>outros serviços</strong> que podem ser <strong>do seu interesse:</strong></h2>
         <a href="#" class="itemSS">
-            <img src="./2via.png" alt="">
+            <img src="./2via.svg" alt="">
             <span>2ª via da Conta</span>
         </a>
+
+        <a href="#" class="itemSS">
+            <img src="./attDados.svg" alt="">
+            <span>Atualizar dados</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="home.svg" alt="">
+            <span>Receber a conta no endereço</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="./calender.svg" alt="">
+            <span>Mudar data de vencimento da conta</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="./notebook.svg" alt="">
+            <span>Analisar a Conta de Gás Natural</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="relogio.svg" alt="">
+            <span>Simular o Consumo</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="./conhecaNova.svg" alt="">
+            <span>Conheça a nova conta</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="./trocaTitulo.svg" alt="">
+            <span>Trocar Titularide</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="parcelamento.svg" alt="">
+            <span>Parcelamento</span>
+        </a>
+
+        <a href="#" class="itemSS">
+            <img src="./debito.svg" alt="">
+            <span>Débito Automático</span>
+        </a>
     </div>
+
+
 </body>
 
 </html>
