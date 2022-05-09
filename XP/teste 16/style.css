@@ -159,8 +159,9 @@ div>label,
     background-color: #ffffff;
 }
 
-label.checkbox-label>span:nth-of-type(1) a {
-    color: #121212;
+label.checkbox-label>span:nth-of-type(1) a,
+label.checkbox-label>a {
+    color: #121212 !important; 
 }
 
 #simulador_app .page--4 .secoesSS,
@@ -214,15 +215,33 @@ label.checkbox-label>span:nth-of-type(1) a {
     margin: 0 auto;
 }
 
-#simulador_app .page--1 .content__title {
+#simulador_app .page--1 .content__title,
+#simulador_app .page--2 .content__title,
+#simulador_app .page--3 .content__title {
     margin-top: 100px;
+}
+
+#simulador_app .page--4 .results__content__title {
+    padding-right: 50px;
+}
+
+#simulador_app .results__chart div:nth-of-type(3) .results__chart__col__value {
+    color: #B88D00;
+}
+
+#simulador_app .results__chart div:nth-of-type(3) .results__chart__col {
+    background-color: #B88D00;
 }
 
 @media(max-width:1023px) {
     #simulador_app .results__content>soma-context:last-of-type {
         position: relative;
-
     }
+
+    #simulador_app .page--4 .results__content__title {
+        padding-right: 0px;
+    }
+
 
     #simulador_app .results__buttons_group {
         background-color: transparent;

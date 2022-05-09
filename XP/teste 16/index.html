@@ -53,7 +53,6 @@
         </div>
     </div>
 
-    <img src="checkedXp.svg" alt="">
 </body>
 
 <script>
@@ -68,12 +67,15 @@
             }
         })
 
-        
-        document.querySelectorAll(".item.active .circle").forEach((conteudo) => {
-            conteudo.innerHTML = `<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.81246 1.33203L3.2578 6.88669L1.40625 5.03514" stroke="#121212" stroke-width="1.5" />
-                </svg>`
+        document.querySelectorAll(".item.active .circle").forEach((conteudo, index) => {
+            if (conteudo.classList.contains("active")) {
+                conteudo.innerHTML = `<img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/7a49fa417701b64a7310f4a88ed45990d0f1b3a7/XP/teste%2016/checkedXP.svg" alt="">`
+
+            }else{
+                 conteudo.innerHTML =index + 1 
+            }
         })
+
     }
 
     atualizarItensLista()
