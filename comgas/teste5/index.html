@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #trocaTitularicadeInicio>form>div:nth-child(2)>cg-button>button>div:nth-child(2),
+        #acompanharSolicitacao>cg-button>button>div:nth-child(2) {
+            display: none;
+        }
+
+        .panel-group .card.panel span {
+            font-weight: 600 !important;
+        }
+
+        .accordion-troca.panel-group {
+            border: none !important;
+            border-radius: 0px 0px 8px 8px !important;
+            margin-bottom: 0px;
+        }
+
+        [_nghost-serverApp-c123] .card-header.panel-enabled[_ngcontent-serverApp-c123] {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        div.box-emergencias-home {
+            background-color: #E80000;
+            border-radius: 0 0 10px 10px;
+        }
+
+        h2.text-blue.font-weight-bold.mb-4.pb-4 {
+            margin-bottom: 0px !important;
+        }
+
+        .loggedin-container .loggedin-row .flex-container {
+            max-width: 944px;
+            margin: 0 auto;
+        }
+
+        div.loggedin-container .loggedin-row .flex-container .instalations {
+            border-bottom: 1px solid #C4C4C4;
+        }
+
+        #trocaTitularicadeInicio>h4 {
+            font-weight: 400;
+            margin-top: 0px !important;
+        }
+
+        #trocaTitularicadeInicio[_ngcontent-serverApp-c168] .text-small[_ngcontent-serverApp-c168] {
+            font-size: 16px;
+        }
+
+        .new-xp-internal .checkbox input[type=checkbox]+label:before {
+            width: 16px !important;
+            height: 16px !important;
+            border: solid 1px #B7B7B7;
+            margin-top: 2px;
+        }
+
+
+        .panel.card.panel-default,
+        .accordion-troca.panel-group .panel {
+            box-shadow: none !important;
+
+        }
+
+        .panel.card.panel-default {
+            border: 1px solid #EEEEEE;
+        }
+
+        .new-xp-internal .checkbox input[type=checkbox]+label:after {
+            top: 2px !important;
+            left: 1px !important;
+        }
+
+        button.cg-btn.cg-btn--green.my-4 {
+            border-radius: 100px;
+            width: 200px;
+            height: 40px;
+        }
+
+        .cg-btn[_ngcontent-serverApp-c17]:disabled {
+            background: transparent;
+            border: 2px solid #8c8c8c;
+            color: #8c8c8c;
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-4.area-extra.mt-0.ajustar-padding>aside {
+            height: fit-content;
+            padding: 24px 16px;
+            border-radius: 12px;
+            position: relative;
+            top: 127px;
+        }
+
+        #acompanharSolicitacao>h4 {
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 0 !important;
+            padding: 0px !important;
+        }
+
+        #acompanharSolicitacao>p {
+            text-align: left;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 8px !important;
+            padding: 0px;
+        }
+
+        #acompanharSolicitacao>cg-button>button {
+            background: red;
+            width: 100%;
+            background: #7FC241;
+            border-radius: 60px;
+            margin: 0 !important;
+        }
+
+        /* 
+
+        *,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+        .itemTrocaTitularidade {
+            display: flex;
+        }
+
+        .itemTrocaTitularidade .textItem {
+            margin-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        .containterTitularidade {
+            padding: 24px;
+            padding-top: 0px;
+        }
+
+        .containterTitularidade .textItem h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 150%;
+            color: #007CB6;
+            margin-bottom: 4px;
+            margin-top: 0px;
+        }
+
+        .containterTitularidade .textItem p {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #3A3A3A;
+        }
+
+        .containterTitularidade .textItem p span {
+            font-weight: 600;
+        }
+
+        .containterTitularidade ul li {
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .containterTitularidade ul li img {
+            margin-right: 8px;
+        }
+
+        .containterTitularidade ul li p {
+            line-height: inherit;
+            padding: 0;
+            margin: 0;
+        }
+
+        .containerItemFlex {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .containerItemFlex ul {
+            margin-right: 16px;
+            max-width: 262px;
+        }
+
+        .containerItemFlex ul p {
+            width: 100%;
+        }
+
+        #trocaTitularicadeInicio>accordion>accordion-group.panel.panel-open>div>div.panel-collapse.collapse.in.show {
+            border: 1px solid #EEEEEE;
+            border-top: 0px;
+        }
+
+        #trocaTitularicadeInicio>accordion>accordion-group.panel.panel-open>div>div.panel-heading.card-header.panel-enabled {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        /* PAGE 2 */
+        .content-page-two p span {
+            font-weight: 700;
+            color: #007CB6;
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-endereco>div>div>p {
+            display: none;
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-endereco>div>div>form>div.row>div:nth-child(1)>div>div.flex-row.div-endereco>button {
+            border-radius: 100px;
+            height: 40px;
+            pointer-events: none;
+            background: #C4C4C4;
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-endereco>div>div>form>div.mb-4.d-flex>div.ml-auto>cg-button>button {
+            width: 200px;
+            border-radius: 100px;
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-endereco>div>div>form>div.mb-4.d-flex>div.ml-auto>cg-button>button:disabled {
+            background: #C4C4C4;
+
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-endereco>div>div>form>div.mb-4.d-flex>div:nth-child(1)>cg-button>button {
+            width: 200px;
+            border-radius: 100px;
+            border-color: #7FC241;
+            color: #7FC241;
+        }
+
+        #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-endereco>div>div>form>div.mb-4.d-flex>div:nth-child(1)>cg-button>button:hover {
+            background-color: #7FC241;
+            color: #fff;
+        }
+
+        @media(max-width: 1124px) {
+            .itemTrocaTitularidade .textItem {
+                width: 100%;
+            }
+
+            h2.text-blue.font-weight-bold.mb-4.pb-4,
+            #trocaTitularicadeInicio[_ngcontent-serverApp-c168] h4[_ngcontent-serverApp-c168] {
+                text-align: left;
+            }
+
+            #mainContent>div>ng-component>div>div>div.col-md-8.area-principal {
+                padding: 0;
+            }
+
+            .itemTrocaTitularidade {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .containerItemFlex {
+                flex-direction: column;
+            }
+
+            .containterTitularidade ul li p {
+                text-align: left;
+            }
+
+            .containerItemFlex ul {
+                margin-right: 0;
+            }
+
+            .loggedin-container .loggedin-row .flex-container h4 {
+                font-weight: 700;
+            }
+
+            div.box-emergencias-home {
+                background-color: #E74646;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #trocaTitularicadeInicio[_ngcontent-serverApp-c168] .text-small[_ngcontent-serverApp-c168] {
+                text-align: left;
+            }
+
+            #acompanharSolicitacao,
+            #acompanharSolicitacao h4,
+            #acompanharSolicitacao p {
+                text-align: center !important;
+            }
+
+            #acompanharSolicitacao>cg-button>button {
+                max-width: 226px;
+            }
+
+            #mainContent>div>ng-component>div>div>div.col-md-8.area-principal>aside {
+                border-radius: 12px;
+                box-shadow: 0px 0px 4px rgb(0 0 0 / 12%);
+                margin: 0 16px;
+                background: rgba(238, 238, 238, 0.6);
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="containterTitularidade">
+        <div class="itemTrocaTitularidade">
+            <img src="./img1.svg" alt="" style="height:fit-content">
+
+            <div class="textItem">
+                <h3>Quem pode solicitar?</h3>
+                <p>A troca do nome da conta deve ser feita por um novo morador (novo titular).</p>
+            </div>
+        </div>
+
+
+        <div class="itemTrocaTitularidade">
+            <img src="./img2.svg" alt="" style="height:fit-content">
+
+
+            <div class="textItem">
+                <h3>Quais informações do endereço vou precisar?</h3>
+                <p><span>A troca do nome da conta deve ser feita por um novo morador (novo titular).</span></p>
+                <ul>
+                    <li>
+                        <img src="./checked.svg" alt="" style="height:fit-content">
+
+                        <p>CEP</p>
+                    </li>
+
+                    <li>
+                        <img src="./checked.svg" alt="" style="height:fit-content">
+
+                        <p>Número da condomínio/residência</p>
+                    </li>
+
+
+                    <li>
+                        <img src="./checked.svg" alt="" style="height:fit-content">
+
+                        <p>Complemento</p>
+                    </li>
+
+                    <li>
+                        <img src="./checked.svg" alt="" style="height:fit-content">
+
+                        <p>Número do apartamento</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="itemTrocaTitularidade">
+            <img src="./img3.svg" alt="" style="height:fit-content">
+            <img src="./checked.svg" alt="" style="height:fit-content">
+
+
+
+            <div class="textItem">
+                <h3>Quais documento preciso?</h3>
+                <div class="containerItemFlex">
+                    <ul>
+                        <p><span>Pessoa Física</span></p>
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Nome completo;</p>
+                        </li>
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Endereço completo;</p>
+                        </li>
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Documento de identificação (RG com CPF ou CNH) do novo titular;</p>
+                        </li>
+                    </ul>
+
+
+                    <ul>
+                        <p><span>Pessoa Jurídica</span></p>
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Razão social;</p>
+                        </li>
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Endereço completo;</p>
+                        </li>
+
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>CNPJ (novo titular);</p>
+                        </li>
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Contrato Social ou MEI ou Estatuto Atualizado ou Ata de Assembleia;</p>
+                        </li>
+
+
+                        <li>
+                            <img src="./checked.svg" alt="" style="height:fit-content">
+
+                            <p>Documento de identificação (RG com CPF ou CNH) dos responsáveis legais (novo titular).
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-page-two">
+        <p>Você deseja ser o titular de um novo endereço? Preencha abaixo os dados do endereço e transfira a
+            titularidade para
+            você.</p>
+        <p><strong>Dica: Para evitar erro na consulta do endereço tenha em mãos o contrato de compra e venda/locação do
+                imóvel ou outras
+                contas de consumo para preencher os dados corretamente.</strong></p>
+
+        <p><span>Consulte o novo endereço para trocar a titularidade:</span></p>
+    </div>
+</body>
+
+</html>

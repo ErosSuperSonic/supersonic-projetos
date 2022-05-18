@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         /*=============  Limpando pagina ============= */
 
         .loggedin-container .loggedin-row .flex-container {
-            padding: 0 152px !important;
+            max-width: 944px;
+            margin: 0 auto;
+            padding: 0 !important;
         }
 
         .loggedin-container .loggedin-row .flex-container .instalations section .user-data h4,
@@ -31,15 +32,34 @@
         #pageInfo[_ngcontent-serverApp-c164] .info-header[_ngcontent-serverApp-c164] .icone[_ngcontent-serverApp-c164],
         .conta-por-email[_ngcontent-serverApp-c175] .descricao__normal[_ngcontent-serverApp-c175],
         .container-info,
-        .checkbox,
-        cg-button .cg-btn--green[_ngcontent-serverApp-c17],
         .form-cg__label--comgas,
         #pageInfo>div.col-md-2.col-xs-12,
-        #mainContent>div>cg-fatura-email>div>div.col-md-4.col-xs-12 {
+        #mainContent>div>cg-fatura-email>div>div.col-md-4.col-xs-12,
+        #mainContent>div>cg-fatura-email>div>div.col-xs-12.col-md-8>section:nth-child(2)>cg-fatura-email-form>form>div.mb-4.d-flex.container-button.p-xs-20>cg-button:nth-child(3) {
             display: none !important;
         }
 
+        .conta-por-email[_ngcontent-serverApp-c175] {
+            position: relative;
+        }
 
+
+
+        #mainContent>div>cg-fatura-email>div>div:nth-of-type(2)>section:nth-of-type(2)>cg-fatura-email-form>form>div:nth-of-type(2)>div>div>div>a>span>strong {
+            color: #007CB6;
+        }
+
+        #mainContent>div>cg-fatura-email>div>div.col-xs-12.col-md-8>section:nth-child(2)>cg-fatura-email-form>form>div.mb-4.d-flex.container-button.p-xs-20>cg-button:nth-child(1)>button {
+            background: #E74646 !important;
+            color: #fff;
+            border-color: transparent;
+        }
+
+        #mainContent>div>cg-fatura-email>div>div.col-xs-12.col-md-8>section:nth-child(2)>cg-fatura-email-form>form>div.mb-4.d-flex.container-button.p-xs-20>cg-button:nth-child(2)>button {
+            width: 184px;
+            height: 40px;
+            border-radius: 100px;
+        }
 
 
         /*===========  Textos ========= */
@@ -107,15 +127,6 @@
             width: 627px;
         }
 
-
-
-
-
-
-
-
-
-
         /* ========== CARDS ========= */
 
 
@@ -131,6 +142,10 @@
             border-radius: 12px;
             width: 330px;
             padding: 24px 16px;
+
+            position: absolute;
+            right: 0;
+            top: 0;
         }
 
 
@@ -147,7 +162,6 @@
             color: #58595B;
             font-family: 'Open Sans', sans-serif;
             width: 141px;
-            height: 90.27px;
             margin-bottom: 24px;
             text-align: center;
 
@@ -166,22 +180,22 @@
 
         .itemSS img {
             margin-bottom: 8px;
-            width: 20px;
+            width: 25px;
         }
 
         .itemSS span {
             font-style: normal;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 16px;
             line-height: 16px;
             letter-spacing: -0.5px;
         }
 
         .container-SS h2 {
-            font-family: 'Open Sans',sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 24px;
+            font-size: 24px !important;
             line-height: 130%;
             /* or 31px */
             letter-spacing: -0.015em;
@@ -190,60 +204,166 @@
 
             margin-bottom: 24px;
         }
+
+        div#acnFooter {
+            position: absolute;
+            width: 1278px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 136px;
+        }
+
+
+        @media(max-width:1173px) {
+            .container-SS {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .container-SS h2 {
+                width: 100%;
+            }
+
+            .subtitleSS {
+                text-align: left;
+            }
+
+            .itemSS {
+                height: auto;
+                margin-right: 16px;
+            }
+
+            div.col-md-10 {
+                width: 100%;
+            }
+
+            .textCadastro,
+            #pageInfo>div.info-header.col-md-10.col-xs-12>div {
+                width: 100%;
+            }
+
+            .subtitleSS {
+                width: 100%;
+            }
+
+            div.container-button {
+                flex-direction: column;
+            }
+
+            cg-button {
+                width: 100%;
+            }
+
+            cg-button button {
+                width: 100% !important;
+            }
+        }
+
+        @media(max-width: 768px) {
+            div.container-button {
+                flex-direction: column-reverse;
+            }
+
+            .container-SS {
+                position: relative;
+                width: 83%;
+                margin: 0 auto;
+            }
+
+            #pageInfo>div.info-header.col-md-10.col-xs-12>div {
+                padding: 0 16px;
+            }
+
+            .itemSS {
+                margin-right: 0;
+            }
+
+            div#acnFooter {
+                width: auto;
+            }
+
+            div.container-button {
+                flex-direction: column;
+            }
+
+
+            div.box-emergencias-home {
+                background-color: #E74646;
+                border-radius: 29px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #mainContent>div>cg-fatura-email>div>div.col-xs-12.col-md-8>section:nth-child(2)>cg-fatura-email-form>form>div.mb-4.d-flex.container-button.p-xs-20>cg-button:nth-child(1)>button {
+                margin-bottom: 15px;
+            }
+
+        }
     </style>
 </head>
 
 <body>
     <div class="container-SS">
-
         <h2>Veja <strong>outros serviços</strong> que podem ser <strong>do seu interesse:</strong></h2>
-        <a href="#" class="itemSS">
-            <img src="./2via.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/contas-e-pagamentos" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/2via.svg"
+                alt="">
             <span>2ª via da Conta</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="./attDados.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/atualizacaoCadastral" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/attDados.svg"
+                alt="">
             <span>Atualizar dados</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="home.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/entregaFatura" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/home.svg"
+                alt="">
             <span>Receber a conta no endereço</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="./calender.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/dataVencimento" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/calender.svg"
+                alt="">
             <span>Mudar data de vencimento da conta</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="./notebook.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/analiseConsumoServicos" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/notebook.svg"
+                alt="">
             <span>Analisar a Conta de Gás Natural</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="relogio.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/simulacaoConsumo" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/relogio.svg"
+                alt="">
             <span>Simular o Consumo</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="./conhecaNova.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/conhecaSuaFatura" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/conhecaNova.svg"
+                alt="">
             <span>Conheça a nova conta</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="./trocaTitulo.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/trocaTitularidade" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/trocaTitulo.svg"
+                alt="">
             <span>Trocar Titularide</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="parcelamento.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/contas-e-pagamentos" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/parcelamento.svg"
+                alt="">
             <span>Parcelamento</span>
         </a>
 
-        <a href="#" class="itemSS">
-            <img src="./debito.svg" alt="">
+        <a href="https://autoatendimento-qas.comgas.com.br/debitoAutomatico" class="itemSS">
+            <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/f9884b83c0506d9f540a9835916b7a7f3db48307/comgas/teste7/debito.svg"
+                alt="">
             <span>Débito Automático</span>
         </a>
     </div>
