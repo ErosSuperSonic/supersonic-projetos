@@ -1,0 +1,472 @@
+.bg-grey-ss{
+    background: #DDDDDD;
+    border-radius: 10px;
+}
+/*=== Botões ====*/
+div .primary-images-carousel .product-detail-controls {
+    width: 47px;
+    height: 47px;
+    background-color: rgba(248, 179, 75, 0.19);
+    border-radius: 50%;
+}
+
+div .primary-images-carousel .product-detail-controls svg {
+    display: none;
+}
+
+div .primary-images-carousel .product-detail-controls::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+    width: 1.5625rem;
+    height: 1.5625rem;
+}
+
+div .primary-images-carousel .product-detail-next {
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/06d958681f035434cc87761a75852329394f6327/disantini/images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 18px;
+    right: 12px;
+}
+
+div .primary-images-carousel .product-detail-prev {
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/06d958681f035434cc87761a75852329394f6327/disantini/images/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 15px;
+    left: 12px;
+}
+
+
+
+
+/*=== Prices ====*/
+.product-detail .product-name {
+    color: #4E4E50;
+}
+
+
+.attributes .prices .price span del+.sales .value,
+.prices .price span span.sales {
+    font-weight: normal;
+}
+
+.prices .price span span.sales {
+    color: #4E4E50 !important;
+}
+
+.attributes .prices .price span.installments {
+    color: #21A144 !important;
+    font-weight: 300;
+    margin-top: 16px;
+}
+
+.attributes .prices .price span.installments b {
+    font-weight: 700;
+    color: #21A144;
+}
+
+div.attributes>div:nth-of-type(3) {
+    justify-content: space-between;
+}
+
+/*==========Popup ===========*/
+
+.guia-tamanho-ss {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.guia-tamanho-ss p {
+    text-decoration-line: underline;
+    color: #4E4E50;
+    margin-left: 5px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.guia-tamanho-ss img {
+    width: 16px;
+    height: 16px;
+}
+
+.guia-tamanhos-ss-popup {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100%;
+    height: 100vh !important;
+    top: 0px !important;
+    transition: .3s !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    z-index: 1000;
+    left: 0;
+}
+
+.guia-tamanhos-ss-popup .container-popup::-webkit-scrollbar{
+    display: none;
+}
+
+
+.guia-tamanhos-ss-popup.active-ss {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.guia-tamanhos-ss-popup .container-popup {
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 90vh;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.guia-tamanhos-ss-popup .title {
+    background: #F8B34B;
+    text-align: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.container-popup .title p {
+    color: #4E4E50;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 28px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+}
+
+.container-popup .element {
+    padding: 0px 64px;
+}
+
+.guia-tamanhos-ss-popup .close-popup-ss {
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.guia-tamanhos-ss-popup .close-popup-ss svg {
+    width: 100%;
+}
+
+
+
+
+/*======= DOBRA NOVA ==========*/
+
+
+.infos-ss {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.box-img {
+    width: 25px;
+    height: 25px;
+    background: #21A144;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.box-img img {
+    width: 15px;
+    height: 15px;
+}
+
+.infos-ss>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.infos-ss div p {
+    color: #4E4E50;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.infos-ss a {
+    text-decoration: underline;
+    color: #4E4E50 !important;
+
+}
+
+.infos-ss div span {
+    color: #21A144;
+}
+
+
+
+
+div.attributes button .add-to-cart-icon {
+    display: none;
+}
+
+div.attributes .btn.btn-sucess.btn-block.add-to-cart {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.26);
+    margin-bottom: 15px;
+}
+
+
+div.attributes .btn.icon-button.add-to-wish-list {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    text-transform: none;
+    color: #4A4A4A;
+    font-family: 'Roboto Condensed';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+div.attributes .btn.icon-button.add-to-wish-list strong {
+    margin-left: 7px;
+}
+
+#container-flex {
+    align-items: center;
+    position: relative;
+    color: #4E4E50;
+}
+
+.venda-entrega {
+    position: relative;
+    left: 2px;
+}
+
+
+
+
+/*Seção das fotos quadradas dos tenis*/
+.product-detail .attributes .color .swatch-circle.color-value.selected {
+    /*Esse é o selecionado*/
+    border: none;
+    width: 62px;
+    height: 62px;
+    border-radius: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+}
+
+.product-detail-attributes .color-value.swatch-container.swatch-circle.selected.selectable {
+    border: 2px solid #F8B34B;
+}
+
+div.attributes>div:nth-of-type(2) {
+    justify-content: center;
+}
+
+div.attributes>div:nth-of-type(2)>div span.color-value.swatch-container.swatch-circle.selectable,
+div.attributes>div:nth-of-type(2)>div span.color-value.swatch-container.swatch-circle.unselectable {
+
+    width: 62px;
+    height: 62px;
+    border-radius: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+div.color button .swatch-circle.unselectable:after {
+    background-size: cover !important;
+    background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/disantini/images/background-x-unselectable.png") !important;
+    background-color: rgba(196, 196, 196, 0.52);
+}
+
+ div.attributes>div:nth-of-type(2)>div .swatch-value {
+    display: none !important;
+}
+ 
+
+.paragrafo-color-add {
+    position: absolute;
+    left: -63px;
+    top: 37px;
+    color: #4E4E50;
+    width: 107px;
+}
+
+.paragrafo-color-add strong {
+    padding-right: 3px;
+}
+
+.container-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: -10px;
+}
+
+@media(max-width: 1200px) {
+    .paragrafo-color-add {
+        top: -10px;
+        left: 8px;
+    }
+
+}
+
+.infos-ss p {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 991.98px) {
+    #chatbot {
+        bottom: 4% !important;
+    }
+
+    .product-breadcrumb.col.hidden-sm-down.d-flex.justify-content-center {
+        display: block !important;
+    }
+
+    .product-breadcrumb .breadcrumb {
+        border: none !important;
+    }
+
+    [aria-label=Breadcrumb] {
+        display: block !important;
+    }
+    .container-popup .element{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container-popup .title p{
+        font-size: 19px;
+    }
+    .table thead th,
+    .table td, .table th{
+        vertical-align: inherit !important; 
+        font-size: 14px;
+    }
+}
+
+
+@media(max-width: 992px) {
+
+    .product-detail .product-name {
+        padding-top: 20px;
+    }
+
+    .attributes .row .caroussel-elements .attribute.color {
+        position: relative;
+        top: 16px;
+    }
+
+    .paragrafo-color-add {
+        top: -22px;
+        left: -53px;
+    }
+
+    .container-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        left: -10px;
+    }
+
+    div.attributes>div:nth-of-type(2)>div .attribute.color {
+        justify-content: flex-start;
+    }
+
+    .primary-images-carousel .slick-carousel-item .image-container .product-image {
+        left: 50% !important;
+        top: 60% !important;
+        transform: translate(-50%, -50%);
+        width: 80% !important;
+
+    }
+
+    .slick-carousel.slick-initialized.slick-slider.slick-dotted {
+        background: #fff !important;
+        padding-bottom: 20px;
+    }
+
+
+}
+
+@media(max-width: 543px) {
+    .prices{
+        padding-bottom: 40px !important;
+    }
+    div.attributes .btn.icon-button.add-to-wish-list{
+        margin-bottom: 40px;
+    }
+
+    .row.hidden-xs-down {
+        display: block !important;
+    }
+
+    .infos-ss {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* div.attributes>div:nth-of-type(2) {
+        overflow-x: scroll;
+    } */
+
+    .caroussel-elements {
+        /* overflow-x: scroll; */
+        position: absolute !important;
+        right: 0;
+        /* overflow-y: hidden; */
+    }
+
+    div.attributes>div:nth-of-type(3) {
+        margin-top: 120px;
+    }
+
+    .paragrafo-color-add {
+        position: absolute;
+        top: 162px;
+        left: 17px;
+        margin: 0;
+        width: 300px;
+    }
+
+    div.attributes .btn.btn-sucess.btn-block.add-to-cart,
+    div.attributes .btn.icon-button.add-to-wish-list {
+        width: 100%;
+    }
+
+
+    #container-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 13px;
+    }
+
+    .venda-entrega {
+        top: 9px;
+    }
+
+}

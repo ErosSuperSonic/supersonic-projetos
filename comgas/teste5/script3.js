@@ -130,17 +130,29 @@ function previousPageOne() {
     if (document.querySelector(".content-page-two")) {
         document.querySelector(".content-page-two").remove()
     }
-    if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal")) {
-        document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal").style.width = "66.66666667%"; //
+
+    if (window.innerWidth >= 1100) {
+        if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal")) {
+            document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal").style.width = "66.66666667%"; //
+        }
+        if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0")) {
+            document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0").style.display = "66.66666667%";
+        }
+    } else {
+        if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal")) {
+            document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal").style.width = "100%"; //
+        }
+        if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0")) {
+            document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0").style.display = "100%";
+        }
     }
+
+
     if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0.ajustar-padding")) {
 
         document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0.ajustar-padding").style.display = 'block'
     }
 
-    if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0")) {
-        document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0").style.display = "66.66666667%";
-    }
     if (document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0")) {
         document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-4.area-extra.mt-0").style.display = "block"
     }
@@ -165,4 +177,3 @@ observer.observe(root, {
     childList: true,
     subtree: true,
 });
-

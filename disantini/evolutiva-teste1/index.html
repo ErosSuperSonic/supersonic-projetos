@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #1d1d1d;
+        }
+
+        .dobraRetireGratis {
+            margin-top: 27px;
+        }
+
+        .dobraRetireGratis p {
+            margin: 0;
+        }
+
+        .dobraRetireGratis>div {
+            display: flex;
+            align-items: center;
+            color: #21A144;
+
+            font-family: 'Roboto';
+            font-size: 16px;
+            line-height: 24px;
+            align-items: flex-start;
+            margin-bottom: 27px;
+        }
+
+        .boxImg {
+            width: 25px;
+            height: 25px;
+            background: #21A144;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            border-radius: 100px;
+        }
+
+        .dobraRetireGratis>div img {
+            position: relative;
+            width: 12px;
+        }
+
+        .grey {
+            color: #4E4E50;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+
+        document.querySelector("#work-jobs").style.display = "none"
+        document.querySelector("body > div.body-wrap > main > section.work-sec-f.sec").style.display = "none"
+        // window.onload = function () {
+        // }
+    </script>
+</head>
+
+<body>
+
+    <div class="dobraRetireGratis">
+        <div>
+            <div class="boxImg">
+                <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/11318d651c5bc7dcd3f4100ce90aa7145f008633/disantini/images/storefront.svg"
+                    alt="">
+            </div>
+            <p><strong>Retire grátis</strong> em qualquer loja física.</p>
+        </div>
+
+        <div>
+            <div class="boxImg">
+                <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/11318d651c5bc7dcd3f4100ce90aa7145f008633/disantini/images/verificado.svg"
+                    alt="">
+            </div>
+            <div>
+                <p><strong>Compra garantida.</strong></p>
+                <p class="grey">Venda e entrega feita pela Di Santinni.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <button class="add-to-favorite-ss">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M14.4219 4.43126C14.2124 3.94632 13.9104 3.50687 13.5328 3.13751C13.1549 2.76705 12.7093 2.47265 12.2203 2.27032C11.7132 2.05969 11.1694 1.95187 10.6203 1.95314C9.85 1.95314 9.09844 2.16407 8.44531 2.56251C8.28906 2.65782 8.14062 2.76251 8 2.87657C7.85938 2.76251 7.71094 2.65782 7.55469 2.56251C6.90156 2.16407 6.15 1.95314 5.37969 1.95314C4.825 1.95314 4.2875 2.05939 3.77969 2.27032C3.28906 2.47345 2.84687 2.76564 2.46719 3.13751C2.08906 3.50645 1.787 3.94601 1.57812 4.43126C1.36094 4.93595 1.25 5.47189 1.25 6.02345C1.25 6.54376 1.35625 7.08595 1.56719 7.63751C1.74375 8.09845 1.99687 8.57657 2.32031 9.05938C2.83281 9.82345 3.5375 10.6203 4.4125 11.4281C5.8625 12.7672 7.29844 13.6922 7.35938 13.7297L7.72969 13.9672C7.89375 14.0719 8.10469 14.0719 8.26875 13.9672L8.63906 13.7297C8.7 13.6906 10.1344 12.7672 11.5859 11.4281C12.4609 10.6203 13.1656 9.82345 13.6781 9.05938C14.0016 8.57657 14.2562 8.09845 14.4312 7.63751C14.6422 7.08595 14.7484 6.54376 14.7484 6.02345C14.75 5.47189 14.6391 4.93595 14.4219 4.43126V4.43126Z"
+                fill="#4A4A4A" />
+        </svg>
+        Adicionar aos favoritos
+    </button>
+</body>
+
+</html>
