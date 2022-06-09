@@ -283,14 +283,11 @@ if (window.innerWidth <= 768) {
                             let image = document.createElement("img")
                             image.classList.add("imageSS")
                             if (brand == "moleca" || productName.includes("moleca")) {
-                                image.src = "https://varejaopaulista.com/wp-content/uploads/2020/05/logo-moleca-png-1-1.png"
-                                insertImage(image)
-
-                            } else if (brand == "moleca" || productName.includes("moleca")) {
                                 image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/moleca.png?raw=true"
                                 insertImage(image)
                             } else if (brand == "zaxy" || productName.includes("zaxy")) {
-
+                                image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/c8eccfadb6b6cc094a264f23a37fc824ff0fc10b/disantini/evolutiva-teste1/image/zaxy_logo_new.svg"
+                                insertImage(image)
                             } else if (brand == "nike" || productName.includes("nike")) {
                                 image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/nike.png?raw=true"
                                 insertImage(image)
@@ -310,7 +307,8 @@ if (window.innerWidth <= 768) {
                                 image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/adidas.png?raw=true"
                                 insertImage(image)
                             } else if (brand == "rider" || productName.includes("rider")) {
-
+                                image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/rider.png?raw=true"
+                                insertImage(image)
                             } else if (brand == "ipanema" || productName.includes("ipanema")) {
                                 image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/ipanema.png?raw=true"
                                 insertImage(image)
@@ -318,7 +316,11 @@ if (window.innerWidth <= 768) {
                                 image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/Azaleia.png?raw=true"
                                 insertImage(image)
                             } else if (brand == "vizzano" || productName.includes("vizzano")) {
-
+                                image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/vizzano.png?raw=true"
+                                insertImage(image)
+                            } else if (brand == "all star" || productName.includes("all star")) {
+                                image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/vizzano.png?raw=true"
+                                insertImage(image)
                             }
 
                             function insertImage(image) {
