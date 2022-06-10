@@ -314,8 +314,9 @@
     }
 
     .imageSS {
-        width: 127.63px;
+        width: fit-content;
         height: 25px;
         margin-bottom: 15px;
+        object-fit: contain;
     }
 }
