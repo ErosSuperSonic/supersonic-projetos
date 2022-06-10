@@ -326,4 +326,8 @@
         margin-bottom: 15px;
         object-fit: contain;
     }
+
+    .product-detail .prices-add-to-cart-actions{
+        z-index: 10 !important;
+    }
 }

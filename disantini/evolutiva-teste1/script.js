@@ -68,6 +68,7 @@ if (window.innerWidth <= 768) {
                     insertElementSizeInHtml()
                     setActiveInButtons()
                     alternateButtonsArrow()
+                    lowerCaseSemJuros()
                 })
             })
         }
@@ -96,6 +97,7 @@ if (window.innerWidth <= 768) {
                 a.addEventListener("click", () => {
                     insertSelectedSize(a.attributes["data-attr-value"].value)
                     alternateButtonsArrow()
+                    lowerCaseSemJuros()
                 })
             })
         }
@@ -126,9 +128,7 @@ if (window.innerWidth <= 768) {
 
                     a.classList.forEach(el => newButton.classList.add(el))
 
-                    // if (newButton.classList.contains("disabled")) {
-                    //     newButton.disabled = true
-                    // }
+
                     document.querySelector(".divTamanhos").appendChild(newButton)
                     insertDivRetireGratis()
                 })
@@ -140,26 +140,23 @@ if (window.innerWidth <= 768) {
 
 
         function setActiveInButtons() {
-
             document.querySelectorAll(".divTamanhos button").forEach((button, index) => {
                 if (document.querySelector(".dropdown button").dataset.selected == button.innerHTML) {
                     button.classList.add("active")
                 }
 
                 button.addEventListener("click", () => {
-                    console.log("Entrei aqui")
-
-
                     document.querySelectorAll(".divTamanhos button").forEach((button) => {
                         button.classList.remove("active")
                     })
 
-
                     document.querySelectorAll(".dropdown a")[index].click()
                     button.classList.add("active")
+                    lowerCaseSemJuros()
                 })
             })
         }
+
 
         function clickInPhoto() {
 
@@ -202,10 +199,7 @@ if (window.innerWidth <= 768) {
 
 
         function adicionarAosFavoritos() {
-            console.log("Nem entrei")
             if (!document.querySelector(".add-to-favorite-ss")) {
-
-                console.log("Entreii")
                 const newButtonFavorite = `
             <button class="add-to-favorite-ss">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,6 +273,9 @@ if (window.innerWidth <= 768) {
                                 if (productName.includes("grendha")) {
                                     image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/grendha.png?raw=true"
                                     insertImage(image)
+                                } else if (productName.includes("azaleia")) {
+                                    image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/Azaleia.png?raw=true"
+                                    insertImage(image)
                                 } else {
                                     image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/c8eccfadb6b6cc094a264f23a37fc824ff0fc10b/disantini/evolutiva-teste1/image/zaxy_logo_new.svg"
                                     insertImage(image)
@@ -317,7 +314,7 @@ if (window.innerWidth <= 768) {
                                 image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/a041a91c92f4c0717a91b2280a4d3c57f144ae16/disantini/evolutiva-teste1/image/allStar.svg"
                                 insertImage(image)
                             } else if (productName.includes("di santinni")) {
-                                image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/a041a91c92f4c0717a91b2280a4d3c57f144ae16/disantini/evolutiva-teste1/image/dissantini.png"
+                                image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/dissantini.png?raw=true"
                                 insertImage(image)
                             }
 
@@ -332,8 +329,42 @@ if (window.innerWidth <= 768) {
                         });
                 }
             });
+        }
+
+
+        function alinhandoPriceCortado() {
+
+            if (document.querySelector(".prices .price span.strike-through.list span.value")) {
+                if (document.querySelector("span.value").attributes.content.textContent.length == 6) {
+                    document.querySelector(".prices .price span.strike-through.list span.value").style.marginLeft = "-74% !important"
+                }
+            }
+        }
+
+        function setInitialTamanhos() {
+
+            let verifyExists = false;
+            let myInterval = setInterval(() => {
+
+                if (!verifyExists) {
+                    if (document.querySelector(".dropdown-toggle")) {
+                        if (document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/( )+/g, '') !== "") {
+                            document.querySelectorAll(".dropdown-menu a").forEach((a, index) => {
+                                if (a.innerText.replaceAll("\n", "").replace(/( )+/g, '') == document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/( )+/g, '')) {
+                                    document.querySelectorAll(".divTamanhos button")[index].click()
+                                }
+
+                            })
+                        }
+                        clearInterval(myInterval)
+                        verifyExists = true
+                    }
+                }
+
+            }, 300)
 
         }
+
 
         insertBreadcrumbInHtml()
         alternateButtonsArrow()
@@ -349,6 +380,9 @@ if (window.innerWidth <= 768) {
         lowerCaseSemJuros()
         divPromoGridDisplayNone()
         getNameInterpreseForBanner()
+        setActiveInButtons()
+        alinhandoPriceCortado()
+        setInitialTamanhos()
     } catch (e) {
         console.error(e)
     }
