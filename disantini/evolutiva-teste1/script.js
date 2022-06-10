@@ -1,23 +1,13 @@
 if (window.innerWidth <= 768) {
     try {
-        function addBreadcrumb() {
-            // Extraindo dados do breadcrumb
-            const breadcrumb = document.querySelectorAll(".breadcrumb li")
-            let myArray = []
-            breadcrumb.forEach((li) => {
-                let li1 = li.innerText.replaceAll("\n", "").replace(/( )+/g, '')
-                myArray.push(li1)
-            })
+        function insertBreadcrumbInHtml() {
 
-            const newBreadcrumb = `${myArray.join(" / ")}`
-
-            insertBreadcrumbInHtml(newBreadcrumb)
-        }
-
-        function insertBreadcrumbInHtml(newBreadcrumb) {
             let newDiv = document.createElement("div")
             newDiv.classList.add("breadcrumb-ss")
-            newDiv.append(newBreadcrumb)
+
+            document.querySelectorAll(".breadcrumb li a").forEach((a) => {
+                newDiv.append(a)
+            })
 
             document.querySelector(".buttons-list").insertAdjacentElement("afterbegin", newDiv)
         }
@@ -286,8 +276,8 @@ if (window.innerWidth <= 768) {
                                 image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/moleca.png?raw=true"
                                 insertImage(image)
                             } else if (brand == "zaxy" || brand == "grendene" || productName.includes("zaxy")) {
-                                if (productName.includes("azaleia")) {
-                                    image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/Azaleia.png?raw=true"
+                                if (productName.includes("grendha")) {
+                                    image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/grendha.png?raw=true"
                                     insertImage(image)
                                 } else {
                                     image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/c8eccfadb6b6cc094a264f23a37fc824ff0fc10b/disantini/evolutiva-teste1/image/zaxy_logo_new.svg"
@@ -326,6 +316,9 @@ if (window.innerWidth <= 768) {
                             } else if (brand == "all star" || productName.includes("all star")) {
                                 image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/a041a91c92f4c0717a91b2280a4d3c57f144ae16/disantini/evolutiva-teste1/image/allStar.svg"
                                 insertImage(image)
+                            } else if (productName.includes("di santinni")) {
+                                image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/a041a91c92f4c0717a91b2280a4d3c57f144ae16/disantini/evolutiva-teste1/image/dissantini.png"
+                                insertImage(image)
                             }
 
                             function insertImage(image) {
@@ -342,7 +335,7 @@ if (window.innerWidth <= 768) {
 
         }
 
-        addBreadcrumb()
+        insertBreadcrumbInHtml()
         alternateButtonsArrow()
         addBackgroundImg()
         getTitleButtonColor()

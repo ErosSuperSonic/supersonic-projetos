@@ -78,16 +78,23 @@
 
     .breadcrumb-ss {
         text-transform: uppercase;
-        background: #F9F9F9;
+        background: #fff;
         padding-right: 10px;
         padding-left: 10px;
         position: relative;
         left: -10px;
         border-radius: 1px;
-        color: #8B8A8C;
         font-size: .8rem;
     }
 
+    .breadcrumb-ss a {
+        color: #8B8A8C !important;
+    }
+
+    .breadcrumb-ss a:nth-child(1)::after {
+        content: "/";
+        margin-right: 4px;
+    }
 
     .slick-carousel.slick-initialized.slick-slider.slick-dotted {
         height: auto;
