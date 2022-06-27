@@ -1,0 +1,75 @@
+#hero>div>div>div>div:nth-of-type(1)>div {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-ss {
+    background-image: url("./background.png");
+    padding-bottom: 101px;
+    padding-top: 100px;
+}
+
+.hero-ss h1 {
+    width: 613px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+
+}
+
+.hero-ss ul {
+    margin-top: 32px;
+}
+
+.hero-ss ul li svg {
+    margin-right: 16px;
+}
+
+.hero-ss ul li {
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 180%;
+    color: #FFFFFF;
+}
+
+.hero-ss a {
+    width: 229px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0053A8;
+    margin-top: 48px;
+    color: #fff;
+    text-decoration: none;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+}
