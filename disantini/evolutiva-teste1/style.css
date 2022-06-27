@@ -23,6 +23,7 @@
 
     .divTamanhos {
         margin-top: 16px;
+        display: flex !important;
     }
 
     .dobraRetireGratis>div {
@@ -327,7 +328,14 @@
         object-fit: contain;
     }
 
-    .product-detail .prices-add-to-cart-actions{
+    .product-detail .prices-add-to-cart-actions {
         z-index: 10 !important;
+    }
+
+    .product-detail .discount-container {
+        z-index: 10;
+        left: initial !important;
+        right: 37px;
+        top: 10px !important;
     }
 }

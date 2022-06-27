@@ -16,7 +16,6 @@ if (window.innerWidth <= 768) {
         function alternateButtonsArrow() {
 
             let verifyExists = false;
-
             let myInterval = setInterval(() => {
                 const button1 = document.querySelector("button.product-detail-controls.product-detail-next.slick-arrow")
                 if (!verifyExists) {
@@ -32,32 +31,6 @@ if (window.innerWidth <= 768) {
         }
 
 
-        function addBackgroundImg() {
-            //Puxando dados com api
-            const myCollection = document.querySelectorAll(".attribute.color")[0].children; //Pegando o container com os quadrados das imagens
-
-            function chamarDados() {
-                Array.from(myCollection).forEach((el) => {
-                    //Begando os botões com as urls para as imagens
-                    if (el.tagName === "BUTTON") {
-                        fetch(el.attributes["data-url"].value)
-                            .then(function (response) {
-                                return response.json();
-                            })
-                            .then(function (data) {
-                                el.querySelector(
-                                    "span.color-value"
-                                ).style.backgroundImage = `url('${data.product.images.large[0].absUrl}')`;
-                            })
-                            .catch((error) => {
-                                console.log("Deu erro", error);
-                            });
-                    }
-                });
-            }
-
-            chamarDados();
-        }
 
 
         function getTitleButtonColor() {
@@ -66,9 +39,8 @@ if (window.innerWidth <= 768) {
                     const colorButton = button.title
                     insertSelectedColorInHtml(colorButton)
                     insertElementSizeInHtml()
-                    setActiveInButtons()
                     alternateButtonsArrow()
-                    lowerCaseSemJuros()
+                    setActiveInButtons()
                 })
             })
         }
@@ -84,6 +56,8 @@ if (window.innerWidth <= 768) {
 
 
         function insertSelectedSize(size = "") {
+
+            console.log("esse é o size:", size)
             if (!document.querySelector(".tamanhoSelecionadoSS")) {
                 document.querySelectorAll(".product-detail-attributes")[1].insertAdjacentHTML("beforebegin", `<p class="tamanhoSelecionadoSS"><strong>Tamanho selecionado:</strong> ${size}</p>`)
             } else {
@@ -97,7 +71,6 @@ if (window.innerWidth <= 768) {
                 a.addEventListener("click", () => {
                     insertSelectedSize(a.attributes["data-attr-value"].value)
                     alternateButtonsArrow()
-                    lowerCaseSemJuros()
                 })
             })
         }
@@ -107,33 +80,32 @@ if (window.innerWidth <= 768) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("divTamanhos")
 
-
-
             setTimeout(() => {
-                document.querySelectorAll(".dropdown a").forEach((a) => {
-                    let link = a.cloneNode(true)
-                    myArray.push(link)
-                })
+                if (!document.querySelector(".active.initialActive")) {
+                    document.querySelectorAll(".dropdown a").forEach((a) => {
+                        let link = a.cloneNode(true)
+                        myArray.push(link)
+                    })
 
 
-                if (document.querySelector(".divTamanhos")) {
-                    document.querySelector(".divTamanhos").remove()
+                    if (document.querySelector(".divTamanhos")) {
+                        document.querySelector(".divTamanhos").remove()
+                    }
+
+                    document.querySelectorAll(".product-detail-attributes")[1].insertAdjacentElement("afterend", newDiv)
+
+                    myArray.forEach((a) => {
+                        let newButton = document.createElement("button")
+                        newButton.innerText = (a.innerText).replaceAll("\n", "").replace(/( )+/g, '')
+
+                        a.classList.forEach(el => newButton.classList.add(el))
+
+
+                        document.querySelector(".divTamanhos").appendChild(newButton)
+                        insertDivRetireGratis()
+                    })
+                    setActiveInButtons()
                 }
-
-                document.querySelectorAll(".product-detail-attributes")[1].insertAdjacentElement("afterend", newDiv)
-
-                myArray.forEach((a) => {
-                    let newButton = document.createElement("button")
-                    newButton.innerText = (a.innerText).replaceAll("\n", "").replace(/( )+/g, '')
-
-                    a.classList.forEach(el => newButton.classList.add(el))
-
-
-                    document.querySelector(".divTamanhos").appendChild(newButton)
-                    insertDivRetireGratis()
-                })
-
-                setActiveInButtons()
             }, 500)
 
         }
@@ -141,20 +113,43 @@ if (window.innerWidth <= 768) {
 
         function setActiveInButtons() {
             document.querySelectorAll(".divTamanhos button").forEach((button, index) => {
+
                 if (document.querySelector(".dropdown button").dataset.selected == button.innerHTML) {
                     button.classList.add("active")
                 }
-
                 button.addEventListener("click", () => {
-                    document.querySelectorAll(".divTamanhos button").forEach((button) => {
-                        button.classList.remove("active")
-                    })
+                    alternateButtonsArrow()
 
-                    document.querySelectorAll(".dropdown a")[index].click()
-                    button.classList.add("active")
-                    lowerCaseSemJuros()
+
+                    if (document.querySelector(".divTamanhos button.initialActive")) {
+                        if (!document.querySelectorAll(".divTamanhos button")[index].classList.contains("initialActive") && document.querySelector(".divTamanhos button.initialActive").innerHTML == document.querySelectorAll(".dropdown a")[index].attributes["data-attr-value"].textContent) {
+                            document.querySelectorAll(".divTamanhos button").forEach((button) => {
+                                button.classList.remove("active")
+                                button.classList.remove("initialActive")
+                            })
+
+                            document.querySelectorAll(".dropdown a")[index].click()
+                            button.classList.add("active")
+                        } else {
+                            document.querySelectorAll(".divTamanhos button").forEach((button) => {
+                                button.classList.remove("active")
+                            })
+
+                            document.querySelectorAll(".dropdown a")[index].click()
+                            button.classList.add("active")
+                        }
+                    } else {
+                        document.querySelectorAll(".divTamanhos button").forEach((button) => {
+                            button.classList.remove("active")
+                        })
+
+                        document.querySelectorAll(".dropdown a")[index].click()
+                        button.classList.add("active")
+                    }
+
                 })
             })
+
         }
 
 
@@ -226,26 +221,12 @@ if (window.innerWidth <= 768) {
         }
 
 
-        function lowerCaseSemJuros() {
-            let verifyExists = false;
-
-            let myInterval = setInterval(() => {
-                if (!verifyExists) {
-                    let vezesJuros = document.querySelector(".installments").innerHTML
-                    if (vezesJuros) {
-                        let newElement = vezesJuros.replace("ou", "<span>ou</span>")
-                        document.querySelector(".installments").innerHTML = newElement
-
-                        clearInterval(myInterval)
-                        verifyExists = true
-                    }
-                }
-            }, 300)
-        }
-
         function divPromoGridDisplayNone() {
-            if (document.querySelector(".product-promo-grid").children.length == 0) {
-                document.querySelector(".product-promo-grid").style.display = "none"
+
+            if (document.querySelector(".product-promo-grid")){
+                if (document.querySelector(".product-promo-grid").children.length == 0) {
+                    document.querySelector(".product-promo-grid").style.display = "none"
+                }
             }
         }
 
@@ -348,10 +329,15 @@ if (window.innerWidth <= 768) {
 
                 if (!verifyExists) {
                     if (document.querySelector(".dropdown-toggle")) {
-                        if (document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/( )+/g, '') !== "") {
+                        if (document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/\s/g, '') !== "") {
                             document.querySelectorAll(".dropdown-menu a").forEach((a, index) => {
                                 if (a.innerText.replaceAll("\n", "").replace(/( )+/g, '') == document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/( )+/g, '')) {
-                                    document.querySelectorAll(".divTamanhos button")[index].click()
+                                    document.querySelectorAll(".divTamanhos button")[index].classList.add("active")
+                                    document.querySelectorAll(".divTamanhos button")[index].classList.add("initialActive")
+
+                                    if (document.querySelector(".divTamanhos button.initialActive")) {
+                                        insertSelectedSize(document.querySelector(".divTamanhos button.initialActive").innerText)
+                                    }
                                 }
 
                             })
@@ -365,10 +351,17 @@ if (window.innerWidth <= 768) {
 
         }
 
+        function setInicialName() {
+            document.querySelectorAll(".product-detail .attributes .color .swatch-circle").forEach((el, index) => {
+                if (el.classList.contains("selected")) {
+                    insertSelectedColorInHtml(document.querySelectorAll(".attribute.color button")[index].attributes["title"].value)
+                }
+            })
+        }
+
 
         insertBreadcrumbInHtml()
         alternateButtonsArrow()
-        addBackgroundImg()
         getTitleButtonColor()
         insertSelectedColorInHtml()
         insertSelectedSize()
@@ -377,12 +370,12 @@ if (window.innerWidth <= 768) {
         insertDivRetireGratis()
         displayElementInScreen()
         adicionarAosFavoritos()
-        lowerCaseSemJuros()
         divPromoGridDisplayNone()
         getNameInterpreseForBanner()
         setActiveInButtons()
         alinhandoPriceCortado()
         setInitialTamanhos()
+        setInicialName()
     } catch (e) {
         console.error(e)
     }
