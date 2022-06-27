@@ -1,6 +1,7 @@
 
+console.log("Entei")
 let content = `    <div class="hero-ss">
-        <div class="container">
+        <div class="container-ss">
             <h1>Potencialize os resultados da sua empresa através de soluções financeiras completas</h1>
 
             <ul>

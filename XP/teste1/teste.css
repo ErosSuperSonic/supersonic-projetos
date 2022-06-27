@@ -1,27 +1,24 @@
-#hero>div>div>div>div:nth-of-type(1)>div {
-    display: none;
+#hero {
+    display: none !important;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 ul {
     padding: 0;
     list-style: none;
 }
 
-.container {
-    max-width: 1200px;
+.container-ss {
+    width: 1200px;
     margin: 0 auto;
 }
 
 .hero-ss {
-    background-image: url("./background.png");
+    background-image: url("https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/XP/teste1/background.png?raw=true");
     padding-bottom: 101px;
     padding-top: 100px;
+    width: 100%;
 }
 
 .hero-ss h1 {
@@ -37,6 +34,7 @@ ul {
 
 .hero-ss ul {
     margin-top: 32px;
+    margin-left: 0;
 }
 
 .hero-ss ul li svg {
@@ -72,4 +70,46 @@ ul {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 20px;
+}
+
+@media(max-width:1200px) {
+    .container-ss {
+        padding: 100px 60;
+    }
+}
+
+@media(max-width:768px) {
+    .container-ss {
+        padding: 100px 60;
+    }
+
+    .hero-ss h1 {
+        font-size: 26px;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
+
+    .hero-ss a {
+        width: 100%;
+    }
+
+    .hero-ss ul {
+        margin-top: 24px;
+    }
+
+    .hero-ss ul li svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-ss ul li {
+        font-size: 16px;
+    }
+
+    .hero-ss a{
+        margin-top: 24px;
+    }
+    .hero-ss{
+        background-image: url();
+    }
 }
