@@ -3,14 +3,31 @@
         display: none;
     }
 
+
+    .product-detail .attributes .color .swatch-circle.unselectable {
+        overflow: hidden;
+    }
+
     .product-detail .attributes .color .swatch-circle.unselectable::after {
+        overflow: hidden;
         content: "";
         width: 80px;
         height: 80px;
-        background: rgba(196, 196, 196, 0.52);
+        background: rgba(240, 240, 240, .5);
         border-radius: 5px;
         background-size: cover !important;
         background-image: url("https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/images/background-x-unselectable.png?raw=true") !important;
+    }
+
+    .product-detail .attributes .color .swatch-circle.unselectable::before {
+        width: 3px;
+        height: 179px;
+        content: "";
+        background: #4E4E50;
+        z-index: 1;
+        width: 1px;
+        transform: rotate(-45deg);
+        position: absolute;
     }
 
     .dobraRetireGratis {
@@ -180,6 +197,11 @@
         color: #21A144 !important;
     }
 
+    .prices .price span.installments {
+        display: flex;
+        flex-direction: row !important;
+    }
+
     span.installments b {
         font-weight: 400;
     }
@@ -254,7 +276,20 @@
     .dropdown-item.disabled,
     .dropdown-item:disabled {
         color: #4E4E50 !important;
-        background-color: #C4C4C4 !important;
+        background-color: rgba(240, 240, 240, 0.5) !important;
+        position: relative;
+        overflow: hidden
+    }
+
+    .dropdown-item.disabled::after {
+        width: 3px;
+        height: 87px;
+        content: "";
+        background: #4E4E50;
+        z-index: 1;
+        width: 1px;
+        transform: rotate(-45deg);
+        position: absolute;
     }
 
     .dropdown-item.active,
@@ -299,7 +334,15 @@
         flex-direction: column;
     }
 
-    .prices .price span del+.sales .value {
+    div#cartModal .modal-dialog .modal-content .cart-product-item-price .strike-through+.pricing {
+        color: #4E4E50 !important;
+    }
+
+    .prices .price>span {
+        flex-direction: column !important;
+    }
+
+    div.prices .price span del+.sales .value {
         margin-top: 0px;
     }
 
@@ -332,10 +375,21 @@
         z-index: 10 !important;
     }
 
+    .discount-container {
+        z-index: 10 !important;
+    }
+
     .product-detail .discount-container {
-        z-index: 10;
         left: initial !important;
         right: 37px;
         top: 10px !important;
+    }
+}
+
+@media(max-width: 374px) {
+    .product-detail .attributes .color .swatch-circle {
+        margin-right: .4375rem;
+        height: 60px !important;
+        width: 60px !important;
     }
 }

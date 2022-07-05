@@ -17,7 +17,7 @@ ul {
 .hero-ss {
     background-image: url("https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/XP/teste1/background.png?raw=true");
     padding-bottom: 101px;
-    padding-top: 100px;
+    padding-top: 150px;
     width: 100%;
 }
 
@@ -72,15 +72,25 @@ ul {
     font-size: 20px;
 }
 
+.hero-ss a:hover,
+.hero-ss a {
+    color: #fff;
+}
+
 @media(max-width:1200px) {
     .container-ss {
-        padding: 100px 60;
+        width: 100%;
+        padding: 100px 24px;
+    }
+
+    .hero-ss h1 {
+        width: 100%;
     }
 }
 
 @media(max-width:768px) {
     .container-ss {
-        padding: 100px 60;
+        padding: 100px 24px;
     }
 
     .hero-ss h1 {
@@ -106,10 +116,12 @@ ul {
         font-size: 16px;
     }
 
-    .hero-ss a{
+    .hero-ss a {
         margin-top: 24px;
     }
-    .hero-ss{
-        background-image: url();
+
+    .hero-ss {
+        background-size: cover;
+        background-image: url("https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/XP/teste1/background-mobile.png?raw=true");
     }
 }
