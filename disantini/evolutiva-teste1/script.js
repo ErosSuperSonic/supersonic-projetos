@@ -295,7 +295,7 @@ if (window.innerWidth <= 768) {
                                 image.src = "https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/a041a91c92f4c0717a91b2280a4d3c57f144ae16/disantini/evolutiva-teste1/image/allStar.svg"
                                 insertImage(image)
                             } else if (productName.includes("di santinni")) {
-                                image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/dissantini.png?raw=true"
+                                image.src = "https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/disantini/evolutiva-teste1/image/dissantini.jpeg?raw=true"
                                 insertImage(image)
                             }
 
