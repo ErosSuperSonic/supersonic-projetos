@@ -25,4 +25,5 @@ function addBackgroundImg() {
     chamarDados();
 }
 
-        addBackgroundImg()
+addBackgroundImg()
+

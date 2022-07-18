@@ -16,6 +16,7 @@ if (window.innerWidth <= 768) {
         function alternateButtonsArrow() {
 
             let verifyExists = false;
+
             let myInterval = setInterval(() => {
                 const button1 = document.querySelector("button.product-detail-controls.product-detail-next.slick-arrow")
                 if (!verifyExists) {
@@ -80,6 +81,7 @@ if (window.innerWidth <= 768) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("divTamanhos")
 
+            console.log("Entreii")
             setTimeout(() => {
                 if (!document.querySelector(".active.initialActive")) {
                     document.querySelectorAll(".dropdown a").forEach((a) => {
@@ -223,7 +225,7 @@ if (window.innerWidth <= 768) {
 
         function divPromoGridDisplayNone() {
 
-            if (document.querySelector(".product-promo-grid")){
+            if (document.querySelector(".product-promo-grid")) {
                 if (document.querySelector(".product-promo-grid").children.length == 0) {
                     document.querySelector(".product-promo-grid").style.display = "none"
                 }
@@ -329,7 +331,7 @@ if (window.innerWidth <= 768) {
 
                 if (!verifyExists) {
                     if (document.querySelector(".dropdown-toggle")) {
-                        if (document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/\s/g, '') !== "") {
+                        if (document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/( )+/g, '') !== "") {
                             document.querySelectorAll(".dropdown-menu a").forEach((a, index) => {
                                 if (a.innerText.replaceAll("\n", "").replace(/( )+/g, '') == document.querySelector(".dropdown-toggle").innerText.replaceAll("\n", "").replace(/( )+/g, '')) {
                                     document.querySelectorAll(".divTamanhos button")[index].classList.add("active")
