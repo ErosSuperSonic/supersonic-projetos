@@ -2,12 +2,12 @@ function add() {
     if (document.querySelector("label[for='chkEmail']")) {
         const label = document.querySelector("label[for='chkEmail']")
 
-        if (!label.querySelector(".shadow")) {
-            label.insertAdjacentHTML("afterbegin", "<span class='shadow'></span>")
+        if (!label.querySelector(".shadow__super")) {
+            label.insertAdjacentHTML("afterbegin", "<span class='shadow__super'></span>")
         }
     }
 
-    const squareShadow = document.querySelector(".shadow")
+    const squareShadow = document.querySelector(".shadow__super")
 
     document.querySelector("#chkEmail").addEventListener("click", () => {
         if (document.querySelector("#chkEmail").checked === false) {

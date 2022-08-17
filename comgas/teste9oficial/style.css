@@ -20,6 +20,7 @@ html {
     border-radius: 8px;
     padding: 36px 16px;
     max-width: 592px;
+    width: 100%;
     margin: 0 auto;
 
     display: flex;
@@ -27,6 +28,15 @@ html {
     align-items: center;
     font-family: 'Open Sans', sans-serif;
     position: relative;
+    margin-bottom: 56px;
+}
+
+.new-xp-internal .form-container [class*="col"] {
+    float: inherit;
+}
+
+.containerImageProtocolo {
+    z-index: 1;
 }
 
 .firstCopy {
@@ -111,6 +121,8 @@ html {
 .logoComgas {
     text-align: center;
     padding-top: 24px;
+    z-index: 2;
+    position: relative;
 }
 
 .containerProtocolo {
@@ -120,10 +132,10 @@ html {
 
 .containerImageProtocolo {
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 50%;
     transform: translate(-50%);
-    z-index: -1;
+    z-index: 1;
 }
 
 .containerProtocolo p {
@@ -137,6 +149,8 @@ html {
 
     color: #4F4F4F;
     margin-bottom: 4px;
+    z-index: 2;
+    position: relative;
 }
 
 .containerProtocolo h3 {
@@ -146,10 +160,12 @@ html {
     line-height: 22px;
     text-align: center;
     color: #007CB6;
+    z-index: 2;
+    position: relative;
 }
 
 .protocoloNumber {
-    padding-top: 32px;
+    padding-top: 26px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -158,6 +174,9 @@ html {
     letter-spacing: 5px;
     color: #007CB6;
     padding-bottom: 24px;
+    z-index: 2;
+    position: relative;
+    float: none !important;
 }
 
 .elementCopy {
@@ -190,8 +209,38 @@ html {
 }
 
 
+.heading.troca-heading {
+    display: none;
+}
 
+#mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-finalizado>div>div.form-container.pb-0>cg-comgas-protocolo,
+#mainContent>div>ng-component>div>div>div.col-md-8.area-principal>cg-finalizado>div>div.form-container.pb-0>div.borda-inferior {
+    display: none !important;
+}
 
+.finalizado[_ngcontent-serverApp-c274] {
+    padding-top: 0;
+}
+
+.new-xp-internal .form-container {
+    padding: 0px 0 64px;
+}
+
+.finalizado[_ngcontent-serverApp-c275] {
+    padding-top: 0;
+}
+
+@media(max-width:767px) {
+    cg-acompanhar-solicitacao-finalizada.hidden-md.hidden-lg {
+        display: none !important;
+    }
+
+    .cardProtocolo {
+        border: 1px solid #C4C4C4;
+        padding-top: 32px;
+        margin-top: -49px;
+    }
+}
 
 @media(max-width:340px) {
     .containerImageProtocolo {

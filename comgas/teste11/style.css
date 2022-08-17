@@ -1,0 +1,91 @@
+.login-xp.modal-dialog.modal-lg.new-xp {
+    max-width: 512px;
+}
+
+.form-group.visible-xs {
+    display: block !important;
+}
+
+.selecionar-login.col-md-12.hidden-xs {
+    display: none !important;
+}
+
+.form-group>label {
+    display: none;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .header-geral .label-principal {
+    margin-bottom: 4px;
+}
+
+.header-geral {
+    margin-bottom: 40px;
+}
+
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario {
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before {
+    border-radius: 1px;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario i {
+    font-size: 10px !important;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .login-links {
+    font-size: 12px;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .login-links a {
+    font-size: 12px !important;
+}
+input#cpf {
+    margin-bottom: 0px;
+}
+
+.title.hidden-xs.hidden-sm {
+    display: none !important;
+}
+
+.input-container.ng-star-inserted {
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn-entrar {
+    width: 100%;
+}
+button#btnEnviar {
+    width: 100%;
+}
+
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login input,
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container .form-group {
+    width: 100% !important;
+}
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container{
+    margin-top: 0px !important;
+}
+
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons {
+    flex-direction: column;
+}
+
+.btn-login-identity-server.ng-star-inserted {
+    display: none;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .header-geral .label-principal {
+    font-size: 24px;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details {
+    padding: 52px 40px 40px 40px;
+}
