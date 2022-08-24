@@ -19,20 +19,18 @@ div.section-hero {
 
 .hero-ss {
     display: flex;
-    max-width: 1280px;
+    max-width: 100%;
     gap: 72px;
     margin: 0 auto;
     margin-top: 4rem;
 
-    opacity: 0;
+    opacity: 1;
     transition: all .5s;
 
     justify-content: space-between;
-}
-
-
-.wrapper__text {
-    width: 596px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    align-items: center;
 }
 
 .wrapper__text h1 {
@@ -71,6 +69,16 @@ div.section-hero {
     flex: 1;
 }
 
+.wrapper__text {
+    width: 50%;
+}
+
+.wrapper__img {
+    flex: 1;
+    min-width: 36.438rem;
+}
+
+
 .buttons-ss {
     display: flex;
     gap: 1rem;
@@ -79,7 +87,7 @@ div.section-hero {
 
 .buttons-ss a {
     padding: 0 8px;
-    width: 290px;
+    width: 18.125rem;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.25rem;
@@ -100,9 +108,7 @@ div.section-hero {
 }
 
 .buttonBlue:hover {
-    background-color: #fff;
-    color: #3D4ED7;
-    border: 2px solid #3D4ED7;
+    background-color: #3341B2;
 }
 
 .buttonWhite {
@@ -113,20 +119,31 @@ div.section-hero {
 }
 
 .buttonWhite:hover {
-    background-color: #3D4ED7;
+    background-color: #3341B2;
     color: #fff;
     border: 2px solid #fff;
 }
 
 
 .wrapper__img img {
-    width: 570px;
-    height: 576px;
+    width: 100%;
+    height: 36rem;
     object-fit: cover;
     object-position: right;
     border-radius: 12px;
 }
 
+@media(max-width: 1378px) {
+    .wrapper__img {
+        min-width: 28.438rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .wrapper__img {
+        min-width: 20rem;
+    }
+}
 
 @media(max-width:1276px) {
     section.hero-ss {
@@ -134,7 +151,18 @@ div.section-hero {
     }
 }
 
+@media(max-width: 1276px){
+    .wrapper__img {
+        min-width: 18rem;
+    }
+}
+
 @media(max-width:991px) {
+    .h1-white.hero.mobile,
+    .margin-vertical.margin-medium.max-width-medium.text-white-color.mobile,
+    .hero-ctas.mobile{
+        display: none !important;
+    }
     section.hero-ss {
         flex-direction: column;
         padding: 0 32px;
@@ -165,9 +193,14 @@ div.section-hero {
         justify-content: center;
     }
 
+    .wrapper__img {
+        min-width: 100%;
+    }
+
     .wrapper__img img {
         height: 300px;
         width: 100%;
+        min-width: 100%;
     }
 
     .wrapper__text li p {

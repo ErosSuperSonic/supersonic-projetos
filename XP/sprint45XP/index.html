@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <section>
+      <div class="containerSupersonic">
+        <div>
+          <div class="titlesCalculator">
+            <h3>Faça uma simulação</h3>
+            <p>
+              O seu fluxo de caixa rendendo mais do que um investimento em CDB a
+              curtíssimo prazo.
+            </p>
+          </div>
+          <div class="wrapperSimulacaoInfos">
+            <div class="containerInputs">
+              <div class="quantidadeInvestida">
+                <label for="#"><span >Quantidade investida</span></label>
+                <div class="wrapperInputs">
+                  <div>
+                    <span class="sufix">R$</span>
+                    <input type="text" value="300.000,00" onKeyUp="mascaraMoeda(this, event)"/>
+                  </div>
+                  <div class="modificadoresQuantidade">
+                    <button>
+                      <svg
+                        width="29"
+                        height="29"
+                        viewBox="0 0 29 29"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.95801 14.5H20.0413"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                        <path
+                          d="M14.3333 27.6667C21.6971 27.6667 27.6667 21.6971 27.6667 14.3333C27.6667 6.96954 21.6971 1 14.3333 1C6.96954 1 1 6.96954 1 14.3333C1 21.6971 6.96954 27.6667 14.3333 27.6667Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </button>
+
+                    <button>
+                      <svg
+                        width="30"
+                        height="29"
+                        viewBox="0 0 30 29"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.167 8.95831V20.0416"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                        <path
+                          d="M9.625 14.5H20.7083"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                        <path
+                          d="M15.0003 27.6667C22.3641 27.6667 28.3337 21.6971 28.3337 14.3333C28.3337 6.96954 22.3641 1 15.0003 1C7.63653 1 1.66699 6.96954 1.66699 14.3333C1.66699 21.6971 7.63653 27.6667 15.0003 27.6667Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="diasInvestidos">
+                <label for="#"
+                  ><span>Dias investidos na compromissada</span></label
+                >
+
+                <div class="wrapperInputs">
+                  <div>
+                    <input type="number" disabled value="05" />
+                    <span class="sufix">dias</span>
+                  </div>
+                  <div class="modificadoresQuantidade">
+                    <button>
+                      <svg
+                        width="29"
+                        height="29"
+                        viewBox="0 0 29 29"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.95801 14.5H20.0413"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                        <path
+                          d="M14.3333 27.6667C21.6971 27.6667 27.6667 21.6971 27.6667 14.3333C27.6667 6.96954 21.6971 1 14.3333 1C6.96954 1 1 6.96954 1 14.3333C1 21.6971 6.96954 27.6667 14.3333 27.6667Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </button>
+
+                    <button>
+                      <svg
+                        width="30"
+                        height="29"
+                        viewBox="0 0 30 29"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.167 8.95831V20.0416"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                        <path
+                          d="M9.625 14.5H20.7083"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                        <path
+                          d="M15.0003 27.6667C22.3641 27.6667 28.3337 21.6971 28.3337 14.3333C28.3337 6.96954 22.3641 1 15.0003 1C7.63653 1 1.66699 6.96954 1.66699 14.3333C1.66699 21.6971 7.63653 27.6667 15.0003 27.6667Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rendimentoCDI">
+              <span>Rendimento em % do CDI </span>
+              <h4>540%</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compareCDB">
+      <div class="containerSupersonic compareCDBContainer">
+
+          <div class="compareCDBInfoMobile">
+            <h2>Compare com um CDB</h2>
+          <p>Veja como seria o valor que você colocou no simulador, se fosse aplicado em um CDB 100% CDI durante o mesmo período</p>
+          </div>
+          <div class="tabelaLucro">
+            <div class="title">
+              <h4>Lucro com CDB 100% CDI</h4>
+              <h4>Lucro com Compromissada sem IOF</h4>
+            </div>
+
+            <div class="numbers">
+              <span class="lucroCDB">R$ 26,00</span>
+              <span class="lucroSemIOF">R$ 300,00</span>
+            </div>
+          </div>
+        <div class="compareCDBInfo">
+          <h2>Compare com um CDB</h2>
+          <p>Veja como seria o valor que você colocou no simulador, se fosse aplicado em um CDB 100% CDI durante o mesmo período</p>
+          <a href="#">Quero abrir conta</a>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

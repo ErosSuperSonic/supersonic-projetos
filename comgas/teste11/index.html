@@ -7,87 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container-supersonic a,
-        .container-supersonic svg,
-        .container-supersonic button,
-        .container-supersonic span,
-        .container-supersonic p {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial;
-            text-decoration: none;
-        }
 
-        .container-supersonic {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .container-supersonic .or {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .container-supersonic .or span {
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #C4C4C4;
-
-        }
-
-        .container-supersonic .or p {
-            padding: 0 12px;
-        }
-
-        .container-supersonic .or p {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 150%;
-            display: flex;
-            align-items: center;
-            color: #3A3A3A;
-        }
-
-        .container-supersonic button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 8px 16px;
-            width: 100%;
-
-            background: #7FC241;
-            border-radius: 60px;
-
-
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 150%;
-            color: #FFFFFF;
-
-            border: 0;
-
-            position: relative;
-        }
-
-        .container-supersonic button+button {
-            margin-top: 20px;
-        }
-
-        .container-supersonic svg {
-            position: absolute;
-            left: 16px;
-        }
     </style>
 </head>
 
@@ -98,6 +18,17 @@
             <p>OU</p>
             <span></span>
         </div>
+
+        <button>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19.6517 4H4.35955C3.73376 4 3.1336 4.26677 2.6911 4.74161C2.24859 5.21646 2 5.86049 2 6.53203V17.468C2 18.1395 2.24859 18.7835 2.6911 19.2584C3.1336 19.7332 3.73376 20 4.35955 20H19.6517C20.2755 19.9968 20.8728 19.7286 21.3129 19.2541C21.753 18.7796 22 18.1374 22 17.468V6.53203C22 5.86258 21.753 5.22037 21.3129 4.74586C20.8728 4.27136 20.2755 4.00319 19.6517 4ZM16.4831 11.994L20.7303 7.44838V16.5516L16.4831 11.994ZM4.35955 5.36247H19.6517C19.8083 5.36757 19.9621 5.40775 20.1034 5.48042C20.2446 5.5531 20.3702 5.65666 20.4719 5.78448L13.5843 13.1876C13.1637 13.6331 12.5966 13.8829 12.0056 13.8829C11.4147 13.8829 10.8475 13.6331 10.427 13.1876L3.52809 5.78448C3.6311 5.65517 3.75844 5.55073 3.90174 5.47799C4.04504 5.40526 4.20106 5.36589 4.35955 5.36247ZM7.51685 11.994L3.26966 16.5516V7.43632L7.51685 11.994ZM19.6517 18.6255H4.35955C4.20192 18.6236 4.04642 18.5861 3.90317 18.5154C3.75992 18.4448 3.63213 18.3426 3.52809 18.2155L8.41573 12.9586L9.53933 14.1643C9.86252 14.5146 10.2477 14.7921 10.6721 14.9805C11.0966 15.1689 11.5519 15.2644 12.0112 15.2615C12.4721 15.2634 12.9288 15.1674 13.355 14.9791C13.7811 14.7908 14.1684 14.5139 14.4944 14.1643L15.618 12.9586L20.5056 18.2155C20.3991 18.3457 20.2677 18.4497 20.1203 18.5204C19.9729 18.5911 19.8131 18.627 19.6517 18.6255Z"
+                    fill="white" />
+            </svg>
+
+            <span>Login com E-mail</span>
+        </button>
+
         <button>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -131,15 +62,6 @@
                     fill="white" />
             </svg>
             <span>Login com Facebook</span>
-        </button>
-        <button>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M19.6517 4H4.35955C3.73376 4 3.1336 4.26677 2.6911 4.74161C2.24859 5.21646 2 5.86049 2 6.53203V17.468C2 18.1395 2.24859 18.7835 2.6911 19.2584C3.1336 19.7332 3.73376 20 4.35955 20H19.6517C20.2755 19.9968 20.8728 19.7286 21.3129 19.2541C21.753 18.7796 22 18.1374 22 17.468V6.53203C22 5.86258 21.753 5.22037 21.3129 4.74586C20.8728 4.27136 20.2755 4.00319 19.6517 4ZM16.4831 11.994L20.7303 7.44838V16.5516L16.4831 11.994ZM4.35955 5.36247H19.6517C19.8083 5.36757 19.9621 5.40775 20.1034 5.48042C20.2446 5.5531 20.3702 5.65666 20.4719 5.78448L13.5843 13.1876C13.1637 13.6331 12.5966 13.8829 12.0056 13.8829C11.4147 13.8829 10.8475 13.6331 10.427 13.1876L3.52809 5.78448C3.6311 5.65517 3.75844 5.55073 3.90174 5.47799C4.04504 5.40526 4.20106 5.36589 4.35955 5.36247ZM7.51685 11.994L3.26966 16.5516V7.43632L7.51685 11.994ZM19.6517 18.6255H4.35955C4.20192 18.6236 4.04642 18.5861 3.90317 18.5154C3.75992 18.4448 3.63213 18.3426 3.52809 18.2155L8.41573 12.9586L9.53933 14.1643C9.86252 14.5146 10.2477 14.7921 10.6721 14.9805C11.0966 15.1689 11.5519 15.2644 12.0112 15.2615C12.4721 15.2634 12.9288 15.1674 13.355 14.9791C13.7811 14.7908 14.1684 14.5139 14.4944 14.1643L15.618 12.9586L20.5056 18.2155C20.3991 18.3457 20.2677 18.4497 20.1203 18.5204C19.9729 18.5911 19.8131 18.627 19.6517 18.6255Z"
-                    fill="white" />
-            </svg>
-
-            <span>Login com E-mail</span>
         </button>
     </div>
 </body>

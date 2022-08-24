@@ -1,91 +1,224 @@
-.login-xp.modal-dialog.modal-lg.new-xp {
-    max-width: 512px;
+/* Estático */
+.container-supersonic a,
+.container-supersonic svg,
+.container-supersonic button,
+.container-supersonic span,
+.container-supersonic p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial;
+    text-decoration: none;
 }
 
-.form-group.visible-xs {
-    display: block !important;
-}
-
-.selecionar-login.col-md-12.hidden-xs {
-    display: none !important;
-}
-
-.form-group>label {
-    display: none;
-}
-
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .header-geral .label-principal {
-    margin-bottom: 4px;
-}
-
-.header-geral {
-    margin-bottom: 40px;
-}
-
-
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario {
-    margin: 20px 0;
-    font-size: 12px;
-}
-
-[type="checkbox"]:not(:checked)+label:before,
-[type="checkbox"]:checked+label:before {
-    border-radius: 1px;
-}
-
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario i {
-    font-size: 10px !important;
-}
-
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .login-links {
-    font-size: 12px;
-}
-
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .login-links a {
-    font-size: 12px !important;
-}
-input#cpf {
-    margin-bottom: 0px;
-}
-
-.title.hidden-xs.hidden-sm {
-    display: none !important;
-}
-
-.input-container.ng-star-inserted {
+.container-supersonic {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    margin-top: 20px;
 }
 
-.btn-entrar {
+.container-supersonic .or {
+    display: flex;
+    align-items: center;
     width: 100%;
+    margin-bottom: 20px;
 }
-button#btnEnviar {
+
+.container-supersonic .or span {
+    display: block;
     width: 100%;
+    height: 1px;
+    background: #C4C4C4;
+
 }
 
-
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login input,
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container .form-group {
-    width: 100% !important;
-}
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container{
-    margin-top: 0px !important;
+.container-supersonic .or p {
+    padding: 0 12px;
 }
 
+.container-supersonic .or p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #3A3A3A;
+}
 
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons {
-    flex-direction: column;
+.container-supersonic button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    width: 100%;
+
+    background: #7FC241;
+    border-radius: 60px;
+
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+
+    border: 0;
+
+    position: relative;
+}
+
+.container-supersonic button+button {
+    margin-top: 20px;
+}
+
+.container-supersonic svg {
+    position: absolute;
+    left: 16px;
 }
 
 .btn-login-identity-server.ng-star-inserted {
     display: none;
 }
 
-.modal-dialog.login-xp .modal-content .modal-body .partial .details .header-geral .label-principal {
-    font-size: 24px;
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons {
+    flex-direction: column;
 }
 
-.modal-dialog.login-xp .modal-content .modal-body .partial .details {
-    padding: 52px 40px 40px 40px;
+.btn-entrar {
+    width: 100%;
+}
+
+.btn-entrar button,
+.btn-cadastrar.ng-star-inserted,
+.btn-cadastrar.ng-star-inserted button {
+    width: 100% !important;
+}
+
+
+@media(min-width: 960px) {
+    .modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons .btn-entrar button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .container-supersonic {
+        margin-top: 0;
+    }
+}
+
+/* Dinamico */
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .label-principal {
+    /* H3/Desktop/Bold */
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    /* identical to box height, or 36px */
+
+    letter-spacing: -0.015em;
+    /* Grayscale/Dark Gray 2 */
+    color: #3A3A3A;
+    margin-bottom: 4px;
+
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .label-sub-titulo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.025em;
+    color: #6E6E6E;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .selecionar-login {
+    padding-left: 0;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login {
+    margin-top: 0px;
+}
+
+.header-geral {
+    margin-bottom: 27px;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container .form-group label {
+    display: none;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario {
+    margin-top: 10px !important;
+}
+
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario .form-check .form-check-label {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3A3A3A;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario i {
+    font-size: 1rem !important;
+}
+
+.login-links span.ng-star-inserted {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3A3A3A;
+}
+
+.modal-dialog.login-xp .modal-content .modal-body .partial .details .login-links a {
+    font-weight: 400;
+    font-size: 12px !important;
+    line-height: 150%;
+}
+
+.new-xp .btn.btn-primary.disabled,
+.new-xp .btn.btn-primary[disabled],
+fieldset[disabled] .new-xp .btn.btn-primary {
+    background: #C4C4C4;
+    color: #fff !important;
+}
+
+@media (max-width: 960px) {
+    .modal-dialog.login-xp .modal-content {
+        margin: 0 16px;
+    }
+
+    .modal-dialog.login-xp .modal-content .modal-body .partial .details .header-geral .label-principal {
+        margin-bottom: 4px;
+    }
+
+    .modal-dialog.login-xp .modal-content .modal-body .partial .details .dados-login .input-container.check-lembrar-codigousuario {
+        margin-top: 25px !important;
+    }
+
+    .login-links {
+        margin-top: 16px;
+    }
+
+    .dados-login .form-group>label {
+        display: none;
+    }
+
+    .modal-dialog.login-xp .modal-content .modal-body .partial .details {
+        padding: 40px 24px 0 !important;
+    }
+
+    .modal-dialog.login-xp .modal-content {
+        border-radius: 16px !important;
+    }
 }
