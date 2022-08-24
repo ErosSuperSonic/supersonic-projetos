@@ -29,7 +29,6 @@ const rendimentoCDI = document.querySelector(".rendimentoCDI h4");
 const lucroCDBCampo = document.querySelector(".lucroCDB");
 const lucroSemIOF = document.querySelector(".lucroSemIOF");
 const CDI = 13.65 / 100;
-
 //========== Quantidade investida ============
 const [quantidadeInvestidaMenos, quantidadeInvestidaMais] =
   document.querySelectorAll(
@@ -153,6 +152,8 @@ function LucroComCdb() {
   const lucroCDB = (valorLiquido - quantidadeInvestidaValue).toFixed(2);
 
   lucroCDBCampo.innerHTML = `R$ ${lucroCDB.replace(".", ",")}`;
+
+  rendimentoPorcentagemCDI(dias)
 }
 
 //===========  Lucro com Compromissada ===========
@@ -193,6 +194,22 @@ function LucroComCompromissada() {
   const lucroComComprom = (valorLiquido - quantidadeInvestidaValue).toFixed(2);
 
   lucroSemIOF.innerHTML = `R$ ${lucroComComprom.replace(".", ",")}`;
+
+  rendimentoPorcentagemCDI(dias)
 }
 
 LucroComCompromissada();
+
+function rendimentoPorcentagemCDI(diasInvestidos = 5) {
+  const valoresTaxa = {
+    1: 1075,
+    3: 480,
+    5: 312,
+    7: 242,
+    10: 185,
+  };
+
+  rendimentoCDI.innerHTML = `${valoresTaxa[diasInvestidos]}%`
+}
+
+rendimentoPorcentagemCDI()
