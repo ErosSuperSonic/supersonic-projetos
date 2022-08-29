@@ -1,3 +1,9 @@
+//Resets
+if(window.innerWidth > 768){
+  document.querySelector("#element-568").style.width = "100%"
+document.querySelector("#page-block-gy918ronptb > div.section-block > div").style.maxWidth = "100%" 
+}
+
 String.prototype.reverse = function () {
   return this.split("").reverse().join("");
 };
@@ -123,13 +129,35 @@ function LucroComCdb() {
     ) / 100;
   let dias = diasInvestidosInput.value;
   const valorBruto = quantidadeInvestidaValue * (1 + CDI) ** (dias / 252);
-
   const rendimentoBruto =
     (quantidadeInvestidaValue - valorBruto).toFixed(2) * -1;
   let IOF = 0;
 
-  var day1 = new Date("08/24/2022");
-  var day2 = new Date("08/31/2022");
+
+  function infoToday(){
+    let day = new Date().getDate()
+    let month = new Date().getMonth() + 1
+    let year = new Date().getFullYear()
+
+    return `${month}/${day}/${year}`
+  }
+  
+  var day1 = new Date(infoToday());
+  let day2 = new Date("09/05/2022");
+
+  if(dias === "01"){
+    day2 = new Date("08/30/2022");
+  }else if(dias === "03"){
+    day2 = new Date("09/01/2022");
+  }else if(dias === "05"){
+    day2 = new Date("09/05/2022");
+  }else if(dias === "07"){
+    day2 = new Date("09/08/2022");
+  }else{
+    day2 = new Date("09/13/2022");
+  }
+
+
 
   var difference = Math.abs(day2 - day1);
   diasEntreAsDatas = difference / (1000 * 3600 * 24);
@@ -198,7 +226,6 @@ function LucroComCompromissada() {
   rendimentoPorcentagemCDI(dias)
 }
 
-LucroComCompromissada();
 
 function rendimentoPorcentagemCDI(diasInvestidos = 5) {
   const valoresTaxa = {
@@ -209,7 +236,9 @@ function rendimentoPorcentagemCDI(diasInvestidos = 5) {
     10: 185,
   };
 
-  rendimentoCDI.innerHTML = `${valoresTaxa[diasInvestidos]}%`
+  rendimentoCDI.innerHTML = `${valoresTaxa[diasInvestidos]}% <span>do CDI</span>`
 }
 
 rendimentoPorcentagemCDI()
+LucroComCdb()
+LucroComCompromissada();
