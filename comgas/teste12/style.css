@@ -1,0 +1,60 @@
+*,html,body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.contentInCard {
+  display: flex;
+  align-items: self-start;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.contentInCard ul{
+  list-style: none;
+}
+.textInCardSS h4{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3A3A3A;
+}
+.contentInCard li{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3A3A3A;
+  margin-bottom: 4px;
+
+}
+.textInCardSS p{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+
+  color: #3A3A3A;
+}
+.textInCardSS h3{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    color: #007CB6;
+    margin-bottom: 4px;
+}
+
+.documentosContainerSS{
+  display: flex;
+  gap: 16px;
+}
+.documentosContainerSS > div{
+  max-width: 50%;
+}
