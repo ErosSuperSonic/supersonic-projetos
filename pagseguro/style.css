@@ -1,0 +1,56 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00b488;
+}
+
+.supersonicContent {
+  max-width: 558px;
+  margin: 0 auto;
+}
+.supersonicContent h4 {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 28px;
+  margin-top: 37px;
+  text-align: center;
+}
+.supersonicContent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 330px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+.supersonicContent ul li {
+  display: flex;
+  gap: 8px;
+
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.supersonicContent__paragraph {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}

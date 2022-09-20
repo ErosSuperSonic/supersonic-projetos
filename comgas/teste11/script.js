@@ -84,12 +84,26 @@ const root = document.querySelector('body');
 const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         console.log(mutation.target)
-        if (mutation.target.classList.contains("modal-open") || mutation.target.classList.contains("dados-login")) {
-            insertContentInScreenLogin()
-            eventClickInButtonLogin()
-            document.querySelector(".modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons").style.flexDirection = "column"
+        // if (mutation.target.classList.contains("modal-open") || mutation.target.classList.contains("dados-login")) {
+            if(mutation.target.classList.contains("form-check-label")){
+                if(document.querySelector(".container-supersonic")){
+                    document.querySelector(".container-supersonic").style.display = "flex"
+                }
+                insertContentInScreenLogin()
+                eventClickInButtonLogin()
+                document.querySelector(".modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons").style.flexDirection = "column"
+            // }
         }else if(mutation.target.classList.contains("passo")){
+            console.log("Entrei no passo")
             document.querySelector(".modal-dialog.login-xp .modal-content .modal-body .partial .details .buttons").style.flexDirection = "row"
+        }else if(!mutation.target.classList.contains("form-check-label")){
+
+            if(!document.querySelector(".form-check-label")){
+                if(document.querySelector(".container-supersonic")){
+                    console.log("Entrei no else")
+                    document.querySelector(".container-supersonic").style.display = "none"
+                }
+            }
         }
     });
 });

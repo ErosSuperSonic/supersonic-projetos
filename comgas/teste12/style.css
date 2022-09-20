@@ -28,7 +28,10 @@
   line-height: 150%;
   color: #3A3A3A;
   margin-bottom: 4px;
-
+}
+.contentInCard strong,
+.textInCardSS p strong{
+  font-size: 12px !important;
 }
 .textInCardSS p{
   font-family: 'Open Sans', sans-serif;
@@ -57,4 +60,10 @@
 }
 .documentosContainerSS > div{
   max-width: 50%;
+}
+
+@media(max-width: 768px){
+  .documentosContainerSS{
+    flex-direction: column;
+  }
 }
