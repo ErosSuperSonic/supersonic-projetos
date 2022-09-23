@@ -35,13 +35,14 @@ const contentSS = `
 </svg>
   
 </div>
-`
+`;
 
-document.querySelector(".card-group__container").insertAdjacentHTML("beforeend", contentSS)
+document
+  .querySelector(".card-group__container")
+  .insertAdjacentHTML("beforeend", contentSS);
 
-
-const titleCards = document.querySelectorAll(".pf-destaque-off")
-const testimonials  = [
+const titleCards = document.querySelectorAll(".pf-destaque-off");
+const testimonials = [
   `<div class="testimonials-ss">
     <span>Quem usa, recomenda!</span>
     <p>Depois de começar a usar a maquininha minhas vendas melhoraram em até 50%</p>
@@ -58,19 +59,31 @@ const testimonials  = [
     <span>Quem usa, recomenda!</span>
     <p>O cliente passou na maquininha, cai já na minha conta e já posso usar meu cartão Pré-pago internacional.</p>
     <span class="nameUser">Andrea - Esteticista</span>
-  </div>`
-  
-]
+  </div>`,
+];
 
 titleCards.forEach((el, index) => {
-  el.insertAdjacentHTML("afterend", testimonials[index])
-})
+  el.insertAdjacentHTML("afterend", testimonials[index]);
+});
+
+// Adicionando item de suporte
 
 
+const contentItemCard = `  
+<li class="geometric-list__item geometric-list__item--icon-time geometric-list__item--icon-dark">
+  <span class="geometric-list__icon">
+    <img class="lazyloaded" data-src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/8b68bdb0a508ff30707c4483b9b538b6f6a21db4/pagseguro/teste2/suporte.svg" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/8b68bdb0a508ff30707c4483b9b538b6f6a21db4/pagseguro/teste2/suporte.svg">
+  </span>
+  <span class="geometric-list__label" >Suporte disponível 24 horas por dia</span>
+</li>
+`;
 
-
-
-
-// Adicionando item de suporte 
-
-const newItemCard = document.querySelector("li.geometric-list__item.geometric-list__item--icon-diamond.geometric-list__item--icon-dark").cloneNode(true)
+document
+  .querySelectorAll(
+    "li.geometric-list__item.geometric-list__item--icon-diamond.geometric-list__item--icon-dark"
+  )
+  .forEach((li, index) => {
+    if (index == 1 || index == 4 || index == 7) {
+      li.insertAdjacentHTML("afterend", contentItemCard);
+    }
+  });
