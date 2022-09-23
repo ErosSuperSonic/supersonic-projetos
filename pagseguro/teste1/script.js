@@ -27,5 +27,23 @@ const supersonicContent = `
 
 <p class="supersonicContent__paragraph">Veja agora as <strong>maquininhas mais escolhidas do Brasil</strong>, que já contam com +7,5 milhões de vendedores satisfeitos:</p>
 </div>
-`
-document.querySelectorAll(".card-group__container")[0].insertAdjacentHTML("beforeend", supersonicContent)
+`;
+document
+  .querySelectorAll(".card-group__container")[0]
+  .insertAdjacentHTML("beforeend", supersonicContent);
+
+function replaceTextJuros() {
+  document.querySelectorAll(".price-block__price").forEach((element) => {
+    const valueOld = element.innerHTML;
+    if (!valueOld.split("<br>")[0].includes("equivalente")) {
+      let newItemArray = valueOld
+        .split("<br>")[0]
+        .replace("12x de", "12x sem juros de ");
+
+      let newValue = newItemArray + valueOld.split("<br>")[1];
+      element.innerHTML = newValue.replaceAll("undefined", "");
+    }
+  });
+}
+
+replaceTextJuros();

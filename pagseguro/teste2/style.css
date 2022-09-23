@@ -1,0 +1,156 @@
+section.slider-free.card-group.card-group--5-in-a-row {
+  margin-top: -33px;
+}
+
+.component-group--campaign-banner:before {
+  height: 581px !important;
+  background: no-repeat
+    url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/pagseguro/bannerVerde.png") !important;
+  background-size: cover !important;
+  background-position: right !important;
+}
+.component-group--campaign-banner .card-group__header {
+  margin-bottom: 20px;
+}
+
+.containerSupersonic {
+  max-width: 583px;
+  margin: 0 auto;
+  position: relative;
+}
+.containerSupersonic h2 {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 28px !important;
+  height: auto !important;
+}
+.containerSupersonic h2 a {
+  color: #ffffff;
+}
+.listSupersonic li p {
+  width: 100%;
+  height: auto !important;
+  font-size: 16px;
+  line-height: inherit;
+}
+.listSupersonic li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  height: auto !important;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  /* or 125% */
+
+  color: #ffffff;
+}
+.containerSupersonic h3 {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  height: auto !important;
+}
+
+.containerSupersonic h3 {
+  max-width: 442px;
+  margin: 0 auto;
+  height: auto !important;
+}
+
+.selo {
+  position: absolute;
+  right: -50px;
+  bottom: -20px;
+}
+
+.testimonials-ss span {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #212529;
+  margin-bottom: 20px;
+}
+
+.testimonials-ss p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #595959;
+  margin-bottom: 12px;
+}
+.testimonials-ss .nameUser {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 350;
+  font-size: 10px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #000000;
+}
+
+
+h4.pf-destaque-off {
+  display: none !important;
+}
+
+
+.testimonials-ss span {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #212529;
+  margin: 20px 0;
+  display: block;
+}
+
+.testimonials-ss p {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #595959;
+  padding: 0 27px;
+}
+
+
+.testimonials-ss span.nameUser {
+  margin-top: 12px;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 350;
+  font-size: 10px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #000000;
+}
+
+span.geometric-list__label{
+  text-align: center !important;
+}

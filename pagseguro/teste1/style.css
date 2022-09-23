@@ -1,0 +1,149 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00b488;
+}
+.supersonicContent {
+  max-width: 558px;
+  margin: 0 auto;
+  margin-top: -70px;
+}
+.supersonicContent h4 {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px !important;
+  line-height: 20px;
+  color: #ffffff;
+  margin-top: 37px !important;
+  margin-bottom: 28px !important;
+  text-align: center;
+  min-height: auto !important;
+  height: auto !important;
+
+  margin-top: 29px;
+}
+.supersonicContent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 368px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+.supersonicContent ul li {
+  display: flex;
+  gap: 8px;
+
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  align-items: center;
+}
+.supersonicContent ul li p {
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+
+  line-height: inherit;
+}
+
+.supersonicContent__paragraph {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.component-group--campaign-banner:before {
+  height: 581px;
+  background: no-repeat
+    url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/main/pagseguro/bannerVerde.png");
+  background-size: cover;
+}
+
+.card-group--5-in-a-row .card-group__card {
+  padding-bottom: 236px !important;
+}
+
+.component-group--campaign-banner .card-group h4 {
+  margin-bottom: 0 !important;
+  margin-top: 20px !important;
+}
+span.geometric-list__label a {
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+@media (max-width: 1483px) {
+  .supersonicContent {
+    margin-top: -70px;
+  }
+}
+@media (max-width: 1240px) {
+  .slider-free-core__content {
+    margin-top: 47px !important;
+  }
+  .component-group--campaign-banner .card-group__header {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .component-group--campaign-banner:before {
+    height: 1012px;
+  }
+  .slider-free-core__content {
+    margin-top: 0;
+  }
+  .supersonicContent {
+    margin-top: -23px;
+  }
+  .supersonicContent h4 {
+    font-size: 16px !important;
+    text-align: left !important;
+    left: -36px;
+  }
+  .supersonicContent__paragraph {
+    font-size: 16px !important;
+  }
+  .supersonicContent ul li p {
+    line-height: inherit;
+  }
+  .supersonicContent ul {
+    padding: 0;
+  }
+
+  .slider-free-core__content{
+    margin-top: 0px !important;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .supersonicContent h4 {
+    position: relative;
+    margin-bottom: 16px !important;
+  }
+}
+
+@media(max-width: 682px){
+  .supersonicContent h4 {
+    left: 0px;
+  }
+}
+
+
