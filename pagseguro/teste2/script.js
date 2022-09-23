@@ -72,7 +72,7 @@ titleCards.forEach((el, index) => {
 const contentItemCard = `  
 <li class="geometric-list__item geometric-list__item--icon-time geometric-list__item--icon-dark">
   <span class="geometric-list__icon">
-    <img class="lazyloaded" data-src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/8b68bdb0a508ff30707c4483b9b538b6f6a21db4/pagseguro/teste2/suporte.svg" src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/8b68bdb0a508ff30707c4483b9b538b6f6a21db4/pagseguro/teste2/suporte.svg">
+    <img class="lazyloaded" data-src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/pagseguro/teste2/support.png?raw=true" src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/pagseguro/teste2/support.png?raw=true">
   </span>
   <span class="geometric-list__label" >Suporte disponível 24 horas por dia</span>
 </li>
