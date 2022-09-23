@@ -108,14 +108,12 @@ section.slider-free.card-group.card-group--5-in-a-row {
   color: #000000;
 }
 
-
 h4.pf-destaque-off {
   display: none !important;
 }
 
-
 .testimonials-ss span {
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -127,7 +125,7 @@ h4.pf-destaque-off {
 }
 
 .testimonials-ss p {
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -138,10 +136,9 @@ h4.pf-destaque-off {
   padding: 0 27px;
 }
 
-
 .testimonials-ss span.nameUser {
   margin-top: 12px;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   font-style: normal;
   font-weight: 350;
   font-size: 10px;
@@ -151,6 +148,29 @@ h4.pf-destaque-off {
   color: #000000;
 }
 
-span.geometric-list__label{
+span.geometric-list__label {
   text-align: center !important;
+}
+
+@media (max-width: 600px) {
+  div.slider-free-core__frame {
+    padding: 8rem 0;
+  }
+
+  .selo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+  .containerForSelo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .containerSupersonic h3 {
+    flex: 1;
+  }
+  .component-group--campaign-banner:before {
+    height: 749px !important;
+  }
 }

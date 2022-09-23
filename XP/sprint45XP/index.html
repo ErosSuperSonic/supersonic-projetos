@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section>
@@ -160,37 +160,138 @@
     </section>
 
     <section id="compareCDB">
-      <div class="containerSupersonic compareCDBContainer">
-        <div class="compareCDBInfoMobile">
-          <h2>Compare com um CDB</h2>
-          <p>
-            Veja como seria o valor que você colocou no simulador, se fosse
-            aplicado em um CDB 100% CDI durante o mesmo período
-          </p>
-        </div>
-        <div class="tabelaLucro">
-          <div class="title">
-            <h4>Lucro com CDB 100% CDI</h4>
-            <h4>Lucro com Compromissada sem IOF</h4>
-          </div>
+      <div class="containerSupersonic">
+        <h2>Compare com um CDB</h2>
+        <p>
+          Veja como seria o valor que você colocou no simulador, se fosse
+          aplicado em um CDB 100% CDI durante o mesmo período
+        </p>
 
-          <div class="numbers">
-            <span class="lucroCDB">R$ 26,00</span>
-            <span class="lucroSemIOF">R$ 300,00</span>
-          </div>
-        </div>
-        <div class="compareCDBInfo">
-          <h2>Compare com um CDB</h2>
-          <p>
-            Veja como seria o valor que você colocou no simulador, se fosse
-            aplicado em um CDB 100% CDI durante o mesmo período
-          </p>
-          <a href="#">Quero abrir conta</a>
-        </div>
+        <table class="tableInfo">
+          <tbody>
+            <tr>
+              <td>Valor aplicado</td>
+              <td>Data aplicação</td>
+              <td>Dias úteis</td>
+              <td>Dia vencimento</td>
+              <td>CDI</td>
+            </tr>
+            <tr>
+              <td><strong>R$ 300.000,00</strong></td>
+              <td><strong>16/09/2022</strong></td>
+              <td><strong>10</strong></td>
+              <td><strong>30/09/2022</strong></td>
+              <td><strong>13,65%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <table class="listWithInfosInGraph">
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">Taxa</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">100%</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">CDB</td>
+              <td class="porcentagemTable value">63%</td>
+            </tr>
+          </tbody>
+
+
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">CDI Equivalente</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">13,65%</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">Compromissada</td>
+              <td class="porcentagemTable value">8,40%</td>
+            </tr>
+          </tbody>
+
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">Valor Bruto</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">R$ 1.005.090,43</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">Compromissada</td>
+              <td class="porcentagemTable value">R$ 1.003.204,26</td>
+            </tr>
+          </tbody>
+
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">IOF</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">-R$ 2.697,93</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">Compromissada</td>
+              <td class="porcentagemTable value">R$ 0,00</td>
+            </tr>
+          </tbody>
+
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">IR</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">-R$ 538,31</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">Compromissada</td>
+              <td class="porcentagemTable value">-R$ 720,96</td>
+            </tr>
+          </tbody>
+
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">Valor líquido</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">R$ 1.001.854,19</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">Compromissada</td>
+              <td class="porcentagemTable value">R$ 1.002.483,30</td>
+            </tr>
+          </tbody>
+
+          <tbody class="tbListWithInfosInGraph">
+            <tr class="infosTable">
+              <td class="titleTable">Lucro</td>
+              <td class="destaqueTable">CDB</td>
+              <td class="porcentagemTable value">R$ 1.854,19</td>
+            </tr>
+
+            <tr class="infosTable">
+              <td class="titleTable opacity-0">Taxa</td>
+              <td class="destaqueTable compromissada">Compromissada</td>
+              <td class="porcentagemTable value">R$ 2.483,30</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <a href="#" class="abrir-conta">Quero abrir conta</a>
       </div>
     </section>
-    <script src="./script.js">
-
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
