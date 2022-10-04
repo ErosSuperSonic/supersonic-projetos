@@ -1,0 +1,81 @@
+.cadastrarFaturaEletronica {
+  border: 1px solid #005075;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 16px;
+}
+.cadastrarFaturaEletronica span {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #005075;
+  margin-bottom: 11px;
+  text-align: center;
+}
+.cadastrarFaturaEletronica a {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #007cb6;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  gap: 8px;
+  border: 1px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cadastrarFaturaEletronica a:hover {
+  border: 1px solid #007cb6;
+  background: transparent;
+}
+
+.cadastrarFaturaEletronica a:hover svg {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(60%) saturate(7468%)
+    hue-rotate(180deg) brightness(92%) contrast(101%);
+}
+.cadastrarFaturaEletronica {
+  transform: translateY(65px);
+}
+#contasEPagamentos > div.row.text-center.my-1 div {
+  width: fit-content;
+  position: relative;
+}
+
+#mainContent > div > ng-component > div > nav > ul {
+  display: flex;
+  position: relative;
+  margin-left: 330px !important;
+}
+
+#contasEPagamentos > div.row.text-center.my-1 > div:nth-child(2) {
+  margin-left: 309px !important;
+}
+
+@media (max-width: 990px) {
+  #mainContent > div > ng-component > div > nav > ul {
+    transform: translateY(0px);
+    margin-left: 0 !important;
+  }
+
+  #contasEPagamentos > div.row.text-center.my-1 > div:nth-child(2) {
+    margin-left: 0px !important;
+  }
+
+  .cadastrarFaturaEletronica {
+    transform: translateY(0px);
+    margin: 0 auto;
+  }
+}

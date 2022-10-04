@@ -5,6 +5,26 @@
   -webkit-font-smoothing: antialiased;
 }
 
+#page-block-gy918ronptb .section-block {
+  height: auto;
+}
+
+#element-568 {
+  position: relative !important;
+  height: auto !important;
+  left: 0;
+}
+
+#page-block-gy918ronptb,
+#page-block-gy918ronptb {
+  height: auto !important;
+}
+
+section#page-block-8ebj5wxjmle {
+  height: auto !important;
+  position: relative;
+}
+
 .containerSupersonic {
   max-width: 964px;
   margin: 0 auto;
@@ -19,6 +39,7 @@
   line-height: 120%;
   color: #232323;
   margin-bottom: 8px;
+  text-align: left;
 }
 .containerSupersonic p {
   font-family: "Roboto", sans-serif;
@@ -27,6 +48,7 @@
   line-height: 120%;
   color: #232323;
   margin-bottom: 54px;
+  text-align: left;
 }
 
 .titlesCalculator {
@@ -47,6 +69,7 @@
   color: #232323;
   display: block;
   margin-bottom: 5px;
+  text-align: left;
 }
 .containerInputs input,
 .containerInputs .sufix {
@@ -96,6 +119,7 @@
 
 .rendimentoCDI {
   width: 339.5px;
+  text-align: left;
 }
 .rendimentoCDI span {
   font-family: "Roboto", sans-serif;
@@ -114,6 +138,9 @@
   line-height: 150%;
   color: #232323;
   border-bottom: 3px solid #0053a8;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
 }
 
 #compareCDB {
@@ -128,6 +155,7 @@
   line-height: 120%;
   color: #232323;
   margin-bottom: 16px;
+  text-align: left;
 }
 #compareCDB .containerSupersonic > p {
   font-family: "Roboto", sans-serif;
@@ -160,6 +188,7 @@
 #compareCDB .tableInfo tr {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 #compareCDB .listWithInfosInGraph {
   width: 100%;
@@ -176,6 +205,7 @@
   font-size: 18px;
   line-height: 150%;
   color: #000000;
+  text-align: left;
 }
 #compareCDB .porcentagemTable {
   font-family: "Roboto", sans-serif;
@@ -224,7 +254,48 @@
   letter-spacing: 0.1px;
   color: #ffffff;
   text-decoration: none;
-  background: #0053A8;
+  background: #0053a8;
   margin: 0 auto;
   margin-top: 30px;
+}
+
+@media (max-width: 964px) {
+  .containerSupersonic {
+    padding: 0 1.25rem;
+  }
+  .containerSupersonic p,
+.titlesCalculator,
+#compareCDB .containerSupersonic > p {
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrapperSimulacaoInfos {
+    flex-direction: column;
+    gap: 65px;
+    padding-bottom: 70px;
+  }
+  .diasInvestidos {
+    margin-top: 32px;
+  }
+  #compareCDB .titleTable {
+    text-align: right;
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  #compareCDB .tbListWithInfosInGraph {
+    position: relative;
+  }
+  #compareCDB .abrir-conta {
+    width: 100%;
+  }
+  #compareCDB .tbListWithInfosInGraph {
+    margin-bottom: 48px;
+  }
+  #compareCDB .tableInfo {
+    margin-bottom: 62px;
+  }
 }/*# sourceMappingURL=style.css.map */
