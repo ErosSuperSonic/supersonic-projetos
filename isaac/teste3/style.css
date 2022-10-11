@@ -1,0 +1,138 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-ss {
+  font-family: "Halcyon", sans-serif;
+  display: flex;
+  gap: 104px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+
+.container-text-ss {
+  width: 50%;
+}
+.container-text-ss h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 64px;
+  color: #3d4ed7;
+  margin-bottom: 24px;
+}
+.container-text-ss ul {
+  margin-bottom: 32px;
+  padding: 0;
+  width: 587px;
+}
+.container-text-ss ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.container-text-ss ul p {
+  width: 100%;
+}
+.container-text-ss .microcopyInput {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #010038;
+}
+
+.container-video-ss {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.container-video-ss::after {
+  content: "";
+  width: 602px;
+  height: 494px;
+  background: #d1dbff;
+  border-radius: 12px 0px 0px 12px;
+  position: absolute;
+  z-index: -1;
+  right: -4rem;
+  bottom: -36px;
+}
+
+.video-box {
+  max-width: 482px;
+}
+.video-box .video-header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.video-box .video-header .play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 10;
+}
+.video-box .video-header:hover .play-button {
+  opacity: 1;
+  transition: 0.3s;
+}
+.video-box .video-header:hover .banner {
+  transform: scale(1.1);
+}
+.video-box .video-header .banner {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 336px;
+  transition: 0.5s;
+  z-index: 1;
+}
+.video-box .video-content {
+  padding: 24px 32px;
+  background: #3d4ed7;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin-top: -4px;
+  position: relative;
+}
+.video-box .video-content p {
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.video-box .video-content h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.video-box .video-content span {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.video-box .aspas {
+  position: absolute;
+  top: -20px;
+}/*# sourceMappingURL=style.css.map */

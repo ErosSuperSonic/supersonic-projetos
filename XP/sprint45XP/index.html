@@ -151,7 +151,7 @@
             </div>
 
             <div class="rendimentoCDI">
-              <span>Rendimento em % do CDI</span>
+              <span>Equivale a um CDB de Liquidez Diária de:</span>
               <h4>0%</h4>
             </div>
           </div>
@@ -294,13 +294,11 @@
     <script>
       //Resets
       if (window.innerWidth > 768) {
-
-        if(document.querySelector("#element-568")){
+        if (document.querySelector("#element-568")) {
           document.querySelector("#element-568").style.width = "100%";
           document.querySelector(
             "#page-block-gy918ronptb > div.section-block > div"
           ).style.maxWidth = "100%";
-
         }
       }
 
@@ -504,18 +502,18 @@
         }
 
         var day1 = new Date(infoToday());
-        let day2 = new Date("09/05/2022");
+        let day2 = new Date("10/12/2022");
 
         if (dias === "01") {
-          day2 = new Date("09/27/2022");
+          day2 = new Date("10/06/2022");
         } else if (dias === "03") {
-          day2 = new Date("09/29/2022");
-        } else if (dias === "05") {
-          day2 = new Date("10/03/2022");
-        } else if (dias === "07") {
-          day2 = new Date("10/05/2022");
-        } else {
           day2 = new Date("10/10/2022");
+        } else if (dias === "05") {
+          day2 = new Date("10/12/2022");
+        } else if (dias === "07") {
+          day2 = new Date("10/14/2022");
+        } else {
+          day2 = new Date("10/19/2022");
         }
 
         var difference = Math.abs(day2 - day1);
@@ -546,9 +544,9 @@
 
         objectInfoTable.lucroCDB = lucroCDB;
 
-        const applicationData = `${day1.getDate()}/${
+        const applicationData = `${String(day1.getDate()).padStart(2, "0")}/${
           day1.getMonth() <= 10
-            ? String(day1.getMonth()).padStart(2, "0")
+            ? String(day1.getMonth() + 1).padStart(2, "0")
             : day1.getMonth()
         }/${day1.getFullYear()}`;
 
@@ -558,8 +556,8 @@
             : day2.getDate()
         }/${
           day2.getMonth() <= 10
-            ? String(day2.getMonth()).padStart(2, "0")
-            : day2.getMonth()
+            ? String(day2.getMonth() + 1).padStart(2, "0")
+            : day2.getMonth() + 1
         }/${day2.getFullYear()}`;
 
         setVariablesTable(6, applicationData);
@@ -630,15 +628,41 @@
       }
 
       function rendimentoPorcentagemCDI(diasInvestidos = 5) {
+        diasInvestidos = Number(diasInvestidos);
         const valoresTaxa = {
-          1: 1075,
-          3: 480,
-          5: 312,
-          7: 242,
-          10: 185,
+          1: 43,
+          3: 48,
+          5: 53,
+          7: 58,
+          10: 63,
         };
 
-        rendimentoCDI.innerHTML = `${valoresTaxa[diasInvestidos]}% <span>do CDI</span>`;
+        const iof = {
+          1: 96,
+          3: 83,
+          5: 73,
+          7: 60,
+          10: 50,
+        };
+
+        const equivalente = (
+          valoresTaxa[diasInvestidos] /
+          100 /
+          (1 - iof[diasInvestidos] / 100)
+        ).toFixed(4);
+
+
+        if (Number(equivalente)) {
+          const rendimento = String(equivalente * 100).replace(".", ",");
+
+          if (diasInvestidos == 1 || diasInvestidos == 7 || diasInvestidos == 10) {
+            rendimentoCDI.innerHTML = `${rendimento},00%`;
+          } else if (diasInvestidos == 5) {
+            rendimentoCDI.innerHTML = `${rendimento}0%`;
+          } else {
+            rendimentoCDI.innerHTML = `${rendimento}%`;
+          }
+        }
       }
 
       rendimentoPorcentagemCDI();
@@ -654,7 +678,6 @@
       }
 
       function setVariablesTableInfos(key, value, cipher = false) {
-
         if (cipher) {
           tableInfo[key].innerHTML = `<strong>R$ ${value}</strong>`;
         } else {
@@ -688,9 +711,9 @@
         infoTableList[1].innerHTML = `${objectInfoTable.taxaCDB}%`;
 
         //CDI equivalente compromissada
-        infoTableList[3].innerHTML = `${String((
-          objectInfoTable.CDIEquivalente * 100
-        ).toFixed(2)).replace(".", ",")}%`;
+        infoTableList[3].innerHTML = `${String(
+          (objectInfoTable.CDIEquivalente * 100).toFixed(2)
+        ).replace(".", ",")}%`;
 
         // //Valor bruto CDB
 
@@ -704,15 +727,20 @@
         )}`;
 
         // IOF CDB
-        infoTableList[6].innerHTML = `R$ ${String(objectInfoTable.IOF).replace(".", ",")}`;
+        infoTableList[6].innerHTML = `R$ ${String(objectInfoTable.IOF).replace(
+          ".",
+          ","
+        )}`;
 
         // IR CDB
-        infoTableList[8].innerHTML = `R$ ${String(objectInfoTable.IR_cdb).replace(".", ",")}`;
+        infoTableList[8].innerHTML = `R$ ${String(
+          objectInfoTable.IR_cdb
+        ).replace(".", ",")}`;
 
         // IR Compromissada
-        infoTableList[9].innerHTML = `R$ ${String(Number(
-          objectInfoTable.IR_compromissada
-        ).toFixed(2)).replace(".", ",")}`;
+        infoTableList[9].innerHTML = `R$ ${String(
+          Number(objectInfoTable.IR_compromissada).toFixed(2)
+        ).replace(".", ",")}`;
 
         // Valor líquido CDB
         infoTableList[10].innerHTML = `R$ ${teste(

@@ -1,0 +1,151 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-ss {
+  font-family: "Halcyon", sans-serif;
+  display: flex;
+  gap: 104px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+.container-text-ss {
+  width: 50%;
+  h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 64px;
+    color: #3d4ed7;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    margin-bottom: 32px;
+    padding: 0;
+    width: 587px;
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .microcopyInput {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #010038;
+  }
+}
+.container-video-ss {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 602px;
+    height: 494px;
+
+    background: #d1dbff;
+    border-radius: 12px 0px 0px 12px;
+
+    position: absolute;
+    z-index: -1;
+    right: -4rem;
+    bottom: -36px;
+  }
+}
+
+.video-box {
+  max-width: 482px;
+  .video-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+    .play-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
+      z-index: 10;
+    }
+
+    &:hover {
+      .play-button {
+        opacity: 1;
+        transition: .3s;
+      }
+      .banner{
+        transform: scale(1.1);
+      }
+    }
+
+    .banner {
+      width: 100%;
+      object-fit: cover;
+      height: 336px;
+      transition: .5s;
+      z-index: 1;
+    }
+  }
+
+  .video-content {
+    padding: 24px 32px;
+    background: #3d4ed7;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: -4px;
+    position: relative;
+
+    p {
+      margin-top: 8px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+
+    span {
+      display: block;
+      margin-top: 6px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
+  .aspas {
+    position: absolute;
+    top: -20px;
+  }
+}
