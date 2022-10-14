@@ -1,5 +1,7 @@
 if (window.innerWidth <= 768) {
   try {
+    const newFraseCard = `<p class="newFraseSS">Garantimos o <strong>melhor preço</strong> de seguro viagem </p>`;
+    const buttonClose = ``
     const boxSS = `
     <div class="box-ss">
       <p>Garantimos o <strong>melhor preço</strong> de seguro viagem </p>
@@ -15,22 +17,28 @@ if (window.innerWidth <= 768) {
     const firstComponentBlogArtigos =
       document.querySelector(".comp_blogcontents");
 
-      
-      if (firstComponentHomeBlog) {
-        firstComponentHomeBlog.insertAdjacentHTML("afterbegin", boxSS);
-        firstComponentHomeBlog.insertAdjacentElement("afterbegin", newFormSS);
-        
-        let buttonModal = document.querySelector(".box-ss").querySelector("button");
+    if (firstComponentHomeBlog) {
+      firstComponentHomeBlog.insertAdjacentHTML("afterbegin", boxSS);
+      firstComponentHomeBlog.insertAdjacentElement("afterbegin", newFormSS);
+
+      let buttonModal = document
+        .querySelector(".box-ss")
+        .querySelector("button");
       buttonModal.addEventListener("click", () => {
         document
           .querySelector(".comp_blogheader .component.formSS")
           .classList.add("active");
         document.querySelector(".box-ss").style.display = "none";
       });
+
+      document.querySelector(".form_contents").insertAdjacentHTML("afterbegin", newFraseCard)
+
     } else if (firstComponentBlogArtigos) {
       firstComponentBlogArtigos.insertAdjacentHTML("afterbegin", boxSS);
       firstComponentBlogArtigos.insertAdjacentElement("afterbegin", newFormSS);
-      let buttonModal = document.querySelector(".box-ss").querySelector("button");
+      let buttonModal = document
+        .querySelector(".box-ss")
+        .querySelector("button");
 
       buttonModal.addEventListener("click", () => {
         document
@@ -38,9 +46,10 @@ if (window.innerWidth <= 768) {
           .classList.add("active");
         document.querySelector(".box-ss").style.display = "none";
       });
+
+      document.querySelector(".form_contents").insertAdjacentHTML("afterbegin", newFraseCard)
+
     }
-
-
   } catch (e) {
     console.log(e);
   }
