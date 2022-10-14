@@ -1,0 +1,198 @@
+<style>
+
+@media (max-width: 768px) {
+  .comp_blogcontents .component .comp_blogsidebar {
+    display: none;
+  }
+  .comp_blogheader {
+    padding: 36px 0 15px 0 !important;
+  }
+  .box-ss {
+    padding: 14px 33px;
+    background: #007e47;
+    border-radius: 5px;
+    margin-top: 57px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 36px;
+  }
+  .box-ss p {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  .box-ss button {
+    padding: 12px 25px;
+    height: 44px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    color: #000000;
+
+    cursor: pointer;
+
+    background: #ffc100;
+    border-radius: 5px;
+
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
+
+  .component.formSS {
+    margin-top: 83px;
+
+    background: #007e47;
+    margin: 0 16px;
+    padding: 14px 18.5px 20px 18.5px;
+    border-radius: 5px;
+  }
+
+  .comp_blogheader .component.formSS {
+    display: none;
+    margin: 0 16px;
+    padding: 14px 18.5px 20px 18.5px;
+    margin-top: 46px;
+    margin-bottom: 24px;
+  }
+  .comp_blogheader .component.formSS.active {
+    display: block;
+  }
+
+  .component.formSS .title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Open Sans";
+    margin-bottom: 16px;
+  }
+
+  .component.formSS input {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    height: 48px;
+    padding-left: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .component.formSS input::placeholder {
+    color: #909090;
+  }
+  .component.formSS .line01 input,
+  .component.formSS .line02 input {
+    position: relative;
+  }
+  .component.formSS .line02 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .component.formSS .line01,
+  .component.formSS .line02 > div,
+  .component.formSS .line01 > div {
+    position: relative;
+  }
+
+  .component.formSS .line01 img {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    z-index: 1;
+  }
+
+  .component.formSS .line01 input {
+    padding-left: 36px;
+  }
+
+  .component.formSS .line01 img.arrowmenu {
+    right: 12px;
+    left: auto;
+  }
+
+  /* .component.formSS #departureDateInput {
+    width: 50%;
+  } */
+  .component.formSS div#ex-input-departure {
+    margin-right: 8px;
+  }
+
+  .component.formSS div#ex-input-departure,
+  .component.formSS div#ex-input-return {
+    width: 48.95%;
+    display: inline-block;
+  }
+
+  .component.formSS #searchTriggerInput {
+    background: #ffc100;
+    border-radius: 5px;
+    width: 100%;
+    border: 0;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    height: 60px;
+    color: #000000;
+  }
+
+  .component.formSS .danger-signal {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .component.formSS .line01 img.danger-signal,
+  .component.formSS .line02 img.danger-signal {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    left: auto;
+    top: 5px;
+    right: 4px;
+  }
+  .component.formSS div#destinationSpDiv {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 660px) {
+    .component.formSS div#ex-input-departure,
+    .component.formSS div#ex-input-return {
+      width: 47.95%;
+    }
+  }
+
+  @media (max-width: 372px) {
+    .component.formSS div#ex-input-departure,
+    .component.formSS div#ex-input-return {
+      width: 47.6%;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .component.formSS div#ex-input-departure,
+  .component.formSS div#ex-input-return {
+    width: 100%;
+  }
+}
+
+
+</style>

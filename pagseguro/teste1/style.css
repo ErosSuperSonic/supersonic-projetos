@@ -17,7 +17,7 @@ body {
 .supersonicContent h4 {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500 !important;
   font-size: 20px !important;
   line-height: 20px;
   color: #ffffff;
@@ -56,15 +56,19 @@ body {
 
   line-height: inherit;
 }
+.card-group__container {
+  flex-direction: column;
+}
 
 .supersonicContent__paragraph {
   font-family: "Segoe UI", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 16px !important;
+  line-height: 24px !important;
   text-align: center;
   color: #ffffff;
+  max-width: 442px;
 }
 .component-group--campaign-banner:before {
   height: 581px;
@@ -89,7 +93,7 @@ span.geometric-list__label a {
 }
 @media (max-width: 1483px) {
   .supersonicContent {
-    margin-top: -70px;
+    margin-top: -23px;
   }
 }
 @media (max-width: 1240px) {

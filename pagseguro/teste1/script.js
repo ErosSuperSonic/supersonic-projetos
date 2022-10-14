@@ -46,4 +46,19 @@ function replaceTextJuros() {
   });
 }
 
+function replaceTextJurosInDisclaimerBlock() {
+  document.querySelectorAll(".disclaimer-block p strong")[1].innerHTML +=
+    "sem juros";
+}
+
+
+function replaceTextJurosDisclaimerBlock() {
+  document.querySelectorAll(".disclaimer-block p strong").forEach((el) => {
+    if (el.innerText.includes("12x")) {
+      el.innerHTML += "sem juros";
+    }
+  });
+}
+
 replaceTextJuros();
+replaceTextJurosDisclaimerBlock()
