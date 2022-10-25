@@ -1,0 +1,95 @@
+form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.hs_email.hs-email.hs-fieldtype-text.field.hs-form-field {
+  width: 285.5px;
+}
+.hs-button,
+.hs-form-field input[type="email"] {
+  border-radius: 8px;
+  height: 64px;
+}
+
+input.hs-button.primary.large,
+input.hs-button.primary.large:hover,
+input.hs-button.primary.large:active {
+  font-family: "Halcyon", sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px !important;
+  line-height: 20px !important;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  top: 3px;
+  margin-left: 16px;
+}
+
+form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 .hs-error-msgs label {
+  position: absolute;
+  bottom: 10px;
+}
+form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0
+  .hs-error-msgs
+  label.hs-main-font-element {
+  position: absolute;
+  right: -299px;
+  bottom: -54px;
+  width: max-content;
+}
+
+form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 label.hs-error-msg {
+  top: 103px;
+}
+
+form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 .hs_error_rollup {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 {
+    flex-direction: column;
+  }
+
+  form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0
+    .hs_email.hs-email.hs-fieldtype-text.field.hs-form-field {
+    width: 100%;
+  }
+
+  form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0.hs_submit.hs-submit {
+    width: 100%;
+  }
+
+  input.hs-button.primary.large,
+  input.hs-button.primary.large:hover,
+  input.hs-button.primary.large:active {
+    width: 100%;
+    margin-left: 0!important;
+  }
+
+  form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 .hs_error_rollup {
+    width: 100%;
+  }
+  .hs_submit.hs-submit {
+    width: 100%;
+}
+
+  form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0
+    .hs-error-msgs
+    label.hs-main-font-element {
+    position: absolute;
+    right: 0px;
+    bottom: -126px;
+    width: max-content;
+    background: #0a0202;
+    width: 100%;
+  }
+  .hs_submit.hs-submit{
+    margin-top: -46px;
+  }
+}

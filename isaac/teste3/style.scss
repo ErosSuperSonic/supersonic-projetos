@@ -5,6 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .container-ss {
   font-family: "Halcyon", sans-serif;
   display: flex;
@@ -76,6 +77,9 @@ body {
     bottom: -36px;
   }
 }
+#bluePlay {
+  transition: 0.3s;
+}
 
 .video-box {
   max-width: 482px;
@@ -100,6 +104,14 @@ body {
       .play-button {
         opacity: 1;
         transition: 0.3s;
+      }
+
+      #bluePlay{
+        fill: #3d4ed7;
+      }
+
+      #strokePlay{
+        stroke: #3d4ed7;
       }
       .banner {
         transform: scale(1.1);
@@ -126,7 +138,7 @@ body {
     p {
       margin-top: 8px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 400;
       font-size: 18px;
       line-height: 20px;
       color: #ffffff;
@@ -180,8 +192,8 @@ body {
   .container-ss {
     flex-direction: column;
     padding-bottom: 72px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .container-video-ss {
     width: 100%;
@@ -212,6 +224,23 @@ body {
     right: -1rem;
   }
 }
+
+@media(min-width: 2167px){
+  .container-text-ss h1{
+    width: 1333px;
+  }
+}
+@media(min-width: 2500px){
+  .container-text-ss h1{
+    width: 100%;
+  }
+}
+
+@media(min-width: 1552px){
+  .container-text-ss ul li p{
+    line-height: 31px;
+  }
+}
 @media (max-width: 1000px) {
   .hero-ctas,
   h1.h1-white.hero.mobile,
@@ -222,6 +251,9 @@ body {
 @media (max-width: 768px) {
   .container-ss {
     padding-top: 2rem;
+  }
+  .video-box .video-content p{
+    
   }
 }
 @media (max-width: 675px) {

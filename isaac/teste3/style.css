@@ -14,6 +14,7 @@ body {
   padding-left: 4rem;
   justify-content: space-between;
   padding-top: 4rem;
+  align-items: center;
 }
 
 .container-text-ss {
@@ -72,6 +73,10 @@ body {
   bottom: -36px;
 }
 
+#bluePlay {
+  transition: 0.3s;
+}
+
 .video-box {
   max-width: 482px;
 }
@@ -94,13 +99,19 @@ body {
   opacity: 1;
   transition: 0.3s;
 }
+.video-box .video-header:hover #bluePlay {
+  fill: #3d4ed7;
+}
+.video-box .video-header:hover #strokePlay {
+  stroke: #3d4ed7;
+}
 .video-box .video-header:hover .banner {
   transform: scale(1.1);
 }
 .video-box .video-header .banner {
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   height: 336px;
   transition: 0.5s;
   z-index: 1;
@@ -116,7 +127,7 @@ body {
 .video-box .video-content p {
   margin-top: 8px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 20px;
   color: #ffffff;
@@ -143,10 +154,6 @@ body {
   top: -20px;
 }
 
-.container-ss form#hsForm_fa43c80c-58c9-452f-a9e8-77958cff96e0 {
-  display: flex;
-  align-items: center;
-}
 @media (min-width: 1500px) {
   .container-text-ss ul {
     max-width: 100%;
@@ -166,8 +173,8 @@ body {
   .container-ss {
     flex-direction: column;
     padding-bottom: 72px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .container-video-ss {
     width: 100%;
@@ -195,12 +202,29 @@ body {
     right: -1rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 2167px) {
+  .container-text-ss h1 {
+    width: 1333px;
+  }
+}
+@media (min-width: 2500px) {
+  .container-text-ss h1 {
+    width: 100%;
+  }
+}
+@media (min-width: 1552px) {
+  .container-text-ss ul li p {
+    line-height: 31px;
+  }
+}
+@media (max-width: 1000px) {
   .hero-ctas,
-  h1.h1-white.hero.mobile,
-  p.margin-vertical.margin-medium.max-width-medium.text-white-color.mobile {
+h1.h1-white.hero.mobile,
+p.margin-vertical.margin-medium.max-width-medium.text-white-color.mobile {
     display: none !important;
   }
+}
+@media (max-width: 768px) {
   .container-ss {
     padding-top: 2rem;
   }
@@ -230,5 +254,4 @@ body {
   .video-box .video-content p {
     margin-top: 0;
   }
-} /*# sourceMappingURL=style.css.map */
-
+}/*# sourceMappingURL=style.css.map */

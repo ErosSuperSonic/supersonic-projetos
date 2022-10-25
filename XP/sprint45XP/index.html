@@ -148,6 +148,7 @@
                   </div>
                 </div>
               </div>
+              <p class="confiraPreco"><i>*Confira as premissas na tabela abaixo</i></p>
             </div>
 
             <div class="rendimentoCDI">
@@ -245,7 +246,7 @@
 
           <tbody class="tbListWithInfosInGraph">
             <tr class="infosTable">
-              <td class="titleTable">IR</td>
+              <td class="titleTable">IRRF</td>
               <td class="destaqueTable">CDB</td>
               <td class="porcentagemTable value">-R$ 538,31</td>
             </tr>
@@ -279,7 +280,7 @@
             </tr>
 
             <tr class="infosTable">
-              <td class="titleTable opacity-0">Taxa</td>
+              <td class="titleTable opacity-0">Taxa CDI</td>
               <td class="destaqueTable compromissada">Compromissada</td>
               <td class="porcentagemTable value">R$ 2.483,30</td>
             </tr>
@@ -299,6 +300,85 @@
           document.querySelector(
             "#page-block-gy918ronptb > div.section-block > div"
           ).style.maxWidth = "100%";
+        }
+      }
+
+      function getFinalData(quantidadeDias = 5) {
+        if (quantidadeDias) {
+          let weekDay = new Date();
+          const diasDoAno = [
+            "18/10/2022",
+            "19/10/2022",
+            "20/10/2022",
+            "21/10/2022",
+            "24/10/2022",
+            "25/10/2022",
+            "26/10/2022",
+            "27/10/2022",
+            "28/10/2022",
+            "31/10/2022",
+            "01/11/2022",
+            "03/11/2022",
+            "04/11/2022",
+            "05/11/2022",
+            "06/11/2022",
+            "07/11/2022",
+            "08/11/2022",
+            "09/11/2022",
+            "10/11/2022",
+            "11/11/2022",
+            "12/11/2022",
+            "13/11/2022",
+            "14/11/2022",
+            "16/11/2022",
+            "17/11/2022",
+            "18/11/2022",
+            "19/11/2022",
+            "20/11/2022",
+            "21/11/2022",
+            "22/11/2022",
+            "23/11/2022",
+            "24/11/2022",
+            "25/11/2022",
+            "26/11/2022",
+            "27/11/2022",
+            "28/11/2022",
+            "29/11/2022",
+            "30/11/2022",
+            "01/12/2022",
+            "02/12/2022",
+            "05/12/2022",
+            "06/12/2022",
+            "07/12/2022",
+            "08/12/2022",
+            "09/12/2022",
+            "12/12/2022",
+            "13/12/2022",
+            "14/12/2022",
+            "15/12/2022",
+            "16/12/2022",
+            "19/12/2022",
+            "20/12/2022",
+            "21/12/2022",
+            "22/12/2022",
+            "33/12/2022",
+            "26/12/2022",
+            "27/12/2022",
+            "28/12/2022",
+            "29/12/2022",
+            "30/12/2022",
+            "31/12/2022",
+          ];
+
+          let indexAtual = 0;
+
+          diasDoAno.forEach((data, index) => {
+            if (data === weekDay.toLocaleDateString()) {
+              indexAtual = index;
+            }
+          });
+
+          return diasDoAno[indexAtual + quantidadeDias];
         }
       }
 
@@ -493,30 +573,22 @@
           (quantidadeInvestidaValue - valorBruto).toFixed(2) * -1;
         let IOF = 0;
 
-        function infoToday() {
-          let day = new Date().getDate();
-          let month = new Date().getMonth() + 1;
-          let year = new Date().getFullYear();
+        var day1 = new Date().toLocaleDateString();
+        let day2 = getFinalData(Number(dias));
 
-          return `${month}/${day}/${year}`;
-        }
+        var difference = Math.abs(
+          new Date(
+            `${day2.split("/")[1]} / ${day2.split("/")[0]} / ${
+              day2.split("/")[2]
+            }`
+          ) -
+            new Date(
+              `${day1.split("/")[1]} / ${day1.split("/")[0]} / ${
+                day1.split("/")[2]
+              }`
+            )
+        );
 
-        var day1 = new Date(infoToday());
-        let day2 = new Date("10/12/2022");
-
-        if (dias === "01") {
-          day2 = new Date("10/06/2022");
-        } else if (dias === "03") {
-          day2 = new Date("10/10/2022");
-        } else if (dias === "05") {
-          day2 = new Date("10/12/2022");
-        } else if (dias === "07") {
-          day2 = new Date("10/14/2022");
-        } else {
-          day2 = new Date("10/19/2022");
-        }
-
-        var difference = Math.abs(day2 - day1);
         diasEntreAsDatas = difference / (1000 * 3600 * 24);
 
         const listIOFDesconto = [
@@ -529,6 +601,7 @@
             rendimentoBruto *
             (listIOFDesconto[diasEntreAsDatas - 1] / 100)
           ).toFixed(2);
+          console.log(IOF);
         }
 
         objectInfoTable.IOF = IOF;
@@ -544,21 +617,9 @@
 
         objectInfoTable.lucroCDB = lucroCDB;
 
-        const applicationData = `${String(day1.getDate()).padStart(2, "0")}/${
-          day1.getMonth() <= 10
-            ? String(day1.getMonth() + 1).padStart(2, "0")
-            : day1.getMonth()
-        }/${day1.getFullYear()}`;
+        const applicationData = day1;
 
-        const dueDate = `${
-          day2.getDate() <= 10
-            ? String(day2.getDate()).padStart(2, "0")
-            : day2.getDate()
-        }/${
-          day2.getMonth() <= 10
-            ? String(day2.getMonth() + 1).padStart(2, "0")
-            : day2.getMonth() + 1
-        }/${day2.getFullYear()}`;
+        const dueDate = day2;
 
         setVariablesTable(6, applicationData);
         setVariablesTable(7, dias);
@@ -581,11 +642,11 @@
         let dias = Number(diasInvestidosInput.value);
 
         const valoresTaxa = {
-          1: 43,
-          3: 48,
-          5: 53,
-          7: 58,
-          10: 63,
+          1: 85,
+          3: 85,
+          5: 85,
+          7: 85,
+          10: 85,
         };
 
         let taxa = valoresTaxa[dias] / 100;
@@ -630,11 +691,11 @@
       function rendimentoPorcentagemCDI(diasInvestidos = 5) {
         diasInvestidos = Number(diasInvestidos);
         const valoresTaxa = {
-          1: 43,
-          3: 48,
-          5: 53,
-          7: 58,
-          10: 63,
+          1: 85, //43
+          3: 85,//48
+          5: 85,//53
+          7: 85,//58
+          10: 85,//63
         };
 
         const iof = {
@@ -651,16 +712,19 @@
           (1 - iof[diasInvestidos] / 100)
         ).toFixed(4);
 
-
         if (Number(equivalente)) {
           const rendimento = String(equivalente * 100).replace(".", ",");
 
-          if (diasInvestidos == 1 || diasInvestidos == 7 || diasInvestidos == 10) {
-            rendimentoCDI.innerHTML = `${rendimento},00%`;
+          if (
+            diasInvestidos == 1 ||
+            diasInvestidos == 7 ||
+            diasInvestidos == 10
+          ) {
+            rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
           } else if (diasInvestidos == 5) {
-            rendimentoCDI.innerHTML = `${rendimento}0%`;
+            rendimentoCDI.innerHTML = `${rendimento}0% <span>do CDI</span>`;
           } else {
-            rendimentoCDI.innerHTML = `${rendimento}%`;
+            rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
           }
         }
       }
@@ -685,7 +749,7 @@
         }
       }
 
-      function teste(campo, evento) {
+      function convertCampoString(campo, evento) {
         var valor = String(campo)
           .replace(/[^\d]+/gi, "")
           .reverse();
@@ -717,16 +781,17 @@
 
         // //Valor bruto CDB
 
-        infoTableList[4].innerHTML = `R$ ${teste(
+        infoTableList[4].innerHTML = `R$ ${convertCampoString(
           objectInfoTable.valorBrutoCDB.toFixed(2)
         )}`;
 
         //Valor bruto Compromissada
-        infoTableList[5].innerHTML = `R$ ${teste(
+        infoTableList[5].innerHTML = `R$ ${convertCampoString(
           objectInfoTable.valorBrutoEquivalente
         )}`;
 
         // IOF CDB
+
         infoTableList[6].innerHTML = `R$ ${String(objectInfoTable.IOF).replace(
           ".",
           ","
@@ -743,20 +808,22 @@
         ).replace(".", ",")}`;
 
         // Valor líquido CDB
-        infoTableList[10].innerHTML = `R$ ${teste(
+        infoTableList[10].innerHTML = `R$ ${convertCampoString(
           objectInfoTable.valorLiquidoCDB
         )}`;
 
         //Valor líquido compromissada
-        infoTableList[11].innerHTML = `R$ ${teste(
+        infoTableList[11].innerHTML = `R$ ${convertCampoString(
           objectInfoTable.valorLiquidoCompromissada
         )}`;
 
         // Lucro líquido CDB
-        infoTableList[12].innerHTML = `R$ ${teste(objectInfoTable.lucroCDB)}`;
+        infoTableList[12].innerHTML = `R$ ${convertCampoString(
+          objectInfoTable.lucroCDB
+        )}`;
 
         //Lucro líquido compromissada
-        infoTableList[13].innerHTML = `R$ ${teste(
+        infoTableList[13].innerHTML = `R$ ${convertCampoString(
           objectInfoTable.lucroCompromissada
         )}`;
       }

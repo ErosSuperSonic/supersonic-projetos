@@ -6,20 +6,24 @@ body {
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
+  img.buttonClose {
+    position: absolute;
+    right: 26px;
+  }
   p.newFraseSS {
     text-align: center;
     margin: 0;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 27px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     max-width: 263px;
     margin: 0 auto;
     margin-bottom: 12px;
-}
+  }
 
   .comp_blogcontents .component .comp_blogsidebar {
     display: none;
@@ -34,7 +38,7 @@ body {
     padding: 14px 33px;
     background: #007e47;
     border-radius: 5px;
-    margin-top: 57px;
+    margin-top: 46px;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 36px;
@@ -86,17 +90,18 @@ body {
   .comp_blogheader .component.formSS,
   .comp_blogcontents .component.formSS {
     display: none;
-    margin: 0 16px !important;
     padding: 14px 18.5px 20px 18.5px !important;
     margin-top: 46px !important;
     margin-bottom: 24px !important;
   }
+
+
   .comp_blogheader .component.formSS.active,
   .comp_blogcontents .component.formSS.active {
     display: block;
   }
-  
-  .comp_blogcontents .component.formSS.active{
+
+  .comp_blogcontents .component.formSS.active {
     margin-top: 0px !important;
   }
   .component.formSS .title {
