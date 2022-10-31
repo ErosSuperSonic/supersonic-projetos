@@ -259,7 +259,18 @@ section#page-block-8ebj5wxjmle {
   margin-top: 30px;
 }
 
+p.confiraPreco.mobile {
+  display: none;
+  margin-top: 0;
+}
+
 @media (max-width: 964px) {
+  p.confiraPreco.desktop {
+    display: none;
+  }
+  p.confiraPreco.mobile {
+    display: block;
+  }
   .containerSupersonic {
     padding: 0 1.25rem;
   }
