@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      *,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container-items {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1172px;
+        padding: 0 16px;
+        margin: 0 auto;
+      }
+      .container-items .item {
+        background: #ffffff;
+        box-shadow: 0px 6px 15px rgba(137, 137, 137, 0.25);
+        border-radius: 8px;
+        width: 357px;
+        padding-top: 16px;
+        padding-bottom: 32px;
+        padding: 16px 24px 32px 24px;
+
+        cursor: pointer;
+        position: relative;
+      }
+
+      .container-items .item::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 7px;
+        background-color: #7fc241;
+        transition: 0.3s;
+      }
+      .container-items .item:hover::before {
+        width: 70%;
+      }
+      .container-items .item h3 {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: -0.015em;
+        color: #3a3a3a;
+
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .container-items .item p {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.025em;
+        color: #6e6e6e;
+      }
+
+      .container-items + .container-items {
+        margin-top: 32px;
+      }
+
+      @media (max-width: 1140px) {
+        .container-items {
+          flex-direction: column;
+        }
+        .container-items .item {
+          width: 100%;
+        }
+        .container-items .item + .item,
+        .container-items + .container-items {
+          margin-top: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body style="padding-top: 100px">
+    <div class="content-cards-ss">
+      <div class="container-items">
+        <div class="item">
+          <img src="./historico.svg" alt="" />
+          <h3>Consultar débitos e 2 via da conta</h3>
+          <p>
+            <strong>Consulte seus débitos</strong> e contas em aberto
+            <strong>ou solicite a 2 via</strong> para pagamento.
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="./religa.svg" alt="" />
+          <h3>Religar gás</h3>
+          <p>
+            Faça uma solicitação e
+            <strong>agende uma visita para religar o seu gás.</strong>
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="./titular_conta.svg" alt="" />
+          <h3>Consultar débitos e 2 via da conta</h3>
+          <p>
+            Efetue agora mesmo a
+            <strong>troca de titularidade para o seu novo endereço.</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="container-items">
+        <div class="item">
+          <img src="./historico.svg" alt="" />
+          <h3>Fatura por e-mail</h3>
+          <p>
+            <strong>Receba sua conta por e-mail.</strong> Além de prático, ajuda
+            a cuidar do meio ambiente.
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="./dinheiro-salvar.svg" alt="" />
+          <h3>Débito automático</h3>
+          <p>
+            Configure seu <strong>pagamento para débito automático</strong> e
+            não se preocupe mais com a fatura.
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="./calender.svg" alt="" />
+          <h3>Acompanhe sua solicitação</h3>
+          <p>
+            Efetue <strong>novas solicitações ou acompanhe</strong> as que estão
+            em andamento.
+          </p>
+        </div>
+      </div>
+
+      <div class="container-items">
+        <div class="item">
+          <img src="./parcelamento.svg" alt="" />
+          <h3 style="color: #007CB6">Parcelamento</h3>
+          <p><strong></strong> e negocie seus débitos com a Comgás.</p>
+        </div>
+
+        <div class="item">
+          <img src="./dinheiro-salvar.svg" alt="" />
+          <h3>Meu perfil</h3>
+          <p>Alterar <strong>dados de cadastro na Comgás.</strong></p>
+        </div>
+
+        <div class="item">
+          <img src="./calender.svg" alt="" />
+          <h3>Boleto Único</h3>
+          <p>
+            <strong>Baixe o PDF de todas as suas contas em aberto</strong> em um
+            só arquivo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -10,16 +10,71 @@ html {
   filter: brightness(0) saturate(100%) invert(84%) sepia(43%) saturate(225%)
     hue-rotate(131deg) brightness(92%) contrast(91%);
 } */
-
+.price-block__installment-price {
+  display: block;
+}
+div.price-block {
+  min-height: 0px;
+}
 .component-group--campaign-banner .card-group__container {
   display: none;
+}
+.component-group--campaign-banner .card-group h2 {
+  margin-bottom: 20px;
+}
+.component-group--campaign-banner .card-group h4 {
+  min-height: auto;
+  display: contents;
+}
+.card-group__details.card-group__details--carnival {
+  padding-top: 0px;
+}
+.testimonial-ss svg {
+  position: absolute;
+  left: 0;
+  top: -11px;
+}
+h4.pf-destaque-off {
+  margin: 20px 0 !important;
+  height: 0px !important;
+}
+.testimonial-ss {
+  padding: 0 26.7px;
+  margin-bottom: 45px;
+  position: relative;
+  margin-top: 20px;
+}
+li.geometric-list__item .geometric-list__label a {
+  text-align: center !important;
+  display: flex;
+}
+
+.testimonial-ss span {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 350;
+  font-size: 10px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #000000;
+}
+.testimonial-ss p {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #595959;
 }
 
 .content-ss {
   position: relative;
   padding-top: 48px;
   padding-bottom: 100px;
-  background-image: url("./banner.svg");
+  background-image: url("https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/5fc7042abc08f99aa4dc93924bd1ff453bead863/pagseguro/teste2-2/banner.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -121,6 +176,7 @@ html {
   justify-content: center;
   gap: 10px;
   margin-top: -64px;
+  margin-bottom: 12px;
 }
 
 .cards-ss .card {
@@ -148,13 +204,18 @@ html {
   color: #212529;
 }
 
+@media (max-width: 960px) {
+  .card-ss {
+    margin-bottom: 54px;
+  }
+}
 @media (max-width: 768px) {
   .content-ss {
     padding: 0 12px;
     padding-top: 32px;
     padding-bottom: 100px;
   }
-  .cards-ss{
+  .cards-ss {
     padding: 0 20px;
   }
   .content-ss h1 {

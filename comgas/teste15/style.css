@@ -1,0 +1,59 @@
+#mainContent > div > ng-component > div > div:nth-child(1) {
+  position: relative;
+}
+div.slider .nav__slider .slick-track {
+  left: 35% !important;
+  transform: translateX(-50%);
+}
+.slider__item {
+  height: 450px;
+}
+
+div.slider .nav__textContent {
+  padding: 16px 0;
+}
+
+div.nav.ng-star-inserted {
+  bottom: -30px;
+}
+.itens-side-cards {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: -79px;
+}
+.itens-side-cards a {
+  background: #629c2d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+
+  width: 72px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.itens-side-cards span {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+}
+
+.itens-side-cards a:nth-child(2) {
+  background: #7fc241;
+}
+.new-xp .quick-access{
+  padding-top: 55px;
+}

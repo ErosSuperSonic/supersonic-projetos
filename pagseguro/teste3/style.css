@@ -1,0 +1,29 @@
+.content-ss span {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #212529;
+}
+.component-group--campaign-banner .card-group h4 {
+  padding: 0;
+}
+
+.component-group--campaign-banner .card-group h4 {
+  padding: 0;
+  margin-top: 50px !important;
+}
+
+.component-group--campaign-banner .card-group h2{
+  min-height: 82px;
+}
+
+.card-group__details.card-group__details--carnival {
+  margin-top: 86px;
+}
+
+.content-ss {
+  padding: 0 8px;
+}

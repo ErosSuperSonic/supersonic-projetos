@@ -87,7 +87,7 @@ let contentSS = `
               </clipPath>
             </defs>
           </svg>
-          <span>Venda muito em até <strong>18x e receba na hora</strong></span>
+          <span>Venda até <strong>18x e receba na hora</strong></span>
         </li>
 
         <li>
@@ -238,3 +238,101 @@ let contentSS = `
 document
   .querySelector("section.card-group.card-group--campaign-banner")
   .insertAdjacentHTML("beforebegin", contentSS);
+
+function addFraseInBanner(testimonial, people, indexItem) {
+  const testimonialHTML = `
+    <div class="testimonial-ss">
+    <svg width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4605 12.9944C31.854 12.3278 31.3735 11.4861 30.5993 11.4861H26.9759L23.3926 17.5562V25.6614C23.3926 26.2137 23.8403 26.6614 24.3926 26.6614H33.1426C33.6949 26.6614 34.1426 26.2137 34.1426 25.6614V18.5562C34.1426 18.0039 33.6949 17.5562 33.1426 17.5562H28.7676L31.4605 12.9944ZM17.1272 12.9944C17.5207 12.3278 17.0401 11.4861 16.266 11.4861H12.6426L9.05924 17.5562V25.6614C9.05924 26.2137 9.50696 26.6614 10.0592 26.6614L18.8092 26.6614C19.3615 26.6614 19.8092 26.2137 19.8092 25.6614V18.5562C19.8092 18.0039 19.3615 17.5562 18.8092 17.5562H14.4342L17.1272 12.9944Z" fill="#1BB99A"/>
+      <mask id="mask0_632_8555" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="9" y="11" width="26" height="16">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4605 12.9944C31.854 12.3278 31.3735 11.4861 30.5993 11.4861H26.9759L23.3926 17.5562V25.6614C23.3926 26.2137 23.8403 26.6614 24.3926 26.6614H33.1426C33.6949 26.6614 34.1426 26.2137 34.1426 25.6614V18.5562C34.1426 18.0039 33.6949 17.5562 33.1426 17.5562H28.7676L31.4605 12.9944ZM17.1272 12.9944C17.5207 12.3278 17.0401 11.4861 16.266 11.4861H12.6426L9.05924 17.5562V25.6614C9.05924 26.2137 9.50696 26.6614 10.0592 26.6614L18.8092 26.6614C19.3615 26.6614 19.8092 26.2137 19.8092 25.6614V18.5562C19.8092 18.0039 19.3615 17.5562 18.8092 17.5562H14.4342L17.1272 12.9944Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask0_632_8555)">
+      <rect x="0.100586" y="0.863312" width="43" height="36.4208" fill="#1BB99A"/>
+      </g>
+  </svg>
+
+      <p>${testimonial}</p>
+      <span>${people}</span>
+    </div>
+  `;
+  document.querySelectorAll("h4.pf-destaque-off").forEach((el, index) => {
+    if (indexItem === index) {
+      el.insertAdjacentHTML("afterend", testimonialHTML);
+    }
+  });
+}
+const testimonialArrayForAddFraseInBanner = [
+  {
+    testimonial:
+      "Depois de começar a usar a maquininha minhas vendas melhoraram em até 50%",
+    people: "Lampioca - Food truck de tapioca",
+  },
+  {
+    testimonial:
+      "Não temos mais a burocracia em conferir os papeizinhos, já temos tudo no sistema",
+    people: "Goodman - Loja de roupas",
+  },
+  {
+    testimonial:
+      "O cliente passou na maquininha, cai já na minha conta e já posso usar meu cartão Pré-pago internacional.",
+    people: "Andrea - Esteticista",
+  },
+];
+
+testimonialArrayForAddFraseInBanner.forEach((item, index) => {
+  const testimonial = item.testimonial;
+  const people = item.people;
+  addFraseInBanner(testimonial, people, index);
+});
+
+
+
+// Mudar todas as headlines
+document.querySelectorAll("h4.pf-destaque-off").forEach((h4) => {
+  h4.innerHTML = "Quem usa recomenda!"
+})
+
+
+// Adicionando item de suporte
+
+const contentItemCard = `  
+<li class="geometric-list__item geometric-list__item--icon-time geometric-list__item--icon-dark">
+  <span class="geometric-list__icon">
+    <img class="lazyloaded" data-src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/pagseguro/teste2/support.png?raw=true" src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/pagseguro/teste2/support.png?raw=true">
+  </span>
+  <span class="geometric-list__label" >Suporte disponível 24 horas por dia</span>
+</li>
+`;
+
+document
+  .querySelectorAll(
+    "li.geometric-list__item.geometric-list__item--icon-diamond.geometric-list__item--icon-dark"
+  )
+  .forEach((li, index) => {
+    if (index == 1 || index == 4 || index == 7) {
+      li.insertAdjacentHTML("afterend", contentItemCard);
+    }
+  });
+
+// Adicionando o sem juros na parte final do card
+
+document.querySelectorAll(".disclaimer-block p").forEach((el) => {
+  if (el.innerHTML.includes(")")) {
+    let arrayMyString = el.innerHTML.split(")")
+    arrayMyString[0] += "<strong>sem juros</strong>"
+
+    
+    el.innerHTML = arrayMyString.join(")")
+  }
+});
+
+
+document.querySelectorAll("p.price-block__price").forEach((p) =>{
+  const frase = "Por 12x sem juros de"
+  if(p.innerText.includes('Por 12x de')){
+    const mySpanValue = p.querySelector("span")
+    p.innerHTML = frase 
+    p.insertAdjacentElement("beforeend", mySpanValue)
+  }
+})

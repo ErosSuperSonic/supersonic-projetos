@@ -1,8 +1,109 @@
-// //Resets
-// if(window.innerWidth > 768){
-//   document.querySelector("#element-568").style.width = "100%"
-// document.querySelector("#page-block-gy918ronptb > div.section-block > div").style.maxWidth = "100%"
-// }
+//Resets
+if (window.innerWidth > 768) {
+  if (document.querySelector("#element-568")) {
+    document.querySelector("#element-568").style.width = "100%";
+    document.querySelector(
+      "#page-block-gy918ronptb > div.section-block > div"
+    ).style.maxWidth = "100%";
+  }
+}
+
+function getFinalData(quantidadeDias = 5) {
+  if (quantidadeDias) {
+    let weekDay = new Date();
+    const diasDoAno = [
+      "01/11/2022",
+      "03/11/2022",
+      "04/11/2022",
+      "07/11/2022",
+      "08/11/2022",
+      "09/11/2022",
+      "10/11/2022",
+      "11/11/2022",
+      "14/11/2022",
+      "16/11/2022",
+      "17/11/2022",
+      "18/11/2022",
+      "21/11/2022",
+      "22/11/2022",
+      "23/11/2022",
+      "24/11/2022",
+      "25/11/2022",
+      "28/11/2022",
+      "29/11/2022",
+      "30/11/2022",
+      "01/12/2022",
+      "02/12/2022",
+      "05/12/2022",
+      "06/12/2022",
+      "07/12/2022",
+      "08/12/2022",
+      "09/12/2022",
+      "12/12/2022",
+      "13/12/2022",
+      "14/12/2022",
+      "15/12/2022",
+      "16/12/2022",
+      "19/12/2022",
+      "20/12/2022",
+      "21/12/2022",
+      "22/12/2022",
+      "23/12/2022",
+      "26/12/2022",
+      "27/12/2022",
+      "28/12/2022",
+      "29/12/2022",
+      "30/12/2022",
+
+      "02/01/2023",
+      "03/01/2023",
+      "04/01/2023",
+      "05/01/2023",
+      "06/01/2023",
+      "09/01/2023",
+      "10/01/2023",
+      "11/01/2023",
+      "12/01/2023",
+      "13/01/2023",
+      "16/01/2023",
+      "17/01/2023",
+      "18/01/2023",
+      "19/01/2023",
+      "20/01/2023",
+      "23/01/2023",
+      "24/01/2023",
+      "25/01/2023",
+      "26/01/2023",
+      "27/01/2023",
+      "30/01/2023",
+      "31/01/2023",
+    ];
+
+    let indexAtual = 0;
+
+    diasDoAno.forEach((data, index) => {
+      if (data === weekDay.toLocaleDateString()) {
+        indexAtual = index;
+      }
+    });
+
+    return diasDoAno[indexAtual + quantidadeDias];
+  }
+}
+
+const objectInfoTable = {
+  taxaCDB: "",
+  CDIEquivalente: 8.4,
+  valorBrutoCDB: "",
+  valorBrutoEquivalente: "",
+  IOF: "",
+  IR_cdb: "",
+  IR_compromissada: "",
+  valorLiquidoCDB: "",
+  valorLiquidoCompromissada: "",
+  lucroCompromissada: "",
+  lucroCDB: "",
+};
 
 String.prototype.reverse = function () {
   return this.split("").reverse().join("");
@@ -36,7 +137,7 @@ const diasInvestidosInput = document.querySelector(".diasInvestidos input");
 const rendimentoCDI = document.querySelector(".rendimentoCDI h4");
 // const lucroCDBCampo = document.querySelector(".lucroCDB");
 // const lucroSemIOF = document.querySelector(".lucroSemIOF");
-const CDI = 13.65 / 100;
+const CDI = 13.75 / 100;
 
 //Variáveis tabela
 
@@ -55,11 +156,12 @@ quantidadeInvestidaInput.addEventListener("blur", (e) => {
       quantidadeInvestidaInput.value.replaceAll(".", "").replaceAll(",", "")
     ) / 100;
 
-  if (quantidadeInvestidaValue < 300000) {
-    quantidadeInvestidaInput.value = "300.000,00";
+  if (quantidadeInvestidaValue < 100000) {
+    quantidadeInvestidaInput.value = "100.000,00";
   }
   LucroComCdb();
   LucroComCompromissada();
+  modificationInfosTable();
 
   const valueForTable = mascaraMoeda(quantidadeInvestidaInput);
   setVariablesTable(5, valueForTable);
@@ -75,6 +177,7 @@ quantidadeInvestidaMais.addEventListener("click", (e) => {
   mascaraMoeda(quantidadeInvestidaInput);
   LucroComCdb();
   LucroComCompromissada();
+  modificationInfosTable();
 
   const valueForTable = mascaraMoeda(quantidadeInvestidaInput);
   setVariablesTable(5, valueForTable);
@@ -86,8 +189,8 @@ quantidadeInvestidaMenos.addEventListener("click", (e) => {
       quantidadeInvestidaInput.value.replaceAll(".", "").replaceAll(",", "")
     ) / 100;
 
-  if (quantidadeInvestidaValue === 300000) {
-    quantidadeInvestidaInput.value = `30000000`;
+  if (quantidadeInvestidaValue === 100000) {
+    quantidadeInvestidaInput.value = `10000000`;
     mascaraMoeda(quantidadeInvestidaInput);
   } else {
     quantidadeInvestidaInput.value = `${quantidadeInvestidaValue - 100000},00`;
@@ -95,6 +198,7 @@ quantidadeInvestidaMenos.addEventListener("click", (e) => {
   }
   LucroComCdb();
   LucroComCompromissada();
+  modificationInfosTable();
 
   const valueForTable = mascaraMoeda(quantidadeInvestidaInput);
   setVariablesTable(5, valueForTable);
@@ -118,6 +222,7 @@ diasInvestidosMenos.addEventListener("click", (e) => {
 
   LucroComCdb();
   LucroComCompromissada();
+  modificationInfosTable();
 });
 
 diasInvestidosMais.addEventListener("click", (e) => {
@@ -135,6 +240,7 @@ diasInvestidosMais.addEventListener("click", (e) => {
 
   LucroComCdb();
   LucroComCompromissada();
+  modificationInfosTable();
 });
 
 //===========  Lucro com CDB ===========
@@ -146,34 +252,25 @@ function LucroComCdb() {
     ) / 100;
   let dias = diasInvestidosInput.value;
   const valorBruto = quantidadeInvestidaValue * (1 + CDI) ** (dias / 252);
+
+  objectInfoTable.valorBrutoCDB = valorBruto;
+
   const rendimentoBruto =
     (quantidadeInvestidaValue - valorBruto).toFixed(2) * -1;
   let IOF = 0;
 
-  function infoToday() {
-    let day = new Date().getDate();
-    let month = new Date().getMonth() + 1;
-    let year = new Date().getFullYear();
+  var day1 = new Date().toLocaleDateString();
+  let day2 = getFinalData(Number(dias));
 
-    return `${month}/${day}/${year}`;
-  }
+  var difference = Math.abs(
+    new Date(
+      `${day2.split("/")[1]} / ${day2.split("/")[0]} / ${day2.split("/")[2]}`
+    ) -
+      new Date(
+        `${day1.split("/")[1]} / ${day1.split("/")[0]} / ${day1.split("/")[2]}`
+      )
+  );
 
-  var day1 = new Date(infoToday());
-  let day2 = new Date("09/05/2022");
-
-  if (dias === "01") {
-    day2 = new Date("09/26/2022");
-  } else if (dias === "03") {
-    day2 = new Date("09/28/2022");
-  } else if (dias === "05") {
-    day2 = new Date("09/30/2022");
-  } else if (dias === "07") {
-    day2 = new Date("10/04/2022");
-  } else {
-    day2 = new Date("10/07/2022");
-  }
-
-  var difference = Math.abs(day2 - day1);
   diasEntreAsDatas = difference / (1000 * 3600 * 24);
 
   const listIOFDesconto = [
@@ -186,35 +283,32 @@ function LucroComCdb() {
       rendimentoBruto *
       (listIOFDesconto[diasEntreAsDatas - 1] / 100)
     ).toFixed(2);
+    console.log(IOF);
   }
+
+  objectInfoTable.IOF = IOF;
+
   const IR = ((rendimentoBruto - IOF) * (22.5 / 100)).toFixed(2);
 
+  objectInfoTable.IR_cdb = IR;
+
   const valorLiquido = (valorBruto - IOF - IR).toFixed(2);
+  objectInfoTable.valorLiquidoCDB = valorLiquido;
 
   const lucroCDB = (valorLiquido - quantidadeInvestidaValue).toFixed(2);
 
-  // lucroCDBCampo.innerHTML = `R$ ${lucroCDB.replace(".", ",")}`;
+  objectInfoTable.lucroCDB = lucroCDB;
 
-  const applicationData = `${day1.getDate()}/${
-    day1.getMonth() <= 10
-      ? String(day1.getMonth()).padStart(2, "0")
-      : day1.getMonth()
-  }/${day1.getFullYear()}`;
+  const applicationData = day1;
 
-  const dueDate = `${
-    day2.getDate() <= 10
-      ? String(day2.getDate()).padStart(2, "0")
-      : day2.getDate()
-  }/${
-    day2.getMonth() <= 10
-      ? String(day2.getMonth()).padStart(2, "0")
-      : day2.getMonth()
-  }/${day2.getFullYear()}`;
+  const dueDate = day2;
 
   setVariablesTable(6, applicationData);
   setVariablesTable(7, dias);
   setVariablesTable(8, dueDate);
   rendimentoPorcentagemCDI(dias);
+
+  modificationInfosTable();
 }
 
 //===========  Lucro com Compromissada ===========
@@ -228,11 +322,11 @@ function LucroComCompromissada() {
   let dias = Number(diasInvestidosInput.value);
 
   const valoresTaxa = {
-    1: 43,
-    3: 48,
-    5: 53,
-    7: 58,
-    10: 63,
+    1: 85,
+    3: 85,
+    5: 85,
+    7: 85,
+    10: 85,
   };
 
   let taxa = valoresTaxa[dias] / 100;
@@ -241,34 +335,88 @@ function LucroComCompromissada() {
     (((((1 + CDI) ** (1 / 252) - 1) * taxa + 1) ** 252 - 1) * 100).toFixed(6) /
     100;
 
+  objectInfoTable.CDIEquivalente = CDIEquivalente;
+
   const valorBruto = (
     quantidadeInvestidaValue *
     (1 + Number(CDIEquivalente)) ** (dias / 252)
   ).toFixed(2);
 
+  objectInfoTable.valorBrutoEquivalente = valorBruto;
+
   const rendimentoBruto = (valorBruto - quantidadeInvestidaValue).toFixed(2);
   const IOF = 0;
   const IR = (rendimentoBruto - IOF) * (22.5 / 100);
-
+  objectInfoTable.IR_compromissada = IR;
   const valorLiquido = (valorBruto - IOF - IR).toFixed(2);
+  objectInfoTable.valorLiquidoCompromissada = valorLiquido;
 
   const lucroComComprom = (valorLiquido - quantidadeInvestidaValue).toFixed(2);
 
+  objectInfoTable.lucroCompromissada = lucroComComprom;
   // lucroSemIOF.innerHTML = `R$ ${lucroComComprom.replace(".", ",")}`;
 
   rendimentoPorcentagemCDI(dias);
+
+  objectInfoTable.taxaCDB = valoresTaxa[dias];
+  modificationInfosTable();
 }
 
 function rendimentoPorcentagemCDI(diasInvestidos = 5) {
+  diasInvestidos = Number(diasInvestidos);
   const valoresTaxa = {
-    1: 1075,
-    3: 480,
-    5: 312,
-    7: 242,
-    10: 185,
+    1: 85, //43
+    3: 85, //48
+    5: 85, //53
+    7: 85, //58
+    10: 85, //63
   };
 
-  rendimentoCDI.innerHTML = `${valoresTaxa[diasInvestidos]}% <span>do CDI</span>`;
+  const iof = {
+    1: 96,
+    3: 83,
+    5: 76,
+    7: 63,
+    10: 50,
+  };
+
+  const equivalente = (
+    valoresTaxa[diasInvestidos] /
+    100 /
+    (1 - iof[diasInvestidos] / 100)
+  ).toFixed(4);
+
+  console.log(equivalente);
+  if (Number(equivalente)) {
+    const rendimento = String(equivalente * 100).replace(".", ",");
+
+    // if (
+    //   diasInvestidos == 1 ||
+    //   diasInvestidos == 7 ||
+    //   diasInvestidos == 10
+    // ) {
+    //   console.log("mensagem 1");
+    //   rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
+    // } else if (diasInvestidos == 5) {
+    //   console.log("mensagem 22");
+    //   rendimentoCDI.innerHTML = `${rendimento}0% <span>do CDI</span>`;
+    // } else {
+    //   console.log("mensagem 3");
+
+    //   rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
+    // }
+    // }
+
+    if (diasInvestidos == 1 || diasInvestidos == 10) {
+      rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
+    } else if (diasInvestidos == 3) {
+      rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
+    } else if (diasInvestidos == 7) {
+      rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
+    } else {
+      rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
+    }
+  }
 }
 
 rendimentoPorcentagemCDI();
@@ -276,7 +424,6 @@ LucroComCdb();
 LucroComCompromissada();
 
 function setVariablesTable(key, value) {
-
   if (key == 5) {
     tableInfo[key].innerHTML = `<strong>R$ ${value}</strong>`;
   } else {
@@ -285,9 +432,93 @@ function setVariablesTable(key, value) {
 }
 
 function setVariablesTableInfos(key, value, cipher = false) {
-  if(cipher){
+  if (cipher) {
     tableInfo[key].innerHTML = `<strong>R$ ${value}</strong>`;
-  }else{
+  } else {
     tableInfo[key].innerHTML = `<strong>${value}</strong>`;
   }
 }
+
+function convertCampoString(campo, evento) {
+  var valor = String(campo)
+    .replace(/[^\d]+/gi, "")
+    .reverse();
+  var resultado = "";
+  var mascara = "##.###.###,##".reverse();
+  for (var x = 0, y = 0; x < mascara.length && y < valor.length; ) {
+    if (mascara.charAt(x) != "#") {
+      resultado += mascara.charAt(x);
+      x++;
+    } else {
+      resultado += valor.charAt(y);
+      y++;
+      x++;
+    }
+  }
+  campo.value = resultado.reverse();
+
+  return (campo.value = resultado.reverse());
+}
+
+function modificationInfosTable() {
+  // Lucro líquido CDB
+  infoTableList[0].innerHTML = `R$ ${convertCampoString(
+    objectInfoTable.lucroCDB
+  )}`;
+
+  //Lucro líquido compromissada
+  infoTableList[1].innerHTML = `R$ ${convertCampoString(
+    objectInfoTable.lucroCompromissada
+  )}`;
+
+
+  console.log(infoTableList)
+  //TAXA CDB/CDI Compromissada
+  infoTableList[3].innerHTML = `${objectInfoTable.taxaCDB}%`;
+
+  //CDI equivalente compromissada
+  infoTableList[5].innerHTML = `${String(
+    (objectInfoTable.CDIEquivalente * 100).toFixed(2)
+  ).replace(".", ",")}%`;
+
+  // //Valor bruto CDB
+
+  infoTableList[6].innerHTML = `R$ ${convertCampoString(
+    objectInfoTable.valorBrutoCDB.toFixed(2)
+  )}`;
+
+  //Valor bruto Compromissada
+  infoTableList[7].innerHTML = `R$ ${convertCampoString(
+    objectInfoTable.valorBrutoEquivalente
+  )}`;
+
+  // IOF CDB
+
+  infoTableList[8].innerHTML = `R$ ${String(objectInfoTable.IOF).replace(
+    ".",
+    ","
+  )}`;
+
+  // IR CDB
+  infoTableList[10].innerHTML = `R$ ${String(objectInfoTable.IR_cdb).replace(
+    ".",
+    ","
+  )}`;
+
+  // IR Compromissada
+  infoTableList[11].innerHTML = `R$ ${String(
+    Number(objectInfoTable.IR_compromissada).toFixed(2)
+  ).replace(".", ",")}`;
+
+  // Valor líquido CDB
+  infoTableList[12].innerHTML = `R$ ${convertCampoString(
+    objectInfoTable.valorLiquidoCDB
+  )}`;
+
+  //Valor líquido compromissada
+  infoTableList[13].innerHTML = `R$ ${convertCampoString(
+    objectInfoTable.valorLiquidoCompromissada
+  )}`;
+}
+
+modificationInfosTable();
