@@ -53,7 +53,96 @@ const itemLateral = `
       </a>
     </div>
 `
-document.querySelector("#mainContent > div > ng-component > div > div:nth-child(1)").insertAdjacentHTML("afterbegin",itemLateral)
+if(!document.querySelector(".itens-side-cards")){
+  document.querySelector("#mainContent > div > ng-component > div > div:nth-child(1)").insertAdjacentHTML("afterbegin",itemLateral)
+}
 
 
-document.querySelector(".new-xp .quick-access").insertAdjacentHTML("beforeend", "")
+const contentSSForCards = `
+<div class="content-cards-ss">
+<div class="container-items">
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/historico.svg" alt="" />
+    <h3>Consultar débitos e 2 via da conta</h3>
+    <p>
+      <strong>Consulte seus débitos</strong> e contas em aberto
+      <strong>ou solicite a 2 via</strong> para pagamento.
+    </p>
+  </div>
+
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/religa.svg" alt="" />
+    <h3>Religar gás</h3>
+    <p>
+      Faça uma solicitação e
+      <strong>agende uma visita para religar o seu gás.</strong>
+    </p>
+  </div>
+
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/titular_conta.svg" alt="" />
+    <h3>Consultar débitos e 2 via da conta</h3>
+    <p>
+      Efetue agora mesmo a
+      <strong>troca de titularidade para o seu novo endereço.</strong>
+    </p>
+  </div>
+</div>
+
+<div class="container-items">
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/historico.svg" alt="" />
+    <h3>Fatura por e-mail</h3>
+    <p>
+      <strong>Receba sua conta por e-mail.</strong> Além de prático, ajuda
+      a cuidar do meio ambiente.
+    </p>
+  </div>
+
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/dinheiro-salvar.svg" alt="" />
+    <h3>Débito automático</h3>
+    <p>
+      Configure seu <strong>pagamento para débito automático</strong> e
+      não se preocupe mais com a fatura.
+    </p>
+  </div>
+
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/calender.svg" alt="" />
+    <h3>Acompanhe sua solicitação</h3>
+    <p>
+      Efetue <strong>novas solicitações ou acompanhe</strong> as que estão
+      em andamento.
+    </p>
+  </div>
+</div>
+
+<div class="container-items">
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/parcelamento.svg" alt="" />
+    <h3 style="color: #007CB6">Parcelamento</h3>
+    <p><strong></strong> e negocie seus débitos com a Comgás.</p>
+  </div>
+
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/meu-perfil.svg" alt="" />
+    <h3>Meu perfil</h3>
+    <p>Alterar <strong>dados de cadastro na Comgás.</strong></p>
+  </div>
+
+  <div class="item">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/boleto.svg" alt="" />
+    <h3>Boleto Único</h3>
+    <p>
+      <strong>Baixe o PDF de todas as suas contas em aberto</strong> em um
+      só arquivo.
+    </p>
+  </div>
+</div>
+</div>
+`
+
+if(!document.querySelector(".content-cards-ss")){
+  document.querySelector(".new-xp .quick-access").insertAdjacentHTML("beforeend", contentSSForCards)
+}
