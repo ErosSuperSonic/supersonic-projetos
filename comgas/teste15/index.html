@@ -22,6 +22,7 @@
         margin: 0 auto;
       }
       .container-items .item {
+        text-decoration: none;
         background: #ffffff;
         box-shadow: 0px 6px 15px rgba(137, 137, 137, 0.25);
         border-radius: 8px;
@@ -87,6 +88,91 @@
         justify-content: center;
         gap: 8px;
       }
+
+      .container-ss-apps {
+        position: relative;
+        margin-top: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(89.84deg, #007cb6 0%, #005075 99.72%);
+        gap: 48px;
+        overflow: hidden;
+      }
+
+      .text-app h2 {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 130%;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+        text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+        margin-bottom: 3px;
+      }
+      .text-app p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28.43px;
+        line-height: 130%;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+        text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+      }
+      .buttons-app a {
+        width: 170px;
+        height: 40px;
+        background: #7fc241;
+        border-radius: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        color: #fff;
+        text-decoration: none;
+      }
+      .buttons-app a + a {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      .buttons-app a img {
+        margin-right: 8px;
+      }
+      .buttons-app span {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        /* or 18px */
+        color: #ffffff;
+      }
+
+      .container-aside-app {
+        display: flex;
+        align-items: center;
+      }
+      .logo-comgas {
+        position: absolute;
+        left: -90px;
+      }
+
+      .containerSS{
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        position: relative;
+      }
+      .text-app{
+        z-index: 1;
+      }
       @media (max-width: 1140px) {
         .container-items {
           flex-direction: column;
@@ -103,9 +189,15 @@
   </head>
   <body style="padding-top: 100px">
     <div class="content-cards-ss">
-      <h2> <img src="./seta-baixo.svg" alt=""> <strong>Acesso rápido</strong> cliente Comgás</h2>
+      <h2>
+        <img
+          src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/03c695f4a9c793093cce878b9e2cf29e486d8559/comgas/teste15/seta-baixo.svg"
+          alt=""
+        />
+        <strong>Acesso rápido</strong> cliente Comgás
+      </h2>
       <div class="container-items">
-        <div class="item">
+        <a href="/contas-e-pagamentos" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/historico.svg"
             alt=""
@@ -115,9 +207,9 @@
             <strong>Consulte seus débitos</strong> e contas em aberto
             <strong>ou solicite a 2 via</strong> para pagamento.
           </p>
-        </div>
+        </a>
 
-        <div class="item">
+        <a href="" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/religa.svg"
             alt=""
@@ -127,23 +219,23 @@
             Faça uma solicitação e
             <strong>agende uma visita para religar o seu gás.</strong>
           </p>
-        </div>
+        </a>
 
-        <div class="item">
+        <a href="/trocaTitularidade" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/titular_conta.svg"
             alt=""
           />
-          <h3>Consultar débitos e 2 via da conta</h3>
+          <h3>Troca de Titularidade</h3>
           <p>
             Efetue agora mesmo a
             <strong>troca de titularidade para o seu novo endereço.</strong>
           </p>
-        </div>
+        </a>
       </div>
 
       <div class="container-items">
-        <div class="item">
+        <a href="/faturaEletronica" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/historico.svg"
             alt=""
@@ -153,9 +245,9 @@
             <strong>Receba sua conta por e-mail.</strong> Além de prático, ajuda
             a cuidar do meio ambiente.
           </p>
-        </div>
+        </a>
 
-        <div class="item">
+        <a href="/debitoAutomatico" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/dinheiro-salvar.svg"
             alt=""
@@ -165,9 +257,9 @@
             Configure seu <strong>pagamento para débito automático</strong> e
             não se preocupe mais com a fatura.
           </p>
-        </div>
+        </a>
 
-        <div class="item">
+        <a href="/acompanhamentoSolicitacao" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/calender.svg"
             alt=""
@@ -177,29 +269,29 @@
             Efetue <strong>novas solicitações ou acompanhe</strong> as que estão
             em andamento.
           </p>
-        </div>
+        </a>
       </div>
 
       <div class="container-items">
-        <div class="item">
+        <a href="/contas-e-pagamentos?tab=2" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/parcelamento.svg"
             alt=""
           />
           <h3 style="color: #007cb6">Parcelamento</h3>
           <p><strong></strong> e negocie seus débitos com a Comgás.</p>
-        </div>
+        </a>
 
-        <div class="item">
+        <a href="" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/meu-perfil.svg"
             alt=""
           />
           <h3>Meu perfil</h3>
           <p>Alterar <strong>dados de cadastro na Comgás.</strong></p>
-        </div>
+        </a>
 
-        <div class="item">
+        <a href="" class="item">
           <img
             src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/boleto.svg"
             alt=""
@@ -209,8 +301,27 @@
             <strong>Baixe o PDF de todas as suas contas em aberto</strong> em um
             só arquivo.
           </p>
-        </div>
+        </a>
       </div>
     </div>
+
+    <section class="container-ss-apps">
+      <div class="containerSS">
+        <img src="./logo-comgas.svg" alt="" class="logo-comgas" />
+        <div class="text-app">
+          <h2>Baixe nosso aplicativo</h2>
+          <p>Vai facilitar sua experiência com a Comgás</p>
+        </div>
+
+        <div class="container-aside-app">
+          <div class="buttons-app">
+            <a href=""><img src="./android.svg" alt="" />Play Store</a>
+            <a href=""><img src="./apple.svg" alt="" />App Store</a>
+            <span>DisponÍvel para Andoid e iOs</span>
+          </div>
+          <img src="./celular-comgas.svg" alt="" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>

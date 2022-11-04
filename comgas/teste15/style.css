@@ -54,6 +54,118 @@ div.nav.ng-star-inserted {
 .itens-side-cards a:nth-child(2) {
   background: #7fc241;
 }
-.new-xp .quick-access{
+.new-xp .quick-access {
   padding-top: 55px;
+}
+
+
+.container-ss-apps {
+  position: relative;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(89.84deg, #007cb6 0%, #005075 99.72%);
+  gap: 48px;
+  overflow: hidden;
+}
+
+.text-app h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 130%;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3px;
+}
+.text-app p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28.43px;
+  line-height: 130%;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+}
+.buttons-app a {
+  width: 170px;
+  height: 40px;
+  background: #7fc241;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #fff;
+  text-decoration: none;
+}
+.buttons-app a + a {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.buttons-app a img {
+  margin-right: 8px;
+}
+.buttons-app span {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  /* or 18px */
+  color: #ffffff;
+}
+
+.container-aside-app {
+  display: flex;
+  align-items: center;
+}
+.logo-comgas {
+  position: absolute;
+  left: -90px;
+}
+
+.containerSS{
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+}
+.text-app{
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  div.nav.ng-star-inserted {
+    display: none;
+  }
+
+  #mainContent > div > ng-component > div > div:nth-child(2) {
+    padding: 0;
+  }
+
+  .itens-side-cards a:nth-child(2),
+  .itens-side-cards a:nth-child(1) svg {
+    display: none;
+  }
+
+  .itens-side-cards {
+    bottom: 100px;
+  }
+
+  .new-xp .quick-access h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
 }
