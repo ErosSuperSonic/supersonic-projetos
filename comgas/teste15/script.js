@@ -58,10 +58,16 @@ if(!document.querySelector(".itens-side-cards")){
 }
 
 
-const contentSSForCards = `<div class="content-cards-ss">
-<h2> <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/03c695f4a9c793093cce878b9e2cf29e486d8559/comgas/teste15/seta-baixo.svg" alt=""> <strong>Acesso rápido</strong> cliente Comgás</h2>
+const contentSSForCards = `    <div class="content-cards-ss">
+<h2>
+  <img
+    src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/03c695f4a9c793093cce878b9e2cf29e486d8559/comgas/teste15/seta-baixo.svg"
+    alt=""
+  />
+  <strong>Acesso rápido</strong> cliente Comgás
+</h2>
 <div class="container-items">
-  <a href="/contas-e-pagamentos"class="item">
+  <a href="/contas-e-pagamentos" class="item">
     <img
       src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/6898ee1dd959c81ac23603045f629398a5d662b1/comgas/teste15/historico.svg"
       alt=""
@@ -172,4 +178,30 @@ const contentSSForCards = `<div class="content-cards-ss">
 
 if(!document.querySelector(".content-cards-ss")){
   document.querySelector(".new-xp .quick-access").insertAdjacentHTML("beforeend", contentSSForCards)
+}
+
+
+const faixaComgas = `
+  <section class="container-ss-apps">
+  <div class="containerSS">
+    <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/logo-comgas.svg" alt="" class="logo-comgas" />
+    <div class="text-app">
+      <h2>Baixe nosso aplicativo</h2>
+      <p>Vai facilitar sua experiência com a Comgás</p>
+    </div>
+
+    <div class="container-aside-app">
+      <div class="buttons-app">
+        <a href=""><img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/android.svg" alt="" />Play Store</a>
+        <a href=""><img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/apple.svg" alt="" />App Store</a>
+        <span>DisponÍvel para Andoid e iOs</span>
+      </div>
+      <img src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/celular-comgas.svg" alt="" />
+    </div>
+  </div>
+  </section>
+`
+
+if(!document.querySelector(".container-ss-apps")){
+  document.querySelector("#mainContent > div > ng-component > div > div:nth-child(3)").insertAdjacentHTML("beforebegin", faixaComgas)
 }

@@ -164,14 +164,18 @@
         left: -90px;
       }
 
-      .containerSS{
+      .containerSS {
         display: flex;
         align-items: center;
         gap: 48px;
         position: relative;
       }
-      .text-app{
+      .text-app {
         z-index: 1;
+      }
+
+      .buttons-app a:hover{
+        color: #fff;
       }
       @media (max-width: 1140px) {
         .container-items {
@@ -183,6 +187,36 @@
         .container-items .item + .item,
         .container-items + .container-items {
           margin-top: 24px;
+        }
+        .containerSS {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .containerSS > img {
+          width: 149.51px;
+        }
+        .text-app h2 {
+          margin-top: 63px;
+          font-size: 28.43px;
+          line-height: 130%;
+        }
+        .text-app p {
+          font-weight: 400;
+          font-size: 18px;
+        }
+        .logo-comgas {
+          position: absolute;
+          left: -26px;
+          top: 24px;
+        }
+        .container-ss-apps{
+          padding: 0 16px;
+        }
+        .container-aside-app{
+          justify-content: space-between;
+        }
+        .container-aside-app > img{
+          width: 50%;
         }
       }
     </style>
@@ -307,7 +341,11 @@
 
     <section class="container-ss-apps">
       <div class="containerSS">
-        <img src="./logo-comgas.svg" alt="" class="logo-comgas" />
+        <img
+          src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/logo-comgas.svg"
+          alt=""
+          class="logo-comgas"
+        />
         <div class="text-app">
           <h2>Baixe nosso aplicativo</h2>
           <p>Vai facilitar sua experiência com a Comgás</p>
@@ -315,11 +353,26 @@
 
         <div class="container-aside-app">
           <div class="buttons-app">
-            <a href=""><img src="./android.svg" alt="" />Play Store</a>
-            <a href=""><img src="./apple.svg" alt="" />App Store</a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.comgas.virtual"
+              ><img
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/android.svg"
+                alt=""
+              />Play Store</a
+            >
+            <a
+              href="https://apps.apple.com/br/app/comg%C3%A1s-virtual/id1074797280?l=en"
+              ><img
+                src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/apple.svg"
+                alt=""
+              />App Store</a
+            >
             <span>DisponÍvel para Andoid e iOs</span>
           </div>
-          <img src="./celular-comgas.svg" alt="" />
+          <img
+            src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/de4cca6f79110366199e90ace3767848a78d69a9/comgas/teste15/celular-comgas.svg"
+            alt=""
+          />
         </div>
       </div>
     </section>
