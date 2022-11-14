@@ -5,9 +5,28 @@ body,
   margin: 0;
   box-sizing: border-box;
 }
+
+.gauge {
+  margin-bottom: 32px;
+}
+.row.d-flex.flex-column.flex-md-row.justify-content-end.pb-3 {
+  display: none !important;
+}
+
+.card.col-md-4.p-md-0.tour-guide-item-inativo{
+  display: none;
+}
+.col-md-4.residential-banner-container {
+  margin-top: 34px;
+}
+a.residential-banner-item img {
+  height: 192px;
+  object-fit: fill;
+}
 .container-ss {
   display: flex;
   gap: 16px;
+  margin-bottom: 32px;
 }
 .info-ss-user {
   background: #ffffff;
@@ -37,6 +56,8 @@ body,
   line-height: 150%;
   letter-spacing: -0.025em;
   color: #005075;
+  margin: 0;
+  padding: 0;
 }
 
 .details-info-user p img {
@@ -59,7 +80,7 @@ body,
 }
 .ultima-fatura .chama {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
 }
 
@@ -105,6 +126,13 @@ body,
   line-height: 150%;
   letter-spacing: -0.025em;
   gap: 8px;
+}
+
+.vencida .buttons-detalhe-fatura button:nth-child(1){
+  display: none;
+}
+.vencida .debito-protestados {
+  display: none;
 }
 
 .buttons-detalhe-fatura button:nth-child(1) {
