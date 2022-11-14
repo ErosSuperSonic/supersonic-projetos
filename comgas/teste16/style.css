@@ -1,0 +1,174 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container-ss {
+  display: flex;
+  gap: 16px;
+}
+.info-ss-user {
+  background: #ffffff;
+  /* Secondary/Secondary 0 */
+  flex: 1;
+  border-top: 4px solid #007cb6;
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.16), 4px 4px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.details-info-user {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.details-info-user p {
+  display: flex;
+  align-items: center;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.025em;
+  color: #005075;
+}
+
+.details-info-user p img {
+  margin-right: 16px;
+}
+
+.details-info-user p strong {
+  margin-left: 4px;
+}
+
+.container-info-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ultima-fatura {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.ultima-fatura .chama {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.chama p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: right;
+  letter-spacing: -0.025em;
+  color: #005075;
+}
+
+.value-fatura {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.015em;
+  color: #005075;
+}
+.buttons-detalhe-fatura {
+  display: flex;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #c4c4c4;
+}
+.buttons-detalhe-fatura button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 2px solid #007cb6;
+  border-radius: 60px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.025em;
+  gap: 8px;
+}
+
+.buttons-detalhe-fatura button:nth-child(1) {
+  background-color: transparent;
+  color: #007cb6;
+}
+
+.buttons-detalhe-fatura button:nth-child(2) {
+  background-color: #007cb6;
+  color: #fff;
+}
+
+.debito-protestados {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  padding: 32px 24px 16px 24px;
+
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  max-width: 304px;
+}
+
+.debito-protestados h3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #005075;
+  gap: 8px;
+}
+
+.debito-protestados p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.025em;
+  color: #005075;
+}
+
+.debito-protestados p span {
+  font-weight: 700;
+  font-size: 16px;
+  color: #f89c1b;
+}
+
+.debito-protestados button {
+  border: 2px solid #7fc241;
+  border-radius: 60px;
+  height: 40px;
+  background-color: #fff;
+  color: #7fc241;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}

@@ -1,0 +1,180 @@
+*,
+margin,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container-ss {
+  max-width: 1074px;
+  margin: 0 auto;
+  font-family: "Segoe UI", sans-serif;
+}
+.container-ss p {
+  text-align: center;
+  max-width: 356px;
+  margin: 0 auto;
+}
+.container-ss .taxa-image {
+  display: block;
+  margin: 0 auto;
+}
+.container-ss h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+  max-width: 352px;
+  margin: 20px auto 16px auto;
+}
+
+.container_simulacao-ss{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.simule-vendas {
+  margin-top: 36px;
+  margin-bottom: 16px;
+  padding: 32px 158px;
+  gap: 33px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
+.simule-vendas h2 {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+}
+
+.inputs-vendas {
+  display: flex;
+  justify-content: space-between;
+}
+.inputs-vendas input {
+  width: 16px;
+  height: 16px;
+}
+
+.inputs-vendas label {
+  display: flex;
+  gap: 14px;
+}
+
+.inputs-vendas span {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #666666;
+}
+
+.inputs-user {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputs-user input,
+.inputs-user select {
+  border: 1px solid #eaeaea;
+  width: 412px;
+  height: 48px;
+}
+
+.inputs-user input,
+.inputs-user select {
+  padding-left: 10px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+  padding-top: 15px;
+}
+
+.inputs-user select {
+  padding-top: 0;
+  padding-right: 10px;
+}
+.labelDigiteValor {
+  position: relative;
+}
+.labelDigiteValor span {
+  position: absolute;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  transition: 0.3s;
+}
+
+.labelDigiteValor input:focus ~ span {
+  font-size: 14px;
+  top: 14px;
+}
+.voce-recebe{
+  flex: 1;
+}
+.voce-recebe h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.voce-recebe .item .title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #f78200;
+}
+
+.voce-recebe .item{
+  display: flex;
+  justify-content: space-between;
+}
+.voce-recebe .item .result {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+}
+
+.voce-recebe .item .result span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.container-flex-ss{
+  display: flex;
+  justify-content: space-between;
+  gap: 121px;
+}

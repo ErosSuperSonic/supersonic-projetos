@@ -169,3 +169,14 @@ div.nav.ng-star-inserted {
     gap: 8px;
   }
 }
+
+
+.slider,
+.slick-list,
+div.slider__item{
+  height: 550px;
+}
+
+div.slider__item{
+  background-size: contain;
+}
