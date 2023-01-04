@@ -2,6 +2,7 @@ const inputSelect = document.querySelector(".inputs-user select");
 const inputValueMaquininha = document.querySelector("#digiteValor");
 const selectForParcel = document.querySelector("#selectForParcel");
 const inputsVendas = document.querySelectorAll(".inputs-vendas");
+const spanInputDigiteValor = document.querySelector(".labelDigiteValor span");
 
 // Mascara para valor
 String.prototype.reverse = function () {
@@ -54,6 +55,12 @@ inputValueMaquininha.addEventListener("keyup", (e) => {
   const valueTotal = Number(String(e.target.value).replaceAll(",", ""));
   mascaraMoeda(e.target);
   setCreateOption(valueTotal / 100);
+
+  if (e.target.value.length > 1) {
+    spanInputDigiteValor.classList.add("active");
+  } else {
+    spanInputDigiteValor.classList.remove("active");
+  }
 });
 
 function setCreateOption(valueTotal) {
@@ -157,15 +164,39 @@ function getChannel() {
   return channel;
 }
 function getResponseData(dataUser) {
+  // axios
+  //   .post(
+  //     "https://api.site.pagseguro.uol.com.br/ps-website-bff/v2/tax-and-rates/simulate",
+  //     dataUser
+  //   )
+  //   .then(function (response) {
+  //     console.log(response);
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   });
+
+  const options = {
+    method: "POST",
+    url: "https://api.site.pagseguro.uol.com.br/ps-website-bff/v2/tax-and-rates/simulate",
+    headers: { "Content-Type": "application/json" },
+    data: {
+      channel: "MOBILE",
+      installmentType: "SELLER",
+      installments: "3",
+      paymentMethod: "CREDIT_CARD",
+      price: 100,
+      select: "CREDIT_CARD-3",
+      type: "EMBEDDED",
+    },
+  };
+
   axios
-    .post(
-      "https://api.site.pagseguro.uol.com.br/ps-website-bff/v2/tax-and-rates/simulate",
-      dataUser
-    )
+    .request(options)
     .then(function (response) {
-      console.log(response);
+      console.log(response.data);
     })
     .catch(function (error) {
-      console.log(error);
+      console.error(error);
     });
 }

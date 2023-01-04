@@ -13,18 +13,15 @@ body {
   font-family: "Segoe UI", sans-serif;
   padding-top: 48px;
 }
-
 .container-ss p {
   text-align: center;
   max-width: 356px;
   margin: 0 auto;
 }
-
 .container-ss .taxa-image {
   display: block;
   margin: 0 auto;
 }
-
 .container-ss h1 {
   font-weight: 600;
   font-size: 28px;
@@ -35,12 +32,11 @@ body {
   margin: 20px auto 16px auto;
 }
 
-.container_simulacao-ss {
+.container_simulacao-ss{
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-
 .simule-vendas {
   margin-top: 36px;
   margin-bottom: 16px;
@@ -65,7 +61,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .inputs-vendas input {
   width: 16px;
   height: 16px;
@@ -115,11 +110,9 @@ body {
   padding-top: 0;
   padding-right: 10px;
 }
-
 .labelDigiteValor {
   position: relative;
 }
-
 .labelDigiteValor span {
   position: absolute;
   font-family: "Segoe UI";
@@ -129,6 +122,7 @@ body {
   line-height: 24px;
   text-align: center;
   color: #333333;
+
   top: 50%;
   transform: translateY(-50%);
   left: 10px;
@@ -140,11 +134,9 @@ body {
   font-size: 14px;
   top: 14px;
 }
-
-.voce-recebe {
+.voce-recebe{
   flex: 1;
 }
-
 .voce-recebe h3 {
   font-weight: 600;
   font-size: 18px;
@@ -163,11 +155,10 @@ body {
   color: #f78200;
 }
 
-.voce-recebe .item {
+.voce-recebe .item{
   display: flex;
   justify-content: space-between;
 }
-
 .voce-recebe .item .result {
   font-weight: 600;
   font-size: 22px;
@@ -185,32 +176,34 @@ body {
   display: inline-block;
 }
 
-.container-flex-ss {
+.container-flex-ss{
   display: flex;
   justify-content: space-between;
   gap: 121px;
 }
 
-@media (max-width: 1040px) {
-  .container-flex-ss {
+@media(max-width: 1040px){
+  .container-flex-ss{
     flex-direction: column;
     gap: 33px;
   }
-  .inputs-user input, .inputs-user select {
+  .inputs-user input, .inputs-user select{
     width: 100%;
   }
-  .simule-vendas {
+
+  .simule-vendas{
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-@media (max-width: 794px) {
-  .inputs-vendas {
+
+@media(max-width: 794px){
+  .inputs-vendas{
     flex-direction: column;
     gap: 24px;
   }
-  .simule-vendas {
+  .simule-vendas{
     padding: 32px 24px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
