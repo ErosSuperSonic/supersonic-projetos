@@ -1,0 +1,204 @@
+*,
+margin,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card-ss {
+  padding: 0 16px;
+}
+.beneficios {
+  margin-top: 55px;
+}
+.disclaimer-block p br {
+  display: none !important;
+}
+
+.beneficios h3 {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #212529;
+}
+.beneficios ul {
+  padding: 0;
+}
+.beneficios ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+.beneficios ul li + li{
+  border-top: 1px solid #E4E4E4;
+}
+.beneficios ul li span {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 350;
+  font-size: 14px;
+  line-height: 20px;
+  color: #212529;
+  text-align: left;
+}
+.card-group--5-in-a-row .card-group__card {
+  max-width: 292px;
+  height: fit-content;
+}
+.card-group--5-in-a-row .card-group__card-content {
+  max-width: 292px;
+}
+h4.pf-destaque-off {
+  display: none !important;
+}
+.garantia-copy {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #007455;
+}
+.grey-card-ss {
+  background: #f5f5f5;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 20px 12px;
+}
+
+.grey-card-ss .title {
+  text-align: center;
+
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #212529;
+  padding-bottom: 12px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.grey-card-ss .subitem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.grey-card-ss .subitem h3 {
+  font-family: "Segoe UI", sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #212529;
+  margin: 0;
+}
+
+.grey-card-ss .subitem p {
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 12px;
+  line-height: 16px;
+  color: #212529;
+  text-align: left;
+}
+
+.grey-card-ss .subitem + .subitem {
+  margin-top: 12px;
+}
+
+.card-group--5-in-a-row .card-group__card-image {
+  position: relative;
+  left: -60px;
+}
+.component-group--campaign-banner .card-group .button {
+  font-weight: 900;
+  color: #000;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: inherit;
+}
+.subitem button {
+  background-color: transparent;
+  border: none;
+
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration-line: underline;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  cursor: pointer;
+}
+p.microcopy-green {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  max-width: 158px;
+  color: #007455;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.price-block__installment-price {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: #1bb99a;
+}
+.price-block__installment-price strong {
+  font-weight: 700;
+}
+.card-group__details .seal-container {
+  display: none;
+}
+
+.card-group__details .seal-container {
+  display: none;
+}
+ul.geometric-list {
+  display: none;
+}
+
+.ver-mais {
+  margin-top: 12px;
+  display: none;
+}
+.grey-card-ss.active .ver-mais {
+  display: block;
+}
+@media (max-width: 768px) {
+  .component-group--campaign-banner .card-group .button.hide-desktop {
+    display: none !important;
+  }
+  .component-group--campaign-banner .card-group .button.hide-mobile {
+    display: block !important;
+  }
+}

@@ -96,10 +96,10 @@ body {
   letter-spacing: -0.011em;
   color: #27462d;
 }
-.seach-form__submit-area-button{
+.seach-form__submit-area-button {
   width: 260px !important;
 }
-.comp_frame_v1 .fullslider{
+.comp_frame_v1 .fullslider {
   margin-top: 64px !important;
 }
 
@@ -116,7 +116,7 @@ body {
   .comp_frame_v1 .component .form_contents {
     padding-top: 24px !important;
   }
-  .seach-form__submit-area-button{
+  .seach-form__submit-area-button {
     width: 100% !important;
   }
   .info-promo-capa .call {
@@ -161,8 +161,20 @@ body {
   }
 }
 
-@media(max-width: 360){
-  .info-promo-capa .call{
+@media (max-width: 360) {
+  .info-promo-capa .call {
     width: 100%;
   }
+}
+
+.elementor-951 .elementor-element.elementor-element-61cf4b6,
+body
+  > div.elementor.elementor-1821.elementor-location-single.post-131.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-uncategorized.tag-automatizacao.tag-credito-imobiliario.tag-gestao-de-cobranca.tag-loteamento.tag-mercado-imobiliario.tag-recebiveis-de-loteamento.entry
+  > div.elementor-element.elementor-element-2413d03.input-search-elementor.e-con-boxed.e-con
+  > div,
+body
+  > div.elementor.elementor-1821.elementor-location-single.post-131.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-uncategorized.tag-automatizacao.tag-credito-imobiliario.tag-gestao-de-cobranca.tag-loteamento.tag-mercado-imobiliario.tag-recebiveis-de-loteamento.entry
+  > div.elementor-element.elementor-element-267dfe2.e-con-boxed.e-con
+  > div {
+  display: none;
 }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      *,
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .modal-click-ss {
+        background-color: #004c2b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 19px;
+        padding: 10px 16px;
+
+        transition: 0.3s;
+        opacity: 0;
+        position: none;
+      }
+      .modal-click-ss.active {
+        opacity: 1;
+        position: all;
+      }
+      .modal-click-ss p {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15.5152px;
+        line-height: 21px;
+        color: #ffffff;
+        flex: 1;
+      }
+      .modal-click-ss p span {
+        color: #c2ff40;
+      }
+
+      .modal-click-ss button {
+        background: #ffc100;
+        border-radius: 4.84848px;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15.5152px;
+        border: none;
+
+        width: 146.42px;
+        height: 42.67px;
+      }
+      .modal-click-ss button svg {
+        position: relative;
+        top: 2px;
+        left: 4px;
+      }
+      body.active .newOverlay{
+        background: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      body.active .subcomp_frame.comp_frame_v1 .component {
+        background: #007e47;
+      }
+      .subcomp_frame.comp_frame_v1 .close-modal-ss {
+        display: none;
+      }
+      body.active .subcomp_frame.comp_frame_v1 .close-modal-ss {
+        display: block;
+        display: block;
+        border: none;
+        width: 20px;
+        margin-bottom: 12px;
+        margin-left: auto;
+        background: none;
+      }
+
+      .autocomplete-suggestions.active {
+        z-index: 1000;
+      }
+
+      body.active .subcomp_frame.comp_frame_v1 .title {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .modal-click-ss {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="modal-click-ss">
+      <p>Seguro viagem com <span>15%</span> de desconto?</p>
+
+      <button>
+        Clique aqui!
+        <svg
+          width="10"
+          height="16"
+          viewBox="0 0 10 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.30861 10.2159H6.09394L7.78579 14.3369C7.90364 14.6226 7.76897 14.943 7.49961 15.0642L6.00976 15.7135C5.73203 15.8347 5.42058 15.6962 5.30273 15.4191L3.69506 11.5059L1.06888 14.2071C0.718913 14.567 0.151367 14.2895 0.151367 13.8175V0.796939C0.151367 0.299969 0.755034 0.0576966 1.06885 0.407363L9.6874 9.27227C10.035 9.61103 9.77852 10.2159 9.30861 10.2159Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </div>
+
+    
+  </body>
+</html>

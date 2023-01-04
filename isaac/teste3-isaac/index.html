@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.section-hero > div {
+        display: none;
+      }
+      *,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container-ss {
+        font-family: "Halcyon", sans-serif;
+        display: flex;
+        gap: 104px;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        justify-content: space-between;
+        padding-top: 4rem;
+        align-items: center;
+      }
+
+      .container-text-ss {
+        flex: 1;
+      }
+      .container-text-ss h1 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 56px;
+        line-height: 64px;
+        color: #3d4ed7;
+        margin-bottom: 24px;
+      }
+      .container-text-ss ul {
+        margin-bottom: 32px;
+        padding: 0;
+        max-width: 587px;
+      }
+      .container-text-ss ul li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .container-text-ss ul li p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #010038;
+      }
+      .container-text-ss ul p {
+        width: 100%;
+      }
+      .container-text-ss .microcopyInput {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+        color: #010038;
+      }
+
+      .container-video-ss {
+        width: 602px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+      }
+      .container-video-ss::after {
+        content: "";
+        width: 602px;
+        height: 494px;
+        background: #d1dbff;
+        border-radius: 12px 0px 0px 12px;
+        position: absolute;
+        z-index: -1;
+        right: -4rem;
+        bottom: -36px;
+      }
+
+      #bluePlay {
+        transition: 0.3s;
+      }
+
+      .video-box {
+        max-width: 482px;
+      }
+      .video-box .video-header {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .video-box .video-header .play-button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+        z-index: 10;
+      }
+      .video-box .video-header:hover .play-button {
+        opacity: 1;
+        transition: 0.3s;
+      }
+      .video-box .video-header:hover #bluePlay {
+        fill: #3d4ed7;
+      }
+      .video-box .video-header:hover #strokePlay {
+        stroke: #3d4ed7;
+      }
+      .video-box .video-header:hover .banner {
+        transform: scale(1.1);
+      }
+      .video-box .video-header .banner {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 336px;
+        transition: 0.5s;
+        z-index: 1;
+      }
+      .video-box .video-content {
+        padding: 24px 32px;
+        background: #3d4ed7;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        margin-top: -4px;
+        position: relative;
+      }
+      .video-box .video-content p {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: #ffffff;
+        margin-bottom: 24px;
+      }
+      .video-box .video-content h3 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+        margin-bottom: 0px;
+      }
+      .video-box .video-content span {
+        display: block;
+        margin-top: 6px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+      .video-box .aspas {
+        position: absolute;
+        top: -20px;
+      }
+
+      @media (min-width: 1500px) {
+        .container-text-ss ul {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 1366px) {
+        .container-ss {
+          gap: 0;
+        }
+      }
+      @media (max-width: 1293px) {
+        .container-video-ss::after {
+          bottom: -6px;
+        }
+      }
+      @media (max-width: 1200px) {
+        .container-ss {
+          flex-direction: column;
+          padding-bottom: 72px;
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+        .container-video-ss {
+          width: 100%;
+          margin-top: 48px;
+        }
+        .video-box {
+          max-width: 100%;
+          flex-direction: column-reverse;
+          display: flex;
+        }
+        .video-box .video-content {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+        }
+        .video-box .video-header {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+        .container-video-ss::after {
+          bottom: -44px;
+          right: -1rem;
+        }
+      }
+      @media (min-width: 2167px) {
+        .container-text-ss h1 {
+          width: 1333px;
+        }
+      }
+      @media (min-width: 2500px) {
+        .container-text-ss h1 {
+          width: 100%;
+        }
+      }
+      @media (min-width: 1552px) {
+        .container-text-ss ul li p {
+          line-height: 31px;
+        }
+      }
+      @media (max-width: 1000px) {
+        .hero-ctas,
+        h1.h1-white.hero.mobile,
+        p.margin-vertical.margin-medium.max-width-medium.text-white-color.mobile {
+          display: none !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .container-ss {
+          padding-top: 2rem;
+        }
+      }
+      @media (max-width: 675px) {
+        .container-video-ss::after {
+          width: 88%;
+        }
+        .container-text-ss h1 {
+          font-size: 36px;
+          line-height: 44px;
+        }
+        .container-text-ss ul {
+          margin-bottom: 24px;
+        }
+        .container-text-ss ul li p {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .container-text-ss ul li img {
+          width: 24px;
+          height: 24px;
+        }
+        .video-box .video-content {
+          padding: 48px 16px 24px 16px;
+        }
+        .video-box .video-content p {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container-ss">
+      <div class="container-text-ss">
+        <h1>A maior plataforma de serviços financeiros feita para escolas</h1>
+        <ul>
+          <li>
+            <img
+              src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/7ab1625a0bd8ee7fb0219a6c598a5db80f2a4a7b/isaac/teste3/checked-icon.svg"
+              alt=""
+            />
+            <p>
+              Ganhe mais tempo para focar na missão de educar. A cobrança fica
+              por nossa conta!
+            </p>
+          </li>
+
+          <li>
+            <img
+              src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/7ab1625a0bd8ee7fb0219a6c598a5db80f2a4a7b/isaac/teste3/checked-icon.svg"
+              alt=""
+            />
+
+            <p>
+              Amplie sua escola e aumente o número de turmas. Garantimos receita
+              garantida.
+            </p>
+          </li>
+
+          <li>
+            <img
+              src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/7ab1625a0bd8ee7fb0219a6c598a5db80f2a4a7b/isaac/teste3/checked-icon.svg"
+              alt=""
+            />
+            <p>
+              Retenha mais alunos oferecendo facilidade de pagamentos para as
+              famílias.
+            </p>
+          </li>
+
+          <li>
+            <img
+              src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/7ab1625a0bd8ee7fb0219a6c598a5db80f2a4a7b/isaac/teste3/checked-icon.svg"
+              alt=""
+            />
+            <p>
+              Monitore o status dos pagamentos, matrículas e contratos em poucos
+              cliques.
+            </p>
+          </li>
+        </ul>
+
+        <h4 class="microcopyInput">Saiba como ter o isaac na sua escola</h4>
+      </div>
+
+      <div class="container-video-ss">
+        <div class="video-box">
+          <div class="video-header">
+            <div class="play-button">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_2)">
+                  <path
+                    id="bluePlay"
+                    d="M69 35C69 16.2223 53.7777 1 35 1C16.2223 1 1 16.2223 1 35C1 53.7777 16.2223 69 35 69C53.7777 69 69 53.7777 69 35Z"
+                    fill="#3d4ed700"
+                  />
+                  <path d="M44 35L30.5 42.7942V27.2058L44 35Z" fill="white" />
+                  <path
+                    d="M69 35C69 16.2223 53.7777 1 35 1C16.2223 1 1 16.2223 1 35C1 53.7777 16.2223 69 35 69C53.7777 69 69 53.7777 69 35Z"
+                    stroke="white"
+                    stroke-width="2"
+                    id="strokePlay"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_2">
+                    <rect width="70" height="70" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <img
+              src="https://github.com/ErosSuperSonic/supersonic-projetos/blob/main/isaac/teste3/banner-video.png?raw=true"
+              class="banner"
+              alt=""
+            />
+          </div>
+          <div class="video-content">
+            <img
+              src="https://raw.githubusercontent.com/ErosSuperSonic/supersonic-projetos/7ab1625a0bd8ee7fb0219a6c598a5db80f2a4a7b/isaac/teste3/aspas.svg"
+              class="aspas"
+              alt=""
+            />
+            <p>
+              Com a parceria do isaac, passamos a ter a certeza dos lucros e dos
+              investimentos da escola. Isso facilitou muito nosso crescimento,
+              tanto é que no ano da pandemia nossa escola cresceu 20%.
+            </p>
+            <h3>CONECTA EX 2022</h3>
+            <span>Escolas parceiras do isaac</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

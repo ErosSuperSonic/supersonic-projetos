@@ -1,21 +1,14 @@
-html,
-body,
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .gauge {
   margin-bottom: 32px;
 }
+
 .row.d-flex.flex-column.flex-md-row.justify-content-end.pb-3 {
   display: none !important;
 }
 
-.card.col-md-4.p-md-0.tour-guide-item-inativo{
+.card.col-md-4.p-md-0.tour-guide-item-inativo {
   display: none;
-}
+} 
 .col-md-4.residential-banner-container {
   margin-top: 34px;
 }
@@ -25,8 +18,26 @@ a.residential-banner-item img {
 }
 .container-ss {
   display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+.container-ss-2 {
+  display: flex;
   gap: 16px;
   margin-bottom: 32px;
+}
+.container-ss h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+  color: #007cb6;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 .info-ss-user {
   background: #ffffff;
@@ -128,16 +139,10 @@ a.residential-banner-item img {
   gap: 8px;
 }
 
-.vencida .buttons-detalhe-fatura button:nth-child(1){
-  display: none;
-}
-.vencida .debito-protestados {
-  display: none;
-}
-
 .buttons-detalhe-fatura button:nth-child(1) {
   background-color: transparent;
   color: #007cb6;
+  display: none;
 }
 
 .buttons-detalhe-fatura button:nth-child(2) {
@@ -151,7 +156,7 @@ a.residential-banner-item img {
   border-radius: 8px;
   padding: 32px 24px 16px 24px;
 
-  display: flex;
+  display: none;
   gap: 24px;
   flex-direction: column;
   max-width: 304px;
@@ -199,4 +204,96 @@ a.residential-banner-item img {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
+  margin-top: 10px;
+}
+
+
+.vencida .buttons-detalhe-fatura button:nth-child(1) {
+  display: flex;
+}
+.vencida .debito-protestados {
+  display: flex;
+}
+
+.vencida .details-info-user .status strong {
+  color: #f89c1b;
+}
+div#mainContent {
+  max-width: 944px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 1000px) {
+  .container-ss-2 {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  .vencida .debito-protestados {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-ss{
+    margin-top: 24px;
+  }
+  .info-ss-user{
+    overflow-x: hidden;
+  }
+  .container-ss h1 {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    color: #007cb6;
+  }
+  .container-ss h1 img{
+    width: 24px;
+    height: 24px;
+  }
+  .container-info-user {
+    flex-direction: column;
+  }
+  .ultima-fatura,
+  .details-info-user {
+    align-items: center;
+  }
+  .ultima-fatura{
+    padding-bottom: 24px;
+    align-items: flex-start;
+  }
+  p.status {
+    /* position: relative;
+    left: -26px; */
+  }
+  p.vencido {
+    /* position: relative;
+    left: 6px; */
+  }
+  .ultima-fatura .chama {
+    /* position: relative;
+    left: -22px; */
+  }
+  .value-fatura {
+    /* position: relative;
+    left: -29px; */
+  }
+  .buttons-detalhe-fatura {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .vencida .debito-protestados {
+    align-items: center;
+    text-align: center;
+  }
+  .debito-protestados button {
+    width: 100%;
+  }
+
+  .buttons-detalhe-fatura button:nth-child(2){
+    width: 100%;
+  }
 }

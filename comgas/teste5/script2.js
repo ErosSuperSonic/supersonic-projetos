@@ -115,53 +115,73 @@ const contentAccordion = `    <div class="containterTitularidade">
                 </div>
             </div>
         </div>
-    </div>`
+    </div>`;
 
 function addContentInAccordion() {
-    const trocaDeTitularidade = document.querySelector("#trocaTitularicadeInicio > accordion > accordion-group:nth-child(1) > div > div.panel-heading.card-header.panel-enabled > div > div > div > div:nth-child(1) > h4")
-    if (trocaDeTitularidade) {
-        trocaDeTitularidade.innerHTML = "Requerimentos para Solicitar Troca de Titularidade"
+  const trocaDeTitularidade = document.querySelector(
+    "#trocaTitularicadeInicio > accordion > accordion-group:nth-child(1) > div > div.panel-heading.card-header.panel-enabled > div > div > div > div:nth-child(1) > h4"
+  );
+  if (trocaDeTitularidade) {
+    trocaDeTitularidade.innerHTML =
+      "Requerimentos para Solicitar Troca de Titularidade";
 
-        const trocaDeTitularidade2 = document.querySelector("#trocaTitularicadeInicio > accordion > accordion-group:nth-child(1) > div > div.panel-heading.card-header.panel-enabled")
-        trocaDeTitularidade2.addEventListener("click", () => {
-            document.querySelector("#trocaTitularicadeInicio > accordion > accordion-group.panel.panel-open > div > div.panel-collapse.collapse.in.show > div.panel-body.card-block.card-body > div > p").style.display = "none"
-            if (!document.querySelector(".containterTitularidade")) {
-                document.querySelector("#trocaTitularicadeInicio > accordion > accordion-group.panel.panel-open > div > div.panel-collapse.collapse.in.show").insertAdjacentHTML("beforeend", contentAccordion)
-            }
-        })
-    }
+    const trocaDeTitularidade2 = document.querySelector(
+      "#trocaTitularicadeInicio > accordion > accordion-group:nth-child(1) > div > div.panel-heading.card-header.panel-enabled"
+    );
+    trocaDeTitularidade2.addEventListener("click", () => {
+      document.querySelector(
+        "#trocaTitularicadeInicio > accordion > accordion-group.panel.panel-open > div > div.panel-collapse.collapse.in.show > div.panel-body.card-block.card-body > div > p"
+      ).style.display = "none";
+      if (!document.querySelector(".containterTitularidade")) {
+        document
+          .querySelector(
+            "#trocaTitularicadeInicio > accordion > accordion-group.panel.panel-open > div > div.panel-collapse.collapse.in.show"
+          )
+          .insertAdjacentHTML("beforeend", contentAccordion);
+      }
+    });
+  }
 }
-
 
 function actionInButtonInitialSolicitation() {
-    const button = document.querySelector("#trocaTitularicadeInicio > form > div:nth-child(2) > cg-button > button")
+  const button = document.querySelector(
+    "#trocaTitularicadeInicio > form > div:nth-child(2) > cg-button > button"
+  );
 
-    if (button) {
-        button.addEventListener("click", () => {
-            document.querySelector("#mainContent > div > ng-component > div > div > div.col-md-8.area-principal > cg-endereco > div > div > form > div.mb-4.d-flex > div:nth-child(1) > cg-button > button").addEventListener("click", () => {
-                addContentInAccordion()
-            })
-        })
-    }
+  if (button) {
+    button.addEventListener("click", () => {
+      document
+        .querySelector(
+          "#mainContent > div > ng-component > div > div > div.col-md-8.area-principal > cg-endereco > div > div > form > div.mb-4.d-flex > div:nth-child(1) > cg-button > button"
+        )
+        .addEventListener("click", () => {
+          addContentInAccordion();
+        });
+    });
+  }
 }
 
+addContentInAccordion();
+actionInButtonInitialSolicitation();
 
-addContentInAccordion()
-actionInButtonInitialSolicitation()
-
-const root = document.querySelector('body');
+const root = document.querySelector("body");
 const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-        if (window.location.pathname === '/trocaTitularidade') {
-            if (mutation.target.classList.contains('area-principal') || mutation.target.classList.contains('ng-tns-0-0') || mutation.target.classList.contains('ng-tns-0-1')) {
-                addContentInAccordion()
-                actionInButtonInitialSolicitation()
-            }
-        }
-    });
+  mutations.forEach((mutation) => {
+    if (window.location.pathname === "/trocaTitularidade") {
+      if (
+        mutation.target.classList.contains("area-principal") ||
+        mutation.target.classList.contains("ng-tns-0-0") ||
+        mutation.target.classList.contains("ng-tns-0-1")
+      ) {
+        addContentInAccordion();
+        actionInButtonInitialSolicitation();
+      }
+    }
+  });
 });
 
 observer.observe(root, {
-    childList: true,
-    subtree: true,
+  childList: true,
+  subtree: true,
 });
+

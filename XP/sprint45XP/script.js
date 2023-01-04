@@ -1,9 +1,9 @@
 //Resets
 if (window.innerWidth > 768) {
-  if (document.querySelector("#element-568")) {
-    document.querySelector("#element-568").style.width = "100%";
+  if (document.querySelector("#element-591")) {
+    document.querySelector("#element-591").style.width = "100%";
     document.querySelector(
-      "#page-block-gy918ronptb > div.section-block > div"
+      "#page-block-es3gspiw74 > div.section-block > div"
     ).style.maxWidth = "100%";
   }
 }
@@ -283,7 +283,6 @@ function LucroComCdb() {
       rendimentoBruto *
       (listIOFDesconto[diasEntreAsDatas - 1] / 100)
     ).toFixed(2);
-    console.log(IOF);
   }
 
   objectInfoTable.IOF = IOF;
@@ -322,13 +321,12 @@ function LucroComCompromissada() {
   let dias = Number(diasInvestidosInput.value);
 
   const valoresTaxa = {
-    1: 85,
-    3: 85,
-    5: 85,
-    7: 85,
-    10: 85,
+    1: 43, //43
+    3: 48, //48
+    5: 53, //53
+    7: 58, //58
+    10: 63, //63
   };
-
   let taxa = valoresTaxa[dias] / 100;
 
   let CDIEquivalente =
@@ -354,67 +352,83 @@ function LucroComCompromissada() {
   const lucroComComprom = (valorLiquido - quantidadeInvestidaValue).toFixed(2);
 
   objectInfoTable.lucroCompromissada = lucroComComprom;
-  // lucroSemIOF.innerHTML = `R$ ${lucroComComprom.replace(".", ",")}`;
 
-  rendimentoPorcentagemCDI(dias);
+  const hoje = new Date();
+  const dataDeVencimento = getFinalData(Number(dias));
+
+  const diffTime = Math.abs(
+    new Date(
+      `${dataDeVencimento.split("/")[1]}/${dataDeVencimento.split("/")[0]}/${
+        dataDeVencimento.split("/")[2]
+      }`
+    ) - hoje
+  );
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  rendimentoPorcentagemCDI(dias, diffDays);
 
   objectInfoTable.taxaCDB = valoresTaxa[dias];
   modificationInfosTable();
 }
 
-function rendimentoPorcentagemCDI(diasInvestidos = 5) {
+function rendimentoPorcentagemCDI(diasInvestidos = 5, diffDays) {
   diasInvestidos = Number(diasInvestidos);
   const valoresTaxa = {
-    1: 85, //43
-    3: 85, //48
-    5: 85, //53
-    7: 85, //58
-    10: 85, //63
+    1: 43, //43
+    3: 48, //48
+    5: 53, //53
+    7: 58, //58
+    10: 63, //63
   };
 
   const iof = {
     1: 96,
-    3: 83,
-    5: 76,
-    7: 63,
-    10: 50,
+    2: 93,
+    3: 90,
+    4: 86,
+    5: 83,
+    8: 73,
+    7: 76,
+    8: 73,
+    9: 70,
+    10: 66,
+    11: 63,
+    12: 60,
+    13: 56,
+    14: 53,
+    15: 50,
+    16: 46,
+    17: 43,
+    18: 40,
+    19: 36,
+    20: 33,
+    21: 30,
+    22: 26,
+    23: 23,
+    24: 20,
+    25: 16,
+    26: 13,
+    27: 10,
+    28: 6,
+    29: 3,
   };
 
-  const equivalente = (
-    valoresTaxa[diasInvestidos] /
-    100 /
-    (1 - iof[diasInvestidos] / 100)
-  ).toFixed(4);
+  const equivalente =
+    valoresTaxa[diasInvestidos] / 100 / (1 - iof[diffDays] / 100);
 
-  console.log(equivalente);
   if (Number(equivalente)) {
     const rendimento = String(equivalente * 100).replace(".", ",");
 
-    // if (
-    //   diasInvestidos == 1 ||
-    //   diasInvestidos == 7 ||
-    //   diasInvestidos == 10
-    // ) {
-    //   console.log("mensagem 1");
-    //   rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
-    // } else if (diasInvestidos == 5) {
-    //   console.log("mensagem 22");
-    //   rendimentoCDI.innerHTML = `${rendimento}0% <span>do CDI</span>`;
-    // } else {
-    //   console.log("mensagem 3");
+    let convertRendimento = Number(rendimento.replace(",", "."))
+      .toFixed(2)
+      .replace(".", ",");
 
-    //   rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
-    // }
-    // }
-
-    if (diasInvestidos == 1 || diasInvestidos == 10) {
-      rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
-    } else if (diasInvestidos == 3) {
-      rendimentoCDI.innerHTML = `${rendimento},00% <span>do CDI</span>`;
+    if (diasInvestidos == 3) {
+      rendimentoCDI.innerHTML = `${convertRendimento}% <span>do CDI</span>`;
     } else if (diasInvestidos == 7) {
-      rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
+      rendimentoCDI.innerHTML = `${convertRendimento}% <span>do CDI</span>`;
     } else {
-      rendimentoCDI.innerHTML = `${rendimento}% <span>do CDI</span>`;
+      rendimentoCDI.innerHTML = `${convertRendimento}% <span>do CDI</span>`;
     }
   }
 }
@@ -471,8 +485,6 @@ function modificationInfosTable() {
     objectInfoTable.lucroCompromissada
   )}`;
 
-
-  console.log(infoTableList)
   //TAXA CDB/CDI Compromissada
   infoTableList[3].innerHTML = `${objectInfoTable.taxaCDB}%`;
 

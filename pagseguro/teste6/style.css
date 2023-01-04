@@ -1,0 +1,175 @@
+.component-group--campaign-banner .card-group h4,
+.card-group__details .seal-container,
+.component-group--campaign-banner .geometric-list {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
+
+
+
+.elementor-951 .elementor-element.elementor-element-61cf4b6{display: none;}
+.post {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.post .bm-blog-post-image {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.post .bm-blog-post-image img {
+  object-fit: cover;
+}
+
+.post .bm-blog-post-content {
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+}
+
+
+.post a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.post .bm-blog-post-content {
+    padding: 32px;
+}
+
+.post .bm-blog-post-content.bm_content_box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-home-blog
+  .bm-blog-posts.bm-display-grid.elementor-grid.elementor-grid-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .entry-post-content {
+    font-size: 14px;
+}
+
+.sidebar-home-blog .post {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.sidebar-home-blog .post .bm-blog-post-image{
+  border-radius: 8px;
+  flex: 0 0 140px;
+  max-width: 45%;
+}
+
+.sidebar-home-blog .post .bm-blog-post-image img{
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+
+.sidebar-home-blog .post .bm-blog-post-content{
+  padding: 8px 16px;
+  background: none;
+}
+
+.sidebar-home-blog .post .bm_title {
+    margin: 0;
+}
+
+.sidebar-home-blog .post .bm_title a {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.sidebar-home-blog img{
+    object-fit: cover;
+}
+.todos-os-posts .post .entry-post-content > div,
+.artigo-acessados .post .entry-post-content > div {
+  background: #3a4cf1;
+  margin: 16px -32px -32px;
+  padding: 12px 16px;
+}
+.todos-os-posts .post .entry-post-content > div a,
+.artigo-acessados .post .entry-post-content > div a{
+
+    color: #fff !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.todos-os-posts .post .entry-post-content > div a:after,
+.artigo-acessados .post .entry-post-content > div a:after{
+
+    content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMSAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjkwODk1IDguODgzOTlDNS43MTM2OCA5LjA3OTI2IDUuNzEzNjggOS4zOTU4NCA1LjkwODk1IDkuNTkxMUM2LjEwNDIxIDkuNzg2MzYgNi40MjA3OSA5Ljc4NjM2IDYuNjE2MDUgOS41OTExTDEwLjg0NTEgNS4zNjIwNEMxMC45NDA1IDUuMjcwOTkgMTEgNS4xNDI1NiAxMSA1LjAwMDI0QzExIDQuOTkyODIgMTAuOTk5OCA0Ljk4NTQzIDEwLjk5OTUgNC45NzgwOEMxMC45OTYxIDQuODk5NTIgMTAuOTc0NSA0LjgyNTY1IDEwLjkzODkgNC43NjA1N0MxMC45MTYzIDQuNzE5MDMgMTAuODg3NiA0LjY4MDU2IDEwLjg1MzYgNC42NDY1TDYuNjE2MDUgMC40MDg5OTVDNi40MjA3OSAwLjIxMzczMyA2LjEwNDIxIDAuMjEzNzMzIDUuOTA4OTUgMC40MDg5OTVDNS43MTM2OCAwLjYwNDI1OCA1LjcxMzY4IDAuOTIwODQgNS45MDg5NSAxLjExNjFMOS4yOTMwOSA0LjUwMDI0TDAuNSA0LjUwMDI0QzAuMjIzODU4IDQuNTAwMjQgNC4zODI4OWUtMDcgNC43MjQxIDQuMTQxNDhlLTA3IDUuMDAwMjRDMy45MDAwN2UtMDcgNS4yNzYzOSAwLjIyMzg1OCA1LjUwMDI0IDAuNSA1LjUwMDI0TDkuMjkyNyA1LjUwMDI0TDUuOTA4OTUgOC44ODM5OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=');
+}
+
+.artigo-acessados .post .entry-post-content {
+  position: relative;
+}
+
+    @media(max-width: 768px){
+        
+        .n2-ss-widget.n2-ss-control-bullet.n2-ow-all.n2-ss-control-bullet-horizontal{
+    --widget-offset: -40px;
+
+}
+ss3-force-full-width.n2-ss-no-bga-fixed {
+    padding: 0 16px;
+}
+    }
+    
+    .elementor embed, .elementor iframe, .elementor object, .elementor video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .sidebar-categories h5 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .sidebar-categories h5 ~ p {
+      display: none;
+    }
+    
+    .sidebar-categories h5 ~ div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    
+    .sidebar-categories a {
+      display: inline-block;
+      font-size: 16px !important;
+      font-weight: 700;
+      color: #3A4CF1;
+      padding: 4px 16px !important;
+      margin: 0px !important;
+      border: 1px solid #3A4CF1;
+      border-radius: 8px;
+      transition: .2s;
+    }
+    
+    .sidebar-categories a:hover {
+        background: #3A4CF1;
+        color: #fff;
+    }
